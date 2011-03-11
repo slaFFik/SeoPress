@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/328772/seopress/trunk/admin
+END
+plugins.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/306955/seopress/trunk/admin/plugins.inc.php
+END
+main.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/306955/seopress/trunk/admin/main.inc.php
+END
+single-metabox.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/305770/seopress/trunk/admin/single-metabox.php
+END
+general.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/306955/seopress/trunk/admin/general.inc.php
+END
+get-pro.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/328772/seopress/trunk/admin/get-pro.inc.php
+END
+settings.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/305770/seopress/trunk/admin/settings.inc.php
+END

@@ -1,0 +1,152 @@
+.seo_bar
+{
+background-color:#5fbbde;
+width:0px;
+height:16px;
+}
+.seo_barbox
+{
+float:right; 
+height:16px; 
+background-color:#FFFFFF; 
+width:100px; 
+border:solid 2px #000; 
+margin-right:3px;
+-webkit-border-radius:5px;-moz-border-radius:5px;
+}
+.seo_count
+{
+float:right; margin-right:8px; 
+font-family:'Georgia', Times New Roman, Times, serif; 
+font-size:16px; 
+font-weight:bold; 
+color:#666666
+}
+
+.bp-seo-admin-menue{
+/* padding-left:10px; */
+}
+
+.spacer{
+margin-top:10px;
+}
+
+.sfb-entry{
+background-color:#F9F9F9;
+padding:15px 10px 30px;
+}
+.sfb-entry-title{
+background-color:#F9F9F9;
+height:18px;
+font: bold 14px Verdana;
+margin-top:10px;
+}
+
+.sfb-entry-left{
+float:left;
+text-align:right;
+margin-left:6px;
+}
+
+.sfb-item-title{
+height:22px;
+margin-top:5px;
+padding-right:5px;
+width:115px;
+}
+
+.sfb-item-desc{
+height:115px;
+margin-top:4px;
+padding-right:5px;
+}
+.sfb-item-tag{
+height:22px;
+margin-top:11px;
+padding-right:5px;
+}
+
+.sfb-entry-right{
+
+}
+
+.sfb-item-name{
+width:115px;
+height:22px;
+margin-top:3px;
+}
+
+
+.components_extend{
+border:1px solid #F9F9F9;
+float:left;
+margin:1px;
+padding:4px 7px 5px;
+}
+.component_update{
+float:left;
+margin:1px;
+-moz-border-radius-bottomleft:25px;
+-moz-border-radius-bottomright:25px;
+-moz-border-radius-topleft:25px;
+-moz-border-radius-topright:25px;
+}
+
+.tabcontent strong{
+font-weight:normal;
+}
+.sfb-entry-title strong{
+font-weight:bold;
+}
+.sfb-entry h2 strong{
+font-weight:bold;
+} 
+
+.sfb-entry-subtitle strong{
+height:18px;
+font: bold 12px Verdana;
+margin-top:10px;
+}
+
+button {
+border: 0 none;
+cursor: pointer;
+font-weight: bold;
+padding: 0 15px 0 0;
+text-align: center;
+height: 30px;
+line-height: 30px;
+width: auto;
+}
+
+button.rounded {
+background: transparent url( ../images/btn_right.png ) no-repeat scroll right top;
+clear: left;
+font-size: 0.8em;
+}
+
+button span {
+display: block;
+padding: 0 0 0 15px;
+position: relative;
+white-space: nowrap;
+height: 30px;
+line-height: 30px;
+}
+
+button.rounded span {
+background: transparent url( ../images/btn_left.png ) no-repeat scroll left top;
+color: #FFFFFF;
+}
+
+button.rounded:hover {
+background-position: 100% -30px;
+}
+
+button.rounded:hover span {
+background-position: 0% -30px;
+}
+
+button::-moz-focus-inner {
+border: none;
+}
