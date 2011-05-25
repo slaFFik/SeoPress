@@ -1,0 +1,26 @@
+{
+    "name" : "SeoPress",
+    "slug" : "seopress",
+    "homepage" : "http://themekraft.com",
+    "download_url" : "http://themekraft.com/plugins/seopress.zip",
+    
+    "version" : "2.0",
+    "requires" : "3.0",
+    "tested" : "3.1.1",
+    "last_updated" : "2011-04-18 20:50:00",
+    "upgrade_notice" : "Please update ...",
+    
+    "author" : "Themekraft",
+    "author_homepage" : "http://themekraft.com",
+    
+    "sections" : {
+        "description" : "(Required) Plugin description.<p>This section will be opened by default when the user clicks on 'View version XYZ information'. Basic HTML can be used in all sections.</p>",
+        "installation" : "(Recommended) Installation instructions.",
+        "changelog" : "(Recommended) Changelog.",
+        "custom_section" : "This is a custom section labeled 'Custom Section'." 
+    },
+    
+    "rating" : 90,
+    "num_ratings" : 123,
+    "downloaded" : 1234
+}

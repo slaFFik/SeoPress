@@ -1,0 +1,1035 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bp-seo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-05 17:13+0100\n"
+"PO-Revision-Date: 2011-05-05 17:23+0100\n"
+"Last-Translator: Sven Wagener <svenw@themekraft.com>\n"
+"Language-Team: Sven Wagener <sven.wagener@rheinschmiede.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: C:\\Users\\wagesve\\My Documents\\Aptana Studio Workspace\\SeoPress-Pro\n"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/functions.php:42
+msgid "Themekraft.com"
+msgstr "Themekraft.com"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/functions.php:42
+msgid "Username"
+msgstr "Benutzername"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/functions.php:44
+msgid "Password"
+msgstr "Passwort"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/functions.php:46
+msgid "login"
+msgstr "Login"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/functions.php:53
+msgid "Please verify your serial of SeoPress"
+msgstr ""
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/init.php:58
+msgid "SeoPress - Seo options"
+msgstr "Seopress - Seo Einstellungen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/init.php:58
+#: Workspace\SeoPress-Pro/admin/seo.php:35
+msgid "Seo Settings"
+msgstr "Seo Einstellungen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/init.php:59
+msgid "SeoPress - Global options"
+msgstr "Seopress - Globale Einstellungen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/init.php:59
+msgid "Global options"
+msgstr "Globale Optionen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/meta.php:243
+msgid "Home"
+msgstr "Startseite"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/meta.php:247
+msgid "Blog &#124; "
+msgstr "Blog &#124; "
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/meta.php:249
+msgid "Blog &#124; Categories &#124; "
+msgstr "Blog &#124; Categories &#124; "
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/meta.php:251
+msgid "Blog &#124; Tags &#124; "
+msgstr "Blog &#124; Tags &#124; "
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/meta.php:255
+msgid "Blog"
+msgstr "Blog"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/meta.php:265
+#: Workspace\SeoPress-Pro/meta.php:267
+#, php-format
+msgid "%s Directory"
+msgstr "%s Directory"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/meta.php:270
+msgid "Create an Account"
+msgstr "Account erstellen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/meta.php:273
+msgid "Activate your Account"
+msgstr "Account aktivieren"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/meta.php:276
+msgid "Create a Group"
+msgstr "Gruppe erstellen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/meta.php:279
+msgid "Create a Blog"
+msgstr "Blog erstellen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo.php:43
+msgid "Wordpress"
+msgstr "Wordpress"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo.php:46
+msgid "Wordpress Network"
+msgstr "Wordpress Netzwerk"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo.php:50
+msgid "Buddypress"
+msgstr "Buddypress"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo.php:52
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_plugins.tab.php:21
+msgid "Buddypress Plugins"
+msgstr "Buddypress Plugins"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo.php:75
+msgid "Save Settings"
+msgstr "Einstellungen speichern"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_plugins.sub_tab.php:43
+msgid "page in"
+msgstr "Seite in"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_plugins.sub_tab.php:80
+#, php-format
+msgid "Please config your \"%s\" plugin before you setup your component meta! (Do this at the bottom of this page)"
+msgstr "Bitte konfigurieren Sie den \"%s\" tab, bevor Sie die Meta Daten der Komponente einstellen! (Dies können Sie am Ende der Seite machen)"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_plugins.tab.php:22
+msgid "Setup your title and meta tags of the buddypress plugins you have installed."
+msgstr "Stellen Sie die Titel sowie die Meta Tags der installierten Buddypress Plugins ein."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_plugins.tab.php:29
+msgid "Configurate plugins"
+msgstr "Plugins einstellen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_plugins.tab.php:70
+#, php-format
+msgid "Setup the tabs of \"%s\". Any checked entry wil let appear a meta box."
+msgstr "Einstellung der Tabs in  \"%s\". Jeder gewählte Eintrag lässt eine Meta box erscheinen."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_plugins.tab.php:78
+#, php-format
+msgid "\"%s\" has a directory page:"
+msgstr "\"%s\" hat eine Directory Seite:"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_plugins.tab.php:83
+#, php-format
+msgid "\"%s\" creating pages in following components:"
+msgstr "\"%s\" erstellt Seiten in den folgenden Komponenten"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.activities-tab.php:13
+msgid "Buddypress Activities"
+msgstr "Buddypress Aktivitäten"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.activities-tab.php:14
+msgid "Setup your title and meta tags of buddypress activity pages."
+msgstr "Stellen Sie den Titel und die Meta Tags Ihrer Buddypress Aktivitätsseiten en."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.activities-tab.php:23
+msgid "Activity Home"
+msgstr "Aktivitäten Startseite"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.activities-tab.php:27
+msgid "Activity Directory"
+msgstr "Akitivitäts-Verzeichnis"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.activities-tab.php:30
+msgid "Personal Activity (in Profile)"
+msgstr "Persönliche Aktivitäten (im Profil)"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.activities-tab.php:35
+msgid "Friends Activity (in Profile)"
+msgstr "Aktivitäten von Freunden (im Profil)"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.blogs-tab.php:13
+msgid "Buddypress Blogs"
+msgstr "Buddypress Blogs"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.blogs-tab.php:14
+msgid "Setup your title and meta tags of buddypress blog pages."
+msgstr "Stellen Sie den Titel und die Meta Tags Ihrer Buddypress Blogseiten ein."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.blogs-tab.php:22
+msgid "Blogs Directory"
+msgstr "Blogverzeichnis"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.forums-tab.php:13
+msgid "Buddypress Forum"
+msgstr "Buddypress Forum"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.forums-tab.php:14
+msgid "Setup your title and meta tags of buddypress forum pages."
+msgstr "Stellen Sie den Titel und die Meta Tags Ihrer Buddypress Forenseiten en."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.forums-tab.php:22
+msgid "Forums Directory"
+msgstr "Forenverzeichnis"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.forums-tab.php:26
+msgid "Forum (in Group)"
+msgstr "Forum (in Gruppe)"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.forums-tab.php:30
+msgid "Forum Topic (in Group)"
+msgstr "Forum Thema (in Gruppe)"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.groups-tab.php:13
+msgid "Buddypress Groups"
+msgstr "Buddypress Gruppen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.groups-tab.php:14
+msgid "Setup your title and meta tags of group pages like home, wire, forum, forum topic and member."
+msgstr "Stellen Sie den Titel und die Meta Tags Ihrer Gruppenseiten wie die Startseite, Wire, Forum und  oder Benutzerseiten ein."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.groups-tab.php:22
+msgid "Groups Directory"
+msgstr "Gruppenverzeichnis"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.groups-tab.php:26
+msgid "Group"
+msgstr "Gruppe"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.groups-tab.php:30
+msgid "Groups (in Profile)"
+msgstr "Gruppen (im Profil)"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.members-tab.php:13
+msgid "Buddypress Members"
+msgstr "Buddypress Mitglieder"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.members-tab.php:14
+msgid "Setup your title and meta tags of buddypress meber pages."
+msgstr "Stellen Sie den Titel und die Meta Tags Ihrer Buddypress Mitgliederseiten ein."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.members-tab.php:22
+msgid "Members Directory"
+msgstr "Mitgliederverzeichnis"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.members-tab.php:26
+msgid "Members (in Groups)"
+msgstr "Mitglieder (in Gruppen)"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.profiles-tab.php:13
+msgid "Buddypress Profiles"
+msgstr "Buddypress Profile"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.profiles-tab.php:14
+msgid "Setup your title and meta tags of Buddypress profile pages."
+msgstr "StelleN Sie den Titel und die Meta Tags Ihrer Buddypress Profilseiten en."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.profiles-tab.php:23
+msgid "Profile"
+msgstr "Profil"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.profiles-tab.php:29
+msgid "Friends"
+msgstr "Freunde"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.registration-tab.php:13
+msgid "Buddypress registration"
+msgstr "Buddypress Registrierung"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.registration-tab.php:14
+msgid "Setup your title and meta tags of buddypress registration pages."
+msgstr "Stellen Sie den Titel und die Meta Tags Ihrer Buddypress Registrierungsseiten ein."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.registration-tab.php:22
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.tab.php:44
+msgid "Registration"
+msgstr "Registrierung"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.tab.php:26
+msgid "Setup your title and meta tags of the buddypress pages."
+msgstr "Stellen Sie den Titel und die Meta Tags Ihrer Buddypress Seiten en."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.tab.php:33
+msgid "Setup Buddypress pages"
+msgstr "Buddypress Seiten einstellen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.tab.php:38
+msgid "Activity"
+msgstr "Aktivität"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.tab.php:39
+msgid "Members"
+msgstr "Mitglieder"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.tab.php:40
+msgid "Profiles"
+msgstr "Profile"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.tab.php:41
+msgid "Groups"
+msgstr "Gruppen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.tab.php:42
+msgid "Forums"
+msgstr "Foren"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_buddypress_standard.tab.php:43
+msgid "Blogs"
+msgstr "Blogs"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_meta_box.php:48
+#: Workspace\SeoPress-Pro/admin/settings_seo.tab.php:32
+#: Workspace\SeoPress-Pro/admin/single_metabox.php:58
+msgid "Title"
+msgstr "Titel"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_meta_box.php:52
+msgid "Meta description"
+msgstr "Meta Beschreibung"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_meta_box.php:56
+msgid "Meta keywords"
+msgstr "Meta Keywörter"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_save.php:27
+msgid "Seo settings saved succsessfully."
+msgstr "Seo Einstellungen erfolgreich gespeichert."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_wordpressmu_blog.tab.php:14
+msgid "Wordpress Network Blogs"
+msgstr "Wordpress Blog-Netzwerk"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_wordpressmu_blog.tab.php:15
+msgid "Setup your title and meta tags of your Wordpress main blog. "
+msgstr "Stellen Sie den Titel und die Meta Tags Ihres Wordpress Blogs an."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_wordpressmu_blog.tab.php:27
+#: Workspace\SeoPress-Pro/admin/seo_wordpress_blog.tab.php:26
+msgid "Posts"
+msgstr "Artikel"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_wordpressmu_blog.tab.php:30
+#: Workspace\SeoPress-Pro/admin/seo_wordpress_blog.tab.php:29
+msgid "Pages"
+msgstr "Seiten"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_wordpressmu_blog.tab.php:33
+#: Workspace\SeoPress-Pro/admin/seo_wordpress_blog.tab.php:32
+msgid "Archive"
+msgstr "Archiv"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_wordpressmu_blog.tab.php:36
+#: Workspace\SeoPress-Pro/admin/seo_wordpress_blog.tab.php:35
+msgid "Categories"
+msgstr "Kategorien"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_wordpressmu_blog.tab.php:39
+#: Workspace\SeoPress-Pro/admin/seo_wordpress_blog.tab.php:38
+msgid "Tags"
+msgstr "Schlagwörter"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_wordpressmu_blog.tab.php:42
+#: Workspace\SeoPress-Pro/admin/seo_wordpress_blog.tab.php:41
+msgid "Author"
+msgstr "Author"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_wordpressmu_blog.tab.php:45
+#: Workspace\SeoPress-Pro/admin/seo_wordpress_blog.tab.php:44
+msgid "Search result"
+msgstr "Suchergebnis"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_wordpress_blog.tab.php:13
+msgid "Wordpress Blog"
+msgstr "Wordpress Blog"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/seo_wordpress_blog.tab.php:14
+msgid "Setup your title and meta tags of your Wordpress blog."
+msgstr "Stellen Sie den Titel und die Meta Tags Ihres Wordpress Blogs ein."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings.php:34
+msgid "Seo"
+msgstr "Seo"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings_save.php:23
+msgid "General options saved succsessfully."
+msgstr "Generelle Optionen erfolgreich gespeichert."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings_seo.tab.php:13
+msgid "Global Seo Settings"
+msgstr "Globale Seo Einstellungen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings_seo.tab.php:14
+msgid "Setup the global settings of the Seo part of the plugin."
+msgstr "Stellen Sie die globalen Optionen des Seo Bereichs des Plugins ein."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings_seo.tab.php:36
+msgid "Standard length of title"
+msgstr "Standard Länge des Titels"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings_seo.tab.php:37
+msgid "number of chars"
+msgstr "Anzahl der Zeichen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings_seo.tab.php:42
+msgid "Meta boxes in posts and pages"
+msgstr "Meta Boxen in Artikeln und Seiten"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings_seo.tab.php:46
+msgid "Hide meta boxes in posts:"
+msgstr "Verstecke Meta Boxen in Artikeln:"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings_seo.tab.php:51
+msgid "Hide meta boxes in pages:"
+msgstr "Verstecke Meta Boxen in Seiten:"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings_seo.tab.php:63
+msgid "Delete SeoPress"
+msgstr "Lösche SeoPress"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings_seo.tab.php:64
+msgid "I do not want to use SeoPress! Delete all concerning fields from the option table."
+msgstr "Ich möchte SeoPress nicht mehr benutzen! Lösche alle SeoPress Einstellungen aus der Optionstabelle."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/settings_seo.tab.php:65
+msgid "Remove SeoPress from the DB"
+msgstr "Entferne SeoPress aus der Datenbank"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/single_metabox.php:46
+msgid "klick"
+msgstr "klick"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/single_metabox.php:49
+msgid "SEO (by SeoPress)"
+msgstr "SEO (von SeoPress)"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/single_metabox.php:54
+msgid "Forbid searchengines to scan url"
+msgstr "Verbiete Suchmaschinen diese Seite zu Scannen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/single_metabox.php:62
+msgid "Description"
+msgstr "Beschreibung"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/single_metabox.php:66
+msgid "Keywords"
+msgstr "Keywords"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/single_metabox.php:79
+msgid "Chars in title"
+msgstr "Zeichen im Titel"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/single_metabox.php:82
+msgid "Chars in desctipion"
+msgstr "Zeichen in der Beschreibung"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/single_metabox.php:85
+msgid "Num of Keywords"
+msgstr "Anzahl der Keywords"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/admin/single_metabox.php:88
+msgid "Forbid searchengines to scan urls"
+msgstr "Verbiete Suchmaschinen diese Seiten zu Scannen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/extended/admin/settings.php:5
+msgid "Keyword Generator"
+msgstr "Keywort Generator"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/extended/admin/settings.php:9
+msgid "Use keyword generator:"
+msgstr "Benutze den Keywort Generator:"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/extended/admin/settings.php:14
+msgid "Number of keywords generated:"
+msgstr "Anzahl zu generierender Keywörter:"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:110
+msgid "Shows the sitename"
+msgstr "Zeigt den Namen des Blogs an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:116
+msgid "Shows the title of post"
+msgstr "Zeigt den Titel eines Posts an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:119
+msgid "Shows the excerpt of the post"
+msgstr "Zeigt die Zusammenfassung eines Posts an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:122
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:125
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:128
+msgid "Shows the username of post author"
+msgstr "Zeigt den Benutzernamen des Artikel Authors an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:131
+msgid "Shows the date of post"
+msgstr "Zeigt das Datum des Artikels an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:134
+msgid "Shows the  modifying date of the post"
+msgstr "Zeigt das Datum an, an dem der Post zuletzt modifiziert wurde"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:140
+msgid "Shows the archive date"
+msgstr "Zeigt das Datum des Archives an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:146
+msgid "Shows the category name"
+msgstr "Zeigt den Kategorienamen an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:149
+msgid "Shows the category description"
+msgstr "Zeigt die Kategoriebeschreibung an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:160
+msgid "Shows the tag name"
+msgstr "Zeigt den Tag Namen"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:163
+msgid "Shows the tag description"
+msgstr "Zeigt die Tag Beschreibung an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:174
+msgid "Shows the name of the author"
+msgstr "Ersetzt den Namen des Authors"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:190
+msgid "Shows the full Pagination"
+msgstr "Zeigt die volle Seitennummerierung an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:193
+msgid "Shows the page number"
+msgstr "Zeigte die Seitennummer an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:196
+msgid "Shows the sum of all pages"
+msgstr "Zeigt die Summe aller Seiten an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:202
+msgid "Shows the search phrase"
+msgstr "Zeigt das gesuchte Wort an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:208
+msgid "Shows the component name"
+msgstr "Zeigt den Namen der Komponente an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:211
+msgid "Shows the component description"
+msgstr "Zeigt die Komponenten-Beschreibung an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:214
+msgid "Shows the component status"
+msgstr "Zeigt den Komponentenstatus an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:217
+msgid "Shows the last activity of component"
+msgstr "Zeigt die letzte Aktivität der Komponente an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:224
+msgid "Shows the users fullname"
+msgstr "Zeigt den vollen Namen eines Benutzers an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:227
+msgid "Shows the user nicename"
+msgstr "Zeigt den Benutzer Nicknamen an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:230
+msgid "Shows the users displayname"
+msgstr "Zeigt den angezeigten Namen eines Benutzers an."
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:236
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:239
+msgid "Shows the forum topic title"
+msgstr "Zeigt den Titel eines Forenbeitrags an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:245
+msgid "Shows the forum topic poster name"
+msgstr "Zeigt den Namen des Erstellers des Foreneintrags an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:248
+msgid "Shows the forum topic last poster name"
+msgstr "Zeigt den Namen des letzten Benutzers, der auf den Foreneintrag geantwortet hat"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:251
+msgid "Shows the forum topic start time"
+msgstr "Zeigt den die Erstellungszeit des Forenbeitrags an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_config.php:254
+msgid "Shows the forum topic time"
+msgstr "Zeigt die Uhrzeit der letzten Antwort im Forenbeitrag an"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio
+#: Workspace\SeoPress-Pro/special-tags/special_tag_functions.php:282
+#, php-format
+msgid "page %d of %d"
+msgstr "Seite %d von %d"
+
+#~ msgid "SeoPress - Wordpress options"
+#~ msgstr "SeoPress - Wordpress Einstellungen"
+
+#~ msgid "BP Directories"
+#~ msgstr "BP Verzeichnisse"
+
+#~ msgid "BP Components"
+#~ msgstr "Buddypress Komponenten"
+
+#~ msgid "Get the Pro Version"
+#~ msgstr "Pro Version kaufen"
+
+#~ msgid "Buddypress Components"
+#~ msgstr "Buddypress Komponenten"
+
+#~ msgid "Following components creating pages in \"%s\":"
+#~ msgstr "Folgende Komponenten erstellen Seiten in \"%s\":"
+
+#~ msgid ""
+#~ "Setup your title and meta tags of your directories like blogs directory, "
+#~ "activity directory, members directory, groups directory and forums "
+#~ "directory."
+#~ msgstr ""
+#~ "Stellen Sie den Titel und die Meta Tags Ihrer Directories, Activity "
+#~ "Direcctories, Benutzer Direcctories, Gruppen Direcctories, und Foren "
+#~ "Direcctories ein."
+
+#~ msgid "SeoPress settings"
+#~ msgstr "Seopress"
+
+#~ msgid "No Index"
+#~ msgstr "Keine Indexierung"
+
+#~ msgid "Shows the current date"
+#~ msgstr "Zeigt das akuelle Datum an"
+
+#~ msgid "Shows the current time"
+#~ msgstr "Zeigt die aktuelle Zeit an"
+
+#~ msgid "Shows the current year"
+#~ msgstr "Zeigt das aktuelle Jahr an"
+
+#~ msgid "Shows the current month"
+#~ msgstr "Zeigt den aktuelle Monat an"
+
+#~ msgid "Shows the current URL"
+#~ msgstr "Zeigt die aktuelle URL an"
+
+#~ msgid "Shows the date of post !Deprecated - do not use"
+#~ msgstr "Zeigt das Datum des Artikels an !Veraltet - Nicht benutzen"
+
+#~ msgid "Shows the excerpt of the post !Deprecated - do not use"
+#~ msgstr "Zeigt die Kurzfassung eines Artikels an !Veraltet - Nicht benutzen"
+
+#~ msgid "Shows the ID of post"
+#~ msgstr "Zeigt die ID des Posts an"
+
+#~ msgid "Shows the user ID of post author"
+#~ msgstr "Zeigt die Benutzer ID des Artikel Authors an"
+
+#~ msgid "Shows the tags of the post"
+#~ msgstr "Zeigt die Tags eines Artikels an"
+
+#~ msgid "Shows the ID of the author"
+#~ msgstr "Zeigt die ID des Authors an"
+
+#~ msgid "Shows the archive date !Deprecated - do not use"
+#~ msgstr "Zeigt das Datum des Archives an !Veraltet - Nicht benutzen"
+
+#~ msgid "Shows a comma separated list of tags"
+#~ msgstr "Zeigt eine Komma separierte Liste der Tags an"
+
+#~ msgid "Shows a comma separated list of tags in list view"
+#~ msgstr "Zeigt eine kommaseparierte Liste der Tags in einer Auflistung an"
+
+#~ msgid "Shows the term title"
+#~ msgstr "Zeigt dern Term title an"
+
+#~ msgid "Shows a comma separated list of categories in list view"
+#~ msgstr ""
+#~ "Zeigt eine kommaseparierte Liste der Kategorien in einer Auflistung an"
+
+#~ msgid "Shows the user ID"
+#~ msgstr "Zeigt die User ID an"
+
+#~ msgid "Shows the component ID"
+#~ msgstr "Zeigt die Komponenten ID an"
+
+#~ msgid "Shows the date of component creation"
+#~ msgstr "Zeigt das Datum der Komponentenerstellung an"
+
+#~ msgid "Shows the component admin names"
+#~ msgstr "Zeigt den Namen des Komponentenadmins an"
+
+#~ msgid "Shows the number of members in component"
+#~ msgstr "Zeigt die Anzahl der Mitglieder einer Komponente an"
+
+#~ msgid "Shows the user registered"
+#~ msgstr "Zeigt den Registrierten User an"
+
+#~ msgid "Current date"
+#~ msgstr "aktuelles Datum"
+
+#~ msgid "Current time"
+#~ msgstr "aktuelle Uhrzeit"
+
+#~ msgid "Current year"
+#~ msgstr "aktuelles Jahr"
+
+#~ msgid "Date of post"
+#~ msgstr "Datum des Posts"
+
+#~ msgid "Title of post"
+#~ msgstr "Titel des Posts"
+
+#~ msgid "SEO Settings"
+#~ msgstr "Seo Einstellungen"
+
+#, fuzzy
+#~ msgid "SeoPress - Options"
+#~ msgstr "Seopress"
+
+#~ msgid "Options"
+#~ msgstr "Optionen"
+
+#~ msgid "Welcome"
+#~ msgstr "Willkommen"
+
+#~ msgid "Special Tags"
+#~ msgstr "Special Tags"
+
+#~ msgid "General Seo"
+#~ msgstr "Generelles SEO"
+
+#~ msgid "Plugins Seo"
+#~ msgstr "Plugins SEO"
+
+#~ msgid "Settings"
+#~ msgstr "Einstellungen"
+
+#~ msgid "The site's name"
+#~ msgstr "Name der Seite"
+
+#~ msgid "SEO"
+#~ msgstr "SEO"
+
+#~ msgid "Save"
+#~ msgstr "Speichern"
+
+#, fuzzy
+#~ msgid "SeoPress - Buddypress options"
+#~ msgstr "Seopress"
+
+#~ msgid "Save General SEO options"
+#~ msgstr "Speicher Generelle SEO Optionen"
+
+#~ msgid "Main Blog"
+#~ msgstr "Hauptblog"
+
+#~ msgid "User Blogs"
+#~ msgstr "Benutzerblogs"
+
+#~ msgid "here"
+#~ msgstr "hier"
+
+#~ msgid "Info"
+#~ msgstr "Info"
+
+#~ msgid "General Settings"
+#~ msgstr "Generelle Einstellungen"
+
+#~ msgid "Help"
+#~ msgstr "Hilfe"

@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: seo,buddypress,wpmu,wp
 Requires at least: 2.9.x
 Tested up to: 3.0.4 & buddypress 1.2.x
-Stable tag:  1.0.5
+Stable tag:  1.1
 
 This plugin adds an option page SeoPress in your admin bar.
 

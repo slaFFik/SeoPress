@@ -1,0 +1,590 @@
+# Translation of the WordPress plugin SeoPress 1.0 by Sven Lehnert, Sven Wagener.
+# Copyright (C) 2010 Sven Lehnert, Sven Wagener
+# This file is distributed under the same license as the SeoPress package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: SeoPress 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/seopress\n"
+"POT-Creation-Date: 2010-10-12 10:23+0000\n"
+"PO-Revision-Date: 2011-02-16 13:47+0100\n"
+"Last-Translator: Peter Holme <peter@holme.se>\n"
+"Language-Team: NORWEGIAN <peter@holme.se>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin/general.inc.php:80
+msgid "<b>SeoPress:</b> General SEO options"
+msgstr "<b>SeoPress:</b> Generelle SEO-innstillinger"
+
+#: admin/general.inc.php:83
+#: admin/general.inc.php:420
+msgid "Save General SEO options"
+msgstr "Lagre generelle SEO-innstillinger"
+
+#: admin/general.inc.php:87
+#: admin/main.inc.php:44
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: admin/general.inc.php:90
+msgid "Directories"
+msgstr "Kataloger"
+
+#: admin/general.inc.php:94
+msgid "Groups"
+msgstr "Grupper"
+
+#: admin/general.inc.php:97
+msgid "Main Blog"
+msgstr "Hovedblogg"
+
+#: admin/general.inc.php:99
+msgid "User Blogs"
+msgstr "Brukerblogger"
+
+#: admin/general.inc.php:113
+#, php-format
+msgid ""
+"A directory view is the start-page of a component, the overview.\r\n"
+"<br>\r\n"
+"Most special tags will not work at the directory view, because they make no sense here.<br>\r\n"
+"The %%component...%% tags are just for sub-pages of the directories.<br>\r\n"
+"<br>\r\n"
+"The directory views are the main-pages and that's why it's important to give every directory a unique title and description.\r\n"
+"Write something about every directory on your site so that others will know what kind of directory they will find.\r\n"
+"<br><br>\r\n"
+"Examples: in the groups directory, write what kind of groups I will find on your social network.\r\n"
+"If you are in the members directory, write what kind of members I will find. Are your members musicians, or do they have the same hobbies? repair cars ...?\r\n"
+"Give a detailed explanation.\r\n"
+"\r\n"
+"."
+msgstr ""
+"En katalog er startsiden til en komponent: oversikten.\r\n"
+"<br>\r\n"
+"De fleste spesielle taggene vil ikke fungere i katalogvisningen, fordi de ikke gir mening her..<br>\r\n"
+"%%component...%%-taggene er bare for undersider til katalogene.<br>\r\n"
+"<br>\r\n"
+"Katalogvisningene er hovedsider, og det er derfor viktig å gi disse unike titler og beskrivelser.\r\n"
+"Skriv noe om hver katalog på ditt nettsted slik at andre vil skjønne hva slags katalog de vil finne.\r\n"
+"<br><br>\r\n"
+"Eksempler: i gruppekatalogen, skriv hva slags grupper man vil kunne finne.\r\n"
+"Hvis du er i medlemskatalogen, skriv hva slags medlemmer man vil finne. Er medlemmene musikere, eller har de andre hobbier? bilmekanikere?\r\n"
+"Gi en detaljert beskrivelse.\r\n"
+"\r\n"
+"."
+
+#: admin/general.inc.php:167
+#: admin/general.inc.php:239
+#: admin/general.inc.php:303
+#: admin/main.inc.php:66
+#: admin/main.inc.php:105
+#: admin/plugins.inc.php:132
+msgid "The site's name"
+msgstr "Nettstedets navn"
+
+#: admin/general.inc.php:168
+#: admin/general.inc.php:240
+#: admin/main.inc.php:106
+#: admin/plugins.inc.php:133
+msgid "Replaced with current component"
+msgstr "Byttes til gjeldende komponent"
+
+#: admin/general.inc.php:169
+#: admin/general.inc.php:241
+#: admin/main.inc.php:107
+#: admin/plugins.inc.php:134
+msgid "Replaced with current action"
+msgstr "Byttes til gjeldende handling"
+
+#: admin/general.inc.php:170
+#: admin/main.inc.php:123
+msgid "Replaced with the user's nicename"
+msgstr "Byttes til brukerens brukernavn (nicename)"
+
+#: admin/general.inc.php:171
+#: admin/main.inc.php:124
+msgid "Replaced with the user registered"
+msgstr "Byttes til den redistrerte brukeren"
+
+#: admin/general.inc.php:172
+#: admin/main.inc.php:125
+msgid "Replaced with the displayed name of the user"
+msgstr "Byttes til visningsnavnet til brukeren"
+
+#: admin/general.inc.php:173
+#: admin/main.inc.php:126
+msgid "Replaced with the full name of the user"
+msgstr "Byttes til brukerens fulle navn"
+
+#: admin/general.inc.php:234
+#: admin/general.inc.php:298
+#: admin/main.inc.php:31
+#: admin/main.inc.php:54
+msgid "Special Tags"
+msgstr "Spesielle tagger"
+
+#: admin/general.inc.php:242
+#: admin/main.inc.php:108
+#: admin/plugins.inc.php:135
+msgid "Replaced with component name"
+msgstr "Byttes til komponentens navn"
+
+#: admin/general.inc.php:243
+#: admin/main.inc.php:109
+#: admin/plugins.inc.php:136
+msgid "Replaced with the component ID"
+msgstr "Byttes til komponentens ID"
+
+#: admin/general.inc.php:244
+#: admin/main.inc.php:110
+#: admin/plugins.inc.php:137
+msgid "Replaced with component description"
+msgstr "Byttes til komponentens beskrivelse"
+
+#: admin/general.inc.php:245
+#: admin/main.inc.php:111
+#: admin/plugins.inc.php:138
+msgid "Replaced with the component status"
+msgstr "Byttes til komponentens status"
+
+#: admin/general.inc.php:246
+#: admin/main.inc.php:112
+#: admin/plugins.inc.php:139
+msgid "Replaced with the component date created"
+msgstr "Byttes til datoen da komponenten ble opprettet"
+
+#: admin/general.inc.php:247
+#: admin/main.inc.php:113
+#: admin/plugins.inc.php:140
+msgid "Replaced with the component admins"
+msgstr "Byttes til komponentens admin"
+
+#: admin/general.inc.php:248
+#: admin/main.inc.php:114
+#: admin/plugins.inc.php:141
+msgid "Replaced with the component total member-count"
+msgstr "Byttes til komponentens totale medlemstall"
+
+#: admin/general.inc.php:249
+#: admin/main.inc.php:115
+#: admin/plugins.inc.php:142
+msgid "Replaced with the component last activity"
+msgstr "Byttes til komponentens seneste aktivitet"
+
+#: admin/general.inc.php:250
+#: admin/main.inc.php:116
+msgid "Replaced with current forum topic title"
+msgstr "Byttes til gjeldende emnetittel i forumet"
+
+#: admin/general.inc.php:251
+#: admin/main.inc.php:117
+msgid "Replaced with current forum topic poster name"
+msgstr "Byttes til navnet til gjeldende emne i forumet"
+
+#: admin/general.inc.php:252
+#: admin/main.inc.php:118
+msgid "Replaced with current forum topic last poster name"
+msgstr "Byttes til navnet til gjeldende forums siste innsender"
+
+#: admin/general.inc.php:253
+#: admin/main.inc.php:119
+msgid "Replaced with current forum topic start time"
+msgstr "Byttes til gjeldende forumemnes opprettingstid"
+
+#: admin/general.inc.php:254
+#: admin/main.inc.php:120
+msgid "Replaced with current forum topic time"
+msgstr "Byttes til gjeldende forums emnetid"
+
+#: admin/general.inc.php:255
+#: admin/main.inc.php:121
+msgid "Replaced with current forum topic text"
+msgstr "Byttes til gjeldende forums emnetekst"
+
+#: admin/general.inc.php:304
+#: admin/main.inc.php:79
+msgid "Replaced with the current time"
+msgstr "Byttes til gjeldende tid"
+
+#: admin/general.inc.php:305
+#: admin/main.inc.php:80
+msgid "Replaced with the current date"
+msgstr "Byttes til gjeldende dato"
+
+#: admin/general.inc.php:306
+#: admin/main.inc.php:81
+msgid "Replaced with the current month"
+msgstr "Byttes til gjeldende måned"
+
+#: admin/general.inc.php:307
+#: admin/main.inc.php:82
+msgid "Replaced with the current year"
+msgstr "Byttes til gjeldende år"
+
+#: admin/general.inc.php:323
+#: admin/general.inc.php:341
+#: admin/general.inc.php:383
+#: admin/main.inc.php:57
+msgid "Special Tags for WP and WPMU"
+msgstr "Spesielle tagger for WP og WP Multisite"
+
+#: admin/general.inc.php:324
+#: admin/general.inc.php:342
+#: admin/general.inc.php:384
+msgid "For a list of all available tags go "
+msgstr "For en liste med alle tilgjengelige tagger, gå "
+
+#: admin/general.inc.php:324
+#: admin/general.inc.php:342
+#: admin/general.inc.php:384
+#: admin/plugins.inc.php:159
+msgid "here"
+msgstr "hit"
+
+#: admin/general.inc.php:380
+msgid "Info"
+msgstr "Info"
+
+#: admin/general.inc.php:381
+msgid "You need to activate the plugin sitewide to run user blogs."
+msgstr "Du må nettverksaktivere innstikket for å kjøre det på brukerblogger."
+
+#: admin/main.inc.php:30
+msgid "Welcome"
+msgstr "Velkommen"
+
+#: admin/main.inc.php:32
+msgid "Pro Version"
+msgstr "Pro-versjon"
+
+#: admin/main.inc.php:38
+#: seopress.php:120
+#: seopress.php:124
+msgid "General Seo"
+msgstr "Generell seo"
+
+#: admin/main.inc.php:39
+msgid "This is the place for the general meta(title, description, keywords) optimization in a WP | WPMU | Buddypress environment. The meta options shown in this page will be generated depending on the WP you use and the activated Buddypress components."
+msgstr "Dette er stedet for de generelle metadataene (tittel, beskrivelse og nøkkelord), for å optimere WP-, WPMS- og BuddyPress-miljøet. Metavalgene på denne siden vil bli generert på bakgrunn av hva slags WP du bruker og aktiverte BuddyPress-komponenter."
+
+#: admin/main.inc.php:41
+#: seopress.php:121
+msgid "Plugins Seo"
+msgstr "Innstikks-seo"
+
+#: admin/main.inc.php:42
+msgid "If you have installed plugins to extend Buddypress, this is the place where to configure the Seo behavior of every component. First you need to select where the component is shown in the front-end. After saving, you will be able to enter all meta data depending on your selection."
+msgstr "Hvis du har installert innstikk for å utvide BuddyPress, er dette stedet hvor du kan konfigurere seo for hver komponent. Først må du velge hvor komponenten vises på nettsidene. Etter at du har lagret, vil du kunne legge inn metadata på bakgrunn av dine valg."
+
+#: admin/main.inc.php:45
+msgid "Settings page for the global Seo configuration, update and delete Seo for Buddypress."
+msgstr "Siden for global seo-konfigurasjonsinnstillinger, oppdatering og sletting av Seo for BuddyPress."
+
+#: admin/main.inc.php:55
+msgid "Special Tags are place holders to use in the meta data to specifay the content. Not all Tags are avalibe everywere. Use every tag with care, and check if the tag is suportet and gife you back the result you wanted."
+msgstr "Spesielle tagger er plassholdere som kan brukes i metadataene for å spesifisere innholdet. Ikke alle taggene er tilgjengelige overalt. Bruk dem med forsiktighet, og sjekk om taggen er støttet, og gir deg det resultatet du ønsker."
+
+#: admin/main.inc.php:58
+msgid "These tags can be included and will be replaced when the main/user blog pages or posts are displayed."
+msgstr "Disse taggene kan inkluderes og vil bli byttet ut når innlegg eller sider på hoved-, eller bruker-blogger vises."
+
+#: admin/main.inc.php:64
+msgid "Replaced with the date of the post/page"
+msgstr "Byttes til datoen til innlegget/siden"
+
+#: admin/main.inc.php:65
+msgid "Replaced with the title of the post/page"
+msgstr "Byttes til tittelen til innlegget/siden"
+
+#: admin/main.inc.php:67
+msgid "Replaced with the post/page excerpt"
+msgstr "Byttes til utdraget fra innlegget/siden"
+
+#: admin/main.inc.php:68
+msgid "Replaced with the current tag/tags"
+msgstr "Byttes til de gjeldende stikkordene"
+
+#: admin/main.inc.php:69
+msgid "Replaced with the post categories (comma separated)"
+msgstr "Byttes til innleggskategorien(e) (kommaseparert)"
+
+#: admin/main.inc.php:70
+msgid "Replaced with the category description"
+msgstr "Byttes til kategoribeskrivelse"
+
+#: admin/main.inc.php:71
+msgid "Replaced with the tag description"
+msgstr "Byttes til stikkordsbeskrivelsen"
+
+#: admin/main.inc.php:72
+msgid "Replaced with the term description"
+msgstr "Byttes til lang nøkkelbeskrivelse"
+
+#: admin/main.inc.php:73
+msgid "Replaced with the term name"
+msgstr "Byttes til nøkkelnavn"
+
+#: admin/main.inc.php:74
+msgid "Replaced with the post/page modified time"
+msgstr "Byttes til innleggets/sidens modifisert dato"
+
+#: admin/main.inc.php:75
+msgid "Replaced with the post/page ID"
+msgstr "Byttes til innleggets/sidens ID"
+
+#: admin/main.inc.php:76
+msgid "Replaced with the post/page author's 'nicename'"
+msgstr "Byttes til innleggets/sidens forfatters 'nicename'"
+
+#: admin/main.inc.php:77
+msgid "Replaced with the post/page author's user ID"
+msgstr "Byttes til innleggets/sidens forfatters bruker-ID"
+
+#: admin/main.inc.php:78
+msgid "Replaced with the current search phrase"
+msgstr "Byttes til gjeldende søkefrase"
+
+#: admin/main.inc.php:83
+msgid "Replaced with the current page number (i.e. page 2 of 4)"
+msgstr "Byttes til gjeldende sidenummer (f.eks side 2 av 4)"
+
+#: admin/main.inc.php:84
+msgid "Replaced with the current page total"
+msgstr "Byttes til gjeldende totalt antall sider"
+
+#: admin/main.inc.php:85
+msgid "Replaced with the current page number"
+msgstr "Byttes til gjeldende sidenummer"
+
+#: admin/main.inc.php:86
+msgid "Attachment caption"
+msgstr "Vedleggstekst"
+
+#: admin/main.inc.php:98
+msgid "Special Tags for Buddypress"
+msgstr "Spesielle tagger for BuddyPress"
+
+#: admin/main.inc.php:99
+msgid "These tags can be included and will be replaced when a Buddypress page is displayed."
+msgstr "Disse taggene kan inkluderes og vil bli byttet når en BuddyPress-side blir vist."
+
+#: admin/main.inc.php:122
+msgid "Replaced with the user ID"
+msgstr "Byttes til bruker-ID"
+
+#: admin/main.inc.php:145
+msgid "Get the SeoPress Pro version"
+msgstr "Få deg SeoPress Pro"
+
+#: admin/main.inc.php:146
+msgid "Comming soon!"
+msgstr "Kommer snart!"
+
+#: admin/plugins.inc.php:33
+msgid "<b>SeoPress:</b> Plugins Seo Options"
+msgstr "<b>SeoPress:</b> Seo-innstillinger for innstikk"
+
+#: admin/plugins.inc.php:38
+msgid "Configuration"
+msgstr "Konfigurasjon"
+
+#: admin/plugins.inc.php:50
+msgid "Buddypress Seo configuration for extended components"
+msgstr "BuddyPress seo-konfigurasjon for utvidede komponenter"
+
+#: admin/plugins.inc.php:51
+msgid "Please select the component for which you like to edit the meta tags."
+msgstr "Vennligst velg hvilken komponent du vil redigere metataggene til."
+
+#: admin/plugins.inc.php:52
+msgid " !!! Attention: most times if a component has a directory view, every entry of the component has an own home view."
+msgstr " !!! Merk: for det meste har komponenter en katalogvisning, og alle innlegg til komponenten har sin egen hjem-visning."
+
+#: admin/plugins.inc.php:53
+msgid "To generate dynamic meta tags for these views, you need to select the component itself under \"extends other components\". "
+msgstr "For å generere dynamiske meta-stikkord for disse visningene, må du velge komponenten selv under \"utvid til andre komponenter\"."
+
+#: admin/plugins.inc.php:55
+msgid "For example, if you have \"Buddypress Events\" installed: it has a directory view and every event has a home view. In this case, you have to select \"events\" under \"extends other components\"."
+msgstr "For eksempel, hvis du har installert \"BuddyPress Events\": det har en katalogvisning og hvert arrangement har en hjem-visning. I dette tilfellet må du velge \"events\" under \"utvid til andre komponenter"
+
+#: admin/plugins.inc.php:59
+msgid "Update components configuration"
+msgstr "Oppdater komponentkonfigurasjon"
+
+#: admin/plugins.inc.php:181
+msgid "COMPONENTS EXTENDED"
+msgstr "KOMPONENTER UTVIDET"
+
+#: admin/settings.inc.php:9
+msgid "SeoPress:General settings"
+msgstr "SeoPress: Generelle innstillinger"
+
+#: admin/settings.inc.php:13
+msgid "Keyword Generator"
+msgstr "Nøkkelord-generator"
+
+#: admin/settings.inc.php:14
+msgid "Check this, if you want SeoPress to generate the keywords from the content, if there are no Keywords set."
+msgstr "Kryss av for denne hvis du vil at SeoPress skal generere nøkkelord fra innhold, hvis ingen nøkkelord er satt"
+
+#: admin/settings.inc.php:16
+msgid "How many Keywords to use?"
+msgstr "Hvor mange nøkkelord skal brukes?"
+
+#: admin/settings.inc.php:18
+#: admin/settings.inc.php:25
+#: admin/settings.inc.php:32
+msgid "Save"
+msgstr "Lagre"
+
+#: admin/settings.inc.php:22
+msgid "Hide meta box in “Add New Page/Edit” screen "
+msgstr "Skjul metaboksen i \"Legg til ny side/Rediger\"-skjermen "
+
+#: admin/settings.inc.php:23
+msgid "Check this, if you do not want to edit meta data in the “Add New Page/Edit” screen: "
+msgstr "Kryss av for denne hvis du ikke vil redigere metadata i \"Legg til ny side/Rediger\"-skjermen: "
+
+#: admin/settings.inc.php:29
+msgid "Hide meta box in “Add New Post/Edit” screen "
+msgstr "Skjul metaboksen i \"Legg til nytt innlegg/Rediger\"-skjermen "
+
+#: admin/settings.inc.php:30
+msgid "Check this, if you do not want to edit meta data in the “Add New Post/Edit” screen: "
+msgstr "Kryss av for denne hvis du ikke vil redigere metadata i \"Legg til nytt innlegg/Rediger\"-skjermen: "
+
+#: admin/settings.inc.php:36
+msgid "Standard length of the title"
+msgstr "Standardlengde på tittel"
+
+#: admin/settings.inc.php:37
+msgid "Please set up a maximum length of the title. After this the title will be stopped. If you dont want to stop, please type in 0."
+msgstr "Vennligst sett opp makslengden på tittelen. Etter dette vil tittelen bli stoppet. Hvis du ikke vil at den skal stoppes, skriv inn 0."
+
+#: admin/settings.inc.php:37
+#: admin/settings.inc.php:44
+msgid "number of chars"
+msgstr "antall tegn"
+
+#: admin/settings.inc.php:39
+msgid "Save standard title length"
+msgstr "Standard tittel-lengde"
+
+#: admin/settings.inc.php:43
+msgid "Standard length of meta description"
+msgstr "Standardlengde på meta-beskrivelse"
+
+#: admin/settings.inc.php:44
+msgid "Please set up a maximum length of meta description. After this the meta description will be stopped. If you dont want to stop, please type in 0."
+msgstr "Vennligst sett opp maks lengde på meta-beskrivelse. Etter dette vil meta-beskrivelsen bli stoppet. Hvis du ikke vil at den skal stoppe, vennligst skriv inn 0."
+
+#: admin/settings.inc.php:46
+msgid "Save standard description length"
+msgstr "Lagre standard beskrivelseslengde"
+
+#: admin/settings.inc.php:50
+#: admin/settings.inc.php:52
+msgid "Delete Seo for Buddypress"
+msgstr "Slett Seo for BuddyPress"
+
+#: admin/settings.inc.php:51
+msgid "I dont want to use Seo for Buddypress! Delete all concerning fields from the option table."
+msgstr "Jeg vil ikke bruke Seo for BuddyPress! Slett alle relevante felter fra tabellen wp_options"
+
+#: admin/single-metabox.php:38
+msgid "klick"
+msgstr "klikk"
+
+#: admin/single-metabox.php:41
+msgid "SeoPress settings"
+msgstr "SeoPress innstillinger"
+
+#: admin/single-metabox.php:44
+msgid "No Index"
+msgstr "No Index"
+
+#: admin/single-metabox.php:49
+msgid "Title"
+msgstr "Tittel"
+
+#: admin/single-metabox.php:54
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: admin/single-metabox.php:58
+msgid "Keywords"
+msgstr "Nøkkelord"
+
+#: meta.inc.php:366
+msgid "Home"
+msgstr "Hjem"
+
+#: meta.inc.php:370
+msgid "Blog &#124; "
+msgstr "Blogg | "
+
+#: meta.inc.php:372
+msgid "Blog &#124; Categories &#124; "
+msgstr "Blogg | Kategorier | "
+
+#: meta.inc.php:374
+msgid "Blog &#124; Tags &#124; "
+msgstr "Blogg | Stikkord | "
+
+#: meta.inc.php:378
+msgid "Blog"
+msgstr "Blogg"
+
+#: meta.inc.php:388
+#: meta.inc.php:390
+#, php-format
+msgid "%s Directory"
+msgstr "%s-katalog"
+
+#: meta.inc.php:393
+msgid "Create an Account"
+msgstr "Lag en konto"
+
+#: meta.inc.php:396
+msgid "Activate your Account"
+msgstr "Aktiver din konto"
+
+#: meta.inc.php:399
+msgid "Create a Group"
+msgstr "Lag en gruppe"
+
+#: meta.inc.php:402
+msgid "Create a Blog"
+msgstr "Lag en blogg"
+
+#. #-#-#-#-#  plugin.pot (SeoPress 1.0)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: seopress.php:119
+#: seopress.php:123
+msgid "SeoPress"
+msgstr "SeoPress"
+
+#: special-tags.inc.php:471
+#, php-format
+msgid "page %d of %d"
+msgstr "side %d av %d"
+
+#. #-#-#-#-#  plugin.pot (SeoPress 1.0)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  plugin.pot (SeoPress 1.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://sven-lehnert.de"
+msgstr "http://sven-lehnert.de"
+
+#. Description of the plugin/theme
+msgid "Seo for Wordpress, Wordpress MU and Buddypress"
+msgstr "Seo for Wordpress, Wordpress MS og Buddypress"
+
+#. Author of the plugin/theme
+msgid "Sven Lehnert, Sven Wagener"
+msgstr "Sven Lehnert, Sven Wagener"
+

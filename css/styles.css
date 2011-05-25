@@ -1,0 +1,74 @@
+.seopress-tab-head .logo{
+	width:50px;
+	float:left;
+	margin: 0 15px 15px 0;
+}
+.seopress-tab-head h3{
+	margin:0;
+}
+.seopress-tab-head p{
+	margin:0;
+}
+
+.seopress-footer{
+	margin:25px;
+}
+.seopress-footer .footer-logo{
+	float:left;
+	width:250px;
+	margin-right:15px;
+}
+.seopress-footer .footer-menue{
+}
+.accordion h3 a{
+	font-size: 12px !important;
+}
+.seopress-config .ui-icon{
+	background: url("../images/menu.png") no-repeat scroll -247px -40px transparent !important;
+}
+.home .ui-icon{
+	background: url("../images/menu.png") no-repeat scroll -66px -40px transparent !important;
+}
+.posts .ui-icon{
+	background: url("../images/menu.png") no-repeat scroll -276px -40px transparent !important;
+}
+.pages .ui-icon{
+	background: url("../images/menu.png") no-repeat scroll -157px -40px transparent !important;
+}
+.blogs .ui-icon{
+	background: url("../images/menu.png") no-repeat scroll -368px -40px transparent !important;
+}
+.seopress-notice{
+    -moz-border-radius: 3px 3px 3px 3px;	
+    background-color: #FFFFE0;
+    border-color: #E6DB55;
+    border-style: solid;
+    border-width: 1px;
+    margin: 5px 15px 2px;
+    padding: 0 0.6em;		
+}
+.seopress-text{
+    -moz-border-radius: 3px 3px 3px 3px;	
+    background-color: #FFFFE0;
+    border-color: #E6DB55;
+    border-style: solid;
+    border-width: 1px;
+    margin: 5px 15px 2px;
+    padding: 0 0.6em;			
+}
+.seopress-components-text{
+    -moz-border-radius: 3px 3px 3px 3px;	
+    background-color:#EDEDED;
+    border-color: #DFDFDF;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0 0.6em;
+	margin: 0 0 15px 0;
+	clear:both;
+}
+.tab_bottom{
+	padding: 0 1.4em 1em 1.4em;
+}
+.ui-state-active{
+	font-weight:bold !important;
+}
