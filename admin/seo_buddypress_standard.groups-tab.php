@@ -20,20 +20,20 @@
 		
 		// DIRECTORY GROUPS 	-->
         $lable= array( __('Groups Directory', 'seopress') ,"directory_groups_title","directory_groups","directory_groups_tags",'','','directory_groups_noindex');  
-        seopress_metabox($lable,$directory_groups, 'bp-component-unknown' ); 
+        seopress_metabox($lable,$directory_groups, 'bp-component-groups' ); 
         
         // GROUPS HOME
         $lable= array( __('Group', 'seopress') ,"groups_home_title","groups_home","groups_home_tags",'','','groups_home_noindex');  
-        seopress_metabox($lable,$groups_home, 'bp-component-unknown' );
+        seopress_metabox($lable,$groups_home, 'bp-component-groups-home' );
         
         
         $lable= array( __('Groups (in Profile)', 'seopress') ,"profil_groups_title","profil_groups","profil_groups_tags",'','','profil_groups_noindex');  
-        seopress_metabox($lable,$profil_groups, 'bp-component-unknown' ); 
+        seopress_metabox($lable,$profil_groups, 'bp-component-groups' ); 
          
         // GROUPS WIRE ????
         if(in_array('wire',$bp->active_components)){
             $lable= array("WIRE","groups_wire_title","groups_wire","groups_wire_tags",'','','groups_wire_noindex');  
-            seopress_metabox($lable,$groups_wire, 'bp-component-unknown' ); 
+            seopress_metabox($lable,$groups_wire, 'bp-component-groups' ); 
         }
 
         do_action( 'sp_seo_buddypress_standard_groups' );

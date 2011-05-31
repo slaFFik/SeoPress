@@ -27,7 +27,7 @@ if( !function_exists( 'tk_get_wp_type' ) ){
 if( !function_exists( 'tk_is_buddypress' ) ){
 	function tk_is_buddypress(){
 		global $bp;
-		if ( defined( 'BP_VERSION' ) && $bp->current_component != "" ){ return true; }else{ return false; }
+		if ( defined( 'BP_VERSION' ) ){ return true; }else{ return false; }
 	}
 }
 /**
@@ -83,7 +83,7 @@ if( !function_exists( 'tk_get_page_type' ) ){
 		if( tk_get_wp_type() == "mu" ) {
 			if( is_admin() ) return 'mu-admin'; // Whats happening here on mu blogs?
 			if( is_home() ) return 'mu-home';
-			if( is_front_page() ) return 'mu-front_page';
+			if( is_front_page() ) return 'mu-front-page';
 			if( is_single() ) return 'mu-post';	
 			if( is_page() ) return 'mu-page';	 	
 			if( is_sticky() ) return 'mu-sticky';	 				
@@ -110,7 +110,7 @@ function tk_is_signup(){
 function echo_page(){
 	echo '<br><br>Page type: ' . tk_get_page_type();
 }
-// add_action( 'wp_head', 'echo_page' );
+add_action( 'wp_head', 'echo_page' );
 
 
 

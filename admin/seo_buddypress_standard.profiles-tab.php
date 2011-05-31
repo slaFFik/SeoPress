@@ -21,13 +21,13 @@
         
         // PROFILE HOME 	-->
         $lable= array( __('Profile','seopress') ,"profil_title","profil","profil_tags",'','','profil_noindex');  
-        seopress_metabox($lable, $profil, 'bp-component-unknown' );      
+        seopress_metabox($lable, $profil, 'bp-component-profile-public' );      
         
         
         // PROFILE FRIENDS  -->
         if(in_array('friends',$bp->active_components)){ 
-            $lable= array( __('Friends','seopress') ,"profil_friends_title","profil_friends","profil_friends_tags",'','','profil_friends_noindex');  
-            seopress_metabox($lable, $profil_friends, 'bp-component-unknown' ); 
+          //  $lable= array( __('Friends','seopress') ,"profil_friends_title","profil_friends","profil_friends_tags",'','','profil_friends_noindex');  
+          //  seopress_metabox($lable, $profil_friends, 'bp-component-unknown' ); 
         } 
         
         // PROFILE WIRE  -->

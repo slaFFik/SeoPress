@@ -9,13 +9,21 @@
 
 ## Initializing hooks
 function seopress_init() {
-	remove_all_filters( 'wp_title' );
-	
-	$wp_type=tk_get_wp_type();
 	
 	if( tk_is_buddypress() ){ // Buddypress
+		sp_init_special_tags();
+		sp_init_special_tags_pt();
+		sp_init_bp_special_tags();
+		sp_init_bp_special_tags_pt();
+		
+		remove_all_filters( 'bp_page_title' );
 		add_filter( 'bp_page_title' , 'sp_setup_header' , 0 );	
+		
 	}else{  // Wordress
+		sp_init_special_tags();
+		sp_init_special_tags_pt();
+		
+		remove_all_filters( 'wp_title' );
 		add_filter( 'wp_title' , 'sp_setup_header' , 0 );
 	}
 

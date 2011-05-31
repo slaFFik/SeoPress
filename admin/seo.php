@@ -73,6 +73,16 @@ function seopress_seo(){
     </form>
     
 	<?php include( 'footer.php' ); ?>
+	
+	<?php 
+		
+	global $bp;
+        
+        echo '<pre>';
+       // print_r($bp);
+        echo '</pre>'
+        
+	?>
     
 </div>
 <?php } ?>

@@ -24,7 +24,7 @@
         seopress_metabox( $lable , $main_blog_start , 'wp-home' ); 
         // MAIN BLOG FRONT PAGE
         $lable= array( __('Front page' , 'seopress' ) ,"main_blog_front_page_title","main_blog_front_page","main_blog_front_page_tags",'','','main_blog_front_page_noindex');  
-        seopress_metabox( $lable , $main_blog_front_page , 'wp-home' ); 
+        seopress_metabox( $lable , $main_blog_front_page , 'wp-front-page' ); 
         // MAIN BLOG POSTS
         $lable= array( __('Posts' , 'seopress' ) ,"main_blog_posts_title","main_blog_posts","main_blog_posts_tags",'','','main_blog_posts_noindex');  
         seopress_metabox( $lable , $main_blog_posts , 'wp-post' ); 

@@ -1,6 +1,5 @@
 <?php
 
-
 /*
 * Filling variables ???
 */
@@ -79,26 +78,19 @@ function sp_replace_special_tags( $string ){
 	return $string;	
 }
 
-// Buddypress pages
-function sp_init_bp_vars(){
-	global $bp, $sp_bp_current_component, $forum_template, $forum_array_pos;
+
+
+function sp_add_special_tag_page_type( $page_type , $special_tag_sets = array( 'global' ) , $option_name ){
+	global $seopress_special_tags;
 	
-	$sp_bp_current_component = $bp->active_components[$bp->current_component];
-	if ( !isset($sp_bp_current_component) ){ $sp_bp_current_component = $bp->current_component; }
+	$seopress_special_tags['page-types'][$page_type]['specialtag-sets'] = $special_tag_sets;
+	$seopress_special_tags['page-types'][$page_type]['option-name'] = $option_name;
+}
+
+function sp_add_special_tag( $set_name, $special_tag, $function, $description ){
+	global $seopress_special_tags;
 	
-	if ( isset( $bp->forums ) && $sp_bp_current_component == 'forums' || $bp->current_action == "forum"){
-		 if( !isset($forum_template) ){
-			 $forum_topic_id = bp_forums_get_topic_id_from_slug( $bp->action_variables[1] );
-			 // $forum_template = new BP_Forums_Template_Forum( 'newest' , groups_get_groupmeta( $bp->groups->current_group->id, 'forum_id' ), false, -1,  -1, -1, 'all', false );
-			 for ( $i=0; $i<=count($forum_template->topics); $i++ ){
-				if ($forum_topic_id == $forum_template->topics[$i]->topic_id) { 
-					$forum_array_pos = $i;      
-				}
-			  }
-		 } else {
-			$forum_template = new BP_Forums_Template_Forum( 'newest', groups_get_groupmeta( $bp->current_component->current->id, 'forum_id' ), false, 1, 1, 1, 'all', false );
-			$forum_array_pos = 0;
-		 }
-	}
-}	
+	$seopress_special_tags['specialtag-set'][$set_name][$special_tag]['function'] = $function;
+	$seopress_special_tags['specialtag-set'][$set_name][$special_tag]['description'] = $description;	
+}
 ?>

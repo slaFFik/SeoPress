@@ -23,6 +23,9 @@
         // USER BLOG HOME  -->
         $lable= array( __('Home' , 'seopress' ) ,"user_blog_title","user_blog","user_blog_tags",'','','');
         seopress_metabox( $lable, $user_blog, 'mu-home' );
+        // USER BLOG FRONT PAGE
+        $lable= array( __('Front page' , 'seopress' ) ,"user_blog_front_page_title","user_blog_front_page","user_blog_front_page_tags",'','','user_blog_front_page_noindex');  
+        seopress_metabox( $lable , $user_blog_front_page , 'mu-front-page' );
         // USER BLOG POSTS -->
         $lable= array( __('Posts' , 'seopress' ) ,"user_blog_posts_title","user_blog_posts","user_blog_posts_tags",'','','user_blog_posts_noindex');
         seopress_metabox( $lable, $user_blog_posts, 'mu-post' );

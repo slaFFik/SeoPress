@@ -43,10 +43,14 @@ include( 'functions.php' );
 include( 'bp-functions.php' );
 
 // Special tag engine
-include( 'special-tags/special_tag_functions.php' );
-include( 'special-tags/special_tag_sets.php' );
-include( 'special-tags/special_tag_config.php' );
 include( 'special-tags/special_tags.php' );
+include( 'special-tags/page_types.php' );
+include( 'special-tags/sets.php' );
+include( 'special-tags/functions.php' );
+
+include( 'special-tags/bp/page_types.php' );
+include( 'special-tags/bp/sets.php' );
+include( 'special-tags/bp/functions.php' );
 
 // Admin pages
 include( 'admin/seo.php' );
@@ -58,5 +62,7 @@ include( 'meta.php' );
 // Meta boxes for end of posts and pages
 include( 'admin/single_metabox.php' );
 include( 'admin/single_metabox_save.php' );
+
+
 
 ?>

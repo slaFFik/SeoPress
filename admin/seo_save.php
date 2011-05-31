@@ -73,6 +73,9 @@ function seopress_save_wordpress_networkblogs(){
 	// USER BLOG HOME
     $user_blog = array($_POST['user_blog_title'],$_POST['user_blog'],$_POST['user_blog_tags'],$_POST['user_blog_noindex']);
 	update_option('bp_seo_user_blog', $user_blog);
+	// USER BLOG FRONT PAGE
+    $user_blog_front_page = array($_POST['user_blog_front_page_title'],$_POST['user_blog_front_page'],$_POST['user_blog_front_page_tags'],$_POST['user_blog_front_page_noindex']) ;
+	update_option('bp_seo_user_blog_front_page', $user_blog_front_page);	
     // USER BLOG POSTS 
     $user_blog_posts = array($_POST['user_blog_posts_title'],$_POST['user_blog_posts'],$_POST['user_blog_posts_tags'],$_POST['user_blog_posts_noindex']) ;
 	update_option('bp_seo_user_blog_posts', $user_blog_posts);
@@ -122,6 +125,7 @@ function seopress_save_buddypress_profiles(){
 	// Profile Home
     $profil = array($_POST['profil_title'],$_POST['profil'],$_POST['profil_tags'],$_POST['profil_noindex']) ;
 	update_option('bp_seo_profil', $profil);
+	
     // Profile Blogs
     $profil_blogs = array($_POST['profil_blogs_title'],$_POST['profil_blogs'],$_POST['profil_blogs_tags'],$_POST['profil_blogs_noindex']) ;
 	update_option('bp_seo_profil_blogs', $profil_blogs);
@@ -140,12 +144,29 @@ function seopress_save_buddypress_profiles(){
     // Profile Wire
     $profil_wire = array($_POST['profil_wire_title'],$_POST['profil_wire'],$_POST['profil_wire_tags'],$_POST['profil_wire_noindex']) ;
 	update_option('bp_seo_profil_wire', $profil_wire);
+	
     // Profile Activity
     $profil_activity = array($_POST['profil_activity_title'],$_POST['profil_activity'],$_POST['profil_activity_tags'],$_POST['profil_activity_noindex']) ;
 	update_option('bp_seo_profil_activity', $profil_activity);
-    // Profile Activity Friends 
+    
+	// Profile Activity friends 
     $profil_activity_friends = array($_POST['profil_activity_friends_title'],$_POST['profil_activity_friends'],$_POST['profil_activity_friends_tags'],$_POST['profil_activity_friends_noindex']) ;
 	update_option('bp_seo_profil_activity_friends', $profil_activity_friends);
+	
+	// Profile Activity groups 
+    $profil_activity_groups = array($_POST['profil_activity_groups_title'],$_POST['profil_activity_groups'],$_POST['profil_activity_groups_tags'],$_POST['profil_activity_groups_noindex']) ;
+	update_option('bp_seo_profil_activity_groups', $profil_activity_groups);	
+	
+	// Profile Activity favorites 
+    $profil_activity_favorites = array($_POST['profil_activity_favorites_title'],$_POST['profil_activity_favorites'],$_POST['profil_activity_favorites_tags'],$_POST['profil_activity_favorites_noindex']) ;
+	update_option('bp_seo_profil_activity_favorites', $profil_activity_favorites);
+
+	// Profile Activity mentions 
+    $profil_activity_mentions = array($_POST['profil_activity_mentions_title'],$_POST['profil_activity_mentions'],$_POST['profil_activity_mentions_tags'],$_POST['profil_activity_mentions_noindex']) ;
+	update_option('bp_seo_profil_activity_mentions', $profil_activity_mentions);
+	
+	
+	
 }
 
 function seopress_save_buddypress_groups(){
