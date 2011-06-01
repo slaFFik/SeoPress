@@ -17,18 +17,35 @@
 	</div> -->
     
     <div class="accordion seopress-meta-boxes">
-		<?php 
+		<?php 	
         
-        // PROFILE HOME 	-->
+        // Profile 
         $lable= array( __('Profile','seopress') ,"profil_title","profil","profil_tags",'','','profil_noindex');  
-        seopress_metabox($lable, $profil, 'bp-component-profile-public' );      
+        seopress_metabox($lable, $profil, 'bp-component-profile-public' );
+
+		// Activity
+        if(in_array('activity',$bp->active_components)){ 
+        	$lable= array( __('Profile Activity', 'seopress'),"profil_activity_title","profil_activity","profil_activity_tags",'','','profil_activity_noindex');  
+        	seopress_metabox($lable,$profil_activity, 'bp-component-activity-just-me' );
+        } 	        
         
+        // Profile Blogs
+        if(in_array('blogs',$bp->active_components)){ 
+        	$lable= array( __('Profile Blogs','seopress') ,"profil_blogs_title","profil","profil_blogs_tags",'','','profil_blogs_noindex');  
+        	seopress_metabox($lable, $profil_blogs, 'bp-component-blogs-my-blogs' );              
+        }
         
         // PROFILE FRIENDS  -->
         if(in_array('friends',$bp->active_components)){ 
-          //  $lable= array( __('Friends','seopress') ,"profil_friends_title","profil_friends","profil_friends_tags",'','','profil_friends_noindex');  
-          //  seopress_metabox($lable, $profil_friends, 'bp-component-unknown' ); 
-        } 
+          	$lable= array( __('Profile Friends','seopress') ,"profil_friends_title","profil_friends","profil_friends_tags",'','','profil_friends_noindex');  
+          	seopress_metabox($lable, $profil_friends, 'bp-component-friends-my-friends' ); 
+        }
+
+                // PROFILE FRIENDS  -->
+        if(in_array('groups',$bp->active_components)){ 
+          	$lable= array( __('Profile Groups','seopress') ,"profil_groups_title","profil_groups","profil_groups_tags",'','','profil_groups_noindex');  
+         	seopress_metabox($lable, $profil_groups, 'bp-component-groups-my-groups' ); 
+        }        
         
         // PROFILE WIRE  -->
         if(in_array('wire',$bp->active_components)){

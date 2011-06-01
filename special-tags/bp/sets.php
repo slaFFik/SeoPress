@@ -19,17 +19,17 @@ function sp_init_bp_special_tags(){
 	*/
 	sp_add_special_tag( 'bp_user' , '%%userfullname%%', 'sp_get_bp_user_fullname', __( 'Shows the users fullname' , 'seopress') );
 	sp_add_special_tag( 'bp_user' , '%%usernicename%%', 'sp_get_bp_user_nicename', __( 'Shows the user nicename' , 'seopress') );
-	sp_add_special_tag( 'bp_user' , '%%userdisplayname%%', 'sp_get_bp_user_display_name', __( 'Shows the users displayname' , 'seopress') );
+	sp_add_special_tag( 'bp_user' , '%%userdisplayname%%', 'sp_get_bp_user_display_name', __( 'Shows the users full name' , 'seopress') );
 	
 	/*
 	* Buddypress forums
 	*/
-	sp_add_special_tag( 'bp_forum' , '%%forumtitle%%', 'sp_get_bp_forum_topic_title', __( 'Shows the forum title' , 'seopress') );
-	sp_add_special_tag( 'bp_forum' , '%%forumtopictitle%%', 'sp_get_bp_forum_topic_title', __( 'Shows the forum topic title' , 'seopress') );
-	sp_add_special_tag( 'bp_forum' , '%%forumtopicpostername%%', 'sp_get_bp_forum_topic_poster_name', __( 'Shows the forum topic poster name' , 'seopress') );
-	sp_add_special_tag( 'bp_forum' , '%%forumtopiclastpostername%%', 'sp_get_bp_forum_topic_poster_name', __( 'Shows the forum topic last poster name' , 'seopress') );
-	sp_add_special_tag( 'bp_forum' , '%%forumtopicstarttime%%', 'sp_get_bp_forum_topic_start_time', __( 'Shows the forum topic start time' , 'seopress') );
-	sp_add_special_tag( 'bp_forum' , '%%forumtopictime%%', 'sp_get_bp_forum_topic_time', __( 'Shows the forum topic time' , 'seopress') );
+	// sp_add_special_tag( 'bp_forum' , '%%forumname%%', 'sp_get_bp_group_name', __( 'Shows the forum name' , 'seopress') ); // Has it a name ???
+	
+	sp_add_special_tag( 'bp_forum_topic' , '%%forumtopictitle%%', 'sp_get_bp_forum_topic_title', __( 'Shows the forum topic title' , 'seopress') );
+	sp_add_special_tag( 'bp_forum_topic' , '%%forumtopictext%%', 'sp_get_bp_forum_post_text', __( 'Shows the forum topic text' , 'seopress') );
+	sp_add_special_tag( 'bp_forum_topic' , '%%forumtopicpostername%%', 'sp_get_bp_forum_topic_poster_name', __( 'Shows the forum topic poster name' , 'seopress') );
+	
 }
 
 ?>

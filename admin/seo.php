@@ -79,7 +79,7 @@ function seopress_seo(){
 	global $bp;
         
         echo '<pre>';
-       // print_r($bp);
+        print_r($bp);
         echo '</pre>'
         
 	?>

@@ -80,7 +80,7 @@ function sp_replace_special_tags( $string ){
 
 
 
-function sp_add_special_tag_page_type( $page_type , $special_tag_sets = array( 'global' ) , $option_name ){
+function sp_add_special_tag_page_type( $page_type , $special_tag_sets = array( 'global' ) , $option_name = '' ){
 	global $seopress_special_tags;
 	
 	$seopress_special_tags['page-types'][$page_type]['specialtag-sets'] = $special_tag_sets;

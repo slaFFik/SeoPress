@@ -26,7 +26,6 @@ if( !function_exists( 'tk_get_wp_type' ) ){
 */ 
 if( !function_exists( 'tk_is_buddypress' ) ){
 	function tk_is_buddypress(){
-		global $bp;
 		if ( defined( 'BP_VERSION' ) ){ return true; }else{ return false; }
 	}
 }
@@ -38,15 +37,15 @@ if( !function_exists( 'tk_is_buddypress' ) ){
 if( !function_exists( 'tk_get_page_type' ) ){
 	
 	function tk_get_page_type(){
+		global $bp;
+		
 		// If is wordpress and no buddypress
 		if( tk_get_wp_type() == "wp" ) {
 			if( is_admin() ) return 'wp-admin';
 			if( is_home() && !tk_is_signup() ) return 'wp-home';
-			if( is_front_page() ) return 'wp-front-page';
+			if( is_front_page() && $bp->current_component != 'forums' ) return 'wp-front-page';
 			if( is_single() ) return 'wp-post';	
-			if( is_page() && tk_is_buddypress() ){
-				
-				global $bp;
+			if( is_page() && tk_is_buddypress() && $bp->current_component != '' ){
 				
 				$component = $bp->current_component;
 				$action = $bp->current_action;
@@ -61,8 +60,6 @@ if( !function_exists( 'tk_get_page_type' ) ){
 					}else{
 						return 'bp-component-' . $component;
 					}
-				}else{
-					return 'wp-page ' . $action;
 				}
 			}else if( is_page() ){
 				return 'wp-page';	
@@ -127,7 +124,7 @@ function tk_show_bp_vars(){
 	print_r_html( $bp );
 	print_r_html( $forum_template );
 }
-// add_action( 'wp_footer', 'tk_show_bp_vars' );
+add_action( 'wp_footer', 'tk_show_bp_vars' );
 
 
 ?>

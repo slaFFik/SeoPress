@@ -52,6 +52,8 @@ if ( get_option( 'bp_seo_profil') != "" )	{	$profil = get_option('bp_seo_profil'
 if ( get_option( 'bp_seo_profil_blogs') != "" )	{	$profil_blogs = get_option('bp_seo_profil_blogs'); } else {$profil_blogs = $bp_seo_default_profile; }
 if ( get_option( 'bp_seo_profil_blogs_recent_posts') != "" )	{	$profil_blogs_recent_posts = get_option('bp_seo_profil_blogs_recent_posts'); } else {$profil_blogs_recent_posts = $bp_seo_default_profile; }
 if ( get_option( 'bp_seo_profil_blogs_recent_commments') != "" )	{	$profil_blogs_recent_commments = get_option('bp_seo_profil_blogs_recent_commments'); } else {$profil_blogs_recent_commments = $bp_seo_default_profile; }
+if ( get_option( 'bp_seo_profil_friends') != "" )	{	$profil_friends = get_option('bp_seo_profil_friends'); } else {$profil_friends = $bp_seo_default_profile; }
+if ( get_option( 'bp_seo_profil_groups') != "" )	{	$profil_groups = get_option('bp_seo_profil_groups'); } else {$profil_groups = $bp_seo_default_profile; }
 if ( get_option( 'bp_seo_profil_wire') != "" )	{	$profil_wire = get_option('bp_seo_profil_wire'); } else {$profil_wire = $bp_seo_default_profile; }
 
 if ( get_option( 'bp_seo_profil_activity') != "" )	{	$profil_activity = get_option('bp_seo_profil_activity'); } else {$profil_activity = $bp_seo_default_profile; }

@@ -22,14 +22,6 @@
 		$lable= array( __('Forums Directory', 'seopress') ,"directory_forums_title","directory_forums","directory_forums_tags",'','','directory_forums_noindex');  
         seopress_metabox($lable,$directory_forums, 'bp-component-unknown' ); 
         
-		// GROUPS FORUM
-        $lable= array( __('Forum (in Group)', 'seopress') ,"groups_forum_title","groups_forum","groups_forum_tags",'','','groups_forum_noindex');  
-        seopress_metabox($lable,$groups_forum, 'bp-component-unknown' ); 
-        
-        // GROUPS FORUM TOPIC
-        $lable= array( __('Forum Topic (in Group)', 'seopress') ,"groups_forum_topic_title","groups_forum_topic","groups_forum_topic_tags",'','','groups_forum_topic_noindex');  
-        seopress_metabox($lable,$groups_forum_topic, 'bp-component-unknown' ); 
-        
         do_action( 'sp_seo_buddypress_standard_forums' );
          
 

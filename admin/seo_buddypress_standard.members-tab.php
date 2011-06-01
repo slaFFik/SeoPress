@@ -22,9 +22,10 @@
 		$lable= array( __('Members Directory', 'seopress'), "directory_members_title","directory_members","directory_members_tags",'','','directory_members_noindex');  
         seopress_metabox($lable, $directory_members, 'bp-component-unknown' ); 
 
+
         // GROUPS MEMBERS
-        $lable= array( __('Members (in Groups)', 'seopress'), "groups_members_title","groups_members","groups_members_tags",'','','groups_members_noindex');  
-        seopress_metabox($lable, $groups_members, 'bp-component-unknown' ); 
+        // $lable= array( __('Members (in Groups)', 'seopress'), "groups_members_title","groups_members","groups_members_tags",'','','groups_members_noindex');  
+        // seopress_metabox($lable, $groups_members, 'bp-component-unknown' ); 
         
         do_action( 'sp_seo_buddypress_standard_members' );
         

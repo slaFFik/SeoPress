@@ -22,6 +22,7 @@
 		$lable= array( __('Blogs Directory', 'seopress') ,"directory_blogs_title","directory_blogs","directory_blogs_tags",'','','directory_blogs_noindex');  
         seopress_metabox($lable,$directory_blogs, 'bp-component-unknown' );    
  		
+        /*
         $lable= array("BLOGS","profil_blogs_title","profil_blogs","profil_blogs_tags",'','','profil_blogs_noindex');  
         seopress_metabox($lable,$profil_blogs, 'bp-component-unknown' ); 
         
@@ -34,7 +35,7 @@
         seopress_metabox($lable,$profil_blogs_recent_commments, 'bp-component-unknown' );
 
         do_action( 'sp_seo_buddypress_standard_blogs' );
-            
+        */  
         ?>  
 	</div>   
 </div>

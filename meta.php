@@ -12,20 +12,24 @@
  * @desc Setting up the title and meta values of a page (function for actionhook wp-title)
  * @return string Returns the string for the title
  * */
-function sp_setup_header(){
+function sp_setup_header( $title ){
 	global $seopress_special_tags;
 	$page_type = tk_get_page_type();
 	
 	if( !is_404() ){
 		
 		// Setup meta data and getting title
-		$title = sp_get_values( $seopress_special_tags['page-types'][$page_type]['option-name'] , $seopress_special_tags['page-types'][$page_type]['specialtag-sets'], 'title' );	
+		$new_title = sp_get_values( $seopress_special_tags['page-types'][$page_type]['option-name'] , $seopress_special_tags['page-types'][$page_type]['specialtag-sets'], 'title' );	
 		
 		// Adding meta tags to wp head
 		add_action( 'wp_head' , 'sp_insert_meta_tags' , 1 );
-	
-		return stripslashes( $title );
-	}
+		
+		if( $new_title == '' ){
+			return $title;
+		}else{	
+			return stripslashes( $new_title );
+		}
+	}	
 }
 
 /**
@@ -34,20 +38,18 @@ function sp_setup_header(){
  * @return array The meta values in an array or if parameter is given it returns meta field 
  * */
 function sp_get_values( $option_name , $special_tag_sets = array() , $key=false){
-	global $seopress_meta;
+	global $bp, $seopress_meta;
 	
 	// Getting template for unknown buddypress components
-	if( tk_is_buddypress() && count( $special_tag_sets ) == 0){ // If buddypress is installed and special tag set is empty
+	if( tk_is_buddypress() && $bp->current_component != '' && count( $special_tag_sets ) == 0){ // If buddypress is installed and special tag set is empty
 		sp_init_bp_unknown_components_special_tag_values(); // Initialising array for unknown buddypress components
-		
-		
-		
+
 		$option_name = sp_get_bp_option_name();
 					
 		$template = get_blog_option( SITE_ID_CURRENT_SITE , $option_name ); //
 
 	// Getting template	
-	}else{ 
+	}elseif( count( $special_tag_sets ) > 0 ){ 
 		// Initializing global special tag array
 		foreach ( $special_tag_sets AS $special_tag_set ){
 			sp_init_special_tag_values( $special_tag_set ); 
@@ -55,6 +57,9 @@ function sp_get_values( $option_name , $special_tag_sets = array() , $key=false)
 		
 		$template = get_blog_option( SITE_ID_CURRENT_SITE , $option_name );	
 	}	
+	
+	
+	// print_r($template);
 	
 	// Getting meta data from template, filled by global special tag array values
 	$meta = sp_replace_meta( $template );

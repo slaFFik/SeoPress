@@ -2,11 +2,9 @@
 
 function sp_init_special_tags_pt(){
 	global $seopress_special_tags;
-
-	/*
-	* Page types
-	*/
-	$seopress_special_tags['page-types']['global']['specialtag-sets'] = array( 'global' );
+	
+	
+	sp_add_special_tag_page_type( 'global' ,  array( 'global' ) );
 	
 	// Wordpress
 	sp_add_special_tag_page_type( 'wp-home' ,  array( 'global' ) , 'bp_seo_main_blog_start' );
