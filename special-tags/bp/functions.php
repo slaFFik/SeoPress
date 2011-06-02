@@ -127,29 +127,4 @@ function sp_get_bp_current_action(){
 	return $bp->current_action;
 }
 
-
-// Buddypress pages
-function sp_init_bp_vars(){
-	global $bp, $sp_bp_current_component, $forum_template, $forum_array_pos;
-	
-	$sp_bp_current_component = $bp->active_components[$bp->current_component];
-	if ( !isset($sp_bp_current_component) ){ $sp_bp_current_component = $bp->current_component; }
-	
-	if ( isset( $bp->forums ) && $sp_bp_current_component == 'forums' || $bp->current_action == "forum"){
-		 if( !isset($forum_template) ){
-			 $forum_topic_id = bp_forums_get_topic_id_from_slug( $bp->action_variables[1] );
-			 // $forum_template = new BP_Forums_Template_Forum( 'newest' , groups_get_groupmeta( $bp->groups->current_group->id, 'forum_id' ), false, -1,  -1, -1, 'all', false );
-			 for ( $i=0; $i<=count($forum_template->topics); $i++ ){
-				if ($forum_topic_id == $forum_template->topics[$i]->topic_id) { 
-					$forum_array_pos = $i;      
-				}
-			  }
-		 } else {
-			$forum_template = new BP_Forums_Template_Forum( 'newest', groups_get_groupmeta( $bp->current_component->current->id, 'forum_id' ), false, 1, 1, 1, 'all', false );
-			$forum_array_pos = 0;
-		 }
-	}
-}
-
-
 ?>

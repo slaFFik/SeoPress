@@ -8,21 +8,15 @@
  **/
 require( '../../../../wp-load.php' ); // Does this work anywhere ???
 
-print_taglist_ext( $_GET['slugs'] ); 
+tk_json_taglist( $_GET['type'] ); 
 
-function print_taglist_ext( $specialtag_sets = 'wp-home' ){
-	global $seopress_special_tags;
-					
-	$specialtag_sets_arr = $seopress_special_tags['page-types'][$specialtag_sets]['specialtag-sets'];
-
-	$result = array();
-	foreach($specialtag_sets_arr AS $specialtag_set_name => $specialtag_set){
-		
-		$special_tags=$seopress_special_tags['specialtag-set'][$specialtag_set];
-		
-		foreach($special_tags AS $special_tag => $array){
-			$result[] = array('value' => $special_tag, 'desc' => $array['description'] );							
-		}				
+function tk_json_taglist( $type = 'wp-home' ){
+	global $special_tags;
+	
+	$tags = $special_tags->get_tags( $type );
+	
+	foreach( $tags AS $tag => $value ){
+		$result[] = array('value' => $tag, 'desc' => $value['description'] );	
 	}
 	
 	echo json_encode($result);

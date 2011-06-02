@@ -25,7 +25,7 @@ function get_seopress_metabox_input_ajax( $id, $suggest_slug = 'blog_404_pages' 
 						}
 					})
 					.autocomplete({
-						source:"' . $seopress_plugin_url . 'admin/get_tags.php?slugs=' . $suggest_slug . '",
+						source:"' . $seopress_plugin_url . 'admin/get_tags.php?type=' . $suggest_slug . '",
 						dataType: "json",
 						focus: function() {
 							// prevent value inserted on focus

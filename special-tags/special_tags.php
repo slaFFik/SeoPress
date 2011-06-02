@@ -1,34 +1,11 @@
 <?php
 
 /*
-* Filling variables ???
-*/
-function sp_init_special_tag_engine(){
-	global $seopress_special_tags, $seopress_used_special_tags, $bp, $sp_bp_current_component, $bbdb;
-	echo "============================= used tags ===================================\n";
-	print_r_html($seopress_used_special_tags);
-	
-	echo "============================= all tags ===================================\n";	
-	foreach ( $seopress_special_tags AS $key => $value ){
-		if ( $key != 'page-types' ) sp_init_special_tag_values( $key );	
-	}
-	$seopress_special_tags_new=$seopress_special_tags;
-	unset($seopress_special_tags_new['page-types']);
-	print_r_html($seopress_special_tags_new);	
-}
-
-
-
-/*
 * Fill value fields  od $seopress_special_tags array with function of array
 * @param string Name of special tag which value field have to be filled
 */
 function sp_init_special_tag_values($special_tag_set){
 	global $seopress_special_tags, $sp_used_special_tags;	
-	
-	if( tk_is_buddypress() ){
-		sp_init_bp_vars(); // Have it to be here ?
-	}
 	
 	// Filling up every value field, needed of special tag fields
 	foreach ( $seopress_special_tags['specialtag-set'][$special_tag_set] AS $special_tag => $value ) {

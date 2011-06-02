@@ -10,13 +10,14 @@ if( !function_exists( 'tk_get_wp_type' ) ){
 		
 		if( defined( 'SITE_ID_CURRENT_SITE' ) ){
 			if ( $blog_id != SITE_ID_CURRENT_SITE ){
-				return 'mu';		
+				$wp_type = 'mu';		
 			}else{ 
-				return 'wp';			
+				$wp_type = 'wp';			
 			}
 		}else{
-			return 'wp';
-		}	
+			$wp_type = 'wp';
+		}
+		return apply_filters( 'tk_wp_type', $wp_type );	
 	}
 }
 /**
@@ -41,10 +42,10 @@ if( !function_exists( 'tk_get_page_type' ) ){
 		
 		// If is wordpress and no buddypress
 		if( tk_get_wp_type() == "wp" ) {
-			if( is_admin() ) return 'wp-admin';
-			if( is_home() && !tk_is_signup() ) return 'wp-home';
-			if( is_front_page() && $bp->current_component != 'forums' ) return 'wp-front-page';
-			if( is_single() ) return 'wp-post';	
+			if( is_admin() ) $page_type = 'wp-admin';
+			if( is_home() && !tk_is_signup() ) $page_type = 'wp-home';
+			if( is_front_page() && $bp->current_component != 'forums' ) $page_type = 'wp-front-page';
+			if( is_single() ) $page_type = 'wp-post';	
 			if( is_page() && tk_is_buddypress() && $bp->current_component != '' ){
 				
 				$component = $bp->current_component;
@@ -53,45 +54,47 @@ if( !function_exists( 'tk_get_page_type' ) ){
 				if( $component != '' ){
 					if( $action != '' ){
 						if( bp_is_group_forum_topic() ){
-							return 'bp-component-' . $component . '-' . $action . '-topic';							
+							$page_type = 'bp-component-' . $component . '-' . $action . '-topic';							
 						}else{
-							return 'bp-component-' . $component . '-' . $action;
+							$page_type = 'bp-component-' . $component . '-' . $action;
 						}
 					}else{
-						return 'bp-component-' . $component;
+						$page_type = 'bp-component-' . $component;
 					}
 				}
 			}else if( is_page() ){
-				return 'wp-page';	
+				$page_type = 'wp-page';	
 			}
 			
-			if( is_sticky() ) return 'wp-sticky';	 				
-			if( is_category() ) return 'wp-category';	 			
-			if( is_tag() ) return 'wp-tag';
-			if( is_tax() ) return 'wp-tax'; 
-			if( is_author() ) return 'wp-author';
-			if( is_archive() ) return 'wp-archive';
-			if( is_search() ) return 'wp-search';
-			if( tk_is_signup() ) return 'wp-signup';
-			if( is_404() ) return 'wp-404';
+			if( is_sticky() ) $page_type = 'wp-sticky';	 				
+			if( is_category() ) $page_type = 'wp-category';	 			
+			if( is_tag() ) $page_type = 'wp-tag';
+			if( is_tax() ) $page_type = 'wp-tax'; 
+			if( is_author() ) $page_type = 'wp-author';
+			if( is_archive() ) $page_type = 'wp-archive';
+			if( is_search() ) $page_type = 'wp-search';
+			if( tk_is_signup() ) $page_type = 'wp-signup';
+			if( is_404() ) $page_type = 'wp-404';
 		}
 		
 		// If is wordpress mu
 		if( tk_get_wp_type() == "mu" ) {
-			if( is_admin() ) return 'mu-admin'; // Whats happening here on mu blogs?
-			if( is_home() ) return 'mu-home';
-			if( is_front_page() ) return 'mu-front-page';
-			if( is_single() ) return 'mu-post';	
-			if( is_page() ) return 'mu-page';	 	
-			if( is_sticky() ) return 'mu-sticky';	 				
-			if( is_category() ) return 'mu-category';	 			
-			if( is_tag() ) return 'mu-tag';
-			if( is_tax() ) return 'mu-tax'; 
-			if( is_author() ) return 'mu-author';
-			if( is_archive() ) return 'mu-archive';
-			if( is_search() ) return 'mu-search';
-			if( is_404() ) return 'mu-404';
-		}	
+			if( is_admin() ) $page_type = 'mu-admin'; // Whats happening here on mu blogs?
+			if( is_home() ) $page_type = 'mu-home';
+			if( is_front_page() ) $page_type = 'mu-front-page';
+			if( is_single() ) $page_type = 'mu-post';	
+			if( is_page() ) $page_type = 'mu-page';	 	
+			if( is_sticky() ) $page_type = 'mu-sticky';	 				
+			if( is_category() ) $page_type = 'mu-category';	 			
+			if( is_tag() ) $page_type = 'mu-tag';
+			if( is_tax() ) $page_type = 'mu-tax'; 
+			if( is_author() ) $page_type = 'mu-author';
+			if( is_archive() ) $page_type = 'mu-archive';
+			if( is_search() ) $page_type = 'mu-search';
+			if( is_404() ) $page_type = 'mu-404';
+		}
+
+		return apply_filters( 'tk_wp_page_type', $page_type );
 	}
 }
 
@@ -107,7 +110,7 @@ function tk_is_signup(){
 function echo_page(){
 	echo '<br><br>Page type: ' . tk_get_page_type();
 }
-add_action( 'wp_head', 'echo_page' );
+// add_action( 'wp_head', 'echo_page' );
 
 
 
@@ -124,7 +127,7 @@ function tk_show_bp_vars(){
 	print_r_html( $bp );
 	print_r_html( $forum_template );
 }
-add_action( 'wp_footer', 'tk_show_bp_vars' );
+// add_action( 'wp_footer', 'tk_show_bp_vars' );
 
 
 ?>

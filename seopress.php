@@ -27,41 +27,47 @@ $seopress_plugin_url = plugin_dir_url( __FILE__ );
 // loading langauge engine
 load_plugin_textdomain( 'seopress', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 
-include( 'init.php' );
+require_once( 'init.php' );
 
 // Loading libraries
-include( 'lib/io.inc.php' );
-include( 'lib/wordpress/io.inc.php' );
-include( 'lib/wordpress/wp.inc.php' );
-include( 'lib/wordpress/wp_url.inc.php' );
+require_once( 'lib/io.inc.php' );
+require_once( 'lib/wordpress/io.inc.php' );
+require_once( 'lib/wordpress/wp.inc.php' );
+require_once( 'lib/wordpress/wp_url.inc.php' );
 
 // Loading css and js
-include( 'css/loader.php' );
-include( 'js/loader.php' );
+require_once( 'css/loader.php' );
+// require_once( 'js/loader.php' );
+require_once( 'lib/wordpress/tk_jquery/tk_jqueryui.php' );
 
-include( 'functions.php' );
-include( 'bp-functions.php' );
+require_once( 'functions.php' );
+require_once( 'bp-functions.php' );
 
 // Special tag engine
-include( 'special-tags/special_tags.php' );
-include( 'special-tags/page_types.php' );
-include( 'special-tags/sets.php' );
-include( 'special-tags/functions.php' );
+// include( 'special-tags/special_tags.php' );
 
-include( 'special-tags/bp/page_types.php' );
-include( 'special-tags/bp/sets.php' );
-include( 'special-tags/bp/functions.php' );
+require_once( 'special-tags/special-tag-core.php' );
+
+require_once( 'special-tags/wp/page_types.php' );
+require_once( 'special-tags/wp/sets.php' );
+require_once( 'special-tags/wp/functions.php' );
+
+require_once( 'special-tags/bp/page_types.php' );
+require_once( 'special-tags/bp/sets.php' );
+require_once( 'special-tags/bp/functions.php' );
 
 // Admin pages
-include( 'admin/seo.php' );
-include( 'admin/settings.php' );
-include( 'admin/getpro_tab.php' );
+require_once( 'admin/seo.php' );
+require_once( 'admin/settings.php' );
+require_once( 'admin/getpro_tab.php' );
 
 // Setup functions for meta tags
-include( 'meta.php' );
+require_once( 'meta.php' );
 // Meta boxes for end of posts and pages
-include( 'admin/single_metabox.php' );
-include( 'admin/single_metabox_save.php' );
+require_once( 'admin/single_metabox.php' );
+require_once( 'admin/single_metabox_save.php' );
+
+require_once( 'sp-core.php' );
 
 
 
