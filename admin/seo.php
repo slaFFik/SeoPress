@@ -8,81 +8,57 @@
  **/
 
 function seopress_seo(){
+	global $seopress_plugin_url;
+		
 	include( 'seo_save.php' ); // Saving posted data
-	
 	include( 'seo_meta_box.php' ); // Meta box for title, description and keyword entry
 	include( 'seo_init_bp_vars.php' ); // Initializing buddypress variables
-	
-	
-	global $seopress_plugin_url;
-	
-?>
-<div class="wrap">
-           
-    <script type="text/javascript">
-		jQuery(document).ready(function($){
-			$( ".config-tabs" ).tabs();
-			$( ".accordion" ).accordion({ header: "h3", active: false, autoHeight: false, collapsible:true });
-		});
-    </script>
 
-    <h2><?php _e ('Seo Settings', 'seopress') ?></h2>
-    
-    <form method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
-        
-        <div class="config-tabs">
-        	
-            <!-- Configuration tabs //-->
-            <ul>
-                <li><a href="#cap_main_blog" ><?php _e ('Wordpress', 'seopress') ?></a></li>
-                
-                <?php if(defined( 'SITE_ID_CURRENT_SITE' )){?>
-                <li><a href="#cap_user_blogs" ><?php _e ('Wordpress Network', 'seopress') ?></a></li>
-                <?php } ?>
-                
-                <?php if ( defined( 'BP_VERSION' ) ){?>  
-                <li><a href="#cap_bp_standard" ><?php _e ('Buddypress', 'seopress') ?></a></li>
-	                <?php if ( sp_is_bp_plugin_installed() ){ ?>
-	                <li><a href="#cap_bp_plugins"><?php _e ( 'Buddypress Plugins', 'seopress'); ?></a></li>
-	                <?php } ?>
-                <?php } ?>
-            </ul>
-            <!-- Configuration tabs //-->
-            
-            <!-- Tab content //-->
-            <?php include("seo_wordpress_blog.tab.php"); ?>
-            <?php include("seo_wordpressmu_blog.tab.php"); ?>            
-        
-            <?php if( defined( 'BP_VERSION' ) ){ ?>
-				<?php if(in_array('blogs',$bp->active_components) || in_array('groups',$bp->active_components) || in_array('activity',$bp->active_components) || in_array('members',$bp->active_components) || in_array('forums',$bp->active_components)){ ?>
-                	
-                    <?php include("seo_buddypress_standard.tab.php"); ?>
-                    <?php if( sp_is_bp_plugin_installed() ) { ?>
-                    	<?php include("seo_buddypress_plugins.tab.php"); ?>
-                    <?php } ?>                    
-                     
-                <?php } ?>
-			<?php } ?>
-            <!-- Tab content end //-->
-                
-            <div class="tab_bottom">
-            	<button type="submit" name="seopress_save_seo" id="seopress_save_seo" class="button"><?php _e('Save Settings', 'seopress') ?></button>
-            </div>
-        </div>    
-        
-    </form>
-    
-	<?php include( 'footer.php' ); ?>
+	/*
+	 * Adding display
+	 */	
+	$display = new	TK_WP_ADMIN_DISPLAY( __( 'Seo Settings', 'seopress'), 'plugins' );
+	$display->add_element(  __( 'Optimize your Wordpress pages.', 'seopress') );
 	
-	<?php 
+	$form = new TK_WP_ADMIN_FORM( 'sp_seo_options' );
+	
+	/*
+	 * Adding jqueryui tabs
+	 */		
+	$tabs = new	TK_WP_JQUERYUI_TABS();	
+	
+	require_once( 'seo_wordpress.tab.php' );
+	require_once( 'seo_wordpressmu.tab.php' );
+	require_once( 'seo_buddypress.tab.php' );
+	require_once( 'seo_buddypress_plugins.tab.php' );
+	
+	// Wordpress
+	$tabs->add_tab( 'cap_main_blog', __ ('Wordpress', 'seopress'), sp_admin_wp_tab() );
+	
+	// Wordpress networked blogs
+	if( defined( 'SITE_ID_CURRENT_SITE' ) ){
+		$tabs->add_tab( 'cap_user_blogs', __ ('Wordpress Network', 'seopress'), sp_admin_wpmu_tab() );		
+	}
+	
+	// Buddypress
+	if( tk_is_buddypress() ){
 		
-	global $bp;
-        
-        echo '<pre>';
-        print_r($bp);
-        echo '</pre>'
-        
-	?>
-    
-</div>
-<?php } ?>
+		$tabs->add_tab( 'cap_bp_standard', __ ('Buddypress', 'seopress'), sp_admin_bp_tab() );
+		
+		if ( sp_is_bp_plugin_installed() ){
+			
+			$tabs->add_tab( 'cap_bp_plugins', __ ('Buddypress Plugins', 'seopress'), sp_admin_bp_plugins_tab() );
+		}		
+	}
+	
+	apply_filters( 'sp_seo_tabs', $tabs );
+	
+	$form->add_element( $tabs->get_html() );
+	
+	$form->add_save_button( __( 'save', 'seopress' ) );
+	
+	$display->add_element( $form->get_html() );
+	
+	$display->write_html();	
+
+} ?>

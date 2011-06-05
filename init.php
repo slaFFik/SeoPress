@@ -27,6 +27,7 @@ function seopress_admin_menu() {
 	add_menu_page( 'SeoPress Admin' , 'SeoPress' , 'manage_options', 'seopress_seo','seopress_seo', $seopress_plugin_url . 'images/icon-seopress-16x16.png');
 	add_submenu_page( 'seopress_seo', __( 'SeoPress - Seo options', 'seopress'),__( 'Seo Settings', 'seopress' ), 'manage_options', 'seopress_seo', 'seopress_seo' );
 	add_submenu_page( 'seopress_seo', __( 'SeoPress - Global options', 'seopress'),__( 'Global options', 'seopress' ), 'manage_options', 'seopress_settings', 'seopress_settings' );
+	add_submenu_page( 'seopress_seo', __( 'Test page', 'seopress'),__( 'Test', 'seopress' ), 'manage_options', 'test_page', 'test_page' );
 	
 }
 

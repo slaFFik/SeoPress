@@ -8,10 +8,11 @@ function seopress_css() {
 	echo '<link rel="stylesheet" href="' . $seopress_plugin_url . 'css/styles.css" type="text/css" media="screen" />';
 	
 	
-    if( $_GET['page'] == 'seopress_seo' || $_GET['page'] == 'seopress_settings'  ) {
-		echo '<link rel="stylesheet" href="' . $seopress_plugin_url . 'css/jquery-ui.css" type="text/css" media="screen" />';
+    if( $_GET['page'] == 'seopress_seo' || $_GET['page'] == 'seopress_settings' || $_GET['page'] == 'test_page' ) {
 		
-		// echo '<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css" rel="stylesheet" />';
+		wp_register_style('seopressui', $seopress_plugin_url . 'css/styles.css');
+		wp_enqueue_style('seopressui');
+		
 	}
 }
 ## Initialising javascripts and css

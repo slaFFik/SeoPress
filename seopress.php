@@ -28,6 +28,7 @@ $seopress_plugin_url = plugin_dir_url( __FILE__ );
 load_plugin_textdomain( 'seopress', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 
 require_once( 'init.php' );
+require_once( 'test.php' );
 
 // Loading libraries
 require_once( 'lib/io.inc.php' );
@@ -35,10 +36,19 @@ require_once( 'lib/wordpress/io.inc.php' );
 require_once( 'lib/wordpress/wp.inc.php' );
 require_once( 'lib/wordpress/wp_url.inc.php' );
 
+require_once('lib/wordpress/tk_html/tk_html.php');
+require_once('lib/wordpress/tk_html/tk_html_form.php');
+
+require_once('lib/wordpress/tk_wp_admin_gui/tk_wp_admin_display.php');
+require_once('lib/wordpress/tk_wp_admin_gui/tk_wp_admin_form.php');
+
+require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui.php' );
+require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_tabs.php' );
+require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_accordion.php' );
+
 // Loading css and js
 require_once( 'css/loader.php' );
-// require_once( 'js/loader.php' );
-require_once( 'lib/wordpress/tk_jquery/tk_jqueryui.php' );
+
 
 require_once( 'functions.php' );
 require_once( 'bp-functions.php' );
@@ -57,18 +67,15 @@ require_once( 'special-tags/bp/sets.php' );
 require_once( 'special-tags/bp/functions.php' );
 
 // Admin pages
+require_once( 'admin/sp_admin_core.php' );
 require_once( 'admin/seo.php' );
 require_once( 'admin/settings.php' );
 require_once( 'admin/getpro_tab.php' );
 
-// Setup functions for meta tags
-require_once( 'meta.php' );
 // Meta boxes for end of posts and pages
 require_once( 'admin/single_metabox.php' );
 require_once( 'admin/single_metabox_save.php' );
 
 require_once( 'sp-core.php' );
-
-
 
 ?>

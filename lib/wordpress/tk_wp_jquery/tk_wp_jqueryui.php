@@ -1,6 +1,6 @@
 <?php
 
-class TK_JQUERYUI{
+class TK_WP_JQUERYUI{
 	
 	var $jqueryui;
 	var $wp_components;
@@ -18,15 +18,17 @@ class TK_JQUERYUI{
 		$this->register_components();
 	}
 	
-	public function load_jqueryui( $components = array () ){
+	public function load_jqueryui( $components = array (), $css = true ){
 		if( defined( 'BP_VERSION' ) && in_array( 'jquery-ui-accordion', $components ) ){
-			// echo 'Deregistering: ' . 'dtheme-ajax-js' . "<br>";
 			wp_deregister_script( 'dtheme-ajax-js' ); // For Buddypress bug on accordion
 		}
 		
 		// loading jQuery core
-		// echo 'Enqueing: ' . 'jquery-ui' . "<br>";
 		wp_enqueue_script( 'jquery-ui' );
+		
+		if( $css ){
+			wp_enqueue_style( 'jquery-ui-css', plugin_dir_url( __FILE__ ) . 'jquery/jquery-ui.css' );
+		}
 		
 		foreach( $components AS $component ){
 			$jqueryui_url = $this->jqueryui[ $this->wp_version ][ $component ]['url'];	

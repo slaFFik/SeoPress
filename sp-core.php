@@ -49,7 +49,7 @@ class SP_CORE{
 		// Initialising data for admin			
 		}else{
 			
-			$this->init_jqueryui();
+			$this->init_admin();
 			
 			## Setting up post & page forms
 			if( get_option('bp_seo_meta_box_post') != true ){
@@ -261,8 +261,8 @@ class SP_CORE{
 		do_action( 'sp_init_special_tags' );
 	}
 	
-	private function init_jqueryui(){
-		$tk_jquery_ui = new TK_JQUERYUI();
+	private function init_admin(){
+		$tk_jquery_ui = new TK_WP_JQUERYUI();
 		$tk_jquery_ui->load_jqueryui( array ( 'jquery-ui-tabs', 'jquery-ui-accordion', 'jquery-ui-autocompleter' ) );
 	}
 	
