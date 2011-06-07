@@ -51,6 +51,10 @@ function sp_admin_bp_tab(){
 
 	$html.= $tabs->get_html();
 	
+	$button = '<p class="submit"><input class="button-primary" type="submit" name="save" value="' . __('Save settings', 'seopress') . '" /></p>';
+	
+	$html.= $button;	
+	
 	return $html;
 		
 }

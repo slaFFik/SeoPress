@@ -27,6 +27,7 @@ function sp_admin_bp_plugins_tab(){
 	
 	$accordion = new TK_WP_JQUERYUI_ACCORDION();		
 	
+	
 	// Runnung all components
 	foreach ($bp_components as $bp_component) {
 		
@@ -75,12 +76,12 @@ function sp_admin_bp_plugins_tab(){
 			$content.= '<input name="componentspage-types[' . $bp_component . '][slug]" type="hidden" ' . $checked . ' value="' . $bp_component . '" /></td>' ;
 			$content.= '</tr>';	
 
-			$accordion->add_section( $section['type'], $section['title'], sp_type_box( $section['type'], $section['values'] ) );
+			// $accordion->add_section( $section['type'], $section['title'], sp_type_box( $section['type'], $section['values'] ) );
 
 			$bp_main_component = $bp_component;						
 			
 			// Runnung all extendable components of this component
-			foreach($bp_components as $bp_sub_component){
+			foreach( $bp_components as $bp_sub_component ){
 				
 				if( $bp_sub_component != 'messages' && $bp_sub_component != 'settings' && $bp_sub_component != 'blogs' && $bp_sub_component != $bp_component ){							
 					 
@@ -107,11 +108,15 @@ function sp_admin_bp_plugins_tab(){
 			$content.= '</tbody>';
 			$content.= '</table>';
 			
-			$accordion->add_section( $component_name, $component_name, $content );										
+			$accordion->add_section( $bp_component, ucwords( strtolower(  $bp_main_component ) ) , $content );										
 		}					
-	}
+	}	
 
 	$html.= $accordion->get_html();
+	
+	$button = '<p class="submit"><input class="button-primary" type="submit" name="save" value="' . __('Save settings', 'seopress') . '" /></p>';
+	
+	$html.= $button;	
 	
 	return $html;
 		
@@ -161,7 +166,9 @@ function seopress_component_tab( $bp_component ){
 		
 		$is_component = 1;
 		
-		$accordion->add_section( 'bp-component-' . $bp_component, $bp_component, sp_type_box( $bp_component, $values ) );
+		$accordion->add_section( 'bp-component-' . $bp_component, sprintf( __( '%s Directory'  , 'seopress' ), ucwords( strtolower(  $bp_component ) ) ), sp_type_box( $bp_component, $values ) );
+		
+		 
 	}
 	
 	if( isset( $bp_seo_components[$bp_component][ 'plugin_extends' ] )){
@@ -182,7 +189,9 @@ function seopress_component_tab( $bp_component ){
 			
 			$is_component = 1;
 			
-			$accordion->add_section( 'bp-component-' .$main_comp . '_' . $bp_component, $bp_component, sp_type_box( $bp_component, $values ) );
+			$accordion->add_section( 'bp-component-' .$main_comp . '_' . $bp_component, sprintf( __( 'Page in %s'  , 'seopress' ), ucwords( strtolower(  $main_comp ) ) ), sp_type_box( $bp_component, $values ) );
+			
+			
 		}
 	}
 	

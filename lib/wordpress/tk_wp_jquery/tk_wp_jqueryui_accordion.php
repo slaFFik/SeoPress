@@ -27,7 +27,8 @@ class TK_WP_JQUERYUI_ACCORDION extends TK_HTML{
 		$html.= '<div class="tk-' . $id . '">';
 		
 		foreach( $this->elements AS $element ){
-			$html.= '<h3>' . $element['title'] . '</h3>';
+			
+			$html.= '<h3><a href="#">' . $element['title'] . '</a></h3>';
 			$html.= '<div id="' . $element['id'] . '" >' . $element['content'] . '</div>';
 		}
 		

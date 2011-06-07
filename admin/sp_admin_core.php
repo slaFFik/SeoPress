@@ -59,13 +59,11 @@ function sp_type_box( $type, $values, $css_class = '' ){
 		if( $field['field-type'] == 'textfield' ){
 			register_setting( 'sp-settings', $field['name'] );			
 			
-			$html.= '<tr>
-					 <td width="200"><lable for="' . $field['name'] . '">' . $field['title'] . '</lable></td>
-				     <td>
-				     	<input name="' . $field['name'] . '" id="' . $field['name'] . '" value="' . get_option( $field['name'] ) . '" onfocus="this.style.color=\'#000\'" onblur="this.style.color=\'#CCC\'" style="width:100%;color:#CCC;" />
-				     </td>
-				     </tr>';
+			$html.= '<tr><td width="200"><lable for="' . $field['name'] . '">' . $field['title'] . '</lable></td><td>';			
+			$html.= tk_wp_admin_form_textfield( $field['name'], $field['name'] , 'onfocus="this.style.color\'#000\'" onblur="this.style.color=\'#CCC\'" style="width:100%;color:#CCC;"', 'seopress' ) ;			
+			$html.= '</td></tr>';
 		}
+		
 		apply_filters( 'sp_type_box_field_loop', $fields );
 	}
 	$html.= '</tbody></table>';

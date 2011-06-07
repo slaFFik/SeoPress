@@ -30,9 +30,13 @@ function sp_admin_wpmu_tab(){
 		$accordion->add_section( $section['type'], $section['title'], sp_type_box( $section['type'], $section['values'] ) );
 	}
 	
-	$html.= $accordion->get_html();
+	$html.= $accordion->get_html();	
 			
 	do_action( 'sp_admin_wpmu_tab_bottom' );
+	
+	$button = '<p class="submit"><input class="button-primary" type="submit" name="save" value="' . __('Save settings', 'seopress') . '" /></p>';
+	
+	$html.= $button;	
 	
 	return $html;
 	

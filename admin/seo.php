@@ -10,17 +10,17 @@
 function seopress_seo(){
 	global $seopress_plugin_url;
 		
-	include( 'seo_save.php' ); // Saving posted data
-	include( 'seo_meta_box.php' ); // Meta box for title, description and keyword entry
-	include( 'seo_init_bp_vars.php' ); // Initializing buddypress variables
+	require_once( 'seo_save.php' ); // Saving posted data
+	require_once( 'seo_meta_box.php' ); // Meta box for title, description and keyword entry
+	require_once( 'seo_init_bp_vars.php' ); // Initializing buddypress variables
 
 	/*
 	 * Adding display
 	 */	
 	$display = new	TK_WP_ADMIN_DISPLAY( __( 'Seo Settings', 'seopress'), 'plugins' );
-	$display->add_element(  __( 'Optimize your Wordpress pages.', 'seopress') );
+	$display->add_element(  __( '<p>Optimize your Wordpress pages.</p>', 'seopress') );
 	
-	$form = new TK_WP_ADMIN_FORM( 'sp_seo_options' );
+	$form = new TK_WP_FORM( 'seopress' );
 	
 	/*
 	 * Adding jqueryui tabs
@@ -54,8 +54,6 @@ function seopress_seo(){
 	apply_filters( 'sp_seo_tabs', $tabs );
 	
 	$form->add_element( $tabs->get_html() );
-	
-	$form->add_save_button( __( 'save', 'seopress' ) );
 	
 	$display->add_element( $form->get_html() );
 	

@@ -51,6 +51,11 @@ class SP_CORE{
 			
 			$this->init_admin();
 			
+			add_action( 'admin_init', 'sp_register_seo_form' );
+			add_action( 'admin_init', 'sp_register_settings_form' );
+			
+			add_action( 'admin_menu', 'sp_admin_menue');
+			
 			## Setting up post & page forms
 			if( get_option('bp_seo_meta_box_post') != true ){
 				add_action('edit_form_advanced', 'sp_metabox'); // Should be reworked <- tk_admin
@@ -63,8 +68,6 @@ class SP_CORE{
 			add_action( 'save_post' , 'seopress_post_description', 1 ); // Should be reworked <- tk_admin
 			add_action( 'save_post' , 'seopress_post_keywords', 1 ); // Should be reworked <- tk_admin
 			add_action( 'save_post' , 'seopress_post_noindex', 1 ); // Should be reworked <- tk_admin	
-			
-			add_action( 'admin_menu' , 'seopress_admin_menu' ); // Should be reworked <- tk_admin
 			
 			$this->special_tags = $special_tags->get_tags();
 			
@@ -261,7 +264,7 @@ class SP_CORE{
 		do_action( 'sp_init_special_tags' );
 	}
 	
-	private function init_admin(){
+	public function init_admin(){				
 		$tk_jquery_ui = new TK_WP_JQUERYUI();
 		$tk_jquery_ui->load_jqueryui( array ( 'jquery-ui-tabs', 'jquery-ui-accordion', 'jquery-ui-autocompleter' ) );
 	}
@@ -270,144 +273,117 @@ class SP_CORE{
 	}
 }
 
+function sp_register_seo_form(){
+	tk_register_wp_form( 'seopress' );
+}
+function sp_register_settings_form(){
+	tk_register_wp_form( 'seopress_settings' );
+}
+
+function sp_admin_menue(){
+	global $blog_id, $seopress_plugin_url;
+	
+	if( !current_user_can('level_10') ){ 
+		return false;
+	} else {
+		if( defined('SITE_ID_CURRENT_SITE') ){	
+	  		if( $blog_id != SITE_ID_CURRENT_SITE ){
+	    		return false;
+	   		}
+		}
+	}
+		
+	add_menu_page( 'SeoPress Admin' , 'SeoPress' , 'manage_options', 'seopress_seo','seopress_seo', $seopress_plugin_url . 'images/icon-seopress-16x16.png');
+	add_submenu_page( 'seopress_seo', __( 'SeoPress - Seo options', 'seopress'),__( 'Seo Settings', 'seopress' ), 'manage_options', 'seopress_seo', 'seopress_seo' );
+	add_submenu_page( 'seopress_seo', __( 'SeoPress - Global options', 'seopress'),__( 'Global options', 'seopress' ), 'manage_options', 'seopress_settings', 'seopress_settings' );
+	add_submenu_page( 'seopress_seo', __( 'Test page', 'seopress'),__( 'Test', 'seopress' ), 'manage_options', 'test_page', 'test_page' );
+
+}
+
 function seopress_init(){
 	global $seopress;
 	$seopress = new SP_CORE();
 }
 
+function sp_rewrite_values_to_1_2( $old_option, $page_type ){
+	
+	$meta = get_blog_option( SITE_ID_CURRENT_SITE , $old_option );
+			
+	$values[ $page_type . '-title' ] = $meta[0];
+	$values[ $page_type . '-description'] = $meta[1];
+	$values[ $page_type . '-kewords'] = $meta[2];
+	$values[ $page_type . '-noindex'] = $meta[3];
+	
+	// delete_blog_option( SITE_ID_CURRENT_SITE , $old_option );		
+	
+	return $values;
+}
+
 function sp_update_to_1_2(){
 	global $seopress;
 	
-	if( get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_settings' ) == '' ){
-		
-		// Wordpress
-		$settings['templates']['wp-home'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_start' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_start' );
-		
-		$settings['templates']['wp-front-page'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_front_page' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_front_page' );
-		
-		$settings['templates']['wp-post'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_posts' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_posts' );
-		
-		$settings['templates']['wp-page'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_pages' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_pages' );
-		
-		$settings['templates']['wp-archive'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_archiv' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_archiv' );
-		
-		$settings['templates']['wp-category'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_cat' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_cat' );
-		
-		$settings['templates']['wp-author'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_autor_pages' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_autor_pages' );
-		
-		$settings['templates']['wp-search'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_search_pages' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_main_blog_search_pages' );
-		
-		// Wordpress network blogs
-		
-		$settings['templates']['mu-home'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog' );
-		
-		$settings['templates']['mu-front-page'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_front_page' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_front_page' );
-		
-		$settings['templates']['mu-post'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_posts' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_posts' );
-		
-		$settings['templates']['mu-page'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_pages' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_pages' );
-		
-		$settings['templates']['mu-archive'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_archiv' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_archiv' );
-		
-		$settings['templates']['mu-author'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_autor_pages' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_autor_pages' );
-		
-		$settings['templates']['mu-search'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_search_pages' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_search_pages' );
-		
-		$settings['templates']['mu-tag'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_tag_pages' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_tag_pages' );
+	if( get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_values' ) == '' ){	
 
-		// Buddypress variables
-		$settings['templates']['bp-component-activity'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_directory_activity' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_directory_activity' );		
-		
-		$settings['templates']['bp-component-activity-friends'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_activity_friends' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_activity_friends' );		
+		$settings['seopress_values'] = array();
 
-		$settings['templates']['bp-component-activity-groups'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_activity_groups' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_activity_groups' );		
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_main_blog_start', 'wp-home' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_main_blog_front_page', 'wp-front-page' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_main_blog_posts', 'wp-post' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_main_blog_pages', 'wp-page' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_main_blog_archiv', 'wp-archive' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_main_blog_cat', 'wp-category' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_main_blog_autor_pages', 'wp-author' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_main_blog_search_pages', 'wp-search' ) );
+		
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_user_blog', 'mu-home' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_user_blog_front_page', 'mu-front-page' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_user_blog_posts', 'mu-post' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_user_blog_pages', 'mu-page' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_user_blog_archiv', 'mu-archive' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_user_blog_autor_pages', 'mu-author' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_user_blog_search_pages', 'mu-search' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_user_blog_tag_pages', 'mu-tag' ) );
+		
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_directory_activity', 'bp-component-activity' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_profil_activity_friends', 'bp-component-activity-friends' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_profil_activity_groups', 'bp-component-activity-groups' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_profil_activity_favorites', 'bp-component-activity-favorites' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_profil_activity_mentions', 'bp-component-activity-mentions'  ));
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_directory_members', 'bp-component-members' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_directory_groups', 'bp-component-groups' ) ); // WHAAAAAAT ???
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_groups_home', 'bp-component-groups-home' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_groups_forum', 'bp-component-groups-forum' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_groups_forum_topic', 'bp-component-groups-forum-topic' ) );		
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_groups_members', 'bp-component-groups-members' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_profil_activity', 'bp-component-activity-just-me' ) );
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_profil', 'bp-component-profile-public' ) );	
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_profil_blogs', 'bp-component-blogs-my-blogs' ) );	
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_profil_friends', 'bp-component-friends-my-friends' ) );	
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_profil_groups', 'bp-component-groups-my-groups' ) );	
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_directory_forums', 'bp-component-forums' ) );	
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_directory_blogs', 'bp-component-blogs' ) );	
+		$settings['seopress_values'] = array_merge( $settings['seopress_values'], sp_rewrite_values_to_1_2( 'bp_seo_registration', 'bp-component-register' ) );		
 
-		$settings['templates']['bp-component-activity-favorites'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_activity_favorites' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_activity_favorites' );	
+		$settings['seopress_settings_values']['post_metabox'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_meta_box_post' );
+		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_meta_box_post' );	
+		$settings['seopress_settings_values']['page_metabox'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_meta_box_page' );
+		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_meta_box_page' );	
+		
+		$settings['seopress_settings_values']['title_length'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_metatitle_length' );
+		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_metatitle_length' );	
+		$settings['seopress_settings_values']['meta_description_length'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_metadesc_length' );
+		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_metadesc_length' );	
+		$settings['seopress_settings_values']['meta_description_length'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_plugins' );
+		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_plugins' );
+		
+		// print_r_html( $settings );
 
-		$settings['templates']['bp-component-activity-mentions'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_activity_mentions' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_activity_mentions' );		
-
-		$settings['templates']['bp-component-members'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_directory_members' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_directory_members' );		
-
-		$settings['templates']['bp-component-groups'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_tag_pages' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_directory_groups' );		
-
-		$settings['templates']['bp-component-groups-hom'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_groups_home' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_groups_home' );		
-
-		$settings['templates']['bp-component-groups-forum'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_groups_forum' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_groups_forum' );	
-
-		$settings['templates']['bp-component-groups-forum-topic'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_groups_forum_topic' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_groups_forum_topic' );
-
-		$settings['templates']['bp-component-groups-members'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_groups_members' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_groups_members' );
+		update_blog_option ( SITE_ID_CURRENT_SITE, 'seopress_values' , $settings['seopress_values'] );
+		update_blog_option ( SITE_ID_CURRENT_SITE, 'seopress_settings_values' , $settings['seopress_settings_values'] );
 		
-		$settings['templates']['bp-component-activity-just-me'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_activity' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_activity' );
-		
-		$settings['templates']['bp-component-profile-public'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_user_blog_tag_pages' );
-		
-		$settings['templates']['bp-component-blogs-my-blogs'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_blogs' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_blogs' );
-		
-		$settings['templates']['bp-component-friends-my-friends'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_friends' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_friends' );
-		
-		$settings['templates']['bp-component-groups-my-groups'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_groups' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_profil_groups' );
-		
-		$settings['templates']['bp-component-forums'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_directory_forums' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_directory_forums' );
-		
-		$settings['templates']['bp-component-blogs'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_directory_blogs' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_directory_blogs' );
-		
-		$settings['templates']['bp-component-register'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_registration' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_registration' );
-		
-		$settings['settings']['post_metabox'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_meta_box_post' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_meta_box_post' );
-		
-		$settings['settings']['page_metabox'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_meta_box_page' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_meta_box_page' );
-		
-		$settings['settings']['title_length'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_metatitle_length' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_metatitle_length' );
-		
-		$settings['settings']['meta_description_length'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_metadesc_length' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_metadesc_length' );
-
-		$settings['settings']['meta_description_length'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_plugins' );
-		// delete_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_metadesc_length' );
-		
-		update_blog_option ( SITE_ID_CURRENT_SITE, 'seopress_settings' , $settings );
-				
+		// print_r_html( get_option( 'seopress_values' ) );				
 	}
 }
-add_action( 'init', 'sp_update_to_1_2', 0)
+add_action( 'init', 'sp_update_to_1_2', 0);
 
 ?>
