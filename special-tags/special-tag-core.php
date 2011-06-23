@@ -40,6 +40,8 @@ class TK_SPECIAL_TAGS{
 		$sets = array();
 		$tags = array();
 		
+		echo $type;
+		
 		$return_tags = array();
 		
 		// Getting sets of types

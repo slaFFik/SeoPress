@@ -10,9 +10,8 @@
 function seopress_seo(){
 	global $seopress_plugin_url;
 		
-	require_once( 'seo_save.php' ); // Saving posted data
 	require_once( 'seo_meta_box.php' ); // Meta box for title, description and keyword entry
-	require_once( 'seo_init_bp_vars.php' ); // Initializing buddypress variables
+
 
 	/*
 	 * Adding display
@@ -32,15 +31,15 @@ function seopress_seo(){
 	require_once( 'seo_buddypress.tab.php' );
 	require_once( 'seo_buddypress_plugins.tab.php' );
 	
-	// Wordpress
+	// Wordpress tab
 	$tabs->add_tab( 'cap_main_blog', __ ('Wordpress', 'seopress'), sp_admin_wp_tab() );
 	
-	// Wordpress networked blogs
+	// Wordpress networked blogs tab
 	if( defined( 'SITE_ID_CURRENT_SITE' ) ){
 		$tabs->add_tab( 'cap_user_blogs', __ ('Wordpress Network', 'seopress'), sp_admin_wpmu_tab() );		
 	}
 	
-	// Buddypress
+	// Buddypress tabs
 	if( tk_is_buddypress() ){
 		
 		$tabs->add_tab( 'cap_bp_standard', __ ('Buddypress', 'seopress'), sp_admin_bp_tab() );
@@ -58,5 +57,9 @@ function seopress_seo(){
 	$display->add_element( $form->get_html() );
 	
 	$display->write_html();	
+	
+	// print_r_html( get_option('seopress_values') ); // Printing options
 
-} ?>
+} 
+
+?>

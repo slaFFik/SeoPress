@@ -23,13 +23,11 @@ class SP_CORE{
 		
 		// echo "WO Version: " . $GLOBALS['wp_version'] . ' ' . plugin_dir_url( __FILE__ );
 		
-		$this->settings = get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_settings' );
+		$this->settings = get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_values' );
 		$this->init_special_tags();
 					
 		// Initialising data for frontend	
 		if( !is_admin() ){
-			
-			$this->page_type = tk_get_page_type();
 
 			if( tk_is_buddypress() ){ // Should be reworked <- BP have to be hooked in
 				
@@ -42,7 +40,7 @@ class SP_CORE{
 				add_filter( 'wp_title' ,  array(&$this, 'init_seo') , 0, 1 );  // Filtering wordpress title
 			}
 			
-			$this->used_tags = $special_tags->get_tags( $this->page_type );
+			$this->used_tags = $special_tags->get_tags( $this->page_type ); // ???? Here ????
 			
 			do_action( 'sp_init' );
 			
@@ -108,9 +106,6 @@ class SP_CORE{
 			$meta = $this->replace_template( $template );
 		}
 		
-		// print_r($template);
-		// print_r($meta);
-		
 		$meta['title'] = apply_filters( 'sp_title', $meta['title'] );
 		$meta['description'] = apply_filters( 'sp_description', $meta['description'] );
 		$meta['keywords'] = apply_filters( 'sp_keywords', $meta['keywords'] );
@@ -128,12 +123,15 @@ class SP_CORE{
 	public function get_template( $page_type = '' ){
 		
 		if( $page_type == '' ){
-			$page_type = $this->page_type;
+			$page_type = tk_get_page_type();
 		}
+				
+		$template['title'] = $this->settings[ $page_type . '-title' ];
+		$template['description'] = $this->settings[ $page_type . '-description' ];
+		$template['keywords'] = $this->settings[ $page_type . '-keywords' ];
+		$template['noindex'] = $this->settings[ $page_type . '-noindex' ];
 		
-		$templates = $this->settings['templates'];
-		
-		return $templates[ $page_type ];
+		return $template;
 	} 
 	
 	public function update_template( $page_type, $template ){
@@ -163,19 +161,17 @@ class SP_CORE{
 	  	$newmeta = Array();
 	  	
 	  	if( is_array( $template ) ){
-
 	  		// Getting meta by replacing special tags in each temlate field
 		  	foreach( $template as $key => $meta_field_template ){
-		   		$newmeta[ $key ] = $special_tags->replace( $meta_field_template, $this->page_type );
-		  	} 
-		  	
+		   		$newmeta[ $key ] = $special_tags->replace( $meta_field_template, tk_get_page_type() );
+		  	} 		  	
 	  	}
-	  	
+	  	/*
 	 	$newmeta['title'] = $newmeta[0]; //////////////////////////////////// <- Have to be switched! Rewrite meta array!
 		$newmeta['description'] = $newmeta[1];
 		$newmeta['keywords'] = $newmeta[2];
 		$newmeta['noindex'] = $newmeta[3];
-	  	
+	  	*/
 	  	return $newmeta; 
 	}
 	

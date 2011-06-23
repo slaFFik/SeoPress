@@ -38,11 +38,14 @@ require_once( 'lib/wordpress/wp_url.inc.php' );
 require_once( 'lib/wordpress/tk_html/tk_html.php' );
 require_once( 'lib/wordpress/tk_html/tk_html_form.php' );
 require_once( 'lib/wordpress/tk_html/tk_form_element.php' );
+require_once( 'lib/wordpress/tk_html/tk_form_button.php' );
 require_once( 'lib/wordpress/tk_html/tk_form_textfield.php' );
+require_once( 'lib/wordpress/tk_html/tk_form_checkbox.php' );
 
 require_once( 'lib/wordpress/tk_wp_gui/tk_wp_admin_display.php' );
 require_once( 'lib/wordpress/tk_wp_gui/tk_wp_form.php' );
 require_once( 'lib/wordpress/tk_wp_gui/tk_wp_form_textfield.php' );
+require_once( 'lib/wordpress/tk_wp_gui/tk_wp_form_checkbox.php' );
 
 require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui.php' );
 require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_tabs.php' );
@@ -55,8 +58,6 @@ require_once( 'lib/wordpress/functions.php' );
 require_once( 'lib/buddypress/bp-functions.php' );
 
 // Special tag engine
-// include( 'special-tags/special_tags.php' );
-
 require_once( 'special-tags/special-tag-core.php' );
 
 require_once( 'special-tags/wp/page_types.php' );
@@ -76,6 +77,11 @@ require_once( 'admin/single_metabox.php' );
 require_once( 'admin/single_metabox_save.php' );
 
 require_once( 'sp-core.php' );
+
+function save_test_form(){
+	tk_register_wp_form( 'testoptiongroup' );
+}
+add_action( 'admin_init' , 'save_test_form' , 0 );
 
 add_action( 'init' , 'seopress_init' , 0 );
 

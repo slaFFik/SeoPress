@@ -3,8 +3,8 @@
 class TK_FORM_TEXTFIELD extends TK_FORM_ELEMENT{
 	var $extra;
 	
-	public function __construct( $id, $name, $value, $extra = '' ){
-		parent::__construct( $id, $name, $value );
+	public function __construct( $name, $value, $id = '', $extra = '' ){
+		parent::__construct( $name, $value, $id );
 		$this->extra = $extra;
 	}
 	
@@ -20,8 +20,8 @@ class TK_FORM_TEXTFIELD extends TK_FORM_ELEMENT{
 	}
 }
 
-function tk_form_textfield( $id, $name, $value, $extra = '' ){
-	$textfield = new TK_FORM_TEXTFIELD( $id, $name, $value, $size = 5, $extra = '' );
+function tk_form_textfield( $name, $value, $id = '', $extra = '' ){
+	$textfield = new TK_FORM_TEXTFIELD( $name, $value, $id, $extra );
 	return $textfield->get_html();
 }
 

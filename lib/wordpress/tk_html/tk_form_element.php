@@ -5,7 +5,7 @@ class TK_FORM_ELEMENT{
 	var $name;
 	var $value;
 	
-	public function __construct( $id = '' , $name = '' , $value = '' ){
+	public function __construct( $name = '' , $value = '', $id = '' ){
 		$this->id = $id;
 		$this->name = $name;
 		$this->value = $value;
