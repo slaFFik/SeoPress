@@ -12,8 +12,8 @@ class TK_SPECIAL_TAGS{
 		$this->tags = array();		
 	}
 	
-	public function replace( $string, $type = '' ){
-		$active_tags = $this->get_tags( $type );
+	public function replace( $string, $type = '', $fallback_type = '' ){
+		$active_tags = $this->get_tags( $type, '', $fallback_type );
 			
 		foreach( $active_tags AS $tag => $value ){
 			$string = str_replace( $tag , call_user_func( $value ['function'] ) , $string );
@@ -36,11 +36,9 @@ class TK_SPECIAL_TAGS{
 		$this->tags[ $tag ]['description'] = $description;
 	}
 	
-	public function get_tags( $type = '', $set = '' ){
+	public function get_tags( $type = '', $set = '', $fallback_type = '' ){
 		$sets = array();
 		$tags = array();
-		
-		echo $type;
 		
 		$return_tags = array();
 		
@@ -49,9 +47,12 @@ class TK_SPECIAL_TAGS{
 			foreach( $this->types AS $name => $value ){
 				$tags = array_merge( $sets, $this->types[ $name ]['sets'] );
 			}
+		}else if( !array_key_exists( $type, $this->types ) && $fallback_type != '' ){
+			$sets = $this->types[ $fallback_type ]['sets'];
 		}else{
 			$sets = $this->types[ $type ]['sets'];	
 		}
+		
 		
 		// Getting tags of sets
 		if( $set == '' ){

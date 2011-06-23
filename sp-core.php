@@ -160,10 +160,14 @@ class SP_CORE{
 		global $special_tags;	
 	  	$newmeta = Array();
 	  	
+	  	if( tk_is_buddypress() ){
+	  		$fallback_type = 'bp-component-unknown'; // Should be hooked in
+	  	}
+	  	
 	  	if( is_array( $template ) ){
 	  		// Getting meta by replacing special tags in each temlate field
 		  	foreach( $template as $key => $meta_field_template ){
-		   		$newmeta[ $key ] = $special_tags->replace( $meta_field_template, tk_get_page_type() );
+		   		$newmeta[ $key ] = $special_tags->replace( $meta_field_template, tk_get_page_type(), $fallback_type );
 		  	} 		  	
 	  	}
 	  	/*
