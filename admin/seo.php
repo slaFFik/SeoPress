@@ -19,7 +19,7 @@ function seopress_seo(){
 	$display = new	TK_WP_ADMIN_DISPLAY( __( 'Seo Settings', 'seopress'), 'plugins' );
 	$display->add_element(  __( '<p>Optimize your Wordpress pages.</p>', 'seopress') );
 	
-	$form = new TK_WP_FORM( 'seopress' );
+	$form = new TK_WP_FORM( 'seopress_seo_settings' );
 	
 	/*
 	 * Adding jqueryui tabs
@@ -56,7 +56,9 @@ function seopress_seo(){
 	
 	$display->add_element( $form->get_html() );
 	
-	$display->write_html();	
+	$display->write_html();
+
+	include( 'footer.php' );
 	
 	// print_r_html( get_option('seopress_values') ); // Printing options
 

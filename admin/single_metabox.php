@@ -6,91 +6,92 @@
  * @author Sven Lehnert, Sven Wagener
  * @copyright Copyright (C) Themekraft.com
  **/
-function sp_metabox(){
-	global $post;
-	
-	$metatitle_length = 150;
-	$metadesc_length = 170;
-	if(get_option('bp_seo_metadesc_length')){
-		$metadesc_length = get_option('bp_seo_metadesc_length');
-	}
-	if(get_option('bp_seo_metatitle_length')){
-		$metatitle_length = get_option('bp_seo_metatitle_length');
-	}
-	
-	$metapostvalue = sp_get_postmeta();
-		
-	$title=$metapostvalue['title'];
-	$description=$metapostvalue['description'];
-	$keywords=$metapostvalue['keywords'];
-	$noindex=$metapostvalue['noindex'];
-	
-	// For old values from 1.0 version
-	if($title=="") $title=$metapostvalue[0];
-	if($description=="") $description=$metapostvalue[1];
-	if($keywords=="") $keywords=$metapostvalue[2];
-	if($noindex=="") $noindex=$metapostvalue[3];	
-	
-	if($noindex == 1){
-		$checked = "checked";
-	}
-	
-	?>
 
-	<style type="text/css">
-	#seopress_title, #seopress_description, #seopress_keywords{
-		width:99%;
+function sp_post_metabox(){
+	
+	add_meta_box( 
+        'sp_post_metabox',
+        __( 'SEO (by SeoPress)', 'seopress' ),
+        'sp_metabox',
+        'post' 
+    );
+	
+}
+function sp_page_metabox(){
+		
+	if( $options['metabox_page'] != 'on' ){
+	    add_meta_box(
+	        'sp_page_metabox',
+	        __( 'SEO (by SeoPress)', 'seopress' ), 
+	        'sp_metabox',
+	        'page'
+	    );
 	}
-	</style>
-	<div id="seopress" class="postbox">
-		<div class="handlediv" title="<?php _e('klick'); ?>">
-			<br />
-		</div>
-		<h3 class="hndle"><?php _e('SEO (by SeoPress)')?></h3>
-		<div class="inside">
-			<table class="form-table">
+	
+}
+function sp_metabox(){
+	wp_nonce_field( 'sp_post_metabox' , '_wpnonce', true , false );	
+	
+	$html = '<table class="form-table">
 				<tbody>
 					<tr>
-						<td width="200"><label for="seopress_noindex"><?php _e('Forbid searchengines to scan url')?>:</label></td>
-						<td><input name="seopress_post_noindex" id="seopress_noindex" type="checkbox" <?php echo $checked ?> value="1" /></td>
+						<td width="200"><label for="seopress_noindex">' . __( 'Forbid searchengines to scan url', 'seopress' ) . ':</label></td>
+						<td>' . tk_wp_form_checkbox( 'noindex', 'sp_post_metabox', 'noindex' ) . '</td>
 					</tr>
 					<tr>
-						<td><label for="seopress_title"><?php _e('Title')?>:</label></td>
-						<td><input type="text" name="seopress_post_title" id="seopress_title" value="<?php echo $title; ?>" /></td>
+						<td><label for="seopress_title">' . __( 'Title', 'seopress' ) . ':</label></td>
+						<td>' . tk_wp_form_textfield( 'title', 'sp_post_metabox', 'title',  ' style="width:99%"' ) . '</td>
 					</tr>
 					<tr>
-						<td><label for="seopress_description"><?php _e('Description')?>:</label></td>
-						<td><input type="text" name="seopress_post_description" id="seopress_description" value="<?php echo $description; ?>" /></td>
+						<td><label for="seopress_description">' . __( 'Description', 'seopress' ) . ':</label></td>
+						<td>' . tk_wp_form_textfield( 'description', 'sp_post_metabox', 'description', ' style="width:99%"' ) . '</td>
 					</tr>
 					<tr>
-						<td><label for="seopress_keywords"><?php _e('Keywords')?>:</label></td>
-						<td><input type="text" name="seopress_post_keywords" id="seopress_keywords" value="<?php echo $keywords; ?>" /></td>
+						<td><label for="seopress_keywords">' . __( 'Keywords', 'seopress' ) . ':</label></td>
+						<td>' . tk_wp_form_textfield( 'keywords', 'sp_post_metabox', 'keywords', ' style="width:99%"' ) . '</td>
 					</tr>				
 				</tbody>
-			</table>
-			
-			<div style="clear:both;height:20px;"></div>
-			<!-- 
-			<div class="configbar">
-						
-			<?php do_action( 'seopress-configbar', $meta, $lable ); ?>
-			
-				<div class="configbar-item">
-					<input type="text" name="numtitle" value="0" size="3" class="configbar-counter" /> <label for="numtitle"><?php  _e('Chars in title'); ?></label>
-				</div>
-				<div class="configbar-item">
-					<input type="text" name="numdesctipion" value="0" size="3" class="configbar-counter" /> <label for="numdesctipion"><?php  _e('Chars in desctipion'); ?></label>
-				</div>
-				<div class="configbar-item">
-					<input type="text" name="numkeywords" value="0" size="3" class="configbar-counter" /> <label for="numkeywords"><?php  _e('Num of Keywords'); ?></label>
-				</div>
-				<div class="configbar-item">
-					<input type="checkbox" name="noindex"> <label for="noindex"><?php  _e('Forbid searchengines to scan urls'); ?></label>
-				</div>
-			</div>	
-			
-			 -->		
-			
-		</div>	
-	</div>
-<?php } ?>
+			</table>';
+	
+	echo $html;
+}
+
+function sp_metabox_save_postdata( $post_id ) {
+	// verify if this is an auto save routine. 
+	// If it is our form has not been submitted, so we dont want to do anything
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+	    return;
+	
+	// verify this came from the our screen and with proper authorization,
+	// because save_post can be triggered at other times
+	
+	if ( !wp_verify_nonce( $_POST['_wpnonce'], 'sp_post_metabox' ) )
+	    return;
+	 
+	// Check permissions
+	if ( 'page' == $_POST['post_type'] ) 
+	{
+	  if ( !current_user_can( 'edit_page', $post_id ) )
+	      return;
+	}
+	else
+	{
+	  if ( !current_user_can( 'edit_post', $post_id ) )
+	      return;
+	}
+	
+	// OK, we're authenticated: we need to find and save the data
+	
+	$metabox_data['title'] = $_POST['title'];
+	$metabox_data['description'] = $_POST['description'];
+	$metabox_data['keywords'] = $_POST['keywords'];
+	$metabox_data['noindex'] = $_POST['noindex'];
+	
+	// Do something with $mydata 
+	// probably using add_post_meta(), update_post_meta(), or 
+	// a custom table (see Further Reading section below)
+	
+	return $metabox_data;
+}
+
+?>

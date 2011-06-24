@@ -14,11 +14,10 @@ function sp_type_box( $type, $css_class = '' ){
 	$html.= '<table width="100%" class="form-table"><tbody>';
 	foreach( $fields AS $key => $field ){
 		if( $field['field-type'] == 'textfield' ){
-			register_setting( 'sp-settings', $field['name'] );
-						
+			register_setting( 'sp-settings', $field['name'] );		
 			
 			$html.= '<tr><td width="200"><lable for="' . $field['name'] . '">' . $field['title'] . '</lable></td><td>';			
-			$html.= tk_wp_jqueryui_autocomplete( $field['name'] , 'seopress', $field['name'], $autocomplete_script , 'onfocus="this.style.color=\'#000\'" onblur="this.style.color=\'#CCC\'" style="width:100%;color:#CCC;"' ) ;			
+			$html.= tk_wp_jqueryui_autocomplete( $field['name'] , 'seopress_seo_settings', $field['name'], $autocomplete_script , 'onfocus="this.style.color=\'#000\'" onblur="this.style.color=\'#CCC\'" style="width:100%;color:#CCC;"' ) ;			
 			$html.= '</td></tr>';
 		}
 		

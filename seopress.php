@@ -72,7 +72,7 @@ require_once( 'special-tags/bp/functions.php' );
 // Admin pages
 require_once( 'admin/sp_admin_core.php' );
 require_once( 'admin/seo.php' );
-require_once( 'admin/settings.php' );
+require_once( 'admin/options.php' );
 require_once( 'admin/getpro_tab.php' );
 require_once( 'admin/single_metabox.php' );
 require_once( 'admin/single_metabox_save.php' );
