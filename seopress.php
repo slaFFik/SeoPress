@@ -50,6 +50,7 @@ require_once( 'lib/wordpress/tk_wp_gui/tk_wp_form_checkbox.php' );
 require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui.php' );
 require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_tabs.php' );
 require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_accordion.php' );
+require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_autocomplete.php' );
 
 // Loading css and js
 require_once( 'css/loader.php' );

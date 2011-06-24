@@ -59,6 +59,8 @@ class TK_WP_JQUERYUI{
 			if( !in_array( $component,  $this->enqueued_components ) ){
 				$this->add_enqueued_jqueryui_component( $component );
 				wp_enqueue_script( $component );
+				
+				// echo "Queueing: " . $component . '<br>';
 			}
 			
 		}
@@ -92,8 +94,8 @@ class TK_WP_JQUERYUI{
 		$this->add_jqueryui_component( 'jquery-ui-accordion', '3.1.3', plugin_dir_url( __FILE__ ) . 'jquery/1.8.9/jquery.ui.accordion.js', '1.8.9' );
 		$this->add_depency( 'jquery-ui-accordion', array( 'jquery-ui-widget' ) );
 
-		$this->add_jqueryui_component( 'jquery-ui-autocompleter', '3.1.3', plugin_dir_url( __FILE__ ) . 'jquery/1.8.9/jquery.ui.autocomplete.js', '1.8.9' );
-		$this->add_depency( 'jquery-ui-autocompleter', array( 'jquery-ui-widget', 'jquery-ui-position' ) );		
+		$this->add_jqueryui_component( 'jquery-ui-autocomplete', '3.1.3', plugin_dir_url( __FILE__ ) . 'jquery/1.8.9/jquery.ui.autocomplete.js', '1.8.9' );
+		$this->add_depency( 'jquery-ui-autocomplete', array( 'jquery-ui-widget', 'jquery-ui-position' ) );		
 	}
 	
 	private function init_known_jqueryui_components(){

@@ -1,6 +1,9 @@
 <?php
 
 function sp_type_box( $type, $css_class = '' ){
+	global $seopress_plugin_url;
+	
+	$autocomplete_script = $seopress_plugin_url . 'admin/get_tags.php?type=' . $type;
 	
 	$fields['title'] = array( 'name' => $type . '-title', 'title' => __( 'Title', 'seopress') , 'field-type' => 'textfield' ) ;
 	$fields['description'] = array( 'name' => $type . '-description', 'title' => __( 'Description', 'seopress') , 'field-type' => 'textfield' ) ;
@@ -11,10 +14,11 @@ function sp_type_box( $type, $css_class = '' ){
 	$html.= '<table width="100%" class="form-table"><tbody>';
 	foreach( $fields AS $key => $field ){
 		if( $field['field-type'] == 'textfield' ){
-			register_setting( 'sp-settings', $field['name'] );			
+			register_setting( 'sp-settings', $field['name'] );
+						
 			
 			$html.= '<tr><td width="200"><lable for="' . $field['name'] . '">' . $field['title'] . '</lable></td><td>';			
-			$html.= tk_wp_form_textfield( $field['name'] , 'seopress', '', 'onfocus="this.style.color=\'#000\'" onblur="this.style.color=\'#CCC\'" style="width:100%;color:#CCC;"' ) ;			
+			$html.= tk_wp_jqueryui_autocomplete( $field['name'] , 'seopress', $field['name'], $autocomplete_script , 'onfocus="this.style.color=\'#000\'" onblur="this.style.color=\'#CCC\'" style="width:100%;color:#CCC;"' ) ;			
 			$html.= '</td></tr>';
 		}
 		
