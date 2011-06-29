@@ -23,10 +23,4 @@ class TK_WP_FORM extends TK_HTML_FORM{
 	}
 }
 
-function tk_register_wp_form( $option_group ){
-	register_setting( $option_group, $option_group . '_values' );
-}
-
-
-
 ?>

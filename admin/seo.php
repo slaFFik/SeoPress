@@ -10,9 +10,6 @@
 function seopress_seo(){
 	global $seopress_plugin_url;
 		
-	require_once( 'seo_meta_box.php' ); // Meta box for title, description and keyword entry
-
-
 	/*
 	 * Adding display
 	 */	

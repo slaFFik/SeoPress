@@ -52,23 +52,17 @@ class SP_CORE{
 			
 			add_action( 'admin_init', 'sp_register_seo_settings_form' );
 			add_action( 'admin_init', 'sp_register_options_form' );
+			add_action( 'admin_init', 'sp_register_post_metabox_form' );
 			
 			add_action( 'admin_menu', 'sp_admin_menue');
 			
 			## Setting up post & page forms
 			if( $this->options['metabox_post'] != 'on' ){
 				add_action('edit_form_advanced', 'sp_post_metabox');
-				add_action( 'save_post', 'sp_metabox_save_postdata' );
 			}
 			if( $this->options['metabox_page'] != 'on' ){
 				add_action('edit_page_form', 'sp_page_metabox');
-				add_action( 'save_post', 'sp_metabox_save_postdata' );
 			}
-			
-			add_action( 'save_post' , 'seopress_post_title', 1 ); // Should be reworked <- tk_admin
-			add_action( 'save_post' , 'seopress_post_description', 1 ); // Should be reworked <- tk_admin
-			add_action( 'save_post' , 'seopress_post_keywords', 1 ); // Should be reworked <- tk_admin
-			add_action( 'save_post' , 'seopress_post_noindex', 1 ); // Should be reworked <- tk_admin	
 			
 			$this->special_tags = $special_tags->get_tags();
 			
@@ -102,7 +96,7 @@ class SP_CORE{
 	public function get_seo_data( $key = false ){
 		global $bp;
 		
-		if( is_single() ) $meta = $this->get_postmeta() ;
+		if( is_single() ) $meta = $this->get_post_meta();
 		
 		if( $meta == '' ){
 			$template = $this->get_template();
@@ -204,7 +198,9 @@ class SP_CORE{
 		 */
 		
 		// SeoPress
-		$title = get_post_meta( $post_id, "_title" );
+		$post_meta = get_post_meta( $post_id, 'sp_post_metabox', TRUE );
+
+		$title[0] = $post_meta['title'];
 		
 		// WPSEO
 		if( $title[0] == '' ) $title= get_post_meta( $post_id, "_wpseo_edit_title" );
@@ -219,7 +215,7 @@ class SP_CORE{
 		 */
 				
 		// SeoPress
-		$description = get_post_meta( $post_id, "_description");
+		$description[0] = $post_meta['description'];
 		
 		// WPSEO
 		if( $description[0] == '' ) $description = get_post_meta( $post_id, "_wpseo_edit_description" );
@@ -233,7 +229,7 @@ class SP_CORE{
 		 * Description
 		 */
 		// SeoPress
-		$keywords = get_post_meta($post->ID,"_keywords");
+		$keywords[0] = $post_meta['keywords'];
 		
 		// WPSEO
 		if( $keywords[0] == '' ) $keywords = get_post_meta( $post_id, "_wpseo_edit_keywords" );
@@ -245,7 +241,7 @@ class SP_CORE{
 		/*
 		 * NoIndex
 		 */
-		$noindex = get_post_meta( $post_id, "_noindex" );
+		$noindex[0] = $post_meta['noindex'];
 		
 		if( $noindex[0] != '' ){
 			$meta['noindex'] = $noindex[0];
@@ -276,10 +272,13 @@ class SP_CORE{
 }
 
 function sp_register_seo_settings_form(){
-	tk_register_wp_form( 'seopress_seo_settings' );
+	tk_register_wp_option_group( 'seopress_seo_settings' );
 }
 function sp_register_options_form(){
-	tk_register_wp_form( 'seopress_options' );
+	tk_register_wp_option_group( 'seopress_options' );
+}
+function sp_register_post_metabox_form(){
+	tk_register_wp_option_group( 'sp_post_metabox' );
 }
 
 function sp_admin_menue(){

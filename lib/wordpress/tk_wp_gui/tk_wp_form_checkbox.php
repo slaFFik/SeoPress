@@ -5,15 +5,25 @@ class TK_WP_FORM_CHECKBOX extends TK_FORM_CHECKBOX{
 	var $option_group;
 	
 	public function __construct( $name, $option_group, $id = '', $extra = '' ){
-		$value = get_option( $option_group . '_values' );
+		global $post;
 		
-		$this->option_group = $option_group;
-		
-		$field_name = $option_group . '_values[' . $name . ']'; 
+		if( $post != '' ){				
+			$option_group_value = get_post_meta( $post->ID , $option_group , true );
+						
+			$field_name = $option_group . '[' . $name . ']';
+			$value = $option_group_value[ $name ];
+
+		}else{
+			$value = get_option( $option_group );
+			$this->option_group = $option_group;
+			$field_name = $option_group . '_values[' . $name . ']';	
+			
+			$value = $value[ $name ];
+		} 
 		
 		$checked = false;
 		
-		if( $value[ $name ] != '' ){
+		if( $value != '' ){
 			$checked = true;
 		}
 				

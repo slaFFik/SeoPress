@@ -46,6 +46,8 @@ require_once( 'lib/wordpress/tk_wp_gui/tk_wp_admin_display.php' );
 require_once( 'lib/wordpress/tk_wp_gui/tk_wp_form.php' );
 require_once( 'lib/wordpress/tk_wp_gui/tk_wp_form_textfield.php' );
 require_once( 'lib/wordpress/tk_wp_gui/tk_wp_form_checkbox.php' );
+require_once( 'lib/wordpress/tk_wp_gui/tk_wp_metabox.php' );
+require_once( 'lib/wordpress/tk_wp_gui/tk_wp_option_group.php' );
 
 require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui.php' );
 require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_tabs.php' );
@@ -73,14 +75,13 @@ require_once( 'special-tags/bp/functions.php' );
 require_once( 'admin/sp_admin_core.php' );
 require_once( 'admin/seo.php' );
 require_once( 'admin/options.php' );
-require_once( 'admin/getpro_tab.php' );
 require_once( 'admin/single_metabox.php' );
 require_once( 'admin/single_metabox_save.php' );
 
 require_once( 'sp-core.php' );
 
 function save_test_form(){
-	tk_register_wp_form( 'testoptiongroup' );
+	tk_register_wp_option_group( 'testoptiongroup' );
 }
 add_action( 'admin_init' , 'save_test_form' , 0 );
 

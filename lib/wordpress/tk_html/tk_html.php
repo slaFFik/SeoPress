@@ -11,9 +11,11 @@ class TK_HTML{
 		array_push( $this->elements, $element  );
 	}
 	
-	public function get_html(){	
-		foreach( $this->elements AS $element ){
-			$html.= $element;
+	public function get_html(){
+		if( count( $this->elements ) > 0 ){
+			foreach( $this->elements AS $element ){
+				$html.= $element;
+			}
 		}
 		return $html;
 	}
