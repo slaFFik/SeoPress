@@ -14,7 +14,6 @@ function sp_admin_wpmu_tab(){
 	$sections = array();
 	
 	array_push( $sections, array( 'type' => 'mu-home', 'title' => __('Home' , 'seopress' ), 'content' => $content ) );
-	array_push( $sections, array( 'type' => 'mu-front-page', 'title' => __('Front page' , 'seopress' ), 'content' => $content ) );
 	array_push( $sections, array( 'type' => 'mu-post', 'title' => __('Posts' , 'seopress' ), 'content' => $content ) );
 	array_push( $sections, array( 'type' => 'mu-page', 'title' => __('Pages' , 'seopress' ), 'content' => $content ) );
 	array_push( $sections, array( 'type' => 'mu-archive', 'title' => __('Archive' , 'seopress' ), 'content' => $content ) );

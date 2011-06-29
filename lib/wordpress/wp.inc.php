@@ -43,8 +43,7 @@ if( !function_exists( 'tk_get_page_type' ) ){
 		// If is wordpress and no buddypress
 		if( tk_get_wp_type() == "wp" ) {
 			if( is_admin() ) $page_type = 'wp-admin';
-			if( is_home() && !tk_is_signup() ) $page_type = 'wp-home';
-			if( is_front_page() && $bp->current_component != 'forums' && !is_home() ) $page_type = 'wp-front-page';
+			if( (is_home() || is_front_page()) && !tk_is_signup() ) $page_type = 'wp-home';
 			if( is_single() ) $page_type = 'wp-post';	
 			if( is_page() && tk_is_buddypress() && $bp->current_component != '' ){
 				
@@ -62,7 +61,7 @@ if( !function_exists( 'tk_get_page_type' ) ){
 						$page_type = 'bp-component-' . $component;
 					}
 				}
-			}else if( is_page() ){
+			}else if( is_page() && !is_front_page() ){
 				$page_type = 'wp-page';	
 			}
 			
@@ -109,14 +108,8 @@ function tk_is_signup(){
 
 function echo_page(){
 	echo '<br><br>Page type: ' . tk_get_page_type();
-	if( is_home() ){
-		echo "<br>Is Home";
-	}
-	if( is_front_page() ){
-		echo "<br>Is Front Page";
-	}
 }
-// add_action( 'wp_head', 'echo_page' );
+add_action( 'wp_head', 'echo_page' );
 
 
 

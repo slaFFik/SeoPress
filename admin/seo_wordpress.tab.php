@@ -14,7 +14,6 @@ function sp_admin_wp_tab(){
 	$sections = array();
 	
 	array_push( $sections, array( 'type' => 'wp-home', 'title' => __('Home' , 'seopress' ), 'content' => $content ) );
-	array_push( $sections, array( 'type' => 'wp-front-page', 'title' => __('Front page' , 'seopress' ), 'content' => $content ) );
 	array_push( $sections, array( 'type' => 'wp-post', 'title' => __('Posts' , 'seopress' ), 'content' => $content ) );
 	array_push( $sections, array( 'type' => 'wp-page', 'title' => __('Pages' , 'seopress' ), 'content' => $content ) );
 	array_push( $sections, array( 'type' => 'wp-archive', 'title' => __('Archive' , 'seopress' ), 'content' => $content ) );
