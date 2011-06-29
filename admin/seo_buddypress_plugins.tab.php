@@ -21,78 +21,6 @@ function sp_admin_bp_plugins_tab(){
 	
 
 	// Configurating Buddypress plugins
-	$html.= '<h3>' .  __( 'Configurate plugins', 'seopress') . '</h3>';
-	
-	$i = 0;
-				
-	/***
-	* Component configurator
-	*/
-	
-	$accordion = new TK_WP_JQUERYUI_ACCORDION();
-			
-	// Getting all active components
-	$bp_components = sp_get_bp_components();	
-	
-	// Runnung all components
-	foreach ( $bp_components as $bp_component ){
-		
-		if( sp_is_bp_plugin( $bp_component ) ) {
-			
-			// Title of component
-			$component_name = ucwords( strtolower( str_replace( '_', ' ', $bp_component ) ) );
-		
-			apply_filters( 'sp_admin_wp_sections', $sections );	
-			
-			
-			/*
-			* Component extend fields
-			*/
-			
-			$content = '<div class="seopress-components-text"><p>' . sprintf( __( 'Setup the tabs of "%s". Any checked entry wil let appear a meta box.'  , 'seopress' ), str_replace( '_', ' ', ucwords( strtolower( $bp_component ) ) ) ) .'</p></div>';
-			
-			
-			$content.= '<table class="widefat">';
-			
-			$content.= '<tbody>';						
-			
-			$content.= '<tr>';
-			$content.= '<td width="50%"><div class="components_extend"><strong>' . sprintf( __( '"%s" has a directory page:' , 'seopress' ), str_replace( '_', ' ', ucwords( strtolower( $bp_component ) ) ) ) . '</strong></div></td>';
-			// $content.= '<td width="50%"><div class="components_extend"><input name="componentspage-types[' . $bp_component . '][directory]" type="checkbox" '.$checked.' value="1"></div></td>';
-			$content.= '<td width="50%"><div class="components_extend">' . tk_wp_form_checkbox( 'bp-componentspage-types-' . $bp_component . '-directory', 'seopress' ) . '</div></td>';
-			$content.= '</tr>';
-			
-			$content.= '<tr>';		
-            $content.= '<td colspan="2"><div class="components_extend"><strong>' . sprintf(  __( '"%s" creating pages in following components:' , 'seopress' ), str_replace( '_', ' ', ucwords( strtolower( $bp_component ) ) ) ) . '</strong></div>';
-			// $content.= '<input name="componentspage-types[' . $bp_component . '][slug]" type="hidden" ' . $checked . ' value="' . $bp_component . '" /></td>' ;
-			$content.= '<input name="seopress_values[bp-componentspage-types-' . $bp_component . '-slug]" type="hidden" ' . $checked . ' value="' . $bp_component . '" /></td>' ;
-			$content.= '</tr>';	
-
-			$bp_main_component = $bp_component;						
-			
-			// Runnung all extendable components of this component
-			foreach( $bp_components as $sub_comp ){
-				
-				if( $sub_comp != 'messages' && $sub_comp != 'settings' && $sub_comp != 'blogs' && $sub_comp != $bp_component ){							
-					 					
-					$component_name = ucwords( strtolower( str_replace( '_', ' ', $sub_comp ) ) );
-					$content.= '<tr>';
-					$content.= '<td><div class="components_extend"><lable for="componentspage-types[' . $bp_main_component . '][plugin_extends][]">' . $component_name . '</lable></div></td>';
-					// $content.= '<td><div class="components_extend"><input name="componentspage-types[' . $bp_main_component . '][plugin_extends][]" id="componentspage-types[' . $bp_main_component . '][plugin_extends][]"  type="checkbox" '.$checked.'  value="' . $bp_sub_component . '" /></div></td>';
-					$content.= '<td><div class="components_extend">' . tk_wp_form_checkbox( 'bp-componentspage-types-' . $bp_main_component . '-' . $sub_comp . '', 'seopress' ) . '</div></td>'; 
-					$content.= '</tr>';								
-													
-				}
-				$checked = '';
-			}
-			$content.= '</tbody>';
-			$content.= '</table>';
-			
-			$accordion->add_section( $bp_component, ucwords( strtolower(  $bp_main_component ) ) , $content );										
-		}					
-	}	
-
-	$html.= $accordion->get_html();
 	
 	$button = '<p class="submit"><input class="button-primary" type="submit" name="save" value="' . __('Save settings', 'seopress') . '" /></p>';
 	
@@ -132,7 +60,7 @@ function sp_admin_bp_plugins_tabs(){
 
 function seopress_component_tab( $bp_component ){
 	
-	$sp_seo_settings = get_option('seopress_values');
+	$sp_seo_settings = get_option('seopress_seo_settings_values');
 	
 	$is_component = 0;
 	
@@ -154,16 +82,63 @@ function seopress_component_tab( $bp_component ){
 			$is_component = 1;
 			$accordion->add_section( 'bp-component-' .$bp_component . '-' . $sub_comp, sprintf( __( 'Page in %s'  , 'seopress' ), ucwords( strtolower(  $sub_comp ) ) ), sp_type_box( 'bp-component-' . $sub_comp . '-' . $bp_component ) );
 		}
-
 	}
+	
+	$accordion->add_section( 'bp-component-config-' .$bp_component . '-' . $sub_comp, sprintf( __( 'Configurate "%s" plugin'  , 'seopress' ), ucwords( strtolower( $bp_component ) ) ), seopress_component_config( $bp_component ) );
 	
 	$html = $accordion->get_html();
 	
 	if( $is_component == 0 ){
-		return '<div class="seopress-notice"><p>' . sprintf(__('Please config your "%s" plugin before you setup your component meta! (Do this at the bottom of this page)'), str_replace( '_', ' ', ucwords( strtolower( $bp_component ) ) ) ) . '</p></div>';
+		// return '<div class="seopress-notice"><p>' . sprintf(__('Please config your "%s" plugin before you setup your component meta! (Do this at the bottom of this page)'), str_replace( '_', ' ', ucwords( strtolower( $bp_component ) ) ) ) . '</p></div>';
+		return seopress_component_config( $bp_component );
 	}else{
 		return $html;
 	}
+}
+
+function seopress_component_config( $bp_component ){
+	
+	$bp_components = sp_get_bp_components();	
+	
+	$content = '<h4>' . sprintf( __( 'Please config your "%s" plugin:' , 'seopress' ), str_replace( '_', ' ', ucwords( strtolower( $bp_component ) ) ) ). '</h4>';
+				
+	$content.= '<table class="widefat">';
+	
+	$content.= '<tbody>';						
+	
+	$content.= '<tr>';
+	$content.= '<td width="50%"><div class="components_extend"><strong>' . sprintf( __( '"%s" has a directory page:' , 'seopress' ), str_replace( '_', ' ', ucwords( strtolower( $bp_component ) ) ) ) . '</strong></div></td>';
+	// $content.= '<td width="50%"><div class="components_extend"><input name="componentspage-types[' . $bp_component . '][directory]" type="checkbox" '.$checked.' value="1"></div></td>';
+	$content.= '<td width="50%"><div class="components_extend">' . tk_wp_form_checkbox( 'bp-componentspage-types-' . $bp_component . '-directory', 'seopress_seo_settings' ) . '</div></td>';
+	$content.= '</tr>';
+	
+	$content.= '<tr>';		
+            $content.= '<td colspan="2"><div class="components_extend"><strong>' . sprintf(  __( '"%s" creating pages in following components:' , 'seopress' ), str_replace( '_', ' ', ucwords( strtolower( $bp_component ) ) ) ) . '</strong></div>';
+	// $content.= '<input name="componentspage-types[' . $bp_component . '][slug]" type="hidden" ' . $checked . ' value="' . $bp_component . '" /></td>' ;
+	$content.= '<input name="seopress_values[bp-componentspage-types-' . $bp_component . '-slug]" type="hidden" ' . $checked . ' value="' . $bp_component . '" /></td>' ;
+	$content.= '</tr>';	
+
+	$bp_main_component = $bp_component;						
+	
+	// Runnung all extendable components of this component
+	foreach( $bp_components as $sub_comp ){
+		
+		if( $sub_comp != 'messages' && $sub_comp != 'settings' && $sub_comp != 'blogs' && $sub_comp != $bp_component ){							
+			 					
+			$component_name = ucwords( strtolower( str_replace( '_', ' ', $sub_comp ) ) );
+			$content.= '<tr>';
+			$content.= '<td><div class="components_extend"><lable for="componentspage-types[' . $bp_main_component . '][plugin_extends][]">' . $component_name . '</lable></div></td>';
+			// $content.= '<td><div class="components_extend"><input name="componentspage-types[' . $bp_main_component . '][plugin_extends][]" id="componentspage-types[' . $bp_main_component . '][plugin_extends][]"  type="checkbox" '.$checked.'  value="' . $bp_sub_component . '" /></div></td>';
+			$content.= '<td><div class="components_extend">' . tk_wp_form_checkbox( 'bp-componentspage-types-' . $bp_main_component . '-' . $sub_comp . '', 'seopress_seo_settings' ) . '</div></td>'; 
+			$content.= '</tr>';								
+											
+		}
+		$checked = '';
+	}
+	$content.= '</tbody>';
+	$content.= '</table>';
+	
+	return $content;
 }
 
 ?>

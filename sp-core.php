@@ -35,10 +35,15 @@ class SP_CORE{
 				sp_init_bp_special_tags(); // Initializung Special tag sets & tags for buddypress
 				sp_init_bp_special_tags_pt(); // Initializung Special tag types for buddypress
 				
-				add_filter( 'bp_page_title' , array(&$this, 'init_seo') , 0, 1 ); // Filtering buddypress title 	
+				remove_all_filters( 'bp_page_title' );
+				
+				add_filter( 'bp_page_title' , array(&$this, 'init_seo') , 1 ); // Filtering buddypress title 	
 				
 			}else{
-				add_filter( 'wp_title' ,  array(&$this, 'init_seo') , 0, 1 );  // Filtering wordpress title
+				
+				remove_all_filters( 'wp_title' );
+				
+				add_filter( 'wp_title' ,  array(&$this, 'init_seo') , 1 );  // Filtering wordpress title
 			}
 			
 			$this->used_tags = $special_tags->get_tags( $this->page_type ); // ???? Here ????
@@ -85,7 +90,8 @@ class SP_CORE{
 			
 			if( $new_title != '' ) $title = stripslashes( $new_title );
 				
-		}		
+		}
+		// echo $title;
 		return $title;	
 	}
 	
@@ -128,7 +134,7 @@ class SP_CORE{
 		$template['title'] = $this->seo_settings[ $page_type . '-title' ];
 		$template['description'] = $this->seo_settings[ $page_type . '-description' ];
 		$template['keywords'] = $this->seo_settings[ $page_type . '-keywords' ];
-		$template['noindex'] = $this->seo_settings[ $page_type . '-noindex' ];
+		$template['noindex'] = $this->seo_settings[ $page_type . '-noindex' ];		
 		
 		return $template;
 	} 
