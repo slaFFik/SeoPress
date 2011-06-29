@@ -23,11 +23,9 @@ function sp_init_bp_special_tags(){
 	/*
 	* Buddypress users
 	*/
-	$special_tags->add_tag( '%%userfullname%%', 'sp_get_bp_user_fullname', __( 'Shows the users fullname' , 'seopress') );
-	$special_tags->add_tag( '%%usernicename%%', 'sp_get_bp_user_nicename', __( 'Shows the user nicename' , 'seopress') );
-	$special_tags->add_tag( '%%userdisplayname%%', 'sp_get_bp_user_display_name', __( 'Shows the users full name' , 'seopress') );
+	$special_tags->add_tag( '%%username%%', 'sp_get_bp_user_display_name', __( 'Shows the users full name' , 'seopress') );
 	
-	$special_tags->add_set( 'bp_user', array( '%%userfullname%%', '%%usernicename%%', '%%userdisplayname%%'  ) );
+	$special_tags->add_set( 'bp_user', array( '%%username%%' ) );
 	
 	/*
 	* Buddypress forums

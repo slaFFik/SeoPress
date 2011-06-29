@@ -306,6 +306,10 @@ function seopress_init(){
 	$seopress = new SP_CORE();
 }
 
+function sp_reset_data(){
+	
+}
+
 function sp_rewrite_values_to_1_1( $old_option, $page_type ){
 	
 	$meta = get_blog_option( SITE_ID_CURRENT_SITE , $old_option );
