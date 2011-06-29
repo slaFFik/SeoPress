@@ -9,7 +9,7 @@
 
 function seopress_seo(){
 	global $seopress_plugin_url;
-		
+		 
 	/*
 	 * Adding display
 	 */	
