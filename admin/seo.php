@@ -56,8 +56,6 @@ function seopress_seo(){
 	$display->write_html();
 
 	include( 'footer.php' );
-	
-	// print_r_html( get_option('seopress_values') ); // Printing options
 
 } 
 
