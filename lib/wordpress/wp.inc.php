@@ -109,7 +109,7 @@ function tk_is_signup(){
 function echo_page(){
 	echo '<br><br>Page type: ' . tk_get_page_type();
 }
-add_action( 'wp_head', 'echo_page' );
+// add_action( 'wp_head', 'echo_page' );
 
 
 
