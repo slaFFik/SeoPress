@@ -14,7 +14,7 @@ function seopress_options(){
 	 * Adding display
 	 */	
 	$display = new	TK_WP_ADMIN_DISPLAY( __( 'Options', 'seopress'), 'plugins' );
-	$display->add_element(  __( '<p>Configure global settings for SeoPress.</p>', 'seopress') );
+	$display->add_element( '<p>' . __( 'Configure global settings for SeoPress.', 'seopress') . '</p>' );
 	
 	$form = new TK_WP_FORM( 'seopress_options' );
 	
