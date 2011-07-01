@@ -9,7 +9,7 @@ function sp_init_special_tags(){
 	$special_tags->add_tag( '%%site_name%%', 'sp_get_sitename', __( 'Shows the sitename' , 'seopress') );
 	$special_tags->add_tag( '%%site_description%%', 'sp_get_sitedesc', __( 'Shows the site description' , 'seopress') );
 	
-	$special_tags->add_set( 'global', array( '%%sitename%%', '%%sitedescription%%' ) );
+	$special_tags->add_set( 'global', array( '%%site_name%%', '%%site_description%%' ) );
 	
 	/*
 	* Post & Page
@@ -20,13 +20,13 @@ function sp_init_special_tags(){
 	$special_tags->add_tag( '%%post_tags%%', 'sp_get_tags_listing',  __( 'Shows the username of post author' , 'seopress') );	
 	$special_tags->add_tag( '%%post_author%%', 'sp_get_post_authorname', __( 'Shows the name of post author' , 'seopress') );
 
-	$special_tags->add_set( 'post', array( '%%post_title%%', '%%post_excerpt%%', '%%post_categories%%', '%%post_tags%%', '%%post_authorname%%' ) );	
+	$special_tags->add_set( 'post', array( '%%post_title%%', '%%post_excerpt%%', '%%post_categories%%', '%%post_tags%%', '%%post_author%%' ) );	
 	
 	$special_tags->add_tag( '%%page_title%%', 'sp_get_post_title', __( 'Shows the title of post' , 'seopress') );	
 	$special_tags->add_tag( '%%page_excerpt%%', 'sp_get_post_excerpt', __( 'Shows the excerpt of the post' , 'seopress') );	
 	$special_tags->add_tag( '%%page_author%%', 'sp_get_post_authorname', __( 'Shows the name of post author' , 'seopress') );	
 	
-	$special_tags->add_set( 'page', array( '%%page_title%%', '%%page_excerpt%%', '%%page_authorname%%' ) );
+	$special_tags->add_set( 'page', array( '%%page_title%%', '%%page_excerpt%%', '%%page_author%%' ) );
 
 	
 	/*
@@ -64,14 +64,14 @@ function sp_init_special_tags(){
 	$special_tags->add_tag( '%%page%%', 'sp_get_page_number', __( 'Shows the current page number' , 'seopress') );	
 	$special_tags->add_tag( '%%page_total%%', 'sp_get_page_total', __( 'Shows the sum of all pages' , 'seopress') );
 	
-	$special_tags->add_set( 'pagination', array( '%%pagination%%', '%%page%%', '%%page_total%%' ) );
+	$special_tags->add_set( 'pagination', array( '%%page%%', '%%page_total%%' ) );
 	
 	/*
 	* Search page
 	*/
 	$special_tags->add_tag( '%%search_phrase%%', 'sp_get_search_phrase', __( 'Shows the search phrase' , 'seopress') );
 	
-	$special_tags->add_set( 'search', array( '%%searchphrase%%' ) );
+	$special_tags->add_set( 'search', array( '%%search_phrase%%' ) );
 
 }
 ?>

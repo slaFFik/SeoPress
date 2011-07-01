@@ -8,9 +8,17 @@ function sp_init_bp_special_tags(){
 	* Buddypress components
 	*/
 	
-	$special_tags->add_tag( '%%componentname%%', 'sp_get_bp_current_component', __( 'Shows the component name' , 'seopress') );
+	$special_tags->add_tag( '%%component_name%%', 'sp_get_bp_current_component', __( 'Shows the component name' , 'seopress') );
 	
-	$special_tags->add_set( 'bp_component', array( '%%componentname%%' ) );
+	$special_tags->add_set( 'bp_component', array( '%%component_name%%' ) );
+	
+	/*
+	* Buddypress activities
+	*/
+	$special_tags->add_tag( '%%activity_content%%', 'sp_get_bp_activity_content', __( 'Shows the content of the activity' , 'seopress') );
+	$special_tags->add_tag( '%%activity_author%%', 'sp_get_bp_activity_author', __( 'Shows the author of the activity' , 'seopress') );
+	
+	$special_tags->add_set( 'bp_activity', array( '%%activity_content%%', '%%activity_author%%' ) );	
 	
 	/*
 	* Buddypress groups
@@ -18,7 +26,7 @@ function sp_init_bp_special_tags(){
 	$special_tags->add_tag( '%%group_name%%', 'sp_get_bp_group_name', __( 'Shows the group name' , 'seopress') );
 	$special_tags->add_tag( '%%group_description%%', 'sp_get_bp_group_description', __( 'Shows the group description' , 'seopress') );
 	
-	$special_tags->add_set( 'bp_group', array( '%%groupname%%', '%%groupdescription%%' ) );
+	$special_tags->add_set( 'bp_group', array( '%%group_name%%', '%%group_description%%' ) );
 	
 	/*
 	* Buddypress users
@@ -36,7 +44,7 @@ function sp_init_bp_special_tags(){
 	$special_tags->add_tag( '%%forum_topic_text%%', 'sp_get_bp_forum_post_text', __( 'Shows the forum topic text' , 'seopress') );
 	$special_tags->add_tag( '%%forum_topic_postername%%', 'sp_get_bp_forum_topic_poster_name', __( 'Shows the forum topic poster name' , 'seopress') );
 	
-	$special_tags->add_set( 'bp_forum_topic', array( '%%forumtopictitle%%', '%%forumtopictext%%', '%%forumtopicpostername%%'  ) );
+	$special_tags->add_set( 'bp_forum_topic', array( '%%forum_topic_title%%', '%%forum_topic_text%%', '%%forum_topic_postername%%'  ) );
 	
 }
 

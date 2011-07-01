@@ -88,12 +88,7 @@ function tk_is_signup(){
 
 function echo_page(){
 	
-	
-	bp_has_activities();
-	
-	global $activities_template;
-	
-	print_r_html( $activities_template );
+	echo sp_get_bp_activity_author();
 	
 	echo '<br><br>Page type: ' . tk_get_page_type();
 	

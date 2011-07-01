@@ -43,6 +43,29 @@ function sp_get_bp_user_fullname(){
 	global $bp;
 	return $bp->displayed_user->fullname;
 }
+/*
+* Buddypress activity functions
+*/
+function sp_get_bp_activity_content(){
+	global $activities_template, $bp;
+	
+	bp_has_activities();
+	
+	foreach( $activities_template->activities AS $activity ){
+		if( $activity->id == $bp->current_action ) return $activity->content;
+	}
+}
+
+function sp_get_bp_activity_author(){
+	global $activities_template, $bp;
+	
+	bp_has_activities();
+	
+	foreach( $activities_template->activities AS $activity ){
+		if( $activity->id == $bp->current_action ) return $activity->display_name;
+	}
+}
+
 
 /*
 * Buddypress forum functions
