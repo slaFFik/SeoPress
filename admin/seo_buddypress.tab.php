@@ -65,6 +65,7 @@ function sp_admin_bp_activities_tab(){
 	$sections = array();
 	
 	array_push( $sections, array( 'type' => 'bp-component-activity', 'title' => __('Activities Directory' , 'seopress' ), 'values' => $content ) );
+	array_push( $sections, array( 'type' => 'bp-component-activity-activity', 'title' => __('Activity' , 'seopress' ), 'values' => $content ) );
 
 	apply_filters( 'sp_admin_bp_activies_sections', $sections );	
 

@@ -7,7 +7,7 @@ function sp_init_special_tags_pt(){
 	$special_tags->add_type( 'wp-home' ,  array( 'global' ) , 'bp_seo_main_blog_start' );	
 	$special_tags->add_type( 'wp-front-page' ,  array( 'post', 'global' ) , 'bp_seo_main_blog_front_page' );
 	$special_tags->add_type( 'wp-post' ,  array( 'post', 'global' ) , 'bp_seo_main_blog_posts' );
-	$special_tags->add_type( 'wp-page' , array( 'post', 'global' )  , 'bp_seo_main_blog_pages' );
+	$special_tags->add_type( 'wp-page' , array( 'page', 'global' )  , 'bp_seo_main_blog_pages' );
 	$special_tags->add_type( 'wp-archive' , array( 'archive', 'global' ) , 'bp_seo_main_blog_archiv' );
 	$special_tags->add_type( 'wp-category' , array( 'category', 'global' ) , 'bp_seo_main_blog_cat' );
 	$special_tags->add_type( 'wp-author' , array( 'author', 'global' ) , 'bp_seo_main_blog_autor_pages' );

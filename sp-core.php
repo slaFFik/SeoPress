@@ -21,8 +21,6 @@ class SP_CORE{
 	public function __construct(){
 		global $special_tags;
 		
-		// echo "WO Version: " . $GLOBALS['wp_version'] . ' ' . plugin_dir_url( __FILE__ );
-		
 		$this->seo_settings = get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_seo_settings_values' );
 		$this->options = get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_options_values' );
 		$this->init_special_tags();
@@ -333,46 +331,52 @@ function sp_rewrite_values_to_1_1( $old_option, $page_type ){
 function sp_update_to_1_1(){
 	global $seopress;
 	
-	if( get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_seo_settings_values' ) == '' ){	
+	if( get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_seo_settings_values' ) == '' ){
 
 		$settings['seopress_seo_settings_values'] = array();
 
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_main_blog_start', 'wp-home' ) );
-		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_main_blog_front_page', 'wp-front-page' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_main_blog_posts', 'wp-post' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_main_blog_pages', 'wp-page' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_main_blog_archiv', 'wp-archive' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_main_blog_cat', 'wp-category' ) );
+		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_main_blog_tag_pages', 'wp-tag' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_main_blog_autor_pages', 'wp-author' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_main_blog_search_pages', 'wp-search' ) );
 		
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_user_blog', 'mu-home' ) );
-		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_user_blog_front_page', 'mu-front-page' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_user_blog_posts', 'mu-post' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_user_blog_pages', 'mu-page' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_user_blog_archiv', 'mu-archive' ) );
+		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_user_blog_cat', 'mu-category' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_user_blog_autor_pages', 'mu-author' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_user_blog_search_pages', 'mu-search' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_user_blog_tag_pages', 'mu-tag' ) );
 		
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_directory_activity', 'bp-component-activity' ) );
+		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_directory_members', 'bp-component-members' ) );
+		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_directory_groups', 'bp-component-groups' ) ); // WHAAAAAAT ???
+		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_directory_forums', 'bp-component-forums' ) );	
+		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_directory_blogs', 'bp-component-blogs' ) );
+		
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_profil_activity_friends', 'bp-component-activity-friends' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_profil_activity_groups', 'bp-component-activity-groups' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_profil_activity_favorites', 'bp-component-activity-favorites' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_profil_activity_mentions', 'bp-component-activity-mentions'  ));
-		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_directory_members', 'bp-component-members' ) );
-		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_directory_groups', 'bp-component-groups' ) ); // WHAAAAAAT ???
-		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_groups_home', 'bp-component-groups-home' ) );
-		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_groups_forum', 'bp-component-groups-forum' ) );
-		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_groups_forum_topic', 'bp-component-groups-forum-topic' ) );		
-		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_groups_members', 'bp-component-groups-members' ) );
+
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_profil_activity', 'bp-component-activity-just-me' ) );
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_profil', 'bp-component-profile-public' ) );	
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_profil_blogs', 'bp-component-blogs-my-blogs' ) );	
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_profil_friends', 'bp-component-friends-my-friends' ) );	
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_profil_groups', 'bp-component-groups-my-groups' ) );	
-		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_directory_forums', 'bp-component-forums' ) );	
-		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_directory_blogs', 'bp-component-blogs' ) );	
+		
+		
+		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_groups_home', 'bp-component-groups-home' ) );
+		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_groups_forum', 'bp-component-groups-forum' ) );
+		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_groups_forum_topic', 'bp-component-groups-forum-topic' ) );		
+		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_groups_members', 'bp-component-groups-members' ) );
+		
+	
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_registration', 'bp-component-register' ) );		
 
 		$settings['seopress_options_values']['post_metabox'] = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_meta_box_post' );

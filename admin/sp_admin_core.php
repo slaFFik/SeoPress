@@ -1,5 +1,9 @@
 <?php
 
+function sp_add_page_type( $page_type ){
+	
+}
+
 function sp_type_box( $type, $css_class = '' ){
 	global $seopress_plugin_url;
 	

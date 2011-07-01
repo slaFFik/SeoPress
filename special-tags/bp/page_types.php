@@ -4,6 +4,7 @@ function sp_init_bp_special_tags_pt(){
 	global $special_tags;
 	
 	$special_tags->add_type( 'bp-component-activity' ,  array( 'bp_component' , 'global' ) , 'bp_seo_directory_activity' ); // Activity directory
+	$special_tags->add_type( 'bp-component-activity-activity' ,  array( 'bp_component' , 'global' ) , 'bp_seo_directory_activity' ); // Activity directory
 	$special_tags->add_type( 'bp-component-activity-friends' ,  array( 'bp_user', 'bp_component' , 'global' ) , 'bp_seo_profil_activity_friends' );
 	$special_tags->add_type( 'bp-component-activity-groups' ,  array( 'bp_user', 'bp_component' , 'global' ) , 'bp_seo_profil_activity_groups' );
 	$special_tags->add_type( 'bp-component-activity-favorites' ,  array( 'bp_user', 'bp_component' , 'global' ) , 'bp_seo_profil_activity_favorites' );

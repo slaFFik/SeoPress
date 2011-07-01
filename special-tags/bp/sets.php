@@ -15,8 +15,8 @@ function sp_init_bp_special_tags(){
 	/*
 	* Buddypress groups
 	*/
-	$special_tags->add_tag( '%%groupname%%', 'sp_get_bp_group_name', __( 'Shows the group name' , 'seopress') );
-	$special_tags->add_tag( '%%groupdescription%%', 'sp_get_bp_group_description', __( 'Shows the group description' , 'seopress') );
+	$special_tags->add_tag( '%%group_name%%', 'sp_get_bp_group_name', __( 'Shows the group name' , 'seopress') );
+	$special_tags->add_tag( '%%group_description%%', 'sp_get_bp_group_description', __( 'Shows the group description' , 'seopress') );
 	
 	$special_tags->add_set( 'bp_group', array( '%%groupname%%', '%%groupdescription%%' ) );
 	
@@ -32,9 +32,9 @@ function sp_init_bp_special_tags(){
 	*/
 	// sp_add_special_tag( 'bp_forum' , '%%forumname%%', 'sp_get_bp_group_name', __( 'Shows the forum name' , 'seopress') ); // Has it a name ???
 	
-	$special_tags->add_tag( '%%forumtopictitle%%', 'sp_get_bp_forum_topic_title', __( 'Shows the forum topic title' , 'seopress') );
-	$special_tags->add_tag( '%%forumtopictext%%', 'sp_get_bp_forum_post_text', __( 'Shows the forum topic text' , 'seopress') );
-	$special_tags->add_tag( '%%forumtopicpostername%%', 'sp_get_bp_forum_topic_poster_name', __( 'Shows the forum topic poster name' , 'seopress') );
+	$special_tags->add_tag( '%%forum_topic_title%%', 'sp_get_bp_forum_topic_title', __( 'Shows the forum topic title' , 'seopress') );
+	$special_tags->add_tag( '%%forum_topic_text%%', 'sp_get_bp_forum_post_text', __( 'Shows the forum topic text' , 'seopress') );
+	$special_tags->add_tag( '%%forum_topic_postername%%', 'sp_get_bp_forum_topic_poster_name', __( 'Shows the forum topic poster name' , 'seopress') );
 	
 	$special_tags->add_set( 'bp_forum_topic', array( '%%forumtopictitle%%', '%%forumtopictext%%', '%%forumtopicpostername%%'  ) );
 	

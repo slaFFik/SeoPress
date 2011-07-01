@@ -34,6 +34,10 @@ require_once( 'lib/io.inc.php' );
 require_once( 'lib/wordpress/io.inc.php' );
 require_once( 'lib/wordpress/wp.inc.php' );
 require_once( 'lib/wordpress/wp_url.inc.php' );
+require_once( 'lib/wordpress/functions.php' );
+
+require_once( 'lib/buddypress/bp.inc.php' );
+require_once( 'lib/buddypress/bp-functions.php' );
 
 require_once( 'lib/wordpress/tk_html/tk_html.php' );
 require_once( 'lib/wordpress/tk_html/tk_html_form.php' );
@@ -56,9 +60,6 @@ require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_autocomplete.php' );
 
 // Loading css and js
 require_once( 'css/loader.php' );
-
-require_once( 'lib/wordpress/functions.php' );
-require_once( 'lib/buddypress/bp-functions.php' );
 
 // Special tag engine
 require_once( 'special-tags/special-tag-core.php' );

@@ -14,7 +14,7 @@ class TK_SPECIAL_TAGS{
 	
 	public function replace( $string, $type = '', $fallback_type = '' ){
 		$active_tags = $this->get_tags( $type, '', $fallback_type );
-			
+		
 		foreach( $active_tags AS $tag => $value ){
 			$string = str_replace( $tag , call_user_func( $value ['function'] ) , $string );
 		}
@@ -69,6 +69,15 @@ class TK_SPECIAL_TAGS{
 		}
 		return $return_tags;
 	}
+}
+
+function sp_add_special_tag_page_type( $name, $sets = array() ){
+	global $special_tags;
+	$special_tags->add_type( $name, $sets = array() ); // Activity directory
+}
+function sp_add_special_tag_set( $name, $sets = array() ){
+	global $special_tags;
+	$special_tags->add_type( $name, $sets = array() ); // Activity directory
 }
 
 ?>

@@ -6,69 +6,72 @@ function sp_init_special_tags(){
 	/*
 	* Global 
 	*/
-	$special_tags->add_tag( '%%sitename%%', 'sp_get_sitename', __( 'Shows the sitename' , 'seopress') );
-	$special_tags->add_tag( '%%sitedescription%%', 'sp_get_sitedesc', __( 'Shows the site description' , 'seopress') );
+	$special_tags->add_tag( '%%site_name%%', 'sp_get_sitename', __( 'Shows the sitename' , 'seopress') );
+	$special_tags->add_tag( '%%site_description%%', 'sp_get_sitedesc', __( 'Shows the site description' , 'seopress') );
 	
 	$special_tags->add_set( 'global', array( '%%sitename%%', '%%sitedescription%%' ) );
 	
 	/*
 	* Post & Page
 	*/
-	$special_tags->add_tag( '%%posttitle%%', 'sp_get_post_title', __( 'Shows the title of post' , 'seopress') );	
-	$special_tags->add_tag( '%%postexcerpt%%', 'sp_get_post_excerpt', __( 'Shows the excerpt of the post' , 'seopress') );	
-	$special_tags->add_tag( '%%postcategories%%', 'sp_get_categories_listing', __( 'Shows the username of post author' , 'seopress') );	
-	$special_tags->add_tag( '%%posttags%%', 'sp_get_tags_listing',  __( 'Shows the username of post author' , 'seopress') );	
-	$special_tags->add_tag( '%%postauthorname%%', 'sp_get_post_authorname', __( 'Shows the name of post author' , 'seopress') );	
-	$special_tags->add_tag( '%%postdate%%', 'sp_get_date', __( 'Shows the date of post' , 'seopress') );	
-	$special_tags->add_tag( '%%postmodified%%', 'sp_get_post_modified', __( 'Shows the  modifying date of the post' , 'seopress') );
+	$special_tags->add_tag( '%%post_title%%', 'sp_get_post_title', __( 'Shows the title of post' , 'seopress') );	
+	$special_tags->add_tag( '%%post_excerpt%%', 'sp_get_post_excerpt', __( 'Shows the excerpt of the post' , 'seopress') );	
+	$special_tags->add_tag( '%%post_categories%%', 'sp_get_categories_listing', __( 'Shows the username of post author' , 'seopress') );	
+	$special_tags->add_tag( '%%post_tags%%', 'sp_get_tags_listing',  __( 'Shows the username of post author' , 'seopress') );	
+	$special_tags->add_tag( '%%post_author%%', 'sp_get_post_authorname', __( 'Shows the name of post author' , 'seopress') );
+
+	$special_tags->add_set( 'post', array( '%%post_title%%', '%%post_excerpt%%', '%%post_categories%%', '%%post_tags%%', '%%post_authorname%%' ) );	
 	
-	$special_tags->add_set( 'post', array( '%%posttitle%%', '%%postexcerpt%%', '%%postcategories%%', '%%posttags%%', '%%postauthorname%%', '%%postdate%%', '%%postmodified%%' ) );
+	$special_tags->add_tag( '%%page_title%%', 'sp_get_post_title', __( 'Shows the title of post' , 'seopress') );	
+	$special_tags->add_tag( '%%page_excerpt%%', 'sp_get_post_excerpt', __( 'Shows the excerpt of the post' , 'seopress') );	
+	$special_tags->add_tag( '%%page_author%%', 'sp_get_post_authorname', __( 'Shows the name of post author' , 'seopress') );	
+	
+	$special_tags->add_set( 'page', array( '%%page_title%%', '%%page_excerpt%%', '%%page_authorname%%' ) );
+
 	
 	/*
 	* Archive page
 	*/
-	$special_tags->add_tag( '%%date%%', 'sp_get_archive_date', __( 'Shows the archive date' , 'seopress') );
-
-	$special_tags->add_set( 'archive', array( '%%date%%' ) );
+	$special_tags->add_tag( '%%archive_date%%', 'sp_get_archive_date', __( 'Shows the archive date' , 'seopress') );
+	$special_tags->add_set( 'archive', array( '%%archive_date%%' ) );
 	
 	/*
 	* Category page
 	*/
-	$special_tags->add_tag( '%%name%%', 'sp_get_category_name', __( 'Shows the category name' , 'seopress') );	
-	$special_tags->add_tag( '%%description%%', 'sp_get_category_description', __( 'Shows the category description' , 'seopress') );
+	$special_tags->add_tag( '%%category%%', 'sp_get_category_name', __( 'Shows the category name' , 'seopress') );	
+	$special_tags->add_tag( '%%category_description%%', 'sp_get_category_description', __( 'Shows the category description' , 'seopress') );
 
-	$special_tags->add_set( 'category', array( '%%name%%', '%%description%%' ) );
+	$special_tags->add_set( 'category', array( '%%category%%', '%%category_description%%' ) );
 	
 	/*
 	* Tag page
 	*/
-	$special_tags->add_tag( '%%name%%', 'sp_get_tag_name', __( 'Shows the tag name' , 'seopress') );		
-	$special_tags->add_tag( '%%description%%', 'sp_get_tag_description', __( 'Shows the tag description' , 'seopress') );	
+	$special_tags->add_tag( '%%tag%%', 'sp_get_tag_name', __( 'Shows the tag name' , 'seopress') );		
+	$special_tags->add_tag( '%%tag_description%%', 'sp_get_tag_description', __( 'Shows the tag description' , 'seopress') );	
 	
-	$special_tags->add_set( 'tag', array( '%%name%%', '%%description%%' ) );
+	$special_tags->add_set( 'tag', array( '%%tag%%', '%%tag_description%%' ) );
 	
 	/*
 	* Author page
 	*/
-	$special_tags->add_tag( '%%authorname%%', 'sp_get_post_authorname', __( 'Shows the name of the author' , 'seopress') );
+	$special_tags->add_tag( '%%author%%', 'sp_get_post_authorname', __( 'Shows the name of the author' , 'seopress') );
 	
-	$special_tags->add_set( 'author', array( '%%authorname%%' ) );
+	$special_tags->add_set( 'author', array( '%%author%%' ) );
 
 	/*
 	* Pagination
-	*/
-	$special_tags->add_tag( '%%pagination%%', 'sp_get_page', __( 'Shows the full Pagination' , 'seopress') );		
-	$special_tags->add_tag( '%%pagenumber%%', 'sp_get_page_number', __( 'Shows the current page number' , 'seopress') );	
-	$special_tags->add_tag( '%%pagetotal%%', 'sp_get_page_total', __( 'Shows the sum of all pages' , 'seopress') );
+	*/			
+	$special_tags->add_tag( '%%page%%', 'sp_get_page_number', __( 'Shows the current page number' , 'seopress') );	
+	$special_tags->add_tag( '%%page_total%%', 'sp_get_page_total', __( 'Shows the sum of all pages' , 'seopress') );
 	
-	$special_tags->add_set( 'pagination', array( '%%pagination%%', '%%pagenumber%%', '%%pagetotal%%' ) );
+	$special_tags->add_set( 'pagination', array( '%%pagination%%', '%%page%%', '%%page_total%%' ) );
 	
 	/*
 	* Search page
 	*/
-	$special_tags->add_tag( '%%search%%', 'sp_get_search_phrase', __( 'Shows the search phrase' , 'seopress') );
+	$special_tags->add_tag( '%%search_phrase%%', 'sp_get_search_phrase', __( 'Shows the search phrase' , 'seopress') );
 	
-	$special_tags->add_set( 'search', array( '%%search%%' ) );
+	$special_tags->add_set( 'search', array( '%%searchphrase%%' ) );
 
 }
 ?>
