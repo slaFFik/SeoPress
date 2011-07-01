@@ -27,8 +27,6 @@ $seopress_plugin_url = plugin_dir_url( __FILE__ );
 // loading langauge engine
 load_plugin_textdomain( 'seopress', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 
-require_once( 'test.php' );
-
 // Loading libraries
 require_once( 'lib/io.inc.php' );
 require_once( 'lib/wordpress/io.inc.php' );

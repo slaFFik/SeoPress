@@ -314,7 +314,38 @@ function sp_reset_data(){
 
 function sp_rewrite_values_to_1_1( $old_option, $page_type ){
 	
+	$special_tag_change[ '%%sitename%%' ] = '%%site_name%%';
+	$special_tag_change[ '%%date%%' ] = '%%archive_date%%';
+	$special_tag_change[ '%%pagenumber%%' ] = '%%page%%';
+	$special_tag_change[ '%%archivedate%%' ] = '%%archive_date%%';	
+	$special_tag_change[ '%%searchphrase%%' ] = '%%search_phrase%%';
+	
+	$special_tag_change[ '%%tag%%' ] = '%%post_tags%%';
+	$special_tag_change[ '%%category%%' ] = '%%post_categories%%';
+	
+	$special_tag_change[ '%%forumtopictitle%%' ] = '%%forum_topic_title%%';
+	$special_tag_change[ '%%forumtopictext%%' ] = '%%forum_topic_text%%';
+	$special_tag_change[ '%%forumtopicpostername%%' ] = '%%forum_topic_author%%';
+	
+	$special_tag_change[ '%%usernicename%%' ] = '%%username%%';	
+	$special_tag_change[ '%%displayname%%' ] = '%%username%%';	
+	$special_tag_change[ '%%fullname%%' ] = '%%username%%';
+	$special_tag_change[ '%%userfullname%%' ] = '%%username%%';	
+	
+	$special_tag_change[ '%%groupname%%' ] = '%%group%%';
+	$special_tag_change[ '%%groupdescription%%' ] = '%%group_description%%';	
+	
+	
+	
 	$meta = get_blog_option( SITE_ID_CURRENT_SITE , $old_option );
+	
+	foreach($special_tag_change AS $key => $value ){
+		$meta[0] = str_replace( $key , $value , $meta[0]  );
+		$meta[1] = str_replace( $key , $value , $meta[1]  );
+		$meta[2] = str_replace( $key , $value , $meta[2]  );
+	}
+	
+	// print_r_html( $meta );
 			
 	$values[ $page_type . '-title' ] = $meta[0];
 	$values[ $page_type . '-description'] = $meta[1];

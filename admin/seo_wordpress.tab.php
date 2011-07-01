@@ -31,7 +31,7 @@ function sp_admin_wp_tab(){
 	
 	$html.= $accordion->get_html();
 	
-	$button = '<p class="submit"><input class="button-primary" type="submit" name="save" value="' . __('Save settings', 'seopress') . '" /></p>';
+	$button = '<p class="submit"><input class="button-primary" type="submit" name="save" value="' . __( 'Save', 'seopress' ) . '" /></p>';
 	
 	$html.= $button;
 			

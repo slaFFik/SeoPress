@@ -33,7 +33,7 @@ function sp_admin_wpmu_tab(){
 			
 	do_action( 'sp_admin_wpmu_tab_bottom' );
 	
-	$button = '<p class="submit"><input class="button-primary" type="submit" name="save" value="' . __('Save settings', 'seopress') . '" /></p>';
+	$button = '<p class="submit"><input class="button-primary" type="submit" name="save" value="' . __( 'Save', 'seopress' ) . '" /></p>';
 	
 	$html.= $button;	
 	

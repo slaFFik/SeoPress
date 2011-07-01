@@ -42,10 +42,11 @@ function seopress_seo(){
 		$tabs->add_tab( 'cap_bp_standard', __ ('Buddypress', 'seopress'), sp_admin_bp_tab() );
 		
 		if ( sp_is_bp_plugin_installed() ){
-			
 			$tabs->add_tab( 'cap_bp_plugins', __ ('Buddypress Plugins', 'seopress'), sp_admin_bp_plugins_tab() );
 		}		
 	}
+	
+	$tabs->add_tab( 'cap_get_pro', __ ('Get Pro version!', 'seopress'), __('Coming soon!', 'seopress') );
 	
 	apply_filters( 'sp_seo_tabs', $tabs );
 	
