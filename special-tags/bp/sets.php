@@ -31,9 +31,9 @@ function sp_init_bp_special_tags(){
 	/*
 	* Buddypress users
 	*/
-	$special_tags->add_tag( '%%username%%', 'sp_get_bp_user_display_name', __( 'Shows name of the user' , 'seopress') );
+	$special_tags->add_tag( '%%user_name%%', 'sp_get_bp_user_display_name', __( 'Shows name of the user' , 'seopress') );
 	
-	$special_tags->add_set( 'bp_user', array( '%%username%%' ) );
+	$special_tags->add_set( 'bp_user', array( '%%user_name%%' ) );
 	
 	/*
 	* Buddypress forums
