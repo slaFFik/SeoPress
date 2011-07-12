@@ -16,6 +16,7 @@ function sp_type_box( $type, $css_class = '' ){
 	apply_filters( 'sp_types_fields', $fields );
 
 	$html.= '<table width="100%" class="form-table"><tbody>';
+		
 	foreach( $fields AS $key => $field ){
 		if( $field['field-type'] == 'textfield' ){
 			register_setting( 'sp-settings', $field['name'] );		
@@ -27,6 +28,11 @@ function sp_type_box( $type, $css_class = '' ){
 		
 		apply_filters( 'sp_type_box_field_loop', $fields );
 	}
+	
+	$html.= '<tr><td width="200"><lable for="' . $type. '-noindex">' . __( 'Ban searchengines', 'seopress' ) . '</lable></td><td>';			
+	$html.= tk_wp_form_checkbox( $type . '-noindex', 'seopress_seo_settings', 'noindex' ) ;
+	$html.= '</td></tr>';	
+
 	$html.= '</tbody></table>';
 	
 	return $html;

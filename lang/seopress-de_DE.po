@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bp-seo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-01 19:40+0100\n"
-"PO-Revision-Date: 2011-07-01 19:41+0100\n"
+"POT-Creation-Date: 2011-07-12 22:13+0100\n"
+"PO-Revision-Date: 2011-07-12 22:13+0100\n"
 "Last-Translator: Sven Wagener <svenw@themekraft.com>\n"
 "Language-Team: Sven Wagener <sven.wagener@rheinschmiede.de>\n"
 "MIME-Version: 1.0\n"
@@ -61,7 +61,7 @@ msgid "Setup the global settings of the Seo part of the plugin."
 msgstr "Stellen Sie die globalen Optionen des Seo Bereichs des Plugins ein."
 
 #: C:\Users\wagesve\SeoPress-Free/admin/options_seo.tab.php:20
-#: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:21
+#: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:17
 #: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:50
 #: C:\Users\wagesve\SeoPress-Free/admin/sp_admin_core.php:12
 msgid "Title"
@@ -314,22 +314,26 @@ msgstr "Stellen Sie den Titel und die Meta Tags Ihres Wordpress Blogs ein."
 msgid "SEO Settings"
 msgstr "Seo Einstellungen"
 
-#: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:17
-#: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:46
-msgid "Forbid searchengines to scan url"
-msgstr "Verbiete Suchmaschinen diese Seite zu Scannen"
-
-#: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:25
+#: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:21
 #: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:54
 #: C:\Users\wagesve\SeoPress-Free/admin/sp_admin_core.php:13
 msgid "Description"
 msgstr "Beschreibung"
 
-#: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:29
+#: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:25
 #: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:58
 #: C:\Users\wagesve\SeoPress-Free/admin/sp_admin_core.php:14
 msgid "Keywords"
 msgstr "Keywords"
+
+#: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:29
+#: C:\Users\wagesve\SeoPress-Free/admin/sp_admin_core.php:32
+msgid "Ban searchengines"
+msgstr "Suchmaschinen aussperren"
+
+#: C:\Users\wagesve\SeoPress-Free/admin/single_metabox.php:46
+msgid "Forbid searchengines to scan url"
+msgstr "Verbiete Suchmaschinen diese Seite zu Scannen"
 
 #: C:\Users\wagesve\SeoPress-Free/lib/cheesecap.php:445
 msgid "Save Options"

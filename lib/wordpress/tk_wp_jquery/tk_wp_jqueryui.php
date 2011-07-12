@@ -30,24 +30,36 @@ class TK_WP_JQUERYUI{
 			wp_enqueue_style( 'jquery-ui-css', plugin_dir_url( __FILE__ ) . 'jquery/jquery-ui.css' );
 		}
 		
+		$jqueryui_url = '';
+		
 		foreach( $components AS $component ){
-			$jqueryui_url = $this->jqueryui[ $this->wp_version ][ $component ]['url'];	
-			$jqueryui_version = $this->jqueryui[ $this->wp_version ][ $component ]['version'];
+			if( isset( $this->jqueryui[ $this->wp_version ][ $component ]['url'] ) ){
+				$jqueryui_url = $this->jqueryui[ $this->wp_version ][ $component ]['url'];
+			}
+			if( isset( $this->jqueryui[ $this->wp_version ][ $component ]['version'] ) ){	
+				$jqueryui_version = $this->jqueryui[ $this->wp_version ][ $component ]['version'];
+			}
 			
 			if( $jqueryui_url == '' ){
-				$jqueryui_url = $this->jqueryui[ '3.1.3' ][ $component ]['url'];
-				$jqueryui_version = $this->jqueryui[ '3.1.3' ][ $component ]['version'];	
+				if( isset( $this->jqueryui[ '3.1.3' ][ $component ]['url'] ) ){
+					$jqueryui_url = $this->jqueryui[ '3.1.3' ][ $component ]['url'];
+				}
+				if( isset(  $this->jqueryui[ '3.1.3' ][ $component ]['version'] ) ){
+					$jqueryui_version = $this->jqueryui[ '3.1.3' ][ $component ]['version'];
+				}	
 			}
 			/* echo '<pre>';
 			print_r($this->depencies[ $component ]);
 			echo '</pre>';
 			*/
-			if( count( $this->depencies[ $component ] ) > 0 ){
-				foreach( $this->depencies[ $component ] AS $required_component ){
-					
-					if( in_array( $required_component, $this->known_components) && !in_array( $required_component,  $this->enqueued_components ) ){
-						$this->add_enqueued_jqueryui_component( $required_component );
-						wp_enqueue_script( $required_component );
+			if( isset( $this->depencies[ $component ] ) ){
+				if( count( $this->depencies[ $component ] ) > 0 ){
+					foreach( $this->depencies[ $component ] AS $required_component ){
+						
+						if( in_array( $required_component, $this->known_components) && !in_array( $required_component,  $this->enqueued_components ) ){
+							$this->add_enqueued_jqueryui_component( $required_component );
+							wp_enqueue_script( $required_component );
+						}
 					}
 				}
 			}
@@ -71,7 +83,7 @@ class TK_WP_JQUERYUI{
 	}
 	
 	public function add_jqueryui_component( $component_name, $wp_version, $jqueryui_component_url, $jqueryui_version = '' ){
-		if( !in_array( $component, $this->known_components ) ) {
+		if( !in_array( $component_name, $this->known_components ) ) {
 			$this->jqueryui[ $wp_version ][ $component_name ]['url'] = $jqueryui_component_url;
 			
 			if( $jqueryui_version != '' ){

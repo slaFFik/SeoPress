@@ -9,7 +9,7 @@ class TK_WP_FORM_CHECKBOX extends TK_FORM_CHECKBOX{
 		
 		if( $post != '' ){
 
-			$option_group_value = get_post_meta( $post->ID , $option_group , true );
+			$option_group_value = get_post_meta( $post->ID , $option_group , TRUE );
 			
 			$field_name = $option_group . '[' . $name . ']';
 			$value = $option_group_value[ $name ];
@@ -23,10 +23,10 @@ class TK_WP_FORM_CHECKBOX extends TK_FORM_CHECKBOX{
 			$value = $value[ $name ];
 		} 
 		
-		$checked = false;
+		$checked = FALSE;
 		
 		if( $value != '' ){
-			$checked = true;
+			$checked = TRUE;
 		}
 				
 		parent::__construct( $field_name , $value, $id, $checked, $extra );

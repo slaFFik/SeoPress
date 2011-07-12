@@ -60,8 +60,6 @@ require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_autocomplete.php' );
 // Loading css and js
 require_once( 'css/loader.php' );
 
-
-
 // Special tag engine
 require_once( 'special-tags/special-tag-core.php' );
 
@@ -78,14 +76,9 @@ require_once( 'admin/sp_admin_core.php' );
 require_once( 'admin/seo.php' );
 require_once( 'admin/options.php' );
 require_once( 'admin/single_metabox.php' );
-require_once( 'admin/single_metabox_save.php' );
 
 require_once( 'sp-core.php' );
-
-function save_test_form(){
-	tk_register_wp_option_group( 'testoptiongroup' );
-}
-add_action( 'admin_init' , 'save_test_form' , 0 );
+require_once( 'update.php' );
 
 add_action( 'init' , 'seopress_init' , 0 );
 

@@ -65,7 +65,9 @@ class TK_SPECIAL_TAGS{
 		
 		// Getting filteted tags in array
 		foreach ( $tags AS $tag ){
-			$return_tags[ $tag ] = $this->tags[ $tag ];
+			if( isset( $this->tags[ $tag ] ) ){
+				$return_tags[ $tag ] = $this->tags[ $tag ];
+			}
 		}
 		return $return_tags;
 	}
