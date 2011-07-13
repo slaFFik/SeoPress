@@ -60,15 +60,11 @@ class SP_CORE{
 			add_action( 'admin_menu', 'sp_admin_menue');
 			
 			## Setting up post & page forms
-			if( isset( $this->options['metabox_post'] ) ){
-				if( $this->options['metabox_post'] != 'on' ){
-					add_action('edit_form_advanced', 'sp_post_metabox');
-				}
+			if( !isset( $this->options['metabox_post'] ) ){
+				add_action('edit_form_advanced', 'sp_post_metabox');
 			}
-			if( isset( $this->options['metabox_page'] ) ){
-				if( $this->options['metabox_page'] != 'on' ){
-					add_action('edit_page_form', 'sp_page_metabox');
-				}
+			if( !isset( $this->options['metabox_page'] ) ){
+				add_action('edit_page_form', 'sp_page_metabox');
 			}			
 			
 			$this->special_tags = $special_tags->get_tags();
@@ -104,7 +100,7 @@ class SP_CORE{
 	public function get_seo_data( $key = false ){
 		global $bp;
 		
-		if( is_single() ) $meta = $this->get_post_meta();
+		if( is_single() || is_page() ) $meta = $this->get_post_meta();
 		
 		if( $meta == '' ){
 			$template = $this->get_template();

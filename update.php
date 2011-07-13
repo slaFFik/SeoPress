@@ -3,6 +3,7 @@
 function sp_rewrite_values_to_1_1( $old_option, $page_type ){
 	
 	$special_tag_change[ '%%sitename%%' ] = '%%site_name%%';
+	$special_tag_change[ '%%sitedescription%%' ] = '%%site_description%%';	
 	
 	if( $page_type == 'wp-post' || $page_type == 'mu-post' ){
 		$special_tag_change[ '%%title%%' ] = '%%post_title%%';

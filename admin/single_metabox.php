@@ -43,10 +43,6 @@ function sp_page_metabox(){
 	$html.= '<table class="form-table">
 				<tbody>
 					<tr>
-						<td width="200"><label for="seopress_noindex">' . __( 'Forbid searchengines to scan url', 'seopress' ) . ':</label></td>
-						<td>' . tk_wp_form_checkbox( 'noindex', 'sp_post_metabox', 'noindex' ) . '</td>
-					</tr>
-					<tr>
 						<td><label for="seopress_title">' . __( 'Title', 'seopress' ) . ':</label></td>
 						<td>' . tk_wp_form_textfield( 'title', 'sp_post_metabox', 'title',  ' style="width:99%"' ) . '</td>
 					</tr>
@@ -57,7 +53,11 @@ function sp_page_metabox(){
 					<tr>
 						<td><label for="seopress_keywords">' . __( 'Keywords', 'seopress' ) . ':</label></td>
 						<td>' . tk_wp_form_textfield( 'keywords', 'sp_post_metabox', 'keywords', ' style="width:99%"' ) . '</td>
-					</tr>				
+					</tr>
+					<tr>
+						<td width="200"><label for="seopress_noindex">' . __( 'Ban searchengines', 'seopress' ) . ':</label></td>
+						<td>' . tk_wp_form_checkbox( 'noindex', 'sp_post_metabox', 'noindex' ) . '</td>
+					</tr>
 				</tbody>
 			</table>';
 	
