@@ -27,7 +27,7 @@ class TK_WP_JQUERYUI_AUTOCOMPLETE extends TK_WP_FORM_TEXTFIELD{
 					function extractLast( term ) {
 						return split( term ).pop();
 					}
-					$("input#' . $this->id . '")
+					$(\'#' . $this->id . '\')
 						.bind( "keydown", function( event ) {
 							if ( event.keyCode === $.ui.keyCode.TAB && $( this ).data( "autocomplete" ).menu.active ) {
 								event.preventDefault();
