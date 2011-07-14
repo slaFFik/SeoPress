@@ -13,7 +13,7 @@ function sp_type_box( $type, $css_class = '' ){
 	$fields['description'] = array( 'name' => $type . '-description', 'title' => __( 'Description', 'seopress') , 'field-type' => 'textfield' ) ;
 	$fields['keywords'] =array( 'name' => $type . '-keywords', 'title' => __( 'Keywords', 'seopress') , 'field-type' => 'textfield' ) ;
 	
-	apply_filters( 'sp_types_fields', $fields );
+	$fields = apply_filters( 'sp_types_fields', $fields );
 
 	$html.= '<table width="100%" class="form-table"><tbody>';
 		
@@ -26,12 +26,14 @@ function sp_type_box( $type, $css_class = '' ){
 			$html.= '</td></tr>';
 		}
 		
-		apply_filters( 'sp_type_box_field_loop', $fields );
+		$html = apply_filters( 'sp_type_box_field_loop', $html, $type );
 	}
 	
 	$html.= '<tr><td width="200"><lable for="' . $type. '-noindex">' . __( 'Ban searchengines', 'seopress' ) . '</lable></td><td>';			
 	$html.= tk_wp_form_checkbox( $type . '-noindex', 'seopress_seo_settings', 'noindex' ) ;
 	$html.= '</td></tr>';	
+	
+	$html = apply_filters( 'sp_type_box_field_html', $html, $type );
 
 	$html.= '</tbody></table>';
 	
