@@ -7,10 +7,11 @@ class TK_FORM_SELECT extends TK_FORM_ELEMENT{
 	public function __construct( $name, $value = '', $id = '', $extra = '' ){
 		parent::__construct( $name, $value, $id );
 		$this->elements = array();
+		$this->extra = $extra;
 	}
 	
-	public function add_option( $option, $value = '' ){
-		$element = array( 'option' => $option, 'value' => $value );
+	public function add_option( $option, $value = '', $extra = '' ){
+		$element = array( 'option' => $option, 'value' => $value, 'extra' => $extra );
 		array_push( $this->elements, $element  );
 	}
 	
@@ -23,19 +24,25 @@ class TK_FORM_SELECT extends TK_FORM_ELEMENT{
 		
 		if( count( $this->elements ) > 0 ){
 			foreach( $this->elements AS $element ){
+				$extra = ''; 
+				
+				if( isset( $element['extra'] ) && $element['extra'] != '' ){ 
+					$extra = $element['extra'];
+				}
+				
 				if( isset( $element['value'] ) && $element['value'] != ''  ){
 					$value =  ' value="' . $element['value'] . '"';
 							
 					if( $this->value == $element['value'] && $element['value'] != '' ){
-						$html.=  '<option' . $value . ' selected>' . $element['option'] . '</option>';;
+						$html.=  '<option' . $value . ' selected' . $extra . '>' . $element['option'] . '</option>';;
 					}else{
-						$html.=  '<option' . $value . '>' . $element['option'] . '</option>';;
+						$html.=  '<option' . $value . $extra . '>' . $element['option'] . '</option>';;
 					}
 				}else{
 					if( $this->value == $element['option'] ){
-						$html.=  '<option' . $value . ' selected>' . $element['option'] . '</option>';;
+						$html.=  '<option' . $value . ' selected' . $extra . '>' . $element['option'] . '</option>';;
 					}else{
-						$html.=  '<option' . $value . '>' . $element['option'] . '</option>';;
+						$html.=  '<option' . $value . $extra . '>' . $element['option'] . '</option>';;
 					}
 				}
 			}

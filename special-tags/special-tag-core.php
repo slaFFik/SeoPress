@@ -55,7 +55,7 @@ class TK_SPECIAL_TAGS{
 		
 		
 		// Getting tags of sets
-		if( $set == '' ){
+		if( $set == '' && is_array($sets) ){
 			foreach( $sets AS $name ){
 				$tags = array_merge( $tags, $this->sets[ $name ] );
 			}	
@@ -63,10 +63,12 @@ class TK_SPECIAL_TAGS{
 			$tags = $this->sets[ $set ];
 		}
 		
-		// Getting filteted tags in array
-		foreach ( $tags AS $tag ){
-			if( isset( $this->tags[ $tag ] ) ){
-				$return_tags[ $tag ] = $this->tags[ $tag ];
+		if( is_array( $tags ) ){
+			// Getting filteted tags in array
+			foreach ( $tags AS $tag ){
+				if( isset( $this->tags[ $tag ] ) ){
+					$return_tags[ $tag ] = $this->tags[ $tag ];
+				}
 			}
 		}
 		return $return_tags;

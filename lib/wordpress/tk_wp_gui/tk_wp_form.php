@@ -4,8 +4,8 @@ class TK_WP_FORM extends TK_HTML_FORM{
 	
 	var $option_group;
 	
-	public function __construct( $option_group ){
-		parent::__construct( 'options.php', 'POST' );
+	public function __construct( $option_group, $id = '' ){
+		parent::__construct( 'options.php', 'POST', $id );
 		
 		$this->option_group = $option_group;
 	}

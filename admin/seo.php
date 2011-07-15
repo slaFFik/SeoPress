@@ -9,6 +9,8 @@
 
 function seopress_seo(){
 	global $seopress_plugin_url;
+	
+	$html = apply_filters( 'sp_settings_top', $html );
 		 
 	/*
 	 * Adding display
@@ -16,12 +18,12 @@ function seopress_seo(){
 	$display = new	TK_WP_ADMIN_DISPLAY( __( 'Seo Settings', 'seopress'), 'plugins' );
 	$display->add_element( '<p>' . __( 'Optimize your Wordpress pages.', 'seopress') . '</p>' );
 	
-	$form = new TK_WP_FORM( 'seopress_seo_settings' );
+	$form = new TK_WP_FORM( 'seopress_seo_settings', 'POST', 'seopress_settings' );
 	
 	/*
 	 * Adding jqueryui tabs
 	 */		
-	$tabs = new	TK_WP_JQUERYUI_TABS();	
+	$tabs = new	TK_WP_JQUERYUI_TABS();
 	
 	require_once( 'seo_wordpress.tab.php' );
 	require_once( 'seo_wordpressmu.tab.php' );
@@ -48,13 +50,15 @@ function seopress_seo(){
 	
 	$tabs->add_tab( 'cap_get_pro', __ ('Get Pro version!', 'seopress'), __('Coming soon!', 'seopress') );
 	
-	apply_filters( 'sp_seo_tabs', $tabs );
-	
 	$form->add_element( $tabs->get_html() );
 	
 	$display->add_element( $form->get_html() );
 	
-	$display->write_html();
+	$html.= $display->get_html();
+	
+	$html = apply_filters( 'sp_settings_bottom', $html );
+	
+	echo $html;
 
 	include( 'footer.php' );
 

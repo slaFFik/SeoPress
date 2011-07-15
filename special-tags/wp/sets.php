@@ -19,12 +19,6 @@ function sp_init_special_tags(){
 	$special_tags->add_tag( '%%post_categories%%', 'sp_get_categories_listing', __( 'Shows post categories' , 'seopress') );	
 	$special_tags->add_tag( '%%post_tags%%', 'sp_get_tags_listing',  __( 'Shows post tags' , 'seopress') );	
 	$special_tags->add_tag( '%%post_author%%', 'sp_get_post_authorname', __( 'Shows the name of post author' , 'seopress') );
-	
-	// Deprecated -> Have to go!!!
-	$special_tags->add_tag( '%%title%%', 'sp_get_post_title', __( 'Deprecated! Please use %%post_title%% (Shows the title of the post)' , 'seopress') );
-	$special_tags->add_tag( '%%excerpt%%', 'sp_get_post_excerpt', __( 'Deprecated! Please use %%post_excerpt%% (Shows the excerpt of the post)' , 'seopress') );
-	// $special_tags->add_tag( '%%tag%%', 'sp_get_tags_listing', __( 'Deprecated! Please use %%post_tags%% (Shows the tags of the post)' , 'seopress') );
-	// $special_tags->add_tag( '%%category%%', 'sp_get_categories_listing', __( 'Deprecated! Please use %%post_categories%% (Shows the categories of the post)' , 'seopress') );	
 		
 	$special_tags->add_set( 'post', array( '%%post_title%%', '%%post_excerpt%%', '%%post_categories%%', '%%post_tags%%', '%%post_author%%', '%%title%%', '%%excerpt%%' ) );	
 	
@@ -32,13 +26,8 @@ function sp_init_special_tags(){
 	$special_tags->add_tag( '%%page_excerpt%%', 'sp_get_post_excerpt', __( 'Shows the excerpt of the post' , 'seopress') );	
 	$special_tags->add_tag( '%%page_author%%', 'sp_get_post_authorname', __( 'Shows the name of post author' , 'seopress') );
 	
-	// Deprecated -> Have to go!!!
-	$special_tags->add_tag( '%%title%%', 'sp_get_post_title', __( 'Deprecated! Please use %%page_title%% (Shows the title of the page)' , 'seopress') );
-	$special_tags->add_tag( '%%excerpt%%', 'sp_get_post_title', __( 'Deprecated! Please use %%page_excerpt%% (Shows the excerpt of the page)' , 'seopress') );		
-	
 	$special_tags->add_set( 'page', array( '%%page_title%%', '%%page_excerpt%%', '%%page_author%%', '%%title%%', '%%excerpt%%' ) );
 
-	
 	/*
 	* Archive page
 	*/
