@@ -48,7 +48,7 @@ function seopress_seo(){
 		}		
 	}
 	
-	$tabs->add_tab( 'cap_get_pro', __ ('Get Pro version!', 'seopress'), __('Coming soon!', 'seopress') );
+	do_action( 'sp_seo_settings_tabs', $tabs );	
 	
 	$form->add_element( $tabs->get_html() );
 	
@@ -56,7 +56,7 @@ function seopress_seo(){
 	
 	$html.= $display->get_html();
 	
-	$html = apply_filters( 'sp_settings_bottom', $html );
+	$html = apply_filters( 'sp_seo_settings_bottom', $html );
 	
 	echo $html;
 

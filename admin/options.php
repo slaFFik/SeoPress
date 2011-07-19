@@ -27,7 +27,7 @@ function seopress_options(){
 	
 	$tabs->add_tab( 'cap_main_blog', __ ('Seo', 'seopress'), sp_admin_settings_tab() );
 	
-	$tabs->add_tab( 'cap_get_pro', __ ('Get Pro version!', 'seopress'), __('Coming soon!', 'seopress') );
+	do_action( 'sp_options_tabs', $tabs );	
 	
 	$form->add_element( $tabs->get_html() );
 	

@@ -69,6 +69,9 @@ class SP_CORE{
 			
 			$this->special_tags = $special_tags->get_tags();
 			
+			add_action( 'sp_seo_settings_tabs', 'sp_get_pro_tab', 10 );
+			add_action( 'sp_options_tabs', 'sp_get_pro_tab', 10 );
+			
 			do_action( 'sp_admin_init' );
 		}
 	}
@@ -306,6 +309,10 @@ function sp_admin_menue(){
 function seopress_init(){
 	global $seopress;
 	$seopress = new SP_CORE();
+}
+
+function sp_get_pro_tab( &$tabs ){
+	$tabs->add_tab( 'cap_get_pro', __ ('Get Pro version!', 'seopress'), __('Coming soon!', 'seopress') );	
 }
 
 function sp_reset_data(){
