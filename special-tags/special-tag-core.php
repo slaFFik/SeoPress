@@ -53,7 +53,6 @@ class TK_SPECIAL_TAGS{
 			$sets = $this->types[ $type ]['sets'];	
 		}
 		
-		
 		// Getting tags of sets
 		if( $set == '' && is_array($sets) ){
 			foreach( $sets AS $name ){

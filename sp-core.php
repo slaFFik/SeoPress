@@ -30,9 +30,6 @@ class SP_CORE{
 
 			if( tk_is_buddypress() ){ // Should be reworked <- BP have to be hooked in
 				
-				sp_init_bp_special_tags(); // Initializung Special tag sets & tags for buddypress
-				sp_init_bp_special_tags_pt(); // Initializung Special tag types for buddypress
-				
 				remove_all_filters( 'bp_page_title' );
 				
 				add_filter( 'bp_page_title' , array(&$this, 'init_seo') , 1 ); // Filtering buddypress title 	
@@ -263,6 +260,11 @@ class SP_CORE{
 
 		sp_init_special_tags(); // Initializung Special tag sets & tags 		
 		sp_init_special_tags_pt(); // Initializung Special tag types
+		
+		if( tk_is_buddypress() ){ // Should be reworked <- BP have to be hooked in
+			sp_init_bp_special_tags(); // Initializung Special tag sets & tags for buddypress
+			sp_init_bp_special_tags_pt(); // Initializung Special tag types for buddypress
+		}
 		
 		$special_tags->add_type( 'unknown' , array( 'global' ) );
 		
