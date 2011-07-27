@@ -10,7 +10,6 @@ Searchengine optimization plugin for Wordpress & Buddypress
 
 == Description ==
 SeoPress is professional search engine optimization for:<br>
-<br>
 <ul>
 <li>Wordpress</li>
 <li>Wordpress Sites (Network Blogs)</li>
@@ -20,38 +19,24 @@ SeoPress is professional search engine optimization for:<br>
 <strong>Please be careful with updating to 1.1! The whole plugin have been redeveloped. Take care that your settings are working after updating.</strong>
 
 SeoPress supports following languages:<br>
-<br>
 <ul>
 <li>English</li>
 <li>German</li>
 </ul>
 
-SeoPress recognizes your type of Wordpress installation automatically and offers you all SEO options you might need, e.g. for the activated Buddypress components.<br><br>
-
-<b>Functionality:</b><br>
+<strong>Functions:</strong><br>
 <ul>
-<li>Create individual title, description, keywords for all parts of your site.</li>
-<li>Use special tags for fine-tuning and automatic creation of title, description and keywords.</li>
+<li>Setup Title, Description and Keywords of your WordPress, Wordpress sites and Buddypress pages.</li>
 <li>Ban searchengines from your sites (noindex)</li>
-<li>No lose of individual page settings (Meta's&Title) if used "All in One Seo" and "WPSeo"  before</li>
-<li>API for additional plugins</li>
+<li>Special Tags for wordpress values</li>
+<li>Action hooks for 3rd party plugins</li>
 <li>Add your own special tags</li>
 </ul>
 
-<b>What the plugin does:</b><br>
-SeoPress recognizes your Wordpress version and displays the SEO options depending on the system you use.<br>
-If Buddypress is installed, it offers you all Seo options for the activated Buddypress components.<br>
-
-To fine-tune your title and description, you can use special tags.<br>
-
-In the option page, you control all global SEO behaviours, from the Wordpress site, the multi-sites or Buddypress components.<br>
-For Buddypress, there is also a section for plugins which extend Buddypress.<br><br>
-
-<b>Meta box:</b>
-In the posts and pages you have a meta box, to fill in individual title and metas.<br>
-<br>
 For bug report and feature requests please go to:<br><br>
 https://github.com/Themekraft/SeoPress-Free/issues or to http://themekraft.com/groups/seopress/forum/
+
+No lose of individual page settings (Meta's&Title) if used "All in One Seo" and "WPSeo"  before.
 
 <br>
 == Installation ==
