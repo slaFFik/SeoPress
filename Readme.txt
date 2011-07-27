@@ -1,21 +1,23 @@
 === SeoPress ===
 Contributors: svenl77,mahype
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NWEYBQUNE5PVY
-Tags: seo,buddypress,wpmu,wp,searchengine optimization,networked blogs
+Tags: seo,buddypress,wpmu,wp,searchengine optimization,networked blogs,title,meta,meta description,meta keywords,noindex
 Requires at least: 2.9.x
 Tested up to: 3.2 & Buddypress 1.2.x
 Stable tag:  1.1 beta
 
-This plugin adds an option page SeoPress in your admin bar.
+Searchengine optimization plugin for Wordpress & Buddypress
 
 == Description ==
 SeoPress is professional search engine optimization for:<br>
 <br>
 <ul>
 <li>Wordpress</li>
-<li>Wordpress Networked Blogs</li>
+<li>Wordpress Sites (Network Blogs)</li>
 <li>Buddypress</li>
 </ul>
+
+<strong>Please be careful with updating to 1.1! The whole plugin have been redeveloped. Take care that your settings are working after updating.</strong>
 
 SeoPress supports following languages:<br>
 <br>
@@ -31,11 +33,12 @@ SeoPress recognizes your type of Wordpress installation automatically and offers
 <li>Create individual title, description, keywords for all parts of your site.</li>
 <li>Use special tags for fine-tuning and automatic creation of title, description and keywords.</li>
 <li>Ban searchengines from your sites (noindex)</li>
-<li>Set title and description length.</li>
 <li>No lose of individual page settings (Meta's&Title) if used "All in One Seo" and "WPSeo"  before</li>
+<li>API for additional plugins</li>
+<li>Add your own special tags</li>
 </ul>
 
-<b>How the plugin works:</b><br>
+<b>What the plugin does:</b><br>
 SeoPress recognizes your Wordpress version and displays the SEO options depending on the system you use.<br>
 If Buddypress is installed, it offers you all Seo options for the activated Buddypress components.<br>
 
@@ -47,18 +50,16 @@ For Buddypress, there is also a section for plugins which extend Buddypress.<br>
 <b>Meta box:</b>
 In the posts and pages you have a meta box, to fill in individual title and metas.<br>
 <br>
-<b>See what others are writing:</b><br>
-http://wpmu.org/optimize-buddypress-for-search-engines-with-the-newly-updated-seo-plugin/ 
-
 For bug report and feature requests please go to:<br><br>
-http://buddypress.org/community/groups/seopress/
+https://github.com/Themekraft/SeoPress-Free/issues or to http://themekraft.com/groups/seopress/forum/
+
 <br>
 == Installation ==
 1. Upload 'SeoPress' to the '/wp-content/plugins/' directory<br>
 2. a) If you use standard Wordpress installation:<br>
 Activate the plugin through the 'Plugins' menu in WordPress<br>
-2. b) If you use Networked blog installation:<br>
-Activate the plugin by the Network administration plugins menu<br>
+2. b) If you use multiple Blog installation:<br>
+Activate the plugin by the Network Admin plugins menu<br>
 3. If you use Buddypress:<br>
 <br>
 Be sure that the main blog header template uses  bp_page_title() instead of wp_title() function.<br><br>
@@ -76,7 +77,7 @@ Plugin is updatefriendly, all needed migration from older versions, will be done
 == Changelog ==
 <h4>1.1</h4>
 <ul>
-<li>Completely rework</li>
+<li>Complete rework</li>
 </ul>
 <h4>1.0.4</h4>
 <ul>
@@ -107,4 +108,3 @@ The plugin used the last post meta values instead of the homepage values.
 <li>The version "SeoPress 1.0" is a replacemand for the old plugin "Seo for Buddypress".</li>
 <li>It comes with a new UI, a lot of more functionality and many more. Read the Desciption for more details.</li>
 </ul>
-
