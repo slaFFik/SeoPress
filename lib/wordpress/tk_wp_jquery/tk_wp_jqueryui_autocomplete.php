@@ -52,8 +52,10 @@ class TK_WP_JQUERYUI_AUTOCOMPLETE extends TK_WP_FORM_TEXTFIELD{
 															
 								return false;
 							},
-							delay: 0,
-							minLength: 2						
+							change: function( event, ui ) {															
+								return false;
+							}
+													
 						})
 						.data( "autocomplete" )._renderItem = function( ul, item ) {
 							return $( "<li></li>" )
