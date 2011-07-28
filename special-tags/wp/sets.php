@@ -26,7 +26,7 @@ function sp_init_special_tags(){
 	$special_tags->add_tag( '%%page_excerpt%%', 'sp_get_post_excerpt', __( 'Shows the excerpt of the post' , 'seopress') );	
 	$special_tags->add_tag( '%%page_author%%', 'sp_get_post_authorname', __( 'Shows the name of post author' , 'seopress') );
 	
-	$special_tags->add_set( 'page', array( '%%page_title%%', '%%page_excerpt%%', '%%page_author%%', '%%title%%', '%%excerpt%%' ) );
+	$special_tags->add_set( 'page', array( '%%page_title%%', '%%page_excerpt%%', '%%page_author%%' ) );
 
 	/*
 	* Archive page

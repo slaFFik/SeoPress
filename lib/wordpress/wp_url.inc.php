@@ -88,9 +88,12 @@ if( !function_exists( 'wp_get_urls' ) ){
 	}
 }
 
-function show_urls(){
-	print_r_html( wp_get_urls() );
+if( !function_exists( 'show_urls' ) ){ 
+	function show_urls(){
+		print_r_html( wp_get_urls() );
+	}
+	// add_action( 'wp_head', 'show_urls' );
 }
-// add_action( 'wp_head', 'show_urls' );
+
 
 ?>

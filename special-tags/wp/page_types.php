@@ -16,7 +16,7 @@ function sp_init_special_tags_pt(){
 	$special_tags->add_type( 'mu-home' ,  array( 'global' ) , 'bp_seo_user_blog' );
 	$special_tags->add_type( 'mu-front-page' ,  array( 'post', 'global' ) , 'bp_seo_user_blog_front_page' );
 	$special_tags->add_type( 'mu-post' , array( 'post', 'global' )  , 'bp_seo_user_blog_posts' );
-	$special_tags->add_type( 'mu-page' , array( 'post', 'global' )  , 'bp_seo_user_blog_pages' );
+	$special_tags->add_type( 'mu-page' , array( 'page', 'global' )  , 'bp_seo_user_blog_pages' );
 	$special_tags->add_type( 'mu-archive' , array( 'archive', 'global' ) , 'bp_seo_user_blog_archiv' );
 	$special_tags->add_type( 'mu-category' , array( 'category', 'global' ) , 'bp_seo_user_blog_cat' );
 	$special_tags->add_type( 'mu-author' , array( 'author', 'global' ) , 'bp_seo_user_blog_autor_pages' );

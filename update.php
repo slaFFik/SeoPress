@@ -84,7 +84,7 @@ function sp_rewrite_values_to_1_1( $old_option, $page_type ){
 function sp_update_to_1_1(){
 	global $seopress;
 	
-	if( get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_seo_settings_values' ) == '' ){
+	if( get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_seo_settings_values' ) == '' || $_GET['reupdate_seopress'] == 'true' ){
 
 		$settings['seopress_seo_settings_values'] = array();
 
@@ -156,35 +156,50 @@ function sp_update_to_1_1(){
 		$post_types[] = 'post';
 		$post_types[] = 'page';
 		
-		foreach ( $post_types AS $post_type ){
+		global $wpdb;
+    	$blogs = $wpdb->get_results("SELECT blog_id FROM " . $wpdb->blogs, ARRAY_A );
 		
-			$posts = get_posts( 'numberposts=-1&post_type=' . $post_type );
-		
-			foreach($posts as $post){
-				$new_value = ''; 
-				
-				$title = get_post_meta( $post->ID, '_title', TRUE );
-				$description = get_post_meta( $post->ID, '_description', TRUE );
-				$keywords = get_post_meta( $post->ID, '_keywords', TRUE );
-				$noindex = get_post_meta( $post->ID, '_noindex', TRUE );
-				
-				$new_value['title'] = $title;
-				$new_value['description'] = $description;
-				$new_value['keywords'] = $keywords;
-				
-				if( $noindex == 0 ){
-					$noindex = '';
-				}else{
-					$noindex = TRUE;
+    	foreach($blogs AS $blog){
+
+    		switch_to_blog( $blog['blog_id'] );
+    		
+			foreach ( $post_types AS $post_type ){
+			
+				$posts = get_posts( 'numberposts=-1&post_type=' . $post_type );
+			
+				foreach($posts as $post){
+					$new_value = ''; 
+					
+					$title = get_post_meta( $post->ID, '_title', TRUE );
+					$description = get_post_meta( $post->ID, '_description', TRUE );
+					$keywords = get_post_meta( $post->ID, '_keywords', TRUE );
+					$noindex = get_post_meta( $post->ID, '_noindex', TRUE );
+					
+					$new_value['title'] = $title;
+					$new_value['description'] = $description;
+					$new_value['keywords'] = $keywords;
+					
+					if( $noindex == 0 ){
+						$noindex = '';
+					}else{
+						$noindex = TRUE;
+					}
+													
+					$new_value['noindex'] = $noindex;
+					
+					/*
+					echo 'Blog ID: ' . $blog['blog_id'] . "<br />";
+					echo 'Post ID: ' . $post->ID . "<br />";;
+					
+					print_r_html( $new_value );
+					*/
+					
+					update_post_meta($post->ID, 'sp_post_metabox' , $new_value );
 				}
-												
-				$new_value['noindex'] = $noindex;
-				
-				// print_r_html( $new_value );
-				
-				update_post_meta($post->ID, 'sp_post_metabox' , $new_value );
 			}
-		}	
+			
+			restore_current_blog();
+    	}	
 	}
 }
 add_action( 'init', 'sp_update_to_1_1', 0);
