@@ -21,9 +21,18 @@ function sp_get_post_title(){
 	global $post;
 	return $post->post_title;
 }
+function sp_get_post_content(){
+	global $post;
+	return str_replace( "\"", "", strip_tags( $post->post_content ) );
+}
 function sp_get_post_excerpt(){
 	global $post;
 	return $post->post_excerpt;
+}
+function sp_get_post_auto_excerpt(){
+	global $post;
+	$length = 160;
+	return substr( strip_tags( $post->post_content ), 0, $length );
 }
 function sp_get_post_authorname(){
 	global $post;
@@ -35,21 +44,12 @@ function sp_get_post_modified(){
 	return $post->post_modified;
 }
 
-
-
-
-
-
-
-
 function sp_get_category_description(){
 	global $post;	
 	$desc = category_description();
 	if (is_object ($desc)) return '';
 	return strip_tags ($desc);	
 }
-
-
 
 // Who needs?
 function sp_get_current_date(){

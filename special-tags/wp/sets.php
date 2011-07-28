@@ -14,19 +14,22 @@ function sp_init_special_tags(){
 	/*
 	* Post & Page
 	*/
-	$special_tags->add_tag( '%%post_title%%', 'sp_get_post_title', __( 'Shows the title of post' , 'seopress') );	
+	$special_tags->add_tag( '%%post_title%%', 'sp_get_post_title', __( 'Shows the title of post' , 'seopress') );
+	$special_tags->add_tag( '%%post_content%%', 'sp_get_post_content', __( 'Shows the content of the post' , 'seopress') );	
+	$special_tags->add_tag( '%%post_auto_excerpt%%', 'sp_get_post_auto_excerpt', __( 'Shows the excerpt of the post' , 'seopress') );
 	$special_tags->add_tag( '%%post_excerpt%%', 'sp_get_post_excerpt', __( 'Shows the excerpt of the post' , 'seopress') );	
 	$special_tags->add_tag( '%%post_categories%%', 'sp_get_categories_listing', __( 'Shows post categories' , 'seopress') );	
 	$special_tags->add_tag( '%%post_tags%%', 'sp_get_tags_listing',  __( 'Shows post tags' , 'seopress') );	
 	$special_tags->add_tag( '%%post_author%%', 'sp_get_post_authorname', __( 'Shows the name of post author' , 'seopress') );
 		
-	$special_tags->add_set( 'post', array( '%%post_title%%', '%%post_excerpt%%', '%%post_categories%%', '%%post_tags%%', '%%post_author%%', '%%title%%', '%%excerpt%%' ) );	
+	$special_tags->add_set( 'post', array( '%%post_title%%', '%%post_content%%', '%%post_auto_excerpt%%', '%%post_excerpt%%', '%%post_categories%%', '%%post_tags%%', '%%post_author%%' ) );	
 	
-	$special_tags->add_tag( '%%page_title%%', 'sp_get_post_title', __( 'Shows the title of post' , 'seopress') );	
-	$special_tags->add_tag( '%%page_excerpt%%', 'sp_get_post_excerpt', __( 'Shows the excerpt of the post' , 'seopress') );	
+	$special_tags->add_tag( '%%page_title%%', 'sp_get_post_title', __( 'Shows the title of post' , 'seopress') );
+	$special_tags->add_tag( '%%page_content%%', 'sp_get_post_content', __( 'Shows the title of post' , 'seopress') );	
+	$special_tags->add_tag( '%%page_auto_excerpt%%', 'sp_get_post_auto_excerpt', __( 'Shows the excerpt of the post' , 'seopress') );	
 	$special_tags->add_tag( '%%page_author%%', 'sp_get_post_authorname', __( 'Shows the name of post author' , 'seopress') );
 	
-	$special_tags->add_set( 'page', array( '%%page_title%%', '%%page_excerpt%%', '%%page_author%%' ) );
+	$special_tags->add_set( 'page', array( '%%page_title%%', '%%page_content%%', '%%page_auto_excerpt%%', '%%page_author%%' ) );
 
 	/*
 	* Archive page

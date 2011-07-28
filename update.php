@@ -13,6 +13,7 @@ function sp_rewrite_values_to_1_1( $old_option, $page_type ){
 	}
 	if( $page_type == 'wp-page' ||  $page_type == 'mu-page' ){
 		$special_tag_change[ '%%title%%' ] = '%%page_title%%';
+		$special_tag_change[ '%%excerpt%%' ] = '%%page_auto_excerpt%%';
 		$special_tag_change[ '%%author%%' ] = '%%page_author%%';
 	}
 	if( $page_type == 'wp-archive' ||  $page_type == 'mu-archive' ){
