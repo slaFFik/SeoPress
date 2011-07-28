@@ -159,13 +159,53 @@ function sp_update_to_1_1(){
 		
 		global $wpdb;
     	$blogs = $wpdb->get_results("SELECT blog_id FROM " . $wpdb->blogs, ARRAY_A );
+    	
+    	if( count( $blogs ) > 0 ){
 		
-    	foreach($blogs AS $blog){
-
-    		switch_to_blog( $blog['blog_id'] );
-    		
+	    	foreach($blogs AS $blog){
+	
+	    		switch_to_blog( $blog['blog_id'] );
+	    		
+				foreach ( $post_types AS $post_type ){
+				
+					$posts = get_posts( 'numberposts=-1&post_type=' . $post_type );
+				
+					foreach($posts as $post){
+						$new_value = ''; 
+						
+						$title = get_post_meta( $post->ID, '_title', TRUE );
+						$description = get_post_meta( $post->ID, '_description', TRUE );
+						$keywords = get_post_meta( $post->ID, '_keywords', TRUE );
+						$noindex = get_post_meta( $post->ID, '_noindex', TRUE );
+						
+						$new_value['title'] = $title;
+						$new_value['description'] = $description;
+						$new_value['keywords'] = $keywords;
+						
+						if( $noindex == 0 ){
+							$noindex = '';
+						}else{
+							$noindex = TRUE;
+						}
+														
+						$new_value['noindex'] = $noindex;
+						
+						/*
+						echo 'Blog ID: ' . $blog['blog_id'] . "<br />";
+						echo 'Post ID: ' . $post->ID . "<br />";;
+						
+						print_r_html( $new_value );
+						*/
+						
+						update_post_meta($post->ID, 'sp_post_metabox' , $new_value );
+					}
+				}
+				
+				restore_current_blog();
+	    	}	
+		}else{
 			foreach ( $post_types AS $post_type ){
-			
+				
 				$posts = get_posts( 'numberposts=-1&post_type=' . $post_type );
 			
 				foreach($posts as $post){
@@ -189,7 +229,7 @@ function sp_update_to_1_1(){
 					$new_value['noindex'] = $noindex;
 					
 					/*
-					echo 'Blog ID: ' . $blog['blog_id'] . "<br />";
+					echo 'Wordpress Blog:<br />';
 					echo 'Post ID: ' . $post->ID . "<br />";;
 					
 					print_r_html( $new_value );
@@ -198,9 +238,7 @@ function sp_update_to_1_1(){
 					update_post_meta($post->ID, 'sp_post_metabox' , $new_value );
 				}
 			}
-			
-			restore_current_blog();
-    	}	
+		}
 	}
 }
 add_action( 'init', 'sp_update_to_1_1', 0);
