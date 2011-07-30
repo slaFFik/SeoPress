@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: seo,buddypress,wpmu,wp,searchengine optimization,networked blogs,title,meta,meta description,meta keywords,noindex
 Requires at least: 2.9.x
 Tested up to: 3.2 & Buddypress 1.2.x
-Stable tag:  1.1 beta
+Stable tag:  1.1 beta 2
 
 Searchengine optimization plugin for Wordpress & Buddypress
 
@@ -47,7 +47,7 @@ Activate the plugin through the 'Plugins' menu in WordPress<br>
 Activate the plugin by the Network Admin plugins menu<br>
 3. If you use Buddypress:<br>
 <br>
-Be sure that the main blog header template uses  bp_page_title() instead of wp_title() function.<br><br>
+<strong>Be sure that the main blog header title have only included wp_title() or bp_title() function.<strong><br><br>
 
 That's it, have fun!
 <br>
@@ -60,7 +60,11 @@ Plugin is updatefriendly, all needed migration from older versions, will be done
 3. **Options**
 
 == Changelog ==
-<h4>1.1</h4>
+<h4>1.1 beta 2</h4>
+<ul>
+<li>Bugfixes and Buddypress 1.5 implementation</li>
+</ul>
+<h4>1.1 beta</h4>
 <ul>
 <li>Complete rework</li>
 </ul>
@@ -93,3 +97,5 @@ The plugin used the last post meta values instead of the homepage values.
 <li>The version "SeoPress 1.0" is a replacemand for the old plugin "Seo for Buddypress".</li>
 <li>It comes with a new UI, a lot of more functionality and many more. Read the Desciption for more details.</li>
 </ul>
+
+Get the actual developement version and all changes in our git repository at https://github.com/Themekraft/SeoPress-Free

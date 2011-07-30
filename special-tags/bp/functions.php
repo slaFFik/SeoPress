@@ -60,6 +60,8 @@ function sp_get_bp_activity_author(){
 	global $activities_template, $bp;
 	
 	bp_has_activities();
+	// echo "AT: ";
+	// print_r_html( $activities_template );
 	
 	foreach( $activities_template->activities AS $activity ){
 		if( $activity->id == $bp->current_action ) return $activity->display_name;

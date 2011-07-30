@@ -84,7 +84,7 @@ function seopress_component_tab( $bp_component ){
 		}
 	}
 	
-	$accordion->add_section( 'bp-component-config-' .$bp_component . '-' . $sub_comp, sprintf( __( 'Configurate "%s" plugin'  , 'seopress' ), ucwords( strtolower( $bp_component ) ) ), seopress_component_config( $bp_component ) );
+	$accordion->add_section( 'bp-component-config-' .$bp_component . '-' . $sub_comp, sprintf( __( 'Configurate "%s" plugin'  , 'seopress' ), ucwords( strtolower( $bp_component ) ) ), seopress_component_config( $bp_component ), ' class="settings"' );
 	
 	$html = $accordion->get_html();
 	

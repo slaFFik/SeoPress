@@ -9,8 +9,8 @@ class TK_WP_JQUERYUI_ACCORDION extends TK_HTML{
 		$jqueryui->load_jqueryui( array( 'jquery-ui-accordion' ) );
 	}
 	
-	public function add_section( $id, $title, $content ){
-		$element = array( 'id'=> $id, 'title' => $title, 'content' => $content );
+	public function add_section( $id, $title, $content, $extra_title = '', $extra_content = '' ){
+		$element = array( 'id'=> $id, 'title' => $title, 'extra_title' => $extra_title,  'content' => $content, 'extra_content' => $extra_content );
 		$this->add_element( $element );
 	}
 
@@ -28,8 +28,8 @@ class TK_WP_JQUERYUI_ACCORDION extends TK_HTML{
 		
 		foreach( $this->elements AS $element ){
 			
-			$html.= '<h3><a href="#">' . $element['title'] . '</a></h3>';
-			$html.= '<div id="' . $element['id'] . '" >' . $element['content'] . '</div>';
+			$html.= '<h3' . $element['extra_title']  . '><a href="#">' . $element['title'] . '</a></h3>';
+			$html.= '<div id="' . $element['id'] . '"' . $element['extra_content']  . '>' . $element['content'] . '</div>';
 		}
 		
 		$html.= '</div>';

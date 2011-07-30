@@ -10,8 +10,20 @@ function sp_get_bp_components(){
 	return $bp_components;
 }
 
+function tk_bp_is_active_component( $component_name ){
+	global $bp;
+	$components = array_keys( $bp->active_components );
+	if( in_array( $component_name, $components ) ){
+		return true;		
+	}else{
+		return false;
+	}
+}
+
 function sp_is_bp_plugin_installed(){
 	$bp_components = sp_get_bp_components();
+	
+	// print_r_html( $bp_components );
 	
 	foreach ($bp_components as $bp_component) {
 		if( sp_is_bp_plugin ( $bp_component ) ) return true;	
@@ -27,7 +39,8 @@ function sp_is_bp_plugin( $slug ){
 		$slug != 'forums' && 
 		$slug != 'friends' && 
 		$slug != 'groups' && 
-		$slug != 'messages'&& 
+		$slug != 'messages'&&
+		$slug != 'members'&& 
 		$slug != 'settings'){
 		
 		return true;

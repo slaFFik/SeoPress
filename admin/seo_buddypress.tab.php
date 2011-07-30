@@ -29,20 +29,20 @@ function sp_admin_bp_tab(){
 		
 	$tabs = new	TK_WP_JQUERYUI_TABS();	
 	
-	if( in_array( 'activity', $bp->active_components ) ){ 
+	if( tk_bp_is_active_component( 'activity' ) ){ 
 		$tabs->add_tab( 'cap_bp_activities', __ ('Activity', 'seopress'), sp_admin_bp_activities_tab() );
 	}
 	
 	$tabs->add_tab( 'cap_bp_members', __ ('Members', 'seopress'), sp_admin_bp_members_tab() );
 	$tabs->add_tab( 'cap_bp_profiles', __ ('Profiles', 'seopress'), sp_admin_bp_profiles_tab() );
 	
-	if ( in_array( 'groups', $bp->active_components ) ){
+	if ( tk_bp_is_active_component( 'groups' ) ){
 		$tabs->add_tab( 'cap_bp_groups', __ ('Groups', 'seopress'), sp_admin_bp_groups_tab() );  
 	}
-	if ( in_array( 'forums', $bp->active_components ) ){
+	if ( tk_bp_is_active_component( 'forums' ) ){
 		$tabs->add_tab( 'cap_bp_forums', __ ('Forums', 'seopress'), sp_admin_bp_forums() );  
 	}
-	if ( in_array( 'blogs', $bp->active_components ) ){
+	if ( tk_bp_is_active_component( 'blogs') ){
 		$tabs->add_tab( 'cap_bp_blogs', __ ('Blogs', 'seopress'), sp_admin_bp_blogs() );  
 	}
 	if ( get_option('users_can_register') ){
@@ -110,13 +110,13 @@ function sp_admin_bp_profiles_tab(){
 	
 	array_push( $sections, array( 'type' => 'bp-component-profile-public', 'title' => __('Profile' , 'seopress' ), 'values' => $content ) );
 	
-	if(in_array('activity',$bp->active_components)){ 
+	if( tk_bp_is_active_component( 'activity' )){ 
 		array_push( $sections, array( 'type' => 'bp-component-activity-just-me', 'title' => __('Profile Activity' , 'seopress' ), 'values' => $content ) );
 	}
-	if(in_array('blogs',$bp->active_components)){ 
+	if( tk_bp_is_active_component( 'blogs' )){ 
 		array_push( $sections, array( 'type' => 'bp-component-blogs-my-blogs', 'title' => __('Profile Blogs' , 'seopress' ), 'values' => $content ) );
 	}
-	if(in_array('groups',$bp->active_components)){ 
+	if( tk_bp_is_active_component( 'groups' )){ 
 		array_push( $sections, array( 'type' => 'bp-component-groups-my-groups', 'title' => __('Profile Groups' , 'seopress' ), 'values' => $content ) );
 	}
 	
@@ -142,13 +142,13 @@ function sp_admin_bp_groups_tab(){
 	
 	array_push( $sections, array( 'type' => 'bp-component-groups', 'title' => __('Group Directory' , 'seopress' ), 'values' => $content ) );
 	
-	if(in_array('activity',$bp->active_components)){ 
+	if( tk_bp_is_active_component('activity')){ 
 		array_push( $sections, array( 'type' => 'bp-component-activity-groups', 'title' => __('Group Activities' , 'seopress' ), 'values' => $content ) );
 	}
 	
 	array_push( $sections, array( 'type' => 'bp-component-groups-home', 'title' => __('Group Home' , 'seopress' ), 'values' => $content ) );
 	
-	if(in_array('forums',$bp->active_components)){ 
+	if( tk_bp_is_active_component('forums')){ 
 		array_push( $sections, array( 'type' => 'bp-component-groups-forum', 'title' => __('Group Forum' , 'seopress' ), 'values' => $content ) );
 		array_push( $sections, array( 'type' => 'bp-component-groups-forum-topic', 'title' => __('Group Forum Topic' , 'seopress' ), 'values' => $content ) );
 	}

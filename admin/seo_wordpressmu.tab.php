@@ -13,9 +13,9 @@ function sp_admin_wpmu_tab(){
 	
 	$sections = array();
 	
-	array_push( $sections, array( 'type' => 'mu-home', 'title' => __('Home' , 'seopress' ), 'content' => $content ) );
-	array_push( $sections, array( 'type' => 'mu-post', 'title' => __('Posts' , 'seopress' ), 'content' => $content ) );
-	array_push( $sections, array( 'type' => 'mu-page', 'title' => __('Pages' , 'seopress' ), 'content' => $content ) );
+	array_push( $sections, array( 'type' => 'mu-home', 'title' => __('Home' , 'seopress' ), 'content' => $content, 'extra_title' => ' class="home"'  ) );
+	array_push( $sections, array( 'type' => 'mu-post', 'title' => __('Posts' , 'seopress' ), 'content' => $content, 'extra_title' => ' class="posts"'  ) );
+	array_push( $sections, array( 'type' => 'mu-page', 'title' => __('Pages' , 'seopress' ), 'content' => $content, 'extra_title' => ' class="pages"'  ) );
 	array_push( $sections, array( 'type' => 'mu-archive', 'title' => __('Archive' , 'seopress' ), 'content' => $content ) );
 	array_push( $sections, array( 'type' => 'mu-category', 'title' => __('Categories' , 'seopress' ), 'content' => $content ) );
 	array_push( $sections, array( 'type' => 'mu-tag', 'title' => __('Tags' , 'seopress' ), 'content' => $content ) );
@@ -26,7 +26,7 @@ function sp_admin_wpmu_tab(){
 
 	$accordion = new TK_WP_JQUERYUI_ACCORDION();
 	foreach( $sections AS $section ){
-		$accordion->add_section( $section['type'], $section['title'], sp_type_box( $section['type'] ) );
+		$accordion->add_section( $section['type'], $section['title'], sp_type_box( $section['type'] ), $section['extra_title']  );
 	}
 	
 	$html.= $accordion->get_html();	

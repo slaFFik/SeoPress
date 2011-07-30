@@ -27,15 +27,38 @@ class TK_WP_JQUERYUI_AUTOCOMPLETE extends TK_WP_FORM_TEXTFIELD{
 					function extractLast( term ) {
 						return split( term ).pop();
 					}
-					$(\'#' . $this->id . '\')
-						.bind( "keydown", function( event ) {
-							if ( event.keyCode === $.ui.keyCode.TAB && $( this ).data( "autocomplete" ).menu.active ) {
-								event.preventDefault();
-							}
-						})
+					
+					var cache = {},
+					lastXhr;
+					
+					$(\'#' . $this->id . '\')						
 						.autocomplete({
-							source:"' . $this->autocomplete_source . '",
-							dataType: "json",
+							source: function( request, response ) {
+								$.getJSON( "' . $this->autocomplete_source . '", {
+									term: extractLast( request.term )
+								}, response );
+							},
+							search: function( event, ui ) {
+								// custom minLength
+								var term = extractLast( this.value );
+								var terms = split( this.value );
+								
+								var found = false;
+								for (var i = 0; i < terms.length; ++i){
+									var myRegExp = term;
+									if( terms[i].search(myRegExp) != -1 ){
+										found = true;
+									}
+								}
+								
+								if( found == false ){
+									return false;
+								}
+								
+								if ( term.length < 2 ) {
+									return false;
+								}
+							},
 							focus: function() {
 								// prevent value inserted on focus
 								return false;
@@ -49,13 +72,9 @@ class TK_WP_JQUERYUI_AUTOCOMPLETE extends TK_WP_FORM_TEXTFIELD{
 								// add placeholder to get the comma-and-space at the end
 								terms.push( "" );
 								this.value = terms.join( " " );
-															
 								return false;
 							},
-							change: function( event, ui ) {															
-								return false;
-							}
-													
+							delay: 1000
 						})
 						.data( "autocomplete" )._renderItem = function( ul, item ) {
 							return $( "<li></li>" )

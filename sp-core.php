@@ -29,17 +29,12 @@ class SP_CORE{
 		if( !is_admin() ){
 
 			if( tk_is_buddypress() ){ // Should be reworked <- BP have to be hooked in
-				
-				remove_all_filters( 'bp_page_title' );
-				
-				add_filter( 'bp_page_title' , array(&$this, 'init_seo') , 1 ); // Filtering buddypress title 	
-				
-			}else{
-				
-				remove_all_filters( 'wp_title' );
-				
-				add_filter( 'wp_title' ,  array(&$this, 'init_seo') , 1 );  // Filtering wordpress title
+				remove_all_filters( 'bp_page_title' );				
+				add_filter( 'bp_page_title' , array(&$this, 'init_seo') , 1 ); // Filtering buddypress title 		
 			}
+			
+			remove_all_filters( 'wp_title' );
+			add_filter( 'wp_title' ,  array(&$this, 'init_seo') , 1 );  // Filtering wordpress title
 			
 			$this->used_tags = $special_tags->get_tags( $this->page_type ); // ???? Here ????
 			
@@ -86,7 +81,7 @@ class SP_CORE{
 			// Adding meta tags to wp head
 			add_action( 'wp_head' , array(&$this, 'insert_meta') , 1 );
 			
-			if( $new_title != '' ) $title = stripslashes( $new_title );
+			if( $new_title != '' ) $title = stripslashes( strip_tags( $new_title ) );
 				
 		}
 		// echo $title;
@@ -149,11 +144,11 @@ class SP_CORE{
 		if( $this->meta['noindex']==true ) echo '<meta name="robots" content="noindex" />' . chr(10); 
 
 	    if( trim( $this->meta['description'] ) != "" || trim( $this->meta['description'] ) == ","){	
-	    	echo '<meta name="description" content="' . $this->meta['description'] . '" />' . chr(10);
+	    	echo '<meta name="description" content="' . addslashes( strip_tags( $this->meta['description'] ) ) . '" />' . chr(10);
 		} 
 	    if( trim( $this->meta['keywords'] ) != '' ){ 
 	    	if(trim( $this->meta['keywords'] ) != ',' ){ //////////////////////////////////// Whats up here? Bad programming?
-	    		echo '<meta name="keywords" content="' . $this->meta['keywords'] . '" />' . chr(10);
+	    		echo '<meta name="keywords" content="' . addslashes( strip_tags( $this->meta['keywords'] ) ) . '" />' . chr(10);
 	    	} 
 		}
 		do_action( 'sp_insert_meta' );
