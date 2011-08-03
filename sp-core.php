@@ -267,9 +267,11 @@ class SP_CORE{
 		do_action( 'sp_init_special_tags' );
 	}
 	
-	public function init_admin(){				
-		$tk_jquery_ui = new TK_WP_JQUERYUI();
-		$tk_jquery_ui->load_jqueryui( array ( 'jquery-ui-tabs', 'jquery-ui-accordion', 'jquery-ui-autocomplete' ) );
+	public function init_admin(){
+		if( $_GET['page'] == 'seopress_seo' || $_GET['page'] == 'seopress_options' ) {				
+			$tk_jquery_ui = new TK_WP_JQUERYUI();
+			$tk_jquery_ui->load_jqueryui( array ( 'jquery-ui-tabs', 'jquery-ui-accordion', 'jquery-ui-autocomplete' ) );
+		}
 	}
 	
 	public function install(){
@@ -300,7 +302,7 @@ function sp_admin_menue(){
 	}
 		
 	add_menu_page( 'SeoPress Admin' , 'SeoPress' , 'manage_options', 'seopress_seo','seopress_seo', $seopress_plugin_url . 'images/icon-seopress-16x16.png');
-	add_submenu_page( 'seopress_seo', __( 'SeoPress - Seo options', 'seopress'),__( 'Seo Settings', 'seopress' ), 'manage_options', 'seopress_seo', 'seopress_seo' );
+	add_submenu_page( 'seopress_seo', __( 'SeoPress - Page types', 'seopress'),__( 'Page types', 'seopress' ), 'manage_options', 'seopress_seo', 'seopress_seo' );
 	add_submenu_page( 'seopress_seo', __( 'SeoPress - Options', 'seopress'),__( 'Options', 'seopress' ), 'manage_options', 'seopress_options', 'seopress_options' );
 }
 

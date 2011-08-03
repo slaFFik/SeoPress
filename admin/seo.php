@@ -15,7 +15,7 @@ function seopress_seo(){
 	/*
 	 * Adding display
 	 */	
-	$display = new	TK_WP_ADMIN_DISPLAY( __( 'Seo Settings', 'seopress'), 'plugins' );
+	$display = new	TK_WP_ADMIN_DISPLAY( __( 'Page types', 'seopress'), 'plugins' );
 	$display->add_element( '<p>' . __( 'Optimize your Wordpress pages.', 'seopress') . '</p>' );
 	
 	$form = new TK_WP_FORM( 'seopress_seo_settings', 'POST', 'seopress_settings' );
