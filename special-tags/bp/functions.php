@@ -78,17 +78,24 @@ class sp_bp_forum_topic{
 	}
 	
 	private function get_forum_arr_pos(){
+		
 		global $bp, $forum_template;	
 		
 		$topic_slug = $bp->action_variables[1];
 		$topic_id = bp_forums_get_topic_id_from_slug( $topic_slug );
 		
 		for( $i=0; $i <= count( $forum_template->topics ) ; $i++ ){
-			if($topic_id == $forum_template->topics[$i]->topic_id ) { 
+			if( $topic_id == $forum_template->topics[$i]->topic_id ) { 
 				$array_pos = $i;      
 			}
 		}
+		
 		return $array_pos;		
+	}
+	
+	private function get_first_post_id(){
+		global $forum_template;	
+		return $forum_template->topics[$this->get_forum_arr_pos()]->topic_id;
 	}
 	
 	private function get_last_post_id(){
@@ -112,13 +119,14 @@ class sp_bp_forum_topic{
 	}
 	
 	public function get_first_post_text(){
-		global $forum_template;	
-		$post = bb_get_first_post( $forum_template->topics[$this->get_forum_arr_pos()]->topic_id , false );
+		global $bbdb, $forum_template;	
+		$post = $bbdb->get_row( $bbdb->prepare( "SELECT * FROM $bbdb->posts WHERE post_id = %d", $this->get_first_post_id() ) );			
 		return $post->post_text;
 	}
 	
 	public function get_last_post_text(){
-    	$post = bb_get_post( $this->get_last_post_id() );
+		global $bbdb, $forum_template;	
+		$post = $bbdb->get_row( $bbdb->prepare( "SELECT * FROM $bbdb->posts WHERE post_id = %d", $this->get_last_post_id() ) );			
 		return $post->post_text;		
 	}
 	

@@ -16,7 +16,7 @@ class TK_SPECIAL_TAGS{
 		$active_tags = $this->get_tags( $type, '', $fallback_type );
 		
 		foreach( $active_tags AS $tag => $value ){
-			$string = str_replace( $tag , call_user_func( $value ['function'] ) , $string );
+			$string = str_replace( $tag , call_user_func( $value['function'] ) , $string );
 		}
 		
 		return $string;

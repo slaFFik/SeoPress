@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bp-seo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 14:06+0100\n"
-"PO-Revision-Date: 2011-07-21 14:23+0100\n"
+"POT-Creation-Date: 2011-08-10 16:46+0100\n"
+"PO-Revision-Date: 2011-08-10 16:47+0100\n"
 "Last-Translator: Sven Wagener <svenw@themekraft.com>\n"
 "Language-Team: Sven Wagener <sven.wagener@rheinschmiede.de>\n"
 "MIME-Version: 1.0\n"
@@ -16,90 +16,90 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: C:\\Users\\wagesve\\SeoPress-Free\n"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:307
-msgid "SeoPress - Seo options"
-msgstr "Seopress - Seo Einstellungen"
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:312
+msgid "SeoPress - Page types"
+msgstr "Seopress - Seitentypen"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:307
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:312
 #: C:\Users\wagesve\SeoPress-Free/admin/seo.php:18
-msgid "Seo Settings"
-msgstr "Seo Einstellungen"
+msgid "Page types"
+msgstr "Seitentypen"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:308
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:313
 msgid "SeoPress - Options"
 msgstr "Seopress - Optionen"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:308
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:313
 #: C:\Users\wagesve\SeoPress-Free/admin/options.php:16
 msgid "Options"
 msgstr "Optionen"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:321
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:326
 msgid "Pro Version now available!"
 msgstr "Pro Version jetzt erhältlich!"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:322
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:327
 msgid "Get SeoPress Pro Version now, and benefit from more functionality, support and a clean UI."
 msgstr "Besorgen Sie sich jetzt die SeoPress Pro Version und profitieren Sie von zusätzlichen Funktionen, vollem Support und einer Werbefreien Oberfläche."
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:324
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:345
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:329
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:350
 msgid "Upgrade now"
 msgstr "Jetzt upgraden"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:326
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:331
 msgid "Pro Features"
 msgstr "Pro Funktionen"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:328
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:333
 msgid "Keyword generator"
 msgstr "Keywort Generator"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:329
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:334
 msgid "Text counter for meta title and description"
 msgstr "Textzähler für Meta Titel und Beschreibung"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:330
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:335
 msgid "No branding: the Pro Version comes without the \"Get Pro\" tabs."
 msgstr "Kein Branding: Die Pro Version hat keine \"Get Pro\" Tabs."
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:331
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:336
 msgid "Full support and help in the SeoPress group and forum."
 msgstr "Voller Support und Hilfe in unseren SeoPress Forum."
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:334
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:339
 msgid "Pro Roadmap"
 msgstr "Pro Roadmap"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:336
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:341
 msgid "Sitemap generator (including Buddypress urls)"
 msgstr "Sitemap Generator (inkl. Buddypress Urls)"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:337
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:342
 msgid "Deeplink generator"
 msgstr "Deeplink Generator"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:338
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:343
 msgid "Pages and posts optimizer"
 msgstr "Seiten und Artikel Optimierer"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:339
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:344
 msgid "Searchengine preview for pages and posts"
 msgstr "Suchmaschinenvorschau für Artikel und Seiten"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:340
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:345
 msgid "Google Pagerank checker"
 msgstr "Google Pagerank checker"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:341
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:346
 msgid "Canonical url support"
 msgstr "Cannonical Url Unterstützung"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:342
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:347
 msgid "Xprofile special tags for buddypress"
 msgstr "Xprofile Special Tags für Buddypress"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:349
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:354
 msgid "Get Pro version!"
 msgstr "Pro Version kaufen"
 
@@ -465,63 +465,72 @@ msgid "Shows the site description"
 msgstr "Zeigt die Seitenbeschreibung an"
 
 #: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:17
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:25
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:27
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:28
 msgid "Shows the title of post"
 msgstr "Zeigt den Titel eines Posts an"
 
 #: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:18
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:26
+msgid "Shows the content of the post"
+msgstr "Zeigt den Inhalte des Posts an"
+
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:19
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:20
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:29
 msgid "Shows the excerpt of the post"
 msgstr "Zeigt die Zusammenfassung eines Posts an"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:19
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:21
 msgid "Shows post categories"
 msgstr "Zeige Artikel Kategorien"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:20
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:22
 msgid "Shows post tags"
 msgstr "Zeige Artikel Schlagwörter"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:21
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:27
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:23
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:30
 msgid "Shows the name of post author"
 msgstr "Zeigt den Namen des Artikel-Authors an"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:34
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:37
 msgid "Shows the archive date"
 msgstr "Zeigt das Datum des Archives an"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:40
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:43
 msgid "Shows the category name"
 msgstr "Zeigt den Kategorienamen an"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:41
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:44
 msgid "Shows the category description"
 msgstr "Zeigt die Kategoriebeschreibung an"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:48
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:51
 msgid "Shows the tag name"
 msgstr "Zeigt den Tag Namen"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:49
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:52
 msgid "Shows the tag description"
 msgstr "Zeigt die Tag Beschreibung an"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:56
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:59
 msgid "Shows the name of the author"
 msgstr "Ersetzt den Namen des Authors"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:63
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:66
 msgid "Shows the current page number"
 msgstr "Zeigte die aktuelle Seitennummer an"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:64
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:67
 msgid "Shows the sum of all pages"
 msgstr "Zeigt die Summe aller Seiten an"
 
-#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:71
+#: C:\Users\wagesve\SeoPress-Free/special-tags/wp/sets.php:74
 msgid "Shows the search phrase"
 msgstr "Zeigt das gesuchte Wort an"
+
+#~ msgid "Seo Settings"
+#~ msgstr "Seo Einstellungen"
 
 #~ msgid "Coming soon!"
 #~ msgstr "Kommt in Kürze!"

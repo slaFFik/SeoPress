@@ -86,7 +86,7 @@ function sp_update_to_1_1(){
 	global $seopress;
 	
 	if( get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_seo_settings_values' ) == '' || $_GET['reupdate_seopress'] == 'true' ){
-
+		
 		$settings['seopress_seo_settings_values'] = array();
 
 		$settings['seopress_seo_settings_values'] = array_merge( $settings['seopress_seo_settings_values'], sp_rewrite_values_to_1_1( 'bp_seo_main_blog_start', 'wp-home' ) );
@@ -190,12 +190,12 @@ function sp_update_to_1_1(){
 														
 						$new_value['noindex'] = $noindex;
 						
-						/*
-						echo 'Blog ID: ' . $blog['blog_id'] . "<br />";
-						echo 'Post ID: ' . $post->ID . "<br />";;
 						
-						print_r_html( $new_value );
-						*/
+						// echo 'Blog ID: ' . $blog['blog_id'] . "<br />";
+						// echo 'Post ID: ' . $post->ID . "<br />";;
+						
+						// print_r_html( $new_value );
+
 						
 						update_post_meta($post->ID, 'sp_post_metabox' , $new_value );
 					}
@@ -228,19 +228,20 @@ function sp_update_to_1_1(){
 													
 					$new_value['noindex'] = $noindex;
 					
-					/*
-					echo 'Wordpress Blog:<br />';
-					echo 'Post ID: ' . $post->ID . "<br />";;
 					
-					print_r_html( $new_value );
-					*/
+					// echo 'Wordpress Blog:<br />';
+					// echo 'Post ID: ' . $post->ID . "<br />";;
+					
+					// print_r_html( $new_value );
 					
 					update_post_meta($post->ID, 'sp_post_metabox' , $new_value );
 				}
 			}
 		}
+		
 	}
 }
+
 add_action( 'init', 'sp_update_to_1_1', 0);
 
 ?>

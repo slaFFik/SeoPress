@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: seo,buddypress,wpmu,wp,searchengine optimization,networked blogs,title,meta,meta description,meta keywords,noindex
 Requires at least: 2.9.x
 Tested up to: 3.2 & Buddypress 1.2.x
-Stable tag:  1.1 beta 2
+Stable tag:  1.1 beta 3
 
 Searchengine optimization plugin for Wordpress & Buddypress
 

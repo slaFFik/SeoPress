@@ -10,16 +10,6 @@ function sp_get_bp_components(){
 	return $bp_components;
 }
 
-function tk_bp_is_active_component( $component_name ){
-	global $bp;
-	$components = array_keys( $bp->active_components );
-	if( in_array( $component_name, $components ) ){
-		return true;		
-	}else{
-		return false;
-	}
-}
-
 function sp_is_bp_plugin_installed(){
 	$bp_components = sp_get_bp_components();
 	
@@ -32,16 +22,19 @@ function sp_is_bp_plugin_installed(){
 }
 
 function sp_is_bp_plugin( $slug ){
+	
+	$component = tk_get_bp_component_by_slug( $slug );
+	
 	if(
-		$slug != 'profile' &&
-		$slug != 'activity' && 
-		$slug != 'blogs' && 
-		$slug != 'forums' && 
-		$slug != 'friends' && 
-		$slug != 'groups' && 
-		$slug != 'messages'&&
-		$slug != 'members'&& 
-		$slug != 'settings'){
+		$component != 'profile' &&
+		$component != 'activity' && 
+		$component != 'blogs' && 
+		$component != 'forums' && 
+		$component != 'friends' && 
+		$component != 'groups' && 
+		$component != 'messages'&&
+		$component != 'members'&& 
+		$component != 'settings'){
 		
 		return true;
 					
