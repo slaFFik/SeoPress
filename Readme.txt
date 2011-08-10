@@ -60,6 +60,17 @@ Plugin is updatefriendly, all needed migration from older versions, will be done
 3. **Options**
 
 == Changelog ==
+<h4>1.1 beta 3</h4>
+<ul>
+<li>Renamed update script filename</li>
+<li>Changed version name to beta 3</li>
+<li>Dublicate topic fix</li>
+<li>Fixed Buddpress slug bug (on changed slugs)</li>
+<li>Added function to get real component names</li>
+<li>Changed functions for getting active components on admin pages</li>
+<li>Added german language strings</li>
+<li>Only loading jQuery on SeoPress pages</li>
+</ul>
 <h4>1.1 beta 2</h4>
 <ul>
 <li>Bugfixes and Buddypress 1.5 implementation</li>
