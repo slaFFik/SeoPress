@@ -24,9 +24,7 @@ class SP_CORE{
 		$this->seo_settings = get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_seo_settings_values' );
 		$this->options = get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_options_values' );
 		$this->init_special_tags();
-		
-		
-					
+							
 		// Initialising data for frontend	
 		if( !is_admin() ){
 			
@@ -67,6 +65,7 @@ class SP_CORE{
 			
 			add_action( 'sp_seo_settings_tabs', 'sp_get_pro_tab', 10 );
 			add_action( 'sp_options_tabs', 'sp_get_pro_tab', 10 );
+			add_action( 'admin_head', 'sp_setup', 10 );
 			
 			do_action( 'sp_admin_init' );
 		}
@@ -86,7 +85,7 @@ class SP_CORE{
 			// Adding meta tags to wp head
 			add_action( 'wp_head' , array(&$this, 'insert_meta') , 1 );
 			
-			if( $new_title != '' ) $title = stripslashes( strip_tags( $new_title ) );
+			if( $new_title != '' ) $title = stripslashes( htmlentities( strip_tags( $new_title ) ) );
 				
 		}
 		return $title;	
@@ -150,11 +149,11 @@ class SP_CORE{
 		if( $this->meta['noindex']==true ) echo '<meta name="robots" content="noindex" />' . chr(10); 
 
 	    if( trim( $this->meta['description'] ) != "" || trim( $this->meta['description'] ) == ","){	
-	    	echo '<meta name="description" content="' . addslashes( strip_tags( $this->meta['description'] ) ) . '" />' . chr(10);
+	    	echo '<meta name="description" content="' . stripslashes( htmlentities( strip_tags( $this->meta['description'] ) ) ) . '" />' . chr(10);
 		} 
 	    if( trim( $this->meta['keywords'] ) != '' ){ 
 	    	if(trim( $this->meta['keywords'] ) != ',' ){ //////////////////////////////////// Whats up here? Bad programming?
-	    		echo '<meta name="keywords" content="' . addslashes( strip_tags( $this->meta['keywords'] ) ) . '" />' . chr(10);
+	    		echo '<meta name="keywords" content="' . stripslashes( htmlentities( strip_tags( $this->meta['keywords'] ) ) ) . '" />' . chr(10);
 	    	} 
 		}
 		do_action( 'sp_insert_meta' );
@@ -315,6 +314,7 @@ function sp_admin_menue(){
 
 function seopress_init(){
 	global $seopress;
+	add_thickbox();
 	$seopress = new SP_CORE();
 }
 
@@ -361,4 +361,20 @@ function seopress_activate(){
 	$redirect_url = get_bloginfo( 'siteurl' ) . 'wp-admin/admin.php?page=seopress_seo';
 	wp_redirect( $redirect_url ); 	
 }
+
+function sp_setup(){
+	global $seopress_plugin_url;
+	
+	if( true == (bool) $_GET[ 'sp_activate' ] ){
+	
+		echo '<script type="text/javascript">
+				  jQuery(document).ready(function($){
+					 imgLoader = new Image(); // preload image
+					 imgLoader.src = tb_pathToImage;
+				     tb_show("", "' . $seopress_plugin_url . '/sp-setup.php?page=tk_framework?TB_iframe=true&amp;width=520&amp;height=410" );
+				  });
+			  	</script>';
+	}
+}
+
 ?>

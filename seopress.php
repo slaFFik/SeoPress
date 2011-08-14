@@ -60,10 +60,7 @@ require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_tabs.php' );
 require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_accordion.php' );
 require_once( 'lib/wordpress/tk_wp_jquery/tk_wp_jqueryui_autocomplete.php' );
 
-
-
 // Loading css and js
-
 require_once( 'css/loader.php' );
 
 // Special tag engine
@@ -90,6 +87,14 @@ require_once( 'sp-core.php' );
 require_once( 'sp-update.php' );
 
 add_action( 'init' , 'seopress_init' , 0 );
+
+function sp_setup_redirect( $plugin ){
+	if( basename( $plugin ) == 'seopress.php' ){
+		wp_redirect( get_bloginfo('home') . '/wp-admin/admin.php?page=seopress_seo&sp_activate=true' );	
+		exit;
+	}
+}
+add_action( 'activated_plugin', 'sp_setup_redirect');
 
 // register_activation_hook( __FILE__ , 'seopress_activate' );
 
