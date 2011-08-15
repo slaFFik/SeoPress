@@ -371,7 +371,7 @@ function sp_setup(){
 				  jQuery(document).ready(function($){
 					 imgLoader = new Image(); // preload image
 					 imgLoader.src = tb_pathToImage;
-				     tb_show("", "' . $seopress_plugin_url . '/sp-setup.php?page=tk_framework?TB_iframe=true&amp;width=520&amp;height=410" );
+				     tb_show("", "' . $seopress_plugin_url . 'sp-setup.php?page=tk_framework?TB_iframe=true&amp;width=520&amp;height=410" );
 				  });
 			  	</script>';
 	}
