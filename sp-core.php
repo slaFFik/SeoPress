@@ -277,6 +277,8 @@ class SP_CORE{
 		if( $_GET['page'] == 'seopress_seo' || $_GET['page'] == 'seopress_options' ) {				
 			$tk_jquery_ui = new TK_WP_JQUERYUI();
 			$tk_jquery_ui->load_jqueryui( array ( 'jquery-ui-tabs', 'jquery-ui-accordion', 'jquery-ui-autocomplete' ) );
+			
+			add_thickbox();
 		}
 	}
 	
@@ -314,7 +316,6 @@ function sp_admin_menue(){
 
 function seopress_init(){
 	global $seopress;
-	add_thickbox();
 	$seopress = new SP_CORE();
 }
 
@@ -372,6 +373,23 @@ function sp_setup(){
 					 imgLoader = new Image(); // preload image
 					 imgLoader.src = tb_pathToImage;
 				     tb_show("", "' . $seopress_plugin_url . 'sp-setup.php?page=tk_framework?TB_iframe=true&amp;width=520&amp;height=410" );
+				     // placed right after tb_show call
+				     
+				     // Workaround for getting tabs running
+				     
+				     // See here: http://themeforest.net/forums/thread/wordpress-32-admin-area-thickbox-triggering-unload-event/46916?page=1#434388
+				     // http://wordpress.org/support/topic/wp-32-thickbox-jquery-ui-tabs-conflict
+				     
+					 $("#TB_window,#TB_overlay,#TB_HideSelect").one("unload",killTheDamnUnloadEvent);
+					
+					 function killTheDamnUnloadEvent(e) {
+					    // you
+					    e.stopPropagation();
+					    // must
+					    e.stopImmediatePropagation();
+					    // DIE!
+					    return false;
+					 }
 				  });
 			  	</script>';
 	}

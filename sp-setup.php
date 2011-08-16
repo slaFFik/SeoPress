@@ -50,7 +50,7 @@ h4{
 	<img src="<?php echo $seopress_plugin_url; ?>images/seopress-logo-180px.jpg" style="margin-bottom: 20px;" />
 	<p><?php _e('Congratulations! You have successfully installed SeoPress 1.1.</p>', 'seopress' ); ?></p>
 	<h4><?php _e( 'Next steps', 'seopress' ); ?></h4>
-	<p><a href="#" class="button" onclick="self.parent.tb_remove();"><?php _e( 'Setup SeoPress', 'seopress' ); ?></a></p>
+	<p><a href="#" class="button" onclick="try{top.tb_remove();}catch(e){}; return false;"><?php _e( 'Setup SeoPress', 'seopress' ); ?></a></p>
 	<p><a href="http://themekraft.com/groups/seopress/forum/" class="button" target="_blank"><?php _e( 'Report a bug', 'seopress' ); ?></a></p>
 	<h4><?php _e( 'Get News', 'seopress' ); ?></h4>
 	<p><a href="https://www.facebook.com/pages/themekraftcom/109853049098537" class="button" target="_blank"><?php _e( 'Themekraft Facebook Fanpage', 'seopress' ); ?></a></p>
@@ -58,5 +58,5 @@ h4{
 	<h4><?php _e( 'Get Pro version', 'seopress' ); ?></h4>
 	<p><a href="https://themekraft.com/plugin/seopress-pro/?s2-ssl=yes" class="button buttonblue" target="_blank"><strong><?php _e( 'Get pro version for only 39$', 'seopress' ); ?></strong></a></p>
 	<div style="clear:both" ></div>
-	<p><a href="#" class="button buttonblue" onclick="self.parent.tb_remove();"><?php _e( 'Close Window', 'seopress' ); ?></a></p>
+	<p><a href="#" class="button buttonblue" onclick="try{top.tb_remove();}catch(e){}; return false;"><?php _e( 'Close Window', 'seopress' ); ?></a></p>
 </div>
