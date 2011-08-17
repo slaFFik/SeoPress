@@ -43,6 +43,7 @@ if( !function_exists( 'tk_get_bp_component_by_slug' ) ){
 		if ( defined( 'BP_MEMBERS_SLUG' ) ) $component_slugs[ BP_MEMBERS_SLUG ] = "members";
 		if ( defined( 'BP_FRIENDS_SLUG' ) ) $component_slugs[ BP_FRIENDS_SLUG ] = "friends";
 		if ( defined( 'BP_GROUPS_SLUG' ) ) $component_slugs[ BP_GROUPS_SLUG ] = "groups";
+		if ( defined( 'BP_FORUMS_SLUG' ) ) $component_slugs[ BP_FORUMS_SLUG ] = "forums";
 		if ( defined( 'BP_MESSAGES_SLUG' ) ) $component_slugs[ BP_MESSAGES_SLUG ] = "messages";
 		if ( defined( 'BP_WIRE_SLUG' ) ) $component_slugs[ BP_WIRE_SLUG ] = "wire";
 		if ( defined( 'BP_XPROFILE_SLUG' ) ) $component_slugs[ BP_XPROFILE_SLUG ] = "profile";
