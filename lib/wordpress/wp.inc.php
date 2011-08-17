@@ -59,8 +59,7 @@ if( !function_exists( 'tk_get_page_type' ) ){
 		// If is wordpress mu
 		if( tk_get_wp_type() == "mu" ) {
 			if( is_admin() ) $page_type = 'mu-admin'; // Whats happening here on mu blogs?
-			if( is_home() ) $page_type = 'mu-home';
-			if( is_front_page() ) $page_type = 'mu-front-page';
+			if( ( is_home() || is_front_page()) && !tk_is_signup() ) $page_type = 'mu-home';
 			if( is_single() ) $page_type = 'mu-post';	
 			if( is_page() ) $page_type = 'mu-page';	 	
 			if( is_sticky() ) $page_type = 'mu-sticky';	 				
