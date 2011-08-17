@@ -32,11 +32,22 @@ $seopress_plugin_url = plugin_dir_url( __FILE__ );
     text-align:center;
     display: block;
     float:left;
-    margin: 0 20px 20px 0;
+    margin: 0 0 20px 0;
 }
 .buttonblue{
-	color: #FFF;
- 	background-color: #247aa3;
+    background: url("../../../wp-admin/images/button-grad.png") repeat-x scroll left top #21759B;
+    border-color: #298CBA;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+.buttonblue:active{
+    background: url("../../../wp-admin/images/button-grad-active.png") repeat-x scroll left top #21759B;
+    color: #EAF2FA;
+}
+.buttonblue:hover{
+ 	border-color: #13455B;
+    color: #EAF2FA;
 }
 .button:hover{
 	color: #FFF;
@@ -47,16 +58,15 @@ h4{
 }
 </style>
 <div class="wrap" style="padding:20px; font-family: arial, verdana, sans-serif; font-size: 12px; ">
+	<img src="images/seopress-pro-package.jpg" style="float:left; margin: 0 20px 20px 0; width: 200px;" />
 	<img src="<?php echo $seopress_plugin_url; ?>images/seopress-logo-180px.jpg" style="margin-bottom: 20px;" />
-	<p><?php _e('Congratulations! You have successfully installed SeoPress 1.1.</p>', 'seopress' ); ?></p>
-	<h4><?php _e( 'Next steps', 'seopress' ); ?></h4>
-	<p><a href="#" class="button" onclick="try{top.tb_remove();}catch(e){}; return false;"><?php _e( 'Setup SeoPress', 'seopress' ); ?></a></p>
-	<p><a href="http://themekraft.com/groups/seopress/forum/" class="button" target="_blank"><?php _e( 'Report a bug', 'seopress' ); ?></a></p>
-	<h4><?php _e( 'Get News', 'seopress' ); ?></h4>
-	<p><a href="https://www.facebook.com/pages/themekraftcom/109853049098537" class="button" target="_blank"><?php _e( 'Themekraft Facebook Fanpage', 'seopress' ); ?></a></p>
-	<p><a href="http://twitter.com/themekraft/" class="button" target="_blank"><?php _e( 'Themekraft Twitter page', 'seopress' ); ?></a></p>
-	<h4><?php _e( 'Get Pro version', 'seopress' ); ?></h4>
-	<p><a href="https://themekraft.com/plugin/seopress-pro/?s2-ssl=yes" class="button buttonblue" target="_blank"><strong><?php _e( 'Get pro version for only 39$', 'seopress' ); ?></strong></a></p>
-	<div style="clear:both" ></div>
-	<p><a href="#" class="button buttonblue" onclick="try{top.tb_remove();}catch(e){}; return false;"><?php _e( 'Close Window', 'seopress' ); ?></a></p>
+	<p><?php _e( 'Congratulations! You have successfully installed SeoPress. You can support us with the developement by buying SeoPress pro.', 'seopress' ); ?></p>
+	<p><?php _e( 'Only for ', 'seopress' ); ?> <span style="font-size:2em; font-weight:bold;">39$</span></p>
+	<br /> 	
+	<p>
+		<a href="https://themekraft.com/plugin/seopress-pro/?s2-ssl=yes" class="button buttonblue" target="_blank"><?php _e( 'Get it on themekraft.com', 'seopress' ); ?></a>
+	</p>
+	<p>
+		<a href="#" class="button buttonblue" onclick="try{top.tb_remove();}catch(e){}; return false;"><?php _e( 'Close Window', 'seopress' ); ?></a>
+	</p>
 </div>

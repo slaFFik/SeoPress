@@ -4,34 +4,54 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: seo,buddypress,wpmu,wp,searchengine optimization,networked blogs,title,meta,meta description,meta keywords,noindex
 Requires at least: 2.9.x
 Tested up to: 3.2 & Buddypress 1.2.x
-Stable tag:  1.1 beta 3
+Stable tag:  1.1
 
 Searchengine optimization plugin for Wordpress & Buddypress
 
 == Description ==
-SeoPress is professional search engine optimization for:<br>
+<h3>SeoPress is search engine optimization for</h3>
+
 <ul>
-<li>Wordpress</li>
-<li>Wordpress Sites (Network Blogs)</li>
-<li>Buddypress</li>
+    <li>WordPress,</li>
+    <li>WordPress Networked Blogs</li>
+    <li>and Buddypress.</li>
 </ul>
 
-<strong>Please be careful with updating to 1.1! The whole plugin have been redeveloped. Take care that your settings are working after updating.</strong>
+<h3>Features</h3>
+<ul>
+	<li>Setup Title, Description and Keywords of your WordPress, WordPress sites and Buddypress pages.</li>
+	<li>Ban searchengines from your sites (noindex)</li>
+	<li>Autocomplete Special Tags for wordpress values</li>
+	<li>Action hooks for 3rd party plugins</li>
+	<li>Add your own special tags</li>
+</ul>
 
-SeoPress supports following languages:<br>
+<h3>Screenshot</h3>
+<img src="http://themekraft.com/wp-content/uploads/2010/11/screenshot-seopress.jpg" alt="" title="SeoPress Screenshot" width="530" height="340" class="alignnone size-full wp-image-1796" />
+
+<h3>How the plugin works</h3>
+SeoPress automaticaly detects your WordPress configuration and offers you the options you need to setup the different page types of WordPress and Buddypress. Just activate it and all values you can set will be shown!
+
+<h4>Page types</h4>
+Your WordPress page has a lot of page types like home, posts, pages, categories and so on. Every page type needs a different setup to have an optimal result in searchengines. SeoPress offers you all page types and shows you the values you can edit on these pages.
+
+<h4>Special Tags</h4>
+Use the special tags like %%site_name%% (for getting name of the site) and use it in your page types. The special tag autocomplete will help you to find the right ones.
+
+<h3>Buddypress Support</h3>
+SeoPress is the only plugin for WordPress which offers you to setup the meta data of the BuddyPress page types. It automaticaly recognizes if BuddyPress is activated and shows you all options to optimize your different page types.
+
+<h3>Languages</h3>
+SeoPress is multilingual and supports the following languages:
 <ul>
 <li>English</li>
 <li>German</li>
 </ul>
+Feel free to support the community. Send us your language files to team[at]themekraft.com and we we will add it in the next update!
 
-<strong>Functions:</strong><br>
-<ul>
-<li>Setup Title, Description and Keywords of your WordPress, Wordpress sites and Buddypress pages.</li>
-<li>Ban searchengines from your sites (noindex)</li>
-<li>Special Tags for wordpress values</li>
-<li>Action hooks for 3rd party plugins</li>
-<li>Add your own special tags</li>
-</ul>
+<h3>SeoPress API</h3>
+You need more special tags or do you want to extend your own plugin to support SeoPress with own page types and your own special tags? Just use the API! You can add new page types and Special tags by using hooks and functions we have added to SeoPress. Just take a look at our code and communicate with SeoPress! A documentation is in progress.
+
 
 For bug report and feature requests please go to:<br><br>
 https://github.com/Themekraft/SeoPress-Free/issues or to http://themekraft.com/groups/seopress/forum/
@@ -60,6 +80,15 @@ Plugin is updatefriendly, all needed migration from older versions, will be done
 3. **Options**
 
 == Changelog ==
+<h4>1.1</h4>
+<ul>
+<li>Added setup window on activaion</li>
+<li>Added function htmlentities to prevent wrong header output</li>
+<li>Changed path to setup</li>
+<li>Fixed: Tabs after thickbox not working</li>
+<li>Added Forum Slug to tk_get_bp_component_by_slug function</li>
+<li>Changed get_page_type function</li>
+</ul>
 <h4>1.1 beta 3</h4>
 <ul>
 <li>Renamed update script filename</li>
