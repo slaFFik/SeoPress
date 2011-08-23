@@ -59,7 +59,7 @@ class SP_CORE{
 			}
 			if( !isset( $this->options['metabox_page'] ) ){
 				add_action('edit_page_form', 'sp_page_metabox');
-			}			
+			}
 			
 			$this->special_tags = $special_tags->get_tags();
 			
@@ -67,6 +67,7 @@ class SP_CORE{
 			add_action( 'sp_options_tabs', 'sp_get_pro_tab', 10 );
 			add_action( 'admin_head', 'sp_setup', 10 );
 			
+			add_action( 'admin_notices', array( &$this, 'seopress_warnings') );
 			
 			do_action( 'sp_admin_init' );
 		}
@@ -280,6 +281,15 @@ class SP_CORE{
 		$special_tags->add_type( 'unknown' , array( 'global' ) );
 		
 		do_action( 'sp_init_special_tags' );
+	}
+	
+	public function seopress_warnings(){
+		$siteurl = get_bloginfo( 'siteurl' );
+		
+		if( 0 == get_option('blog_public') ){
+			$privacy_url = $siteurl . '/wp-admin/options-privacy.php';			 
+			echo '<div id="seopress-privacy-warning" class="error"><p>' . sprintf( __('Your blog is not public. Searchengines will be blocked. You can change this in your <a href="%s">privacy settings</a>.', 'seopress' ), $privacy_url ) . '</p></div>';
+		}
 	}
 	
 	public function init_admin(){

@@ -12,14 +12,14 @@ class TK_SPECIAL_TAGS{
 		$this->tags = array();		
 	}
 	
-	public function replace( $string, $type = '', $fallback_type = '' ){
-		$active_tags = $this->get_tags( $type, '', $fallback_type );
-		
-		foreach( $active_tags AS $tag => $value ){
-			$string = str_replace( $tag , call_user_func( $value['function'] ) , $string );
+	public function replace( $string, $type = '', $fallback_type = '' ){		
+		if( $string != '' ){
+			$active_tags = $this->get_tags( $type, '', $fallback_type );
+			foreach( $active_tags AS $tag => $value ){			
+				$string = str_replace( $tag , call_user_func( $value['function'] ) , $string );
+			}
 		}
-		
-		return $string;
+		return $string;		 
 	}
 	
 	public function add_type( $name, $sets = array() , $option_name = '' ){ 
