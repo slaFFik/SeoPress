@@ -6,7 +6,7 @@ Description: Searchengine optimization plugin for Wordpress & Buddypress
 Author: Sven Lehnert, Sven Wagener
 Author URI: http://themekraft.com/
 License: GNU GENERAL PUBLIC LICENSE 3.0 http://www.gnu.org/licenses/gpl.txt
-Version: 1.1
+Version: 1.1.1
 Text Domain: seopress
 Site Wide Only: true
 */
