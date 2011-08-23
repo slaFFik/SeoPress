@@ -86,10 +86,18 @@ class SP_CORE{
 			// Adding meta tags to wp head
 			add_action( 'wp_head' , array(&$this, 'insert_meta') , 1 );
 			
-			if( $new_title != '' ) $title = stripslashes( htmlentities( strip_tags( $new_title ) ) );
+			if( $new_title != '' ) $title = $this->filter_for_html_output( $new_title ) ;
 				
 		}
 		return $title;	
+	}
+	
+	public function filter_for_html_output( $string ){
+		$string = strip_tags( $string ); // Filtering HTML Tags
+		$string = htmlentities( $string, ENT_QUOTES, 'UTF-8'  ); // Changning all special chanrs to HTML chars
+		$string = stripslashes( $string ); // Stripping slashes 
+		
+		return $string;
 	}
 	
 	/**
@@ -150,12 +158,12 @@ class SP_CORE{
 		if( $this->meta['noindex']==true ) echo '<meta name="robots" content="noindex" />' . chr(10); 
 
 	    if( trim( $this->meta['description'] ) != "" || trim( $this->meta['description'] ) == ","){	
-	    	echo '<meta name="description" content="' . stripslashes( htmlentities( strip_tags( $this->meta['description'] ) ) ) . '" />' . chr(10);
+	    	echo '<meta name="description" content="' . $this->filter_for_html_output( $this->meta['description'] ) . '" />' . chr(10);
 		} 
 	    if( trim( $this->meta['keywords'] ) != '' ){ 
 	    	if(trim( $this->meta['keywords'] ) != ',' ){ //////////////////////////////////// Whats up here? Bad programming?
-	    		echo '<meta name="keywords" content="' . stripslashes( htmlentities( strip_tags( $this->meta['keywords'] ) ) ) . '" />' . chr(10);
-	    	} 
+	    		echo '<meta name="keywords" content="' . $this->filter_for_html_output( $this->meta['keywords'] ) . '" />' . chr(10);
+	    	}
 		}
 		do_action( 'sp_insert_meta' );
 	}
@@ -328,7 +336,7 @@ function sp_get_pro_tab( &$tabs ){
 		      <h2>' . __('Pro Version now available!', 'seopress') . '</h2><br>
 				<b>' . __('Get SeoPress Pro Version now, and benefit from more functionality, support and a clean UI.', 'seopress') . '</b><br>
 				<br>
-				<a href="https://themekraft.com/plugin/seopress-pro/?s2-ssl=yes" target="_blank">' . __('Upgrade now', 'seopress') . '</a>					
+				<a href="http://wpplugins.com/plugin/238/seopress-pro-version" target="_blank">' . __('Upgrade now', 'seopress') . '</a>					
 				<br><br>
 				<h3>' . __('Pro Features', 'seopress') . '</h3>
 				<ol>
@@ -349,7 +357,7 @@ function sp_get_pro_tab( &$tabs ){
 					<li>' . __( 'Xprofile special tags for buddypress', 'seopress') . '</li>
 				</ol>
 				<br>
-				<a href="https://themekraft.com/plugin/seopress-pro/?s2-ssl=yes" target="_blank">' . __('Upgrade now', 'seopress') . '</a>	
+				<a href="http://wpplugins.com/plugin/238/seopress-pro-version" target="_blank">' . __('Upgrade now', 'seopress') . '</a>	
 			</div>
 	    </div>';
 	
