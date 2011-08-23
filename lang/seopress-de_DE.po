@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bp-seo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-10 16:46+0100\n"
-"PO-Revision-Date: 2011-08-10 16:47+0100\n"
+"POT-Creation-Date: 2011-08-23 22:26+0100\n"
+"PO-Revision-Date: 2011-08-23 22:29+0100\n"
 "Last-Translator: Sven Wagener <svenw@themekraft.com>\n"
 "Language-Team: Sven Wagener <sven.wagener@rheinschmiede.de>\n"
 "MIME-Version: 1.0\n"
@@ -16,92 +16,113 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: C:\\Users\\wagesve\\SeoPress-Free\n"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:312
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:291
+#, php-format
+msgid "Your blog is not public. Searchengines will be blocked. You can change this in your <a href=\"%s\">privacy settings</a>."
+msgstr "Ihr Blog ist nicht öffentlich. Suchmaschinen werden geblockt. Sie können dies unter <a href=\"%s\">Privatsphäre</a> ändern."
+
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:332
 msgid "SeoPress - Page types"
 msgstr "Seopress - Seitentypen"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:312
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:332
 #: C:\Users\wagesve\SeoPress-Free/admin/seo.php:18
 msgid "Page types"
 msgstr "Seitentypen"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:313
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:333
 msgid "SeoPress - Options"
 msgstr "Seopress - Optionen"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:313
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:333
 #: C:\Users\wagesve\SeoPress-Free/admin/options.php:16
 msgid "Options"
 msgstr "Optionen"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:326
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:346
 msgid "Pro Version now available!"
 msgstr "Pro Version jetzt erhältlich!"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:327
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:347
 msgid "Get SeoPress Pro Version now, and benefit from more functionality, support and a clean UI."
 msgstr "Besorgen Sie sich jetzt die SeoPress Pro Version und profitieren Sie von zusätzlichen Funktionen, vollem Support und einer Werbefreien Oberfläche."
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:329
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:350
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:349
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:370
 msgid "Upgrade now"
 msgstr "Jetzt upgraden"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:331
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:351
 msgid "Pro Features"
 msgstr "Pro Funktionen"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:333
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:353
 msgid "Keyword generator"
 msgstr "Keywort Generator"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:334
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:354
 msgid "Text counter for meta title and description"
 msgstr "Textzähler für Meta Titel und Beschreibung"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:335
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:355
 msgid "No branding: the Pro Version comes without the \"Get Pro\" tabs."
 msgstr "Kein Branding: Die Pro Version hat keine \"Get Pro\" Tabs."
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:336
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:356
 msgid "Full support and help in the SeoPress group and forum."
 msgstr "Voller Support und Hilfe in unseren SeoPress Forum."
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:339
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:359
 msgid "Pro Roadmap"
 msgstr "Pro Roadmap"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:341
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:361
 msgid "Sitemap generator (including Buddypress urls)"
 msgstr "Sitemap Generator (inkl. Buddypress Urls)"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:342
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:362
 msgid "Deeplink generator"
 msgstr "Deeplink Generator"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:343
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:363
 msgid "Pages and posts optimizer"
 msgstr "Seiten und Artikel Optimierer"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:344
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:364
 msgid "Searchengine preview for pages and posts"
 msgstr "Suchmaschinenvorschau für Artikel und Seiten"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:345
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:365
 msgid "Google Pagerank checker"
 msgstr "Google Pagerank checker"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:346
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:366
 msgid "Canonical url support"
 msgstr "Cannonical Url Unterstützung"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:347
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:367
 msgid "Xprofile special tags for buddypress"
 msgstr "Xprofile Special Tags für Buddypress"
 
-#: C:\Users\wagesve\SeoPress-Free/sp-core.php:354
+#: C:\Users\wagesve\SeoPress-Free/sp-core.php:374
 msgid "Get Pro version!"
 msgstr "Pro Version kaufen"
+
+#: C:\Users\wagesve\SeoPress-Free/sp-setup.php:63
+msgid "Congratulations! You have successfully installed SeoPress. You can support us with the developement by buying SeoPress pro."
+msgstr "Herzlichen Glückwunsch! Sie haben SeoPress erfolgreich installiert. Sie können die Entwicklung dieses Plugins unterstützen, indem Sie SeoPress Pro kaufen."
+
+#: C:\Users\wagesve\SeoPress-Free/sp-setup.php:64
+msgid "Only for "
+msgstr "Für nur"
+
+#: C:\Users\wagesve\SeoPress-Free/sp-setup.php:67
+msgid "Get it on themekraft.com"
+msgstr "Auf themekraft.com kaufen"
+
+#: C:\Users\wagesve\SeoPress-Free/sp-setup.php:70
+msgid "Close Window"
+msgstr "Fenster schließen"
 
 #: C:\Users\wagesve\SeoPress-Free/admin/options.php:17
 msgid "Configure global settings for SeoPress."
