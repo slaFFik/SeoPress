@@ -58,8 +58,8 @@ h4{
 }
 </style>
 <div class="wrap" style="padding:20px; font-family: arial, verdana, sans-serif; font-size: 12px; ">
-	<img src="images/seopress-pro-package.jpg" style="float:left; margin: 0 20px 20px 0; width: 200px;" />
-	<img src="<?php echo $seopress_plugin_url; ?>images/seopress-logo-180px.jpg" style="margin-bottom: 20px;" />
+	<img src="includes/images/seopress-pro-package.jpg" style="float:left; margin: 0 20px 20px 0; width: 200px;" />
+	<img src="<?php echo $seopress_plugin_url; ?>includes/images/seopress-logo-180px.jpg" style="margin-bottom: 20px;" />
 	<p><?php _e( 'Congratulations! You have successfully installed SeoPress. You can support us with the developement by buying SeoPress pro.', 'seopress' ); ?></p>
 	<p><?php _e( 'Only for ', 'seopress' ); ?> <span style="font-size:2em; font-weight:bold;">39$</span></p>
 	<br /> 	
