@@ -9,7 +9,7 @@
 
 function sp_post_metabox(){
 	
-	$mb = new TK_WP_METABOX( 'sp_post_metabox', __( 'SEO Settings', 'seopress' ), 'post' );
+	$mb = new TK_WP_METABOX( 'sp_post_metabox', __( 'SeoPress Settings', 'seopress' ), 'post' );
 	
 	$title_field = apply_filters( 'sp_post_metabox_title', $title_field );
 	$description_field = apply_filters( 'sp_post_metabox_description', $description_field );
@@ -18,7 +18,11 @@ function sp_post_metabox(){
 	
 	$post_metabox_table = apply_filters( 'sp_post_metabox_table', $post_metabox_table );
 	
-	$html = '<table class="form-table">
+	$tabs = new	TK_WP_JQUERYUI_TABS();
+	
+	$html = '<p class="sp_metabox_description">' . __( 'Leave fields blank if you want to use standard WordPress values.', 'seopress' ) . '</p>';
+	
+	$html.= '<table class="form-table">
 				<tbody>
 					<tr>
 						<td width="200" valign="top"><label for="seopress_title">' . __( 'Title', 'seopress' ) . ':</label></td>
@@ -42,13 +46,19 @@ function sp_post_metabox(){
 	
 	$html = apply_filters( 'sp_post_metabox_html', $html );
 	
+	$tabs->add_tab( 'cap_post_seo', __ ('SEO', 'seopress'), $html );
+	
+	do_action( 'sp_post_metabox_tabs', $tabs );	
+	
+	$html = $tabs->get_html();
+	
 	$mb->add_element( $html );
 	
 	$mb->create();
 	
 }
 function sp_page_metabox(){
-	$mb = new TK_WP_METABOX( 'sp_post_metabox', __( 'SEO Settings', 'seopress' ), 'page' );
+	$mb = new TK_WP_METABOX( 'sp_post_metabox', __( 'SeoPress Settings', 'seopress' ), 'page' );
 	
 	$title_field = apply_filters( 'sp_page_metabox_title', $title_field );
 	$description_field = apply_filters( 'sp_page_metabox_description', $description_field );
@@ -57,7 +67,11 @@ function sp_page_metabox(){
 	
 	$post_metabox_table = apply_filters( 'sp_page_metabox_table', $post_metabox_table );
 	
-	$html = '<table class="form-table">
+	$tabs = new	TK_WP_JQUERYUI_TABS();
+	
+	$html = '<p class="sp_metabox_description">' . __( 'Leave fields blank if you want to use standard values.', 'seopress' ) . '</p>';
+	
+	$html.= '<table class="form-table">
 				<tbody>
 					<tr>
 						<td width="200" valign="top"><label for="seopress_title">' . __( 'Title', 'seopress' ) . ':</label></td>
@@ -80,6 +94,12 @@ function sp_page_metabox(){
 			</table>';
 	
 	$html = apply_filters( 'sp_page_metabox_html', $html );
+	
+	$tabs->add_tab( 'cap_post_seo', __ ('SEO', 'seopress'), $html );
+	
+	do_action( 'sp_page_metabox_tabs', $tabs );	
+	
+	$html = $tabs->get_html();
 	
 	$mb->add_element( $html );
 	

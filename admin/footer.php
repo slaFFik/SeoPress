@@ -10,7 +10,7 @@
 <!-- themekraft footer //-->
 <div class="seopress-footer">
     <div class="footer-logo">
-        <a href="http://themekraft.com" target="_blank"><img src="<?php echo $seopress_plugin_url; ?>images/themekraft-logo.png" /></a>
+        <a href="http://themekraft.com" target="_blank"><img src="<?php echo $seopress_plugin_url; ?>includes/images/themekraft-logo.png" /></a>
     </div>
     <div class="footer-menue">
         <ul>

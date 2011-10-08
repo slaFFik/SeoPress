@@ -1,10 +1,10 @@
 === SeoPress ===
 Contributors: svenl77,mahype
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NWEYBQUNE5PVY
-Tags: seo,buddypress,wpmu,wp,searchengine optimization,networked blogs,title,meta,meta description,meta keywords,noindex
+Tags: seo,buddypress,wpmu,wp,searchengine optimization,networked blogs,title,meta,meta description,meta keywords,noindex,facebook,open graph
 Requires at least: 2.9.x
 Tested up to: 3.2 & Buddypress 1.2.x
-Stable tag:  1.1.1
+Stable tag:  1.2
 
 Searchengine optimization plugin for Wordpress & Buddypress
 
@@ -17,9 +17,12 @@ Searchengine optimization plugin for Wordpress & Buddypress
     <li>and Buddypress.</li>
 </ul>
 
+<strong>NEW: Optimize your Posts/Pages for Facebook!</strong>
+
 <h3>Features</h3>
 <ul>
 	<li>Setup Title, Description and Keywords of your WordPress, WordPress sites and Buddypress pages.</li>
+	<li>Optimize your Posts/Pages for Facebook</li>
 	<li>Ban searchengines from your sites (noindex)</li>
 	<li>Autocomplete Special Tags for wordpress values</li>
 	<li>Action hooks for 3rd party plugins</li>
@@ -78,8 +81,15 @@ Plugin is updatefriendly, all needed migration from older versions, will be done
 1. **Settings**
 2. **Special Tag autocomplete**
 3. **Options**
+4. **Setting up Meta data for post/page**
+5. **Setting up Facebook data for post/page**
+
 
 == Changelog ==
+<h4>1.2</h4>
+<ul>
+<li>Added Facbook optimizing functions</li>
+</ul>
 <h4>1.1.1</h4>
 <ul>
 <li>Added filter function for correct filtering and changed htmlentities to utf8</li>

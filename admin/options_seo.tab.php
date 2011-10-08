@@ -10,7 +10,7 @@
 function sp_admin_settings_tab(){
 	global $seopress_plugin_url;
 	
-	$html.= sp_admin_tab_header( __('Global Seo options', 'seopress'), __('Setup the global settings of the Seo part of the plugin.', 'seopress'), $seopress_plugin_url . 'images/logo-wordpress.png' );
+	$html.= sp_admin_tab_header( __('Global Seo options', 'seopress'), __('Setup the global settings of the Seo part of the plugin.', 'seopress'), $seopress_plugin_url . 'includes/images/logo-wordpress.png' );
 	    
     $html.= '<table class="widefat">';
 						

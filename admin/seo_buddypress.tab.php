@@ -11,7 +11,7 @@
 function sp_admin_bp_tab(){
 	global $bp, $seopress_plugin_url;
 	
-	$html.= sp_admin_tab_header( __( 'Buddypress', 'seopress'), __( 'Setup your title and meta tags of the buddypress pages.', 'seopress'), $seopress_plugin_url . 'images/logo-buddypress.png' );
+	$html.= sp_admin_tab_header( __( 'Buddypress', 'seopress'), __( 'Setup your title and meta tags of the buddypress pages.', 'seopress'), $seopress_plugin_url . 'includes/images/logo-buddypress.png' );
 	
 	$bp_seo_components = get_blog_option( SITE_ID_CURRENT_SITE , 'bp_seo_plugins' );
 		

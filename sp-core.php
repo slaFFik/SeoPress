@@ -293,7 +293,7 @@ class SP_CORE{
 	}
 	
 	public function init_admin(){
-		if( $_GET['page'] == 'seopress_seo' || $_GET['page'] == 'seopress_options' ) {				
+		if( $_GET['page'] == 'seopress_seo' || $_GET['page'] == 'seopress_options' || $_GET['post'] != '' ) {				
 			$tk_jquery_ui = new TK_WP_JQUERYUI();
 			$tk_jquery_ui->load_jqueryui( array ( 'jquery-ui-tabs', 'jquery-ui-accordion', 'jquery-ui-autocomplete' ) );
 			
@@ -328,9 +328,10 @@ function sp_admin_menue(){
 		}
 	}
 		
-	add_menu_page( 'SeoPress Admin' , 'SeoPress' , 'manage_options', 'seopress_seo','seopress_seo', $seopress_plugin_url . 'images/icon-seopress-16x16.png');
+	add_menu_page( 'SeoPress Admin' , 'SeoPress' , 'manage_options', 'seopress_seo','seopress_seo', $seopress_plugin_url . 'includes/images/icon-seopress-16x16.png');
 	add_submenu_page( 'seopress_seo', __( 'SeoPress - Page types', 'seopress'),__( 'Page types', 'seopress' ), 'manage_options', 'seopress_seo', 'seopress_seo' );
 	add_submenu_page( 'seopress_seo', __( 'SeoPress - Options', 'seopress'),__( 'Options', 'seopress' ), 'manage_options', 'seopress_options', 'seopress_options' );
+	// add_submenu_page( 'seopress_seo', __( 'Test page', 'seopress'),__( 'Test page', 'seopress' ), 'manage_options', 'seopress_test', 'test_facebook' );
 }
 
 function seopress_init(){
@@ -342,11 +343,11 @@ function sp_get_pro_tab( &$tabs ){
 	global $seopress_plugin_url;
 	$html = '<div id="tab-head">
 	      <div class="sfb-entry">
-	      	  <div style="width:250px; padding:0 40px 100px 0; float:left;"><a href="http://wpplugins.com/plugin/238/seopress-pro-version" target="_blank"><img src="' . $seopress_plugin_url . 'images/seopress-pro-package.jpg" border="0" /></a></div>
+	      	  <div style="width:250px; padding:0 40px 100px 0; float:left;"><a href="http://themekraft.com/plugin/seopress-pro/" target="_blank"><img src="' . $seopress_plugin_url . 'includes/images/seopress-pro-package.jpg" border="0" /></a></div>
 		      <h2>' . __('Pro Version now available!', 'seopress') . '</h2><br>
 				<b>' . __('Get SeoPress Pro Version now, and benefit from more functionality, support and a clean UI.', 'seopress') . '</b><br>
 				<br>
-				<a href="http://wpplugins.com/plugin/238/seopress-pro-version" target="_blank">' . __('Upgrade now', 'seopress') . '</a>					
+				<a href="http://themekraft.com/plugin/seopress-pro/" target="_blank">' . __('Upgrade now', 'seopress') . '</a>					
 				<br><br>
 				<h3>' . __('Pro Features', 'seopress') . '</h3>
 				<ol>
@@ -367,7 +368,7 @@ function sp_get_pro_tab( &$tabs ){
 					<li>' . __( 'Xprofile special tags for buddypress', 'seopress') . '</li>
 				</ol>
 				<br>
-				<a href="http://wpplugins.com/plugin/238/seopress-pro-version" target="_blank">' . __('Upgrade now', 'seopress') . '</a>	
+				<a href="http://themekraft.com/plugin/seopress-pro/" target="_blank">' . __('Upgrade now', 'seopress') . '</a>	
 			</div>
 	    </div>';
 	

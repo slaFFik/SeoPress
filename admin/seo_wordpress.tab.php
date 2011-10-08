@@ -9,7 +9,7 @@
 function sp_admin_wp_tab(){
 	global $seopress_plugin_url;
 
-	$html.= sp_admin_tab_header( __('Wordpress Blog', 'seopress'), __('Setup your title and meta tags of your Wordpress blog.', 'seopress'), $seopress_plugin_url . 'images/logo-wordpress.png' );
+	$html.= sp_admin_tab_header( __('Wordpress Blog', 'seopress'), __('Setup your title and meta tags of your Wordpress blog.', 'seopress'), $seopress_plugin_url . 'includes/images/logo-wordpress.png' );
 	
 	$sections = array();
 	

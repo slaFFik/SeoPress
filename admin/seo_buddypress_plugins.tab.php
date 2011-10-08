@@ -14,7 +14,7 @@ function sp_admin_bp_plugins_tab(){
 
 	
 	// Adding tab header
-	$html.= sp_admin_tab_header( __( 'Buddypress Plugins', 'seopress'), __( 'Setup your title and meta tags of the buddypress plugins you have installed.', 'seopress'), $seopress_plugin_url . 'images/logo-buddypress.png' );
+	$html.= sp_admin_tab_header( __( 'Buddypress Plugins', 'seopress'), __( 'Setup your title and meta tags of the buddypress plugins you have installed.', 'seopress'), $seopress_plugin_url . 'includes/images/logo-buddypress.png' );
 	
 	// Showing component configuration
 	$html.= sp_admin_bp_plugins_tabs();
