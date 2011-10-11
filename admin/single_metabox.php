@@ -8,6 +8,7 @@
  **/
 
 function sp_post_metabox(){
+	global $post;
 	
 	$mb = new TK_WP_METABOX( 'sp_post_metabox', __( 'SeoPress Settings', 'seopress' ), 'post' );
 	
@@ -17,6 +18,26 @@ function sp_post_metabox(){
 	$noindex_field = apply_filters( 'sp_post_metabox_noindex', $noindex_field );
 	
 	$post_metabox_table = apply_filters( 'sp_post_metabox_table', $post_metabox_table );
+	
+	// Preview data
+	$post_meta = get_post_meta( $post->ID , 'sp_post_metabox' , true );
+	
+	$preview_date = date( 'd M Y', strtotime( $post->post_modified ) );
+	
+	if( $post_meta['title'] != '' ){
+		$preview_title = $post_meta['title'];
+	}else{
+		$preview_title = $post->post_title;
+	}
+	
+	if( $post_meta['description'] != '' ){
+		$preview_desc = $post_meta['description'];
+	}else{
+		$preview_desc = substr( strip_tags( $post->post_content ), 0, 170 ) . ' ... ';
+	}
+	
+	$preview_url = get_permalink( $post->ID );
+	$preview_url = str_replace('http://', '', $preview_url );
 	
 	$tabs = new	TK_WP_JQUERYUI_TABS();
 	
@@ -39,6 +60,16 @@ function sp_post_metabox(){
 					<tr>
 						<td valign="top"><label for="seopress_noindex">' . __( 'Ban searchengines', 'seopress' ) . ':</label></td>
 						<td>' . tk_wp_form_checkbox( 'noindex', 'sp_post_metabox', 'seopress_noindex' ) . $noindex_field . '</td>
+					</tr>
+					<tr>
+						<td valign="top">' . __( 'Preview:', 'seopress' ) . '</td>
+						<td>
+							<div style="border: 1px #000 solid; bgcolor: #FFF; width:96%; height; 100%; padding:1em;">
+								<div><a style="line-height:19px; font-size: 16px; font-family: arial,sans-serif; color: #12c; text-decoration: underline;" href="' . get_permalink( $post->ID ) . '" target="_blank">' . $preview_title . '</a></div>
+								<div style="color:#093; font-size: 13px;">' . $preview_url . '</div>
+								<div style="color:#222; font-size: 13px; line-height: 15px;"><span style="color: #666;">' . $preview_date . '</span> &ndash; ' . $preview_desc . '</div>
+							</div>
+						</td>
 					</tr>
 					' . $post_metabox_table .'
 				</tbody>
