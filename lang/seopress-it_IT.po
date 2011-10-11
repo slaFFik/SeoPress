@@ -6,455 +6,1062 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: seo-for-buddypress\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/seo-for-buddypress\n"
-"POT-Creation-Date: 2010-04-09 14:10+0000\n"
-"PO-Revision-Date: 2010-05-10 23:41+0100\n"
-"Last-Translator: Luca Camellini <luccame@gmail.com>\n"
-"Language-Team: luccame <luccame@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-10-11 14:02+0100\n"
+"PO-Revision-Date: 2011-10-11 14:04+0100\n"
+"Last-Translator: Alberto Lusoli <alberto.lusoli@gmail.com>\n"
+"Language-Team: AlbertoITA <alberto.lusoli@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: C:\\Users\\alberto.NETIDEA\\Dropbox\\Progetti\\SEOpress\n"
 
-#: bp-seo-general.inc.php:64
-msgid "Seo for Buddypress: General Seo"
-msgstr "Seo per Buddypress: Seo Generale"
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:291
+#, php-format
+msgid "Your blog is not public. Searchengines will be blocked. You can change this in your <a href=\"%s\">privacy settings</a>."
+msgstr "Attenzione! hai bloccato i motori di ricerca. Puoi cambiare questa impostazione dal menu Impostazioni > Privacy"
 
-#: bp-seo-general.inc.php:67
-msgid "Update General Seo"
-msgstr "Aggiorna Seo Generale"
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:332
+msgid "SeoPress - Page types"
+msgstr "SeoPress - Tipi pagina"
 
-#: bp-seo-general.inc.php:71
-msgid "Directories"
-msgstr "Directory"
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:332
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:18
+msgid "Page types"
+msgstr "Meta tag"
 
-#: bp-seo-general.inc.php:75
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:333
+msgid "SeoPress - Options"
+msgstr "Seopress - Opzioni"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:333
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options.php:16
+msgid "Options"
+msgstr "Opzioni"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:346
+msgid "Pro Version now available!"
+msgstr "Versione Pro disponibile per il download!"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:347
+msgid "Get SeoPress Pro Version now, and benefit from more functionality, support and a clean UI."
+msgstr "Acquista la versione Pro. Acquistandola potrai riceverai più funzionalità, interfaccia di facile utilizzo e supporto."
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:349
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:370
+msgid "Upgrade now"
+msgstr "Aggiorna adesso"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:351
+msgid "Pro Features"
+msgstr "Pro Features"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:353
+msgid "Keyword generator"
+msgstr "Generatore di keywords"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:354
+msgid "Text counter for meta title and description"
+msgstr "Contatore di caratteri per Title e Description"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:355
+msgid "No branding: the Pro Version comes without the \"Get Pro\" tabs."
+msgstr "Nessuna pubblicità: la versione Pro non contiene il tag Upgrade a pro"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:356
+msgid "Full support and help in the SeoPress group and forum."
+msgstr "Aiuto e supporto all'interno del forum e gruppo di SeoPress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:359
+msgid "Pro Roadmap"
+msgstr "Roadmap della versione Pro"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:361
+msgid "Sitemap generator (including Buddypress urls)"
+msgstr "Generatore di Sitemap XML comprensiva di pagine Buddypress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:362
+msgid "Deeplink generator"
+msgstr "Generatore di deeplink"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:363
+msgid "Pages and posts optimizer"
+msgstr "Ottimizzazione per Pagine e Post"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:364
+msgid "Searchengine preview for pages and posts"
+msgstr "Anteprima SERP per pagine e post"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:365
+msgid "Google Pagerank checker"
+msgstr "Google pagerank Checker"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:366
+msgid "Canonical url support"
+msgstr "Gestione del Rel canonical"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:367
+msgid "Xprofile special tags for buddypress"
+msgstr "Tag speciali Xprofile per Buddypress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:374
+msgid "Get Pro version!"
+msgstr "Acquista la versione Pro!"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-setup.php:63
+msgid "Congratulations! You have successfully installed SeoPress. You can support us with the developement by buying SeoPress pro."
+msgstr "Congratulazioni, hai appena installato SeoPress! Supporta il progetto acquistando la versione Pro."
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-setup.php:64
+msgid "Only for "
+msgstr "Solo a"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-setup.php:67
+msgid "Get it on themekraft.com"
+msgstr "Acquistalo su themekraft.com"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-setup.php:70
+msgid "Close Window"
+msgstr "Chiudi finestra"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options.php:17
+msgid "Configure global settings for SeoPress."
+msgstr "Configura le opzioni di SeoPress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options.php:28
+msgid "Seo"
+msgstr "Seo"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:13
+msgid "Global Seo options"
+msgstr "Opzioni Seo generali"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:13
+msgid "Setup the global settings of the Seo part of the plugin."
+msgstr "Configura le opzioni per la parte SEO del plugin"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:20
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:24
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:63
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/sp_admin_core.php:12
+msgid "Title"
+msgstr "Titolo"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:24
+msgid "Standard length of title"
+msgstr "Lunghezza standard del titolo"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:26
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:32
+msgid "number of chars"
+msgstr "numero di caratteri"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:30
+msgid "Standard length of meta description"
+msgstr "Lunghezza standard del meta Description"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:37
+msgid "Meta boxes in posts and pages"
+msgstr "Box meta tag in post e pagine"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:41
+msgid "Hide meta boxes in posts:"
+msgstr "Nascondi meta box nei post:"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:47
+msgid "Hide meta boxes in pages:"
+msgstr "Nascondi meta box nelle pagine"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:57
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:54
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:34
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:36
+msgid "Save"
+msgstr "Salva"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:19
+msgid "Optimize your Wordpress pages."
+msgstr "Ottimizza le pagine di Wordpress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:34
+msgid "Wordpress"
+msgstr "Wordpress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:38
+msgid "Wordpress Network"
+msgstr "Network Wordpress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:44
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:14
+msgid "Buddypress"
+msgstr "Buddypress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:47
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:17
+msgid "Buddypress Plugins"
+msgstr "Plugin per Buddypress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:14
+msgid "Setup your title and meta tags of the buddypress pages."
+msgstr "Configura Title e Description per le pagine di Buddypress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:28
+msgid "Setup Buddypress pages"
+msgstr "Seo per Buddypress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:33
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:68
+msgid "Activity"
+msgstr "Attività"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:36
+msgid "Members"
+msgstr "Membri"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:37
+msgid "Profiles"
+msgstr "Profili"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:40
 msgid "Groups"
 msgstr "Gruppi"
 
-#: bp-seo-general.inc.php:78
-msgid "Main Blog"
-msgstr "Blog Principale"
-
-#: bp-seo-general.inc.php:80
-msgid "User Blogs"
-msgstr "Blog degli Utenti"
-
-#: bp-seo-general.inc.php:88
-#, php-format
-msgid ""
-"A directory view is the start-page of a component, the overview.\r\n"
-"<br>\r\n"
-"Most special tags will not work at the directory view, because they make no sense here.<br>\r\n"
-"The %%component...%% tags are just for sub-pages of the directories.<br>\r\n"
-"<br>\r\n"
-"The directory views are the main-pages and that's why it's important to give every directory a unique title and description.\r\n"
-"Write something about every directory on your site so that others will know what kind of directory they will find.\r\n"
-"<br><br>\r\n"
-"Examples: in the groups directory, write what kind of groups I will find on your social network.\r\n"
-"If you are in the members directory, write what kind of members I will find. Are your members musicians, or do they have the same hobbies? repair cars ...?\r\n"
-"Give a detailed explanation.\r\n"
-"\r\n"
-"."
-msgstr ""
-"La directory view è la prima pagina di un componente, una sorta di panoramica.\r\n"
-"<br>\r\n"
-"Molti tag speciali non funzioneranno nella directory view, perchè non avrebbero senso.<br>\r\n"
-"I tag %%component...%% sono solo per le sotto-pagine delle directory.<br>\r\n"
-"<br>\r\n"
-"Le directory view sono le pagine principali ed è per questo che è importante dare ad ogni directory un titolo e una descrizione univoci.\r\n"
-"Scrivi qualcosa per ogni directory sul tuo sito così che gli altri possano capire che tipo di directory troveranno.\r\n"
-"<br><br>\r\n"
-"Esempi: nella directory gruppi, scrivi quali tipi di gruppi si possono trovare sul tuo social network.\r\n"
-"Nella directory membri, scrivi che tipo di utenti si possono trovare. Sono musicisti? O magari condividono un hobby, tipo riparare automobili?\r\n"
-"Cerca di fornire una descrizione dettagliata.\r\n"
-"\r\n"
-"."
-
-#: bp-seo-general.inc.php:138
-#: bp-seo-general.inc.php:206
-#: bp-seo-general.inc.php:259
-#: bp-seo-main-page.inc.php:49
-#: bp-seo-main-page.inc.php:88
-#: bp-seo-plugins.inc.php:124
-msgid "The site's name"
-msgstr "Nome sito"
-
-#: bp-seo-general.inc.php:139
-#: bp-seo-main-page.inc.php:98
-msgid "Replaced with the user's nicename"
-msgstr "Sostituito con il nome dell'utente"
-
-#: bp-seo-general.inc.php:140
-#: bp-seo-main-page.inc.php:99
-msgid "Replaced with the user registered"
-msgstr "Sostituito con l'utente registrato"
-
-#: bp-seo-general.inc.php:141
-#: bp-seo-main-page.inc.php:100
-msgid "Replaced with the displayed name of the user"
-msgstr "Sostituito con il nome visualizzato dell'utente"
-
-#: bp-seo-general.inc.php:142
-#: bp-seo-main-page.inc.php:101
-msgid "Replaced with the full name of the user"
-msgstr "Sostituito con il nome completo dell'utente"
-
-#: bp-seo-general.inc.php:201
-#: bp-seo-general.inc.php:254
-#: bp-seo-main-page.inc.php:14
-#: bp-seo-main-page.inc.php:37
-msgid "Special Tags"
-msgstr "Tag Speciali"
-
-#: bp-seo-general.inc.php:207
-#: bp-seo-plugins.inc.php:125
-msgid "Replaced with component name(title of the entry)"
-msgstr "Sostituito con il nome del componente (titolo dell'elemento)"
-
-#: bp-seo-general.inc.php:208
-#: bp-seo-main-page.inc.php:90
-#: bp-seo-plugins.inc.php:126
-msgid "Replaced with the component ID"
-msgstr "Sostituito con l'ID del componente"
-
-#: bp-seo-general.inc.php:209
-#: bp-seo-main-page.inc.php:91
-#: bp-seo-plugins.inc.php:127
-msgid "Replaced with component description"
-msgstr "Sostituito con la descrizione del componente"
-
-#: bp-seo-general.inc.php:210
-#: bp-seo-main-page.inc.php:92
-#: bp-seo-plugins.inc.php:128
-msgid "Replaced with the component status"
-msgstr "Sostituito con lo status del componente"
-
-#: bp-seo-general.inc.php:211
-#: bp-seo-main-page.inc.php:93
-#: bp-seo-plugins.inc.php:129
-msgid "Replaced with the component date created"
-msgstr "Sostituito con la data di creazione del componente"
-
-#: bp-seo-general.inc.php:212
-#: bp-seo-main-page.inc.php:94
-#: bp-seo-plugins.inc.php:130
-msgid "Replaced with the component admins"
-msgstr "Sostituito con gli amministratori del componente"
-
-#: bp-seo-general.inc.php:213
-#: bp-seo-main-page.inc.php:95
-#: bp-seo-plugins.inc.php:131
-msgid "Replaced with the component total member-count"
-msgstr "Sostituito con il numero di utenti totali del componente"
-
-#: bp-seo-general.inc.php:214
-#: bp-seo-main-page.inc.php:96
-#: bp-seo-plugins.inc.php:132
-msgid "Replaced with the component last activity"
-msgstr "Sostituito con l'ultima attività del componente"
-
-#: bp-seo-general.inc.php:260
-#: bp-seo-main-page.inc.php:62
-msgid "Replaced with the current time"
-msgstr "Sostituito con l'ora corrente"
-
-#: bp-seo-general.inc.php:261
-#: bp-seo-main-page.inc.php:63
-msgid "Replaced with the current date"
-msgstr "Sostituito con la data corrente"
-
-#: bp-seo-general.inc.php:262
-#: bp-seo-main-page.inc.php:64
-msgid "Replaced with the current month"
-msgstr "Sostituito con il mese corrente"
-
-#: bp-seo-general.inc.php:263
-#: bp-seo-main-page.inc.php:65
-msgid "Replaced with the current year"
-msgstr "Sostituito con l'anno corrente"
-
-#: bp-seo-general.inc.php:287
-#: bp-seo-general.inc.php:327
-#: bp-seo-main-page.inc.php:40
-msgid "Special Tags for WP and WPMU"
-msgstr "Tag speciali per WP e WPMU"
-
-#: bp-seo-general.inc.php:288
-#: bp-seo-general.inc.php:328
-msgid "For a list of all available tags go "
-msgstr "Per una lista dei tag disponibile vai "
-
-#: bp-seo-general.inc.php:288
-#: bp-seo-general.inc.php:328
-msgid "here"
-msgstr "qui"
-
-#: bp-seo-general.inc.php:324
-msgid "Info"
-msgstr "Informazioni"
-
-#: bp-seo-general.inc.php:325
-msgid "You need to activate the plugin sitewide to run user blogs."
-msgstr "Devi attivare il plugin su tutto il sito per gestire i blog degli utenti."
-
-#: bp-seo-main-page.inc.php:13
-msgid "Welcome"
-msgstr "Benvenuto"
-
-#: bp-seo-main-page.inc.php:15
-#: bp-seo-main-page.inc.php:121
-msgid "Help and Info"
-msgstr "Aiuto ed Informazioni"
-
-#: bp-seo-main-page.inc.php:21
-msgid "Seo for WP/WPMU and Buddypress"
-msgstr "Seo per WP/WPMU e Buddypress"
-
-#: bp-seo-main-page.inc.php:22
-msgid "Search engine optimization for Wordpress single | Wordpress MU | Buddypress and plugins."
-msgstr "Ottimizzazione per i motori di ricerca per Wordpress | Wordpress MU | Buddypress e plugin."
-
-#: bp-seo-main-page.inc.php:23
-#: bp-seo.php:65
-msgid "General Seo"
-msgstr "Seo Generale"
-
-#: bp-seo-main-page.inc.php:24
-msgid "This is the place for the general meta(title, description, keywords) optimization in a WP | WPMU | Buddypress environment. The meta options shown in this page will be generated depending on the WP you use and the activated Buddypress components."
-msgstr "Qui è possibile ottimizzare i meta tag generici (title, description, keywords) per gli ambienti WP | WPMU | Buddypress. Le opzioni dei meta tag mostrate in questa pagina sono generate in base a quale WP è in uso e quali componenti di Buddypress sono attivi."
-
-#: bp-seo-main-page.inc.php:25
-#: bp-seo.php:68
-msgid "Plugins Seo"
-msgstr "Seo dei Plugin"
-
-#: bp-seo-main-page.inc.php:26
-msgid "If you have installed plugins to extend Buddypress, this is the place where to configure the Seo behavior of every component. First you need to select where the component is shown in the front-end. After saving, you will be able to enter all meta data depending on your selection."
-msgstr "Se hai installato dei plugin per espandere Buddypress, qui puoi configurare il comportamento Seo di ogni componente. Prima devi selezionare dove il componente è visualizzato nel front-end. Dopo aver salvato, sarà possibile inserire tutti i dati meta in base alla tua selezione."
-
-#: bp-seo-main-page.inc.php:27
-#: bp-seo.php:70
-msgid "Settings"
-msgstr "Impostazioni"
-
-#: bp-seo-main-page.inc.php:28
-msgid "Settings page for the global Seo configuration, update and delete Seo for Buddypress."
-msgstr "Pagina delle impostazioni per la configurazione Seo globale, aggiornamento ed eliminazione di Seo per Buddypress."
-
-#: bp-seo-main-page.inc.php:38
-msgid "Special Tags are place holders to use in the meta data to specifay the content. Not all Tags are avalibe everywere. Use every tag with care, and check if the tag is suportet and gife you back the result you wanted."
-msgstr "I tag speciali sono segnaposto da usare nei dati meta per specificare il contenuto. Non tutti i tag sono disponibili ovunque. Usa i tag con cautela e controlla se il tag è supportato e se restituisce i risultati attesi."
-
-#: bp-seo-main-page.inc.php:41
-msgid "These tags can be included and will be replaced when the main/user blog pages or posts are displayed."
-msgstr "Questi tag possono essere inclusi e saranno sostituiti quando le pagine del blog o gli articoli vengono visualizzati."
-
-#: bp-seo-main-page.inc.php:47
-msgid "Replaced with the date of the post/page"
-msgstr "Sostituito con la data dell'articolo/pagina"
-
-#: bp-seo-main-page.inc.php:48
-msgid "Replaced with the title of the post/page"
-msgstr "Sostituito con il titolo dell'articolo/pagina"
-
-#: bp-seo-main-page.inc.php:50
-msgid "Replaced with the post/page excerpt"
-msgstr "Sostituito con l'estratto dell'articolo/pagina"
-
-#: bp-seo-main-page.inc.php:51
-msgid "Replaced with the current tag/tags"
-msgstr "Sostituito con i tag correnti"
-
-#: bp-seo-main-page.inc.php:52
-msgid "Replaced with the post categories (comma separated)"
-msgstr "Sostituito con le categorie dell'articolo (separate da virgola)"
-
-#: bp-seo-main-page.inc.php:53
-msgid "Replaced with the category description"
-msgstr "Sostituito con la descrizione della categoria"
-
-#: bp-seo-main-page.inc.php:54
-msgid "Replaced with the tag description"
-msgstr "Sostituito con la descrizione del tag"
-
-#: bp-seo-main-page.inc.php:55
-msgid "Replaced with the term description"
-msgstr "Sostituito con la descrizione del termine"
-
-#: bp-seo-main-page.inc.php:56
-msgid "Replaced with the term name"
-msgstr "Sostituito con il nome del termine"
-
-#: bp-seo-main-page.inc.php:57
-msgid "Replaced with the post/page modified time"
-msgstr "Sostituito con l'ora di modifica dell'articolo/pagina"
-
-#: bp-seo-main-page.inc.php:58
-msgid "Replaced with the post/page ID"
-msgstr "Sostituito con l'ID dell'articolo/pagina"
-
-#: bp-seo-main-page.inc.php:59
-msgid "Replaced with the post/page author's 'nicename'"
-msgstr "Sostituito con il nome utente dell'autore dell'articolo/pagina"
-
-#: bp-seo-main-page.inc.php:60
-msgid "Replaced with the post/page author's user ID"
-msgstr "Sostituito con l'ID utente dell'autore dell'articolo/pagina"
-
-#: bp-seo-main-page.inc.php:61
-msgid "Replaced with the current search phrase"
-msgstr "Sostituito con la frase cercata corrente"
-
-#: bp-seo-main-page.inc.php:66
-msgid "Replaced with the current page number (i.e. page 2 of 4)"
-msgstr "Sostituito con il numero di pagina corrente (es. pagina 2 di 4)"
-
-#: bp-seo-main-page.inc.php:67
-msgid "Replaced with the current page total"
-msgstr "Sostituito con il numero di pagine totali"
-
-#: bp-seo-main-page.inc.php:68
-msgid "Replaced with the current page number"
-msgstr "Sostituito con il numero di pagina corrente"
-
-#: bp-seo-main-page.inc.php:69
-msgid "Attachment caption"
-msgstr "Didascalia allegato"
-
-#: bp-seo-main-page.inc.php:81
-msgid "Special Tags for Buddypress"
-msgstr "Tag speciali per Buddypress"
-
-#: bp-seo-main-page.inc.php:82
-msgid "These tags can be included and will be replaced when a Buddypress page is displayed."
-msgstr "Questi tag possono essere inclusi e saranno sostituiti quando una pagina di Buddypress viene visualizzata."
-
-#: bp-seo-main-page.inc.php:89
-msgid "Replaced with component name"
-msgstr "Sostituito con il nome del componente"
-
-#: bp-seo-main-page.inc.php:97
-msgid "Replaced with the user ID"
-msgstr "Sostituito con l'ID utente"
-
-#: bp-seo-main-page.inc.php:122
-msgid ""
-"If you have any problems, need help or find a bug,\r\n"
-"      <br>please have a look into the following places:"
-msgstr ""
-"Se riscontri dei problemi, hai bisogno di aiuto o trovi un bug,\r\n"
-"      <br>dai un'occhiata nei seguenti posti:"
-
-#: bp-seo-main-page.inc.php:124
-msgid "Plugin page"
-msgstr "Pagina Plugin"
-
-#: bp-seo-main-page.inc.php:125
-msgid "Buddypress forum"
-msgstr "Forum Buddypress"
-
-#: bp-seo-main-page.inc.php:129
-msgid "What's coming in the next version?"
-msgstr "Cosa sarà aggiunto nella prossima versione?"
-
-#: bp-seo-main-page.inc.php:130
-msgid "I'm thinking about to add the following features into the next versions:"
-msgstr "Sto pensando di aggiungere le seguenti funzionalità nella prossima versione:"
-
-#: bp-seo-main-page.inc.php:131
-msgid "- Nofollow control"
-msgstr "- Controlli Nofollow"
-
-#: bp-seo-main-page.inc.php:132
-msgid "- Image-title and alt-tag management"
-msgstr "- Gestione del titolo dell'immagine e del tag alt"
-
-#: bp-seo-main-page.inc.php:133
-msgid "- Letter and word counter for the meta edit pages"
-msgstr "- Contatore di lettere e parole per le pagine di modifica dei meta"
-
-#: bp-seo-main-page.inc.php:134
-msgid "- Add meta description in the post edit screen"
-msgstr "- Aggiungi meta description nella schermata di modifica degli articoli"
-
-#: bp-seo-main-page.inc.php:135
-msgid "If you have any suggestions, please contact me here."
-msgstr "Se hai qualche suggerimento, ti prego di contattarmi qui."
-
-#: bp-seo-main-page.inc.php:136
-msgid "I'm always looking forward to improve \"Seo for Buddypress\"."
-msgstr "Sono costantemente impegnato per migliorare \"Seo per Buddypress\"."
-
-#: bp-seo-meta.inc.php:260
-msgid "Home"
-msgstr "Home"
-
-#: bp-seo-meta.inc.php:263
-msgid "Blog &#8212; "
-msgstr "Blog &#8212; "
-
-#: bp-seo-meta.inc.php:265
-msgid "Blog &#8212; Categories &#8212; "
-msgstr "Blog &#8212; Categorie &#8212; "
-
-#: bp-seo-meta.inc.php:267
-msgid "Blog &#8212; Tags &#8212; "
-msgstr "Blog &#8212; Tag &#8212; "
-
-#: bp-seo-meta.inc.php:269
-msgid "Blog"
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:43
+msgid "Forums"
+msgstr "Forum"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:46
+msgid "Blogs"
 msgstr "Blog"
 
-#: bp-seo-meta.inc.php:277
-#: bp-seo-meta.inc.php:279
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:49
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:222
+msgid "Registration"
+msgstr "Registrazione"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:67
+msgid "Activities Directory"
+msgstr "Directory Attività"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:90
+msgid "Members Directory"
+msgstr "Directory membri"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:111
+msgid "Profile"
+msgstr "Profilo"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:114
+msgid "Profile Activity"
+msgstr "Attività nel profilo"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:117
+msgid "Profile Blogs"
+msgstr "Blog degli Utenti"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:120
+msgid "Profile Groups"
+msgstr "Gruppi"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:143
+msgid "Group Directory"
+msgstr "Directory dei gruppi"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:146
+msgid "Group Activities"
+msgstr "Home dei gruppi"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:149
+msgid "Group Home"
+msgstr "Home del gruppo"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:152
+msgid "Group Forum"
+msgstr "Forum dei gruppi"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:153
+msgid "Group Forum Topic"
+msgstr "Topic nei forum dei gruppi"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:156
+msgid "Group Members"
+msgstr "Membri del gruppo"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:178
+msgid "Forums Directory"
+msgstr "Directory dei forum"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:200
+msgid "Blogs Directory"
+msgstr "Directory dei blog"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:17
+msgid "Setup your title and meta tags of the buddypress plugins you have installed."
+msgstr "Configura meta tag per le pagine generate dai tuoi plugin per Buddypress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:25
+msgid "Save settings"
+msgstr "Salva impostazioni"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:72
 #, php-format
 msgid "%s Directory"
 msgstr "%s Directory"
 
-#: bp-seo-plugins.inc.php:18
-msgid "Seo for Buddypress: Plugins Seo"
-msgstr "Seo per Buddypress: Seo dei Plugin"
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:83
+#, php-format
+msgid "Page in %s"
+msgstr "Pagina in %s"
 
-#: bp-seo-plugins.inc.php:36
-msgid "Buddypress Seo configuration for extended components"
-msgstr "Configurazione di Seo per Buddypress per i componenti estesi"
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:87
+#, php-format
+msgid "Configurate \"%s\" plugin"
+msgstr "Configura plugin"
 
-#: bp-seo-plugins.inc.php:37
-msgid "Please select the component for which you like to edit the meta tags."
-msgstr "Si prega di selezionare il componente per il quale si desidera modificare i meta tags."
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:103
+#, php-format
+msgid "Please config your \"%s\" plugin:"
+msgstr "Configura il plugin %s"
 
-#: bp-seo-plugins.inc.php:38
-msgid " !!! Attention: most times if a component has a directory view, every entry of the component has an own home view."
-msgstr " !!! Attenzione: molte volte se il componente ha una directory view, ogni elemento del componente ha una sua home view."
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:110
+#, php-format
+msgid "\"%s\" has a directory page:"
+msgstr "\"%s\" ha una pagina directory:"
 
-#: bp-seo-plugins.inc.php:39
-msgid "To generate dynamic meta tags for these views, you need to select the component itself under \"extends other components\". "
-msgstr "Per generare meta tag dinamici per queste viste, devi selezionare lo stesso componente sotto \"estende altri componenti\". "
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:116
+#, php-format
+msgid "\"%s\" creating pages in following components:"
+msgstr "\"%s\" crea pagine nei seguenti componenti:"
 
-#: bp-seo-plugins.inc.php:41
-msgid "For example, if you have \"Buddypress Events\" installed: it has a directory view and every event has a home view. In this case, you have to select \"events\" under \"extends other components\"."
-msgstr "Ad esempio, se hai installato \"Buddypress Events\": ha una directory view ed ogni evento ha una home view. In questo caso, devi selezionare \"events\" sotto \"extends other components\"."
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:12
+msgid "Wordpress Blog"
+msgstr "Blog Wordpress"
 
-#: bp-seo-plugins.inc.php:45
-msgid "Update components configuration"
-msgstr "Aggiorna configurazione componenti"
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:12
+msgid "Setup your title and meta tags of your Wordpress blog."
+msgstr "Configura title e meta tag per il tuo blog Wordpress"
 
-#: bp-seo-settings.inc.php:15
-msgid "Update Database"
-msgstr "Aggiorna Database"
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:16
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:16
+msgid "Home"
+msgstr "Home"
 
-#: bp-seo-settings.inc.php:22
-msgid "Delete Seo for Buddypress"
-msgstr "Elimina Seo per Buddypress"
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:17
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:17
+msgid "Posts"
+msgstr "Post"
 
-#: bp-seo-special-tags.inc.php:398
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:18
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:18
+msgid "Pages"
+msgstr "Pagine"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:19
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:19
+msgid "Archive"
+msgstr "Archivi"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:20
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:20
+msgid "Categories"
+msgstr "Categorie"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:21
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:21
+msgid "Tags"
+msgstr "Tags"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:22
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:22
+msgid "Author"
+msgstr "Autore"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:23
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:23
+msgid "Search result"
+msgstr "Risultati di ricerca"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:12
+msgid "Wordpress Network Blogs"
+msgstr "Netowrk di blog Wordpress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:12
+msgid "Setup your title and meta tags of your Wordpress main blog."
+msgstr "Configura title e meta tag per il blog Wordpress principale"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:12
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:51
+msgid "SEO Settings"
+msgstr "Impostazioni SEO"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:28
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:67
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/sp_admin_core.php:13
+msgid "Description"
+msgstr "Descrizione"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:32
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:71
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/sp_admin_core.php:14
+msgid "Keywords"
+msgstr "Keywords"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:36
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:75
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/sp_admin_core.php:35
+msgid "Ban searchengines"
+msgstr "Blocca motori di ricerca"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/cheesecap.php:445
+msgid "Save Options"
+msgstr "Salva opzioni"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/wordpress/functions.php:42
+msgid "Themekraft.com"
+msgstr "Themekraft.com"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/wordpress/functions.php:42
+msgid "Username"
+msgstr "Username"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/wordpress/functions.php:44
+msgid "Password"
+msgstr "Password"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/wordpress/functions.php:46
+msgid "login"
+msgstr "Login"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/wordpress/functions.php:53
+msgid "Please verify your serial of SeoPress"
+msgstr "Prego controlla il numero seriale di Seopress"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:11
+msgid "Shows the component name"
+msgstr "Inserisce il nome del componente"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:18
+msgid "Shows the content of the activity"
+msgstr "Inserisce il contenuto dell'attività"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:19
+msgid "Shows the author of the activity"
+msgstr "Inserisce l'autore dell'attività"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:26
+msgid "Shows the group name"
+msgstr "Inserisce il nome del Gruppo"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:27
+msgid "Shows the group description"
+msgstr "Inserisce la descrizione del gurppo"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:34
+msgid "Shows name of the user"
+msgstr "Inserisce il nome utente"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:43
+msgid "Shows the forum topic title"
+msgstr "Inserisce il titolo del topic"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:44
+msgid "Shows the forum topic text"
+msgstr "Inserisce il contenuto del toipic"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:45
+msgid "Shows the forum topic poster name"
+msgstr "Inserisce il nome dell'autore del post"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/functions.php:297
 #, php-format
 msgid "page %d of %d"
 msgstr "Pagina %d di %d"
 
-#: bp-seo.php:63
-msgid "Seo for Buddypress"
-msgstr "Seo per Buddypress"
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:9
+msgid "Shows the sitename"
+msgstr "Inserisce il nome del sito"
 
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:10
+msgid "Shows the site description"
+msgstr "Inserisce la descrizione del sito"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:17
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:27
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:28
+msgid "Shows the title of post"
+msgstr "Inserisce il titolo del post"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:18
+msgid "Shows the content of the post"
+msgstr "Inserisce il contenuto del post"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:19
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:20
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:29
+msgid "Shows the excerpt of the post"
+msgstr "Inserisce il riassunto del post"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:21
+msgid "Shows post categories"
+msgstr "Inserisce le categorie del post"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:22
+msgid "Shows post tags"
+msgstr "Inserisce i tag del post"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:23
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:30
+msgid "Shows the name of post author"
+msgstr "Inserisce il nome dell'autore del post"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:37
+msgid "Shows the archive date"
+msgstr "Inserisce la data"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:43
+msgid "Shows the category name"
+msgstr "Inserisce il nome categoria"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:44
+msgid "Shows the category description"
+msgstr "Inserisce la descrizione della categoria"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:51
+msgid "Shows the tag name"
+msgstr "Inserisce il nome del tag"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:52
+msgid "Shows the tag description"
+msgstr "Inserisce la descrizione del tag"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:59
+msgid "Shows the name of the author"
+msgstr "Inserisce il nome dell'autore"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:66
+msgid "Shows the current page number"
+msgstr "Inserisce il numero di pagina corrente"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:67
+msgid "Shows the sum of all pages"
+msgstr "Mostra la somma di tutte le pagine"
+
+#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:74
+msgid "Shows the search phrase"
+msgstr "Inserisce la frase cercata corrente"
+
+#~ msgid "<b>SeoPress:</b> General SEO options"
+#~ msgstr "Seopress - Opzioni"
+
+#, fuzzy
+#~ msgid "Save General SEO options"
+#~ msgstr "Salva opzioni"
+
+#~ msgid "Directories"
+#~ msgstr "Directory"
+
+#~ msgid "Main Blog"
+#~ msgstr "Blog Principale"
+
+#, fuzzy
+#~ msgid "User Blogs"
+#~ msgstr "Blog"
+
+#~ msgid ""
+#~ "A directory view is the start-page of a component, the overview.\r\n"
+#~ "<br>\r\n"
+#~ "Most special tags will not work at the directory view, because they make "
+#~ "no sense here.<br>\r\n"
+#~ "The %%component...%% tags are just for sub-pages of the directories.<br>"
+#~ "\r\n"
+#~ "<br>\r\n"
+#~ "The directory views are the main-pages and that's why it's important to "
+#~ "give every directory a unique title and description.\r\n"
+#~ "Write something about every directory on your site so that others will "
+#~ "know what kind of directory they will find.\r\n"
+#~ "<br><br>\r\n"
+#~ "Examples: in the groups directory, write what kind of groups I will find "
+#~ "on your social network.\r\n"
+#~ "If you are in the members directory, write what kind of members I will "
+#~ "find. Are your members musicians, or do they have the same hobbies? "
+#~ "repair cars ...?\r\n"
+#~ "Give a detailed explanation.\r\n"
+#~ "\r\n"
+#~ "."
+#~ msgstr ""
+#~ "La directory view è la prima pagina di un componente, una sorta di "
+#~ "panoramica.\r\n"
+#~ "<br>\r\n"
+#~ "Molti tag speciali non funzioneranno nella directory view, perchè non "
+#~ "avrebbero senso.<br>\r\n"
+#~ "I tag %%component...%% sono solo per le sotto-pagine delle directory.<br>"
+#~ "\r\n"
+#~ "<br>\r\n"
+#~ "Le directory view sono le pagine principali ed è per questo che è "
+#~ "importante dare ad ogni directory un titolo e una descrizione univoci.\r\n"
+#~ "Scrivi qualcosa per ogni directory sul tuo sito così che gli altri "
+#~ "possano capire che tipo di directory troveranno.\r\n"
+#~ "<br><br>\r\n"
+#~ "Esempi: nella directory gruppi, scrivi quali tipi di gruppi si possono "
+#~ "trovare sul tuo social network.\r\n"
+#~ "Nella directory membri, scrivi che tipo di utenti si possono trovare. "
+#~ "Sono musicisti? O magari condividono un hobby, tipo riparare automobili?"
+#~ "\r\n"
+#~ "Cerca di fornire una descrizione dettagliata.\r\n"
+#~ "\r\n"
+#~ "."
+
+#, fuzzy
+#~ msgid "The site's name"
+#~ msgstr "Inserisce il nome del sito"
+
+#, fuzzy
+#~ msgid "Replaced with current component"
+#~ msgstr "Sostituito con il mese corrente"
+
+#, fuzzy
+#~ msgid "Replaced with current action"
+#~ msgstr "Sostituito con l'ora corrente"
+
+#~ msgid "Replaced with the user's nicename"
+#~ msgstr "Sostituito con il nome dell'utente"
+
+#~ msgid "Replaced with the user registered"
+#~ msgstr "Sostituito con l'utente registrato"
+
+#~ msgid "Replaced with the displayed name of the user"
+#~ msgstr "Sostituito con il nome visualizzato dell'utente"
+
+#~ msgid "Replaced with the full name of the user"
+#~ msgstr "Sostituito con il nome completo dell'utente"
+
+#~ msgid "Special Tags"
+#~ msgstr "Tag Speciali"
+
+#, fuzzy
+#~ msgid "Replaced with component name"
+#~ msgstr "Sostituito con gli amministratori del componente"
+
+#~ msgid "Replaced with the component ID"
+#~ msgstr "Sostituito con l'ID del componente"
+
+#, fuzzy
+#~ msgid "Replaced with component description"
+#~ msgstr "Sostituito con gli amministratori del componente"
+
+#~ msgid "Replaced with the component status"
+#~ msgstr "Sostituito con lo status del componente"
+
+#~ msgid "Replaced with the component date created"
+#~ msgstr "Sostituito con la data di creazione del componente"
+
+#~ msgid "Replaced with the component admins"
+#~ msgstr "Sostituito con gli amministratori del componente"
+
+#~ msgid "Replaced with the component total member-count"
+#~ msgstr "Sostituito con il numero di utenti totali del componente"
+
+#, fuzzy
+#~ msgid "Replaced with the component last activity"
+#~ msgstr "Sostituito con lo status del componente"
+
+#, fuzzy
+#~ msgid "Replaced with current forum topic title"
+#~ msgstr "Sostituito con l'ora corrente"
+
+#, fuzzy
+#~ msgid "Replaced with current forum topic poster name"
+#~ msgstr "Inserisce il nome dell'autore del topic"
+
+#, fuzzy
+#~ msgid "Replaced with current forum topic last poster name"
+#~ msgstr "Inserisce il nome dell'autore del topic"
+
+#, fuzzy
+#~ msgid "Replaced with current forum topic start time"
+#~ msgstr "Sostituito con l'ora corrente"
+
+#, fuzzy
+#~ msgid "Replaced with current forum topic time"
+#~ msgstr "Sostituito con l'ora corrente"
+
+#, fuzzy
+#~ msgid "Replaced with current forum topic text"
+#~ msgstr "Sostituito con l'ora corrente"
+
+#~ msgid "Replaced with the current time"
+#~ msgstr "Sostituito con l'ora corrente"
+
+#~ msgid "Replaced with the current date"
+#~ msgstr "Sostituito con la data corrente"
+
+#~ msgid "Replaced with the current month"
+#~ msgstr "Sostituito con il mese corrente"
+
+#~ msgid "Replaced with the current year"
+#~ msgstr "Sostituito con l'anno corrente"
+
+#~ msgid "Special Tags for WP and WPMU"
+#~ msgstr "Tag speciali per WP e WPMU"
+
+#~ msgid "For a list of all available tags go "
+#~ msgstr "Per una lista dei tag disponibile vai "
+
+#~ msgid "here"
+#~ msgstr "qui"
+
+#~ msgid "Info"
+#~ msgstr "Informazioni"
+
+#~ msgid "You need to activate the plugin sitewide to run user blogs."
+#~ msgstr ""
+#~ "Devi attivare il plugin su tutto il sito per gestire i blog degli utenti."
+
+#~ msgid "Welcome"
+#~ msgstr "Benvenuto"
+
+#~ msgid "General Seo"
+#~ msgstr "Seo Generale"
+
+#~ msgid ""
+#~ "This is the place for the general meta(title, description, keywords) "
+#~ "optimization in a WP | WPMU | Buddypress environment. The meta options "
+#~ "shown in this page will be generated depending on the WP you use and the "
+#~ "activated Buddypress components."
+#~ msgstr ""
+#~ "Qui è possibile ottimizzare i meta tag generici (title, description, "
+#~ "keywords) per gli ambienti WP | WPMU | Buddypress. Le opzioni dei meta "
+#~ "tag mostrate in questa pagina sono generate in base a quale WP è in uso e "
+#~ "quali componenti di Buddypress sono attivi."
+
+#~ msgid "Plugins Seo"
+#~ msgstr "Seo dei Plugin"
+
+#~ msgid ""
+#~ "If you have installed plugins to extend Buddypress, this is the place "
+#~ "where to configure the Seo behavior of every component. First you need to "
+#~ "select where the component is shown in the front-end. After saving, you "
+#~ "will be able to enter all meta data depending on your selection."
+#~ msgstr ""
+#~ "Se hai installato dei plugin per espandere Buddypress, qui puoi "
+#~ "configurare il comportamento Seo di ogni componente. Prima devi "
+#~ "selezionare dove il componente è visualizzato nel front-end. Dopo aver "
+#~ "salvato, sarà possibile inserire tutti i dati meta in base alla tua "
+#~ "selezione."
+
+#~ msgid ""
+#~ "Settings page for the global Seo configuration, update and delete Seo for "
+#~ "Buddypress."
+#~ msgstr ""
+#~ "Pagina delle impostazioni per la configurazione Seo globale, "
+#~ "aggiornamento ed eliminazione di Seo per Buddypress."
+
+#~ msgid ""
+#~ "Special Tags are place holders to use in the meta data to specifay the "
+#~ "content. Not all Tags are avalibe everywere. Use every tag with care, and "
+#~ "check if the tag is suportet and gife you back the result you wanted."
+#~ msgstr ""
+#~ "I tag speciali sono segnaposto da usare nei dati meta per specificare il "
+#~ "contenuto. Non tutti i tag sono disponibili ovunque. Usa i tag con "
+#~ "cautela e controlla se il tag è supportato e se restituisce i risultati "
+#~ "attesi."
+
+#~ msgid ""
+#~ "These tags can be included and will be replaced when the main/user blog "
+#~ "pages or posts are displayed."
+#~ msgstr ""
+#~ "Questi tag possono essere inclusi e saranno sostituiti quando le pagine "
+#~ "del blog o gli articoli vengono visualizzati."
+
+#~ msgid "Replaced with the date of the post/page"
+#~ msgstr "Sostituito con la data dell'articolo/pagina"
+
+#, fuzzy
+#~ msgid "Replaced with the title of the post/page"
+#~ msgstr "Sostituito con la data dell'articolo/pagina"
+
+#~ msgid "Replaced with the post/page excerpt"
+#~ msgstr "Sostituito con l'estratto dell'articolo/pagina"
+
+#~ msgid "Replaced with the current tag/tags"
+#~ msgstr "Sostituito con i tag correnti"
+
+#~ msgid "Replaced with the post categories (comma separated)"
+#~ msgstr "Sostituito con le categorie dell'articolo (separate da virgola)"
+
+#, fuzzy
+#~ msgid "Replaced with the category description"
+#~ msgstr "Inserisce la descrizione della categoria"
+
+#, fuzzy
+#~ msgid "Replaced with the tag description"
+#~ msgstr "Sostituito con l'estratto dell'articolo/pagina"
+
+#, fuzzy
+#~ msgid "Replaced with the term description"
+#~ msgstr "Sostituito con il nome del termine"
+
+#~ msgid "Replaced with the term name"
+#~ msgstr "Sostituito con il nome del termine"
+
+#~ msgid "Replaced with the post/page modified time"
+#~ msgstr "Sostituito con l'ora di modifica dell'articolo/pagina"
+
+#~ msgid "Replaced with the post/page ID"
+#~ msgstr "Sostituito con l'ID dell'articolo/pagina"
+
+#~ msgid "Replaced with the post/page author's 'nicename'"
+#~ msgstr "Sostituito con il nome utente dell'autore dell'articolo/pagina"
+
+#~ msgid "Replaced with the post/page author's user ID"
+#~ msgstr "Sostituito con l'ID utente dell'autore dell'articolo/pagina"
+
+#, fuzzy
+#~ msgid "Replaced with the current search phrase"
+#~ msgstr "Sostituito con l'anno corrente"
+
+#~ msgid "Replaced with the current page number (i.e. page 2 of 4)"
+#~ msgstr "Sostituito con il numero di pagina corrente (es. pagina 2 di 4)"
+
+#~ msgid "Replaced with the current page total"
+#~ msgstr "Sostituito con il numero di pagine totali"
+
+#, fuzzy
+#~ msgid "Replaced with the current page number"
+#~ msgstr "Sostituito con il numero di pagine totali"
+
+#~ msgid "Attachment caption"
+#~ msgstr "Didascalia allegato"
+
+#~ msgid ""
+#~ "These tags can be included and will be replaced when a Buddypress page is "
+#~ "displayed."
+#~ msgstr ""
+#~ "Questi tag possono essere inclusi e saranno sostituiti quando una pagina "
+#~ "di Buddypress viene visualizzata."
+
+#~ msgid "Replaced with the user ID"
+#~ msgstr "Sostituito con l'ID utente"
+
+#, fuzzy
+#~ msgid "Get the SeoPress Pro version"
+#~ msgstr "Acquista la versione Pro!"
+
+#~ msgid "Comming soon!"
+#~ msgstr "In arrivo!"
+
+#, fuzzy
+#~ msgid "<b>SeoPress:</b> Plugins Seo Options"
+#~ msgstr "Seopress - Opzioni"
+
+#, fuzzy
+#~ msgid "Configuration"
+#~ msgstr "Configura %s plugin"
+
+#~ msgid "Buddypress Seo configuration for extended components"
+#~ msgstr "Configurazione di Seo per Buddypress per i componenti estesi"
+
+#~ msgid ""
+#~ "Please select the component for which you like to edit the meta tags."
+#~ msgstr ""
+#~ "Si prega di selezionare il componente per il quale si desidera modificare "
+#~ "i meta tags."
+
+#~ msgid ""
+#~ " !!! Attention: most times if a component has a directory view, every "
+#~ "entry of the component has an own home view."
+#~ msgstr ""
+#~ " !!! Attenzione: molte volte se il componente ha una directory view, ogni "
+#~ "elemento del componente ha una sua home view."
+
+#~ msgid ""
+#~ "To generate dynamic meta tags for these views, you need to select the "
+#~ "component itself under \"extends other components\". "
+#~ msgstr ""
+#~ "Per generare meta tag dinamici per queste viste, devi selezionare lo "
+#~ "stesso componente sotto \"estende altri componenti\". "
+
+#~ msgid ""
+#~ "For example, if you have \"Buddypress Events\" installed: it has a "
+#~ "directory view and every event has a home view. In this case, you have to "
+#~ "select \"events\" under \"extends other components\"."
+#~ msgstr ""
+#~ "Ad esempio, se hai installato \"Buddypress Events\": ha una directory "
+#~ "view ed ogni evento ha una home view. In questo caso, devi selezionare "
+#~ "\"events\" sotto \"extends other components\"."
+
+#~ msgid "Update components configuration"
+#~ msgstr "Aggiorna configurazione componenti"
+
+#~ msgid "COMPONENTS EXTENDED"
+#~ msgstr "COMPONENTI ESTESI"
+
+#, fuzzy
+#~ msgid "SeoPress:General settings"
+#~ msgstr "Seo per Buddypress: Seo Generale"
+
+#~ msgid ""
+#~ "Check this, if you want SeoPress to generate the keywords from the "
+#~ "content, if there are no Keywords set."
+#~ msgstr ""
+#~ "Seleziona se vuoi che SEOpress generi le keywords dai contenuti nel caso "
+#~ "in cui non siano specificate"
+
+#~ msgid "How many Keywords to use?"
+#~ msgstr "Quante keywords utilizzare?"
+
+#~ msgid "Hide meta box in “Add New Page/Edit” screen "
+#~ msgstr "Nascondi il box Meta in \"Aggiungi/modifica pagina\""
+
+#~ msgid ""
+#~ "Check this, if you do not want to edit meta data in the “Add New Page/"
+#~ "Edit” screen: "
+#~ msgstr ""
+#~ "Seleziona questa opzione se non desideri modificare i meta dalla "
+#~ "schermata \"Aggiungi/modifica pagina\":"
+
+#~ msgid "Hide meta box in “Add New Post/Edit” screen "
+#~ msgstr "Nascondi il box Meta in \"Aggiungi/modifica post\""
+
+#~ msgid ""
+#~ "Check this, if you do not want to edit meta data in the “Add New Post/"
+#~ "Edit” screen: "
+#~ msgstr ""
+#~ "Seleziona questa opzione se non desideri modificare i meta dalla "
+#~ "schermata \"Aggiungi/modifica post\":"
+
+#~ msgid ""
+#~ "Please set up a maximum length of the title. After this the title will be "
+#~ "stopped. If you dont want to stop, please type in 0."
+#~ msgstr ""
+#~ "Specifica la lunghezza massima del title. Se non desideri impostare una "
+#~ "lunghezza massima, inserisci il valore 0"
+
+#, fuzzy
+#~ msgid "Save standard title length"
+#~ msgstr "Lunghezza standard del titolo"
+
+#~ msgid ""
+#~ "Please set up a maximum length of meta description. After this the meta "
+#~ "description will be stopped. If you dont want to stop, please type in 0."
+#~ msgstr ""
+#~ "Specifica la lunghezza massima della description. Se non desideri "
+#~ "impostare una lunghezza massima, inserisci il valore 0"
+
+#~ msgid "Save standard description length"
+#~ msgstr "Salva lunghezza standard della description"
+
+#~ msgid "Delete Seo for Buddypress"
+#~ msgstr "Elimina Seo per Buddypress"
+
+#~ msgid ""
+#~ "I dont want to use Seo for Buddypress! Delete all concerning fields from "
+#~ "the option table."
+#~ msgstr ""
+#~ "Non voglio più utilizzare Seo per Buddypress. Cancella i relativi campi "
+#~ "dalla tabella Option"
+
+#~ msgid "klick"
+#~ msgstr "click"
+
+#~ msgid "No Index"
+#~ msgstr "No Index"
+
+#, fuzzy
+#~ msgid "Blog &#124; "
+#~ msgstr "Blog &#8212; "
+
+#, fuzzy
+#~ msgid "Blog &#124; Categories &#124; "
+#~ msgstr "Blog &#8212; Categorie &#8212; "
+
+#, fuzzy
+#~ msgid "Blog &#124; Tags &#124; "
+#~ msgstr "Blog &#8212; Tag &#8212; "
+
+#~ msgid "Create an Account"
+#~ msgstr "Crea un account"
+
+#~ msgid "Activate your Account"
+#~ msgstr "attiva il tuo account"
+
+#~ msgid "Create a Group"
+#~ msgstr "Crea un gruppo"
+
+#~ msgid "Create a Blog"
+#~ msgstr "Crea un blog"
+
+#, fuzzy
+#~ msgid "SeoPress"
+#~ msgstr "Seopress - Opzioni"
+
+#~ msgid "http://sven-lehnert.de"
+#~ msgstr "http://sven-lehnert.de"
+
+#, fuzzy
+#~ msgid "Seo for Wordpress, Wordpress MU and Buddypress"
+#~ msgstr "Seo per WP/WPMU e Buddypress"
+
+#~ msgid "Sven Lehnert, Sven Wagener"
+#~ msgstr "Sven Lehnert, Sven Wagener"
+
+#~ msgid "Update General Seo"
+#~ msgstr "Aggiorna Seo Generale"
+
+#~ msgid "Replaced with component name(title of the entry)"
+#~ msgstr "Sostituito con il nome del componente (titolo dell'elemento)"
+
+#~ msgid "Help and Info"
+#~ msgstr "Aiuto ed Informazioni"
+
+#~ msgid ""
+#~ "Search engine optimization for Wordpress single | Wordpress MU | "
+#~ "Buddypress and plugins."
+#~ msgstr ""
+#~ "Ottimizzazione per i motori di ricerca per Wordpress | Wordpress MU | "
+#~ "Buddypress e plugin."
+
+#~ msgid ""
+#~ "If you have any problems, need help or find a bug,\r\n"
+#~ "      <br>please have a look into the following places:"
+#~ msgstr ""
+#~ "Se riscontri dei problemi, hai bisogno di aiuto o trovi un bug,\r\n"
+#~ "      <br>dai un'occhiata nei seguenti posti:"
+
+#~ msgid "Plugin page"
+#~ msgstr "Pagina Plugin"
+
+#~ msgid "What's coming in the next version?"
+#~ msgstr "Cosa sarà aggiunto nella prossima versione?"
+
+#~ msgid ""
+#~ "I'm thinking about to add the following features into the next versions:"
+#~ msgstr ""
+#~ "Sto pensando di aggiungere le seguenti funzionalità nella prossima "
+#~ "versione:"
+
+#~ msgid "- Nofollow control"
+#~ msgstr "- Controlli Nofollow"
+
+#~ msgid "- Image-title and alt-tag management"
+#~ msgstr "- Gestione del titolo dell'immagine e del tag alt"
+
+#~ msgid "- Letter and word counter for the meta edit pages"
+#~ msgstr "- Contatore di lettere e parole per le pagine di modifica dei meta"
+
+#~ msgid "- Add meta description in the post edit screen"
+#~ msgstr ""
+#~ "- Aggiungi meta description nella schermata di modifica degli articoli"
+
+#~ msgid "If you have any suggestions, please contact me here."
+#~ msgstr "Se hai qualche suggerimento, ti prego di contattarmi qui."
+
+#~ msgid "I'm always looking forward to improve \"Seo for Buddypress\"."
+#~ msgstr "Sono costantemente impegnato per migliorare \"Seo per Buddypress\"."
+
+#~ msgid "Update Database"
+#~ msgstr "Aggiorna Database"
