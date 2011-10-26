@@ -293,7 +293,7 @@ class SP_CORE{
 	}
 	
 	public function init_admin(){
-		if( 'seopress_seo' == $_GET['page'] || 'seopress_options' == $_GET['page'] || '' == $_GET['post'] || 'post-new.php' == basename( $_SERVER['REQUEST_URI'] ) ) {				
+		if( 'seopress_seo' == $_GET['page'] || 'seopress_options' == $_GET['page'] || '' != $_GET['post'] || 'post-new.php' == basename( $_SERVER['REQUEST_URI'] ) ) {				
 			$tk_jquery_ui = new TK_WP_JQUERYUI();
 			$tk_jquery_ui->load_jqueryui( array ( 'jquery-ui-tabs', 'jquery-ui-accordion', 'jquery-ui-autocomplete' ) );
 			add_thickbox();
