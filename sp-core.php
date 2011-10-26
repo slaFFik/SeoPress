@@ -293,10 +293,9 @@ class SP_CORE{
 	}
 	
 	public function init_admin(){
-		if( $_GET['page'] == 'seopress_seo' || $_GET['page'] == 'seopress_options' || $_GET['post'] != '' ) {				
+		if( 'seopress_seo' == $_GET['page'] || 'seopress_options' == $_GET['page'] || '' == $_GET['post'] || 'post-new.php' == basename( $_SERVER['REQUEST_URI'] ) ) {				
 			$tk_jquery_ui = new TK_WP_JQUERYUI();
 			$tk_jquery_ui->load_jqueryui( array ( 'jquery-ui-tabs', 'jquery-ui-accordion', 'jquery-ui-autocomplete' ) );
-			
 			add_thickbox();
 		}
 	}
@@ -339,7 +338,7 @@ function seopress_init(){
 	$seopress = new SP_CORE();
 }
 
-function sp_get_pro_tab( &$tabs ){
+function sp_get_pro_tab( $tabs ){
 	global $seopress_plugin_url;
 	$html = '<div id="tab-head">
 	      <div class="sfb-entry">

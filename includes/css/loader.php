@@ -5,8 +5,8 @@ function seopress_css() {
 	global $seopress_plugin_url;	
 	
 	if( isset( $_GET['page'] ) ){
-		
-	    if( $_GET['page'] == 'seopress_seo' || $_GET['page'] == 'seopress_options' || $_GET['post'] != '' ) {
+				
+	    if( 'seopress_seo' == $_GET['page'] || 'seopress_options' == $_GET['page'] || '' == $_GET['post'] || 'post-new.php' == basename( $_SERVER['REQUEST_URI'] ) ) {
 			
 	    	$style_url =  $seopress_plugin_url . 'includes/css/styles.css';
 			wp_register_style( 'seopressui', $style_url );
