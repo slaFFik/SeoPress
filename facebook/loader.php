@@ -1,31 +1,7 @@
 <?php
 
 require_once( 'open-graph.php' );
-/*
-function test_facebook(){
-	$args = array(
-		'app_id' => '222384077820870',
-		'facebook_secret' => 'e04143717ed3504da1e7e85a5efa9d3c'
-	);
-	
-	$og = new FB_Open_Graph( $args );
-	
-	$args = array(
-		'title' => 'Ein Test',
-		'url' => 'http://seopress.themekraft.com/hallo-welt/'
-	);
-	
-	$og->set_page_data( $args );
-	
-	echo '<pre>';
-	echo $og->get_header_data();
-	echo '</pre>';
-	
-	echo $og->publish();
-	
-	echo "jaja";
-}
- * */
+
 function sp_fp_add_meta(){
 	if( $_SERVER['HTTP_USER_AGENT'] == 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)' ) {			
 		global $post;
@@ -100,7 +76,7 @@ function sp_fb_page_meta_box( &$tabs ){
 }
 add_action( 'sp_page_metabox_tabs', 'sp_fb_post_meta_box' );
 
-function sp_fb_post_meta_box( &$tabs ){
+function sp_fb_post_meta_box( $tabs ){
 	global $post;
 	
 	$html = '<p class="sp_metabox_description">' . __( 'Leave fields blank if you want to use standard values.', 'seopress' ) . '</p>';
