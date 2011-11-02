@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: seo-for-buddypress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-11 14:02+0100\n"
-"PO-Revision-Date: 2011-10-11 14:04+0100\n"
+"POT-Creation-Date: 2011-11-02 22:10+0100\n"
+"PO-Revision-Date: 2011-11-02 22:14+0100\n"
 "Last-Translator: Alberto Lusoli <alberto.lusoli@gmail.com>\n"
 "Language-Team: AlbertoITA <alberto.lusoli@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -18,541 +18,605 @@ msgstr ""
 "X-Poedit-Country: ITALY\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: C:\\Users\\alberto.NETIDEA\\Dropbox\\Progetti\\SEOpress\n"
+"X-Poedit-SearchPath-0: C:\\Users\\Alberto\\Downloads\\Themekraft-SeoPress-a464d02\n"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:291
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:104
+#, php-format
+msgid "Page %s"
+msgstr "Pagine %s"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:310
 #, php-format
 msgid "Your blog is not public. Searchengines will be blocked. You can change this in your <a href=\"%s\">privacy settings</a>."
 msgstr "Attenzione! hai bloccato i motori di ricerca. Puoi cambiare questa impostazione dal menu Impostazioni > Privacy"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:332
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:350
 msgid "SeoPress - Page types"
 msgstr "SeoPress - Tipi pagina"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:332
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:18
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:350
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo.php:18
 msgid "Page types"
 msgstr "Meta tag"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:333
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:351
 msgid "SeoPress - Options"
 msgstr "Seopress - Opzioni"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:333
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options.php:16
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:351
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options.php:16
 msgid "Options"
 msgstr "Opzioni"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:346
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:365
 msgid "Pro Version now available!"
 msgstr "Versione Pro disponibile per il download!"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:347
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:366
 msgid "Get SeoPress Pro Version now, and benefit from more functionality, support and a clean UI."
 msgstr "Acquista la versione Pro. Acquistandola potrai riceverai più funzionalità, interfaccia di facile utilizzo e supporto."
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:349
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:370
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:368
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:389
 msgid "Upgrade now"
 msgstr "Aggiorna adesso"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:351
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:370
 msgid "Pro Features"
 msgstr "Pro Features"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:353
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:372
 msgid "Keyword generator"
 msgstr "Generatore di keywords"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:354
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:373
 msgid "Text counter for meta title and description"
 msgstr "Contatore di caratteri per Title e Description"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:355
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:374
 msgid "No branding: the Pro Version comes without the \"Get Pro\" tabs."
 msgstr "Nessuna pubblicità: la versione Pro non contiene il tag Upgrade a pro"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:356
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:375
 msgid "Full support and help in the SeoPress group and forum."
 msgstr "Aiuto e supporto all'interno del forum e gruppo di SeoPress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:359
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:378
 msgid "Pro Roadmap"
 msgstr "Roadmap della versione Pro"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:361
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:380
 msgid "Sitemap generator (including Buddypress urls)"
 msgstr "Generatore di Sitemap XML comprensiva di pagine Buddypress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:362
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:381
 msgid "Deeplink generator"
 msgstr "Generatore di deeplink"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:363
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:382
 msgid "Pages and posts optimizer"
 msgstr "Ottimizzazione per Pagine e Post"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:364
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:383
 msgid "Searchengine preview for pages and posts"
 msgstr "Anteprima SERP per pagine e post"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:365
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:384
 msgid "Google Pagerank checker"
 msgstr "Google pagerank Checker"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:366
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:385
 msgid "Canonical url support"
 msgstr "Gestione del Rel canonical"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:367
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:386
 msgid "Xprofile special tags for buddypress"
 msgstr "Tag speciali Xprofile per Buddypress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-core.php:374
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-core.php:393
 msgid "Get Pro version!"
 msgstr "Acquista la versione Pro!"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-setup.php:63
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-setup.php:63
 msgid "Congratulations! You have successfully installed SeoPress. You can support us with the developement by buying SeoPress pro."
 msgstr "Congratulazioni, hai appena installato SeoPress! Supporta il progetto acquistando la versione Pro."
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-setup.php:64
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-setup.php:64
 msgid "Only for "
 msgstr "Solo a"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-setup.php:67
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-setup.php:67
 msgid "Get it on themekraft.com"
 msgstr "Acquistalo su themekraft.com"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/sp-setup.php:70
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/sp-setup.php:70
 msgid "Close Window"
 msgstr "Chiudi finestra"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options.php:17
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options.php:17
 msgid "Configure global settings for SeoPress."
 msgstr "Configura le opzioni di SeoPress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options.php:28
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options.php:28
 msgid "Seo"
 msgstr "Seo"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:13
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:13
 msgid "Global Seo options"
 msgstr "Opzioni Seo generali"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:13
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:13
 msgid "Setup the global settings of the Seo part of the plugin."
 msgstr "Configura le opzioni per la parte SEO del plugin"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:20
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:24
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:63
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/sp_admin_core.php:12
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:20
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:49
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:108
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/sp_admin_core.php:12
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:56
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:128
 msgid "Title"
 msgstr "Titolo"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:24
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:24
+msgid "Show pagination"
+msgstr "Mostra paginazione"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:30
 msgid "Standard length of title"
 msgstr "Lunghezza standard del titolo"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:26
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:32
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:32
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:38
 msgid "number of chars"
 msgstr "numero di caratteri"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:30
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:36
 msgid "Standard length of meta description"
 msgstr "Lunghezza standard del meta Description"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:37
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:43
 msgid "Meta boxes in posts and pages"
 msgstr "Box meta tag in post e pagine"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:41
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:47
 msgid "Hide meta boxes in posts:"
 msgstr "Nascondi meta box nei post:"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:47
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:53
 msgid "Hide meta boxes in pages:"
 msgstr "Nascondi meta box nelle pagine"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/options_seo.tab.php:57
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:54
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:34
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:36
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/options_seo.tab.php:63
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:54
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpress.tab.php:34
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpressmu.tab.php:36
 msgid "Save"
 msgstr "Salva"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:19
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo.php:19
 msgid "Optimize your Wordpress pages."
 msgstr "Ottimizza le pagine di Wordpress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:34
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo.php:34
 msgid "Wordpress"
 msgstr "Wordpress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:38
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo.php:38
 msgid "Wordpress Network"
 msgstr "Network Wordpress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:44
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:14
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo.php:44
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:14
 msgid "Buddypress"
 msgstr "Buddypress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo.php:47
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:17
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo.php:47
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress_plugins.tab.php:17
 msgid "Buddypress Plugins"
 msgstr "Plugin per Buddypress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:14
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:14
 msgid "Setup your title and meta tags of the buddypress pages."
 msgstr "Configura Title e Description per le pagine di Buddypress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:28
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:28
 msgid "Setup Buddypress pages"
 msgstr "Seo per Buddypress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:33
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:68
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:33
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:68
 msgid "Activity"
 msgstr "Attività"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:36
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:36
 msgid "Members"
 msgstr "Membri"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:37
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:37
 msgid "Profiles"
 msgstr "Profili"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:40
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:40
 msgid "Groups"
 msgstr "Gruppi"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:43
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:43
 msgid "Forums"
 msgstr "Forum"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:46
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:46
 msgid "Blogs"
 msgstr "Blog"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:49
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:222
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:49
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:222
 msgid "Registration"
 msgstr "Registrazione"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:67
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:67
 msgid "Activities Directory"
 msgstr "Directory Attività"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:90
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:90
 msgid "Members Directory"
 msgstr "Directory membri"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:111
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:111
 msgid "Profile"
 msgstr "Profilo"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:114
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:114
 msgid "Profile Activity"
 msgstr "Attività nel profilo"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:117
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:117
 msgid "Profile Blogs"
 msgstr "Blog degli Utenti"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:120
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:120
 msgid "Profile Groups"
 msgstr "Gruppi"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:143
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:143
 msgid "Group Directory"
 msgstr "Directory dei gruppi"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:146
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:146
 msgid "Group Activities"
 msgstr "Home dei gruppi"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:149
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:149
 msgid "Group Home"
 msgstr "Home del gruppo"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:152
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:152
 msgid "Group Forum"
 msgstr "Forum dei gruppi"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:153
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:153
 msgid "Group Forum Topic"
 msgstr "Topic nei forum dei gruppi"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:156
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:156
 msgid "Group Members"
 msgstr "Membri del gruppo"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:178
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:178
 msgid "Forums Directory"
 msgstr "Directory dei forum"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress.tab.php:200
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress.tab.php:200
 msgid "Blogs Directory"
 msgstr "Directory dei blog"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:17
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress_plugins.tab.php:17
 msgid "Setup your title and meta tags of the buddypress plugins you have installed."
 msgstr "Configura meta tag per le pagine generate dai tuoi plugin per Buddypress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:25
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress_plugins.tab.php:25
 msgid "Save settings"
 msgstr "Salva impostazioni"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:72
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress_plugins.tab.php:72
 #, php-format
 msgid "%s Directory"
 msgstr "%s Directory"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:83
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress_plugins.tab.php:83
 #, php-format
 msgid "Page in %s"
 msgstr "Pagina in %s"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:87
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress_plugins.tab.php:87
 #, php-format
 msgid "Configurate \"%s\" plugin"
 msgstr "Configura plugin"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:103
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress_plugins.tab.php:103
 #, php-format
 msgid "Please config your \"%s\" plugin:"
 msgstr "Configura il plugin %s"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:110
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress_plugins.tab.php:110
 #, php-format
 msgid "\"%s\" has a directory page:"
 msgstr "\"%s\" ha una pagina directory:"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_buddypress_plugins.tab.php:116
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_buddypress_plugins.tab.php:116
 #, php-format
 msgid "\"%s\" creating pages in following components:"
 msgstr "\"%s\" crea pagine nei seguenti componenti:"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:12
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpress.tab.php:12
 msgid "Wordpress Blog"
 msgstr "Blog Wordpress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:12
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpress.tab.php:12
 msgid "Setup your title and meta tags of your Wordpress blog."
 msgstr "Configura title e meta tag per il tuo blog Wordpress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:16
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:16
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpress.tab.php:16
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpressmu.tab.php:16
 msgid "Home"
 msgstr "Home"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:17
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:17
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpress.tab.php:17
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpressmu.tab.php:17
 msgid "Posts"
 msgstr "Post"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:18
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:18
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpress.tab.php:18
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpressmu.tab.php:18
 msgid "Pages"
 msgstr "Pagine"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:19
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:19
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpress.tab.php:19
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpressmu.tab.php:19
 msgid "Archive"
 msgstr "Archivi"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:20
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:20
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpress.tab.php:20
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpressmu.tab.php:20
 msgid "Categories"
 msgstr "Categorie"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:21
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:21
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpress.tab.php:21
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpressmu.tab.php:21
 msgid "Tags"
 msgstr "Tags"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:22
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:22
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpress.tab.php:22
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpressmu.tab.php:22
 msgid "Author"
 msgstr "Autore"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpress.tab.php:23
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:23
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpress.tab.php:23
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpressmu.tab.php:23
 msgid "Search result"
 msgstr "Risultati di ricerca"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:12
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpressmu.tab.php:12
 msgid "Wordpress Network Blogs"
 msgstr "Netowrk di blog Wordpress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/seo_wordpressmu.tab.php:12
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/seo_wordpressmu.tab.php:12
 msgid "Setup your title and meta tags of your Wordpress main blog."
 msgstr "Configura title e meta tag per il blog Wordpress principale"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:12
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:51
-msgid "SEO Settings"
-msgstr "Impostazioni SEO"
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:13
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:92
+msgid "SeoPress Settings"
+msgstr "Impostazioni SeoPress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:28
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:67
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/sp_admin_core.php:13
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:44
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:43
+msgid "Leave fields blank if you want to use standard WordPress values."
+msgstr "Lascia vuoto se desideri utilizzare le impostazioni standard di Wordpress"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:53
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:112
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/sp_admin_core.php:13
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:60
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:132
 msgid "Description"
 msgstr "Descrizione"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:32
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:71
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/sp_admin_core.php:14
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:57
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:116
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/sp_admin_core.php:14
 msgid "Keywords"
 msgstr "Keywords"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:36
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/single_metabox.php:75
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/admin/sp_admin_core.php:35
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:61
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:120
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/sp_admin_core.php:35
 msgid "Ban searchengines"
 msgstr "Blocca motori di ricerca"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/cheesecap.php:445
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:65
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:140
+msgid "Preview:"
+msgstr "Anteprima:"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:80
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:129
+msgid "SEO"
+msgstr "SEO"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/admin/single_metabox.php:103
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:82
+msgid "Leave fields blank if you want to use standard values."
+msgstr "Lascia vuoto se desideri utilizzare le impostazioni standard"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:46
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:85
+msgid "featured image"
+msgstr "immagine in evidenza"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:47
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:86
+msgid "post text"
+msgstr "testo del post"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:64
+msgid "Image"
+msgstr "Immagine"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:68
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:157
+msgid "Type"
+msgstr "Tipo"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:75
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:164
+msgid "Facebook"
+msgstr "Facebook"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/facebook/loader.php:136
+msgid "Take image from"
+msgstr "Seleziona immagine da"
+
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/includes/lib/cheesecap.php:445
 msgid "Save Options"
 msgstr "Salva opzioni"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/wordpress/functions.php:42
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/includes/lib/wordpress/functions.php:42
 msgid "Themekraft.com"
 msgstr "Themekraft.com"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/wordpress/functions.php:42
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/includes/lib/wordpress/functions.php:42
 msgid "Username"
 msgstr "Username"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/wordpress/functions.php:44
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/includes/lib/wordpress/functions.php:44
 msgid "Password"
 msgstr "Password"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/wordpress/functions.php:46
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/includes/lib/wordpress/functions.php:46
 msgid "login"
 msgstr "Login"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/lib/wordpress/functions.php:53
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/includes/lib/wordpress/functions.php:53
 msgid "Please verify your serial of SeoPress"
 msgstr "Prego controlla il numero seriale di Seopress"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:11
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/bp/sets.php:11
 msgid "Shows the component name"
 msgstr "Inserisce il nome del componente"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:18
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/bp/sets.php:18
 msgid "Shows the content of the activity"
 msgstr "Inserisce il contenuto dell'attività"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:19
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/bp/sets.php:19
 msgid "Shows the author of the activity"
 msgstr "Inserisce l'autore dell'attività"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:26
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/bp/sets.php:26
 msgid "Shows the group name"
 msgstr "Inserisce il nome del Gruppo"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:27
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/bp/sets.php:27
 msgid "Shows the group description"
 msgstr "Inserisce la descrizione del gurppo"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:34
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/bp/sets.php:34
 msgid "Shows name of the user"
 msgstr "Inserisce il nome utente"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:43
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/bp/sets.php:43
 msgid "Shows the forum topic title"
 msgstr "Inserisce il titolo del topic"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:44
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/bp/sets.php:44
 msgid "Shows the forum topic text"
 msgstr "Inserisce il contenuto del toipic"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/bp/sets.php:45
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/bp/sets.php:45
 msgid "Shows the forum topic poster name"
 msgstr "Inserisce il nome dell'autore del post"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/functions.php:297
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/functions.php:297
 #, php-format
 msgid "page %d of %d"
 msgstr "Pagina %d di %d"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:9
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:9
 msgid "Shows the sitename"
 msgstr "Inserisce il nome del sito"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:10
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:10
 msgid "Shows the site description"
 msgstr "Inserisce la descrizione del sito"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:17
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:27
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:28
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:17
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:27
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:28
 msgid "Shows the title of post"
 msgstr "Inserisce il titolo del post"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:18
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:18
 msgid "Shows the content of the post"
 msgstr "Inserisce il contenuto del post"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:19
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:20
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:29
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:19
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:20
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:29
 msgid "Shows the excerpt of the post"
 msgstr "Inserisce il riassunto del post"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:21
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:21
 msgid "Shows post categories"
 msgstr "Inserisce le categorie del post"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:22
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:22
 msgid "Shows post tags"
 msgstr "Inserisce i tag del post"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:23
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:30
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:23
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:30
 msgid "Shows the name of post author"
 msgstr "Inserisce il nome dell'autore del post"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:37
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:37
 msgid "Shows the archive date"
 msgstr "Inserisce la data"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:43
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:43
 msgid "Shows the category name"
 msgstr "Inserisce il nome categoria"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:44
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:44
 msgid "Shows the category description"
 msgstr "Inserisce la descrizione della categoria"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:51
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:51
 msgid "Shows the tag name"
 msgstr "Inserisce il nome del tag"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:52
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:52
 msgid "Shows the tag description"
 msgstr "Inserisce la descrizione del tag"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:59
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:59
 msgid "Shows the name of the author"
 msgstr "Inserisce il nome dell'autore"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:66
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:66
 msgid "Shows the current page number"
 msgstr "Inserisce il numero di pagina corrente"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:67
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:67
 msgid "Shows the sum of all pages"
 msgstr "Mostra la somma di tutte le pagine"
 
-#: C:\Users\alberto.NETIDEA\Dropbox\Progetti\SEOpress/seopress/special-tags/wp/sets.php:74
+#: C:\Users\Alberto\Downloads\Themekraft-SeoPress-a464d02/special-tags/wp/sets.php:74
 msgid "Shows the search phrase"
 msgstr "Inserisce la frase cercata corrente"
+
+#~ msgid "SEO Settings"
+#~ msgstr "Impostazioni SEO"
 
 #~ msgid "<b>SeoPress:</b> General SEO options"
 #~ msgstr "Seopress - Opzioni"
@@ -899,10 +963,6 @@ msgstr "Inserisce la frase cercata corrente"
 
 #~ msgid "COMPONENTS EXTENDED"
 #~ msgstr "COMPONENTI ESTESI"
-
-#, fuzzy
-#~ msgid "SeoPress:General settings"
-#~ msgstr "Seo per Buddypress: Seo Generale"
 
 #~ msgid ""
 #~ "Check this, if you want SeoPress to generate the keywords from the "
