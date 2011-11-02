@@ -81,7 +81,7 @@ class SP_CORE{
     * @desc Initializes data for site and sets title
     * */
 	public function delete_bloginfo_name( $output = '', $show = '' ){
-		if( $show == 'name' || $output == get_option('blogname') )
+		if( $show == 'name' || $output == get_option('blogname') || $output == get_option('blogdescription') )
 			$output = '';
 
 		return $output;
@@ -94,9 +94,14 @@ class SP_CORE{
 	public function init_seo( $title, $sep = '' , $seplocation = '' ){
 		
 		if( !is_404() && FALSE != $sep ){
+			global $page, $paged;
 			
 			// Setup meta data and getting title
 			$new_title = $this->get_seo_data( 'title' );
+			
+			// Adding Pagination
+			if ( $paged >= 2 || $page >= 2 )
+				$new_title.= ' | ' . sprintf( __( 'Page %s', 'seopress' ), max( $paged, $page ) );
 			
 			// Adding meta tags to wp head
 			add_action( 'wp_head' , array(&$this, 'insert_meta') , 1 );

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bp-seo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-11 23:47+0100\n"
-"PO-Revision-Date: 2011-10-11 23:47+0100\n"
+"POT-Creation-Date: 2011-11-02 20:18+0100\n"
+"PO-Revision-Date: 2011-11-02 20:18+0100\n"
 "Last-Translator: Sven Wagener <svenw@themekraft.com>\n"
 "Language-Team: Sven Wagener <sven.wagener@rheinschmiede.de>\n"
 "MIME-Version: 1.0\n"
@@ -18,137 +18,144 @@ msgstr ""
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:291
+#: Workspace\SeoPress/sp-core.php:104
+#, php-format
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio 3
+#: Workspace\SeoPress/sp-core.php:310
 #, php-format
 msgid "Your blog is not public. Searchengines will be blocked. You can change this in your <a href=\"%s\">privacy settings</a>."
 msgstr "Ihr Blog ist nicht öffentlich. Suchmaschinen werden geblockt. Sie können dies unter <a href=\"%s\">Privatsphäre</a> ändern."
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:332
+#: Workspace\SeoPress/sp-core.php:350
 msgid "SeoPress - Page types"
 msgstr "Seopress - Seitentypen"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:332
+#: Workspace\SeoPress/sp-core.php:350
 #: Workspace\SeoPress/admin/seo.php:18
 msgid "Page types"
 msgstr "Seitentypen"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:333
+#: Workspace\SeoPress/sp-core.php:351
 msgid "SeoPress - Options"
 msgstr "Seopress - Optionen"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:333
+#: Workspace\SeoPress/sp-core.php:351
 #: Workspace\SeoPress/admin/options.php:16
 msgid "Options"
 msgstr "Optionen"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:347
+#: Workspace\SeoPress/sp-core.php:365
 msgid "Pro Version now available!"
 msgstr "Pro Version jetzt erhältlich!"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:348
+#: Workspace\SeoPress/sp-core.php:366
 msgid "Get SeoPress Pro Version now, and benefit from more functionality, support and a clean UI."
 msgstr "Besorgen Sie sich jetzt die SeoPress Pro Version und profitieren Sie von zusätzlichen Funktionen, vollem Support und einer Werbefreien Oberfläche."
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:350
-#: Workspace\SeoPress/sp-core.php:371
+#: Workspace\SeoPress/sp-core.php:368
+#: Workspace\SeoPress/sp-core.php:389
 msgid "Upgrade now"
 msgstr "Jetzt upgraden"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:352
+#: Workspace\SeoPress/sp-core.php:370
 msgid "Pro Features"
 msgstr "Pro Funktionen"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:354
+#: Workspace\SeoPress/sp-core.php:372
 msgid "Keyword generator"
 msgstr "Keywort Generator"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:355
+#: Workspace\SeoPress/sp-core.php:373
 msgid "Text counter for meta title and description"
 msgstr "Textzähler für Meta Titel und Beschreibung"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:356
+#: Workspace\SeoPress/sp-core.php:374
 msgid "No branding: the Pro Version comes without the \"Get Pro\" tabs."
 msgstr "Kein Branding: Die Pro Version hat keine \"Get Pro\" Tabs."
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:357
+#: Workspace\SeoPress/sp-core.php:375
 msgid "Full support and help in the SeoPress group and forum."
 msgstr "Voller Support und Hilfe in unseren SeoPress Forum."
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:360
+#: Workspace\SeoPress/sp-core.php:378
 msgid "Pro Roadmap"
 msgstr "Pro Roadmap"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:362
+#: Workspace\SeoPress/sp-core.php:380
 msgid "Sitemap generator (including Buddypress urls)"
 msgstr "Sitemap Generator (inkl. Buddypress Urls)"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:363
+#: Workspace\SeoPress/sp-core.php:381
 msgid "Deeplink generator"
 msgstr "Deeplink Generator"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:364
+#: Workspace\SeoPress/sp-core.php:382
 msgid "Pages and posts optimizer"
 msgstr "Seiten und Artikel Optimierer"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:365
+#: Workspace\SeoPress/sp-core.php:383
 msgid "Searchengine preview for pages and posts"
 msgstr "Suchmaschinenvorschau für Artikel und Seiten"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:366
+#: Workspace\SeoPress/sp-core.php:384
 msgid "Google Pagerank checker"
 msgstr "Google Pagerank checker"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:367
+#: Workspace\SeoPress/sp-core.php:385
 msgid "Canonical url support"
 msgstr "Cannonical Url Unterstützung"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:368
+#: Workspace\SeoPress/sp-core.php:386
 msgid "Xprofile special tags for buddypress"
 msgstr "Xprofile Special Tags für Buddypress"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/sp-core.php:375
+#: Workspace\SeoPress/sp-core.php:393
 msgid "Get Pro version!"
 msgstr "Pro Version kaufen"
 
@@ -206,8 +213,8 @@ msgstr "Stellen Sie die globalen Optionen des Seo Bereichs des Plugins ein."
 #: Workspace\SeoPress/admin/single_metabox.php:49
 #: Workspace\SeoPress/admin/single_metabox.php:108
 #: Workspace\SeoPress/admin/sp_admin_core.php:12
-#: Workspace\SeoPress/facebook/loader.php:80
-#: Workspace\SeoPress/facebook/loader.php:152
+#: Workspace\SeoPress/facebook/loader.php:56
+#: Workspace\SeoPress/facebook/loader.php:128
 msgid "Title"
 msgstr "Titel"
 
@@ -573,7 +580,7 @@ msgstr "SeoPress Einstellungen"
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
 #: Workspace\SeoPress/admin/single_metabox.php:44
-#: Workspace\SeoPress/facebook/loader.php:67
+#: Workspace\SeoPress/facebook/loader.php:43
 msgid "Leave fields blank if you want to use standard WordPress values."
 msgstr "Lassen Sie die Felder leer, wenn die standard WordPress Werte genutzt werden sollen."
 
@@ -582,8 +589,8 @@ msgstr "Lassen Sie die Felder leer, wenn die standard WordPress Werte genutzt we
 #: Workspace\SeoPress/admin/single_metabox.php:53
 #: Workspace\SeoPress/admin/single_metabox.php:112
 #: Workspace\SeoPress/admin/sp_admin_core.php:13
-#: Workspace\SeoPress/facebook/loader.php:84
-#: Workspace\SeoPress/facebook/loader.php:156
+#: Workspace\SeoPress/facebook/loader.php:60
+#: Workspace\SeoPress/facebook/loader.php:132
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -606,7 +613,7 @@ msgstr "Suchmaschinen aussperren"
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
 #: Workspace\SeoPress/admin/single_metabox.php:65
-#: Workspace\SeoPress/facebook/loader.php:164
+#: Workspace\SeoPress/facebook/loader.php:140
 msgid "Preview:"
 msgstr "Vorschau:"
 
@@ -620,47 +627,47 @@ msgstr "SEO"
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
 #: Workspace\SeoPress/admin/single_metabox.php:103
-#: Workspace\SeoPress/facebook/loader.php:106
+#: Workspace\SeoPress/facebook/loader.php:82
 msgid "Leave fields blank if you want to use standard values."
 msgstr "Werden die Felder leer gelassen, werden die standard Werte von Wordpress genutzt."
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/facebook/loader.php:70
-#: Workspace\SeoPress/facebook/loader.php:109
+#: Workspace\SeoPress/facebook/loader.php:46
+#: Workspace\SeoPress/facebook/loader.php:85
 msgid "featured image"
 msgstr "Vorschaubild"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/facebook/loader.php:71
-#: Workspace\SeoPress/facebook/loader.php:110
+#: Workspace\SeoPress/facebook/loader.php:47
+#: Workspace\SeoPress/facebook/loader.php:86
 msgid "post text"
 msgstr "Text"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/facebook/loader.php:88
+#: Workspace\SeoPress/facebook/loader.php:64
 msgid "Image"
 msgstr "Bild"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/facebook/loader.php:92
-#: Workspace\SeoPress/facebook/loader.php:181
+#: Workspace\SeoPress/facebook/loader.php:68
+#: Workspace\SeoPress/facebook/loader.php:157
 msgid "Type"
 msgstr "Typ"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/facebook/loader.php:99
-#: Workspace\SeoPress/facebook/loader.php:188
+#: Workspace\SeoPress/facebook/loader.php:75
+#: Workspace\SeoPress/facebook/loader.php:164
 msgid "Facebook"
 msgstr "Facebook"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/facebook/loader.php:160
+#: Workspace\SeoPress/facebook/loader.php:136
 msgid "Take image from"
 msgstr "Nutze Bild aus"
 
