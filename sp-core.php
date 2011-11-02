@@ -36,8 +36,8 @@ class SP_CORE{
 			}
 			
 			remove_all_filters( 'wp_title' );
-			add_filter( 'wp_title' ,  array( &$this, 'init_seo') , 1 );  // Filtering wordpress title
-			add_filter( 'bloginfo', array( &$this, 'delete_bloginfo_name') , 2 );
+			add_filter( 'wp_title' ,  array( &$this, 'init_seo') , 1, 3 );  // Filtering wordpress title
+			add_filter( 'bloginfo', array( &$this, 'delete_bloginfo_name') , 1, 2 );
 			
 			$this->used_tags = $special_tags->get_tags( $this->page_type ); // ???? Here ????
 			
@@ -91,9 +91,9 @@ class SP_CORE{
     * Initializing seo data for reuested page
     * @desc Initializes data for site and sets title
     * */	
-	public function init_seo( $title ){
+	public function init_seo( $title, $sep = '' , $seplocation = '' ){
 		
-		if( !is_404() ){
+		if( !is_404() && FALSE != $sep ){
 			
 			// Setup meta data and getting title
 			$new_title = $this->get_seo_data( 'title' );

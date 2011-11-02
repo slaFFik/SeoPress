@@ -50,7 +50,7 @@ if( !function_exists( 'tk_get_page_type' ) ){
 			if( is_tag() ) $page_type = 'wp-tag';
 			if( is_tax() ) $page_type = 'wp-tax'; 
 			if( is_author() ) $page_type = 'wp-author';
-			if( is_archive() ) $page_type = 'wp-archive';
+			if( is_archive() && !is_category() && !is_tag() && !is_author() ) $page_type = 'wp-archive';
 			if( is_search() ) $page_type = 'wp-search';
 			if( tk_is_signup() ) $page_type = 'wp-signup';
 			if( is_404() ) $page_type = 'wp-404';
@@ -67,7 +67,7 @@ if( !function_exists( 'tk_get_page_type' ) ){
 			if( is_tag() ) $page_type = 'mu-tag';
 			if( is_tax() ) $page_type = 'mu-tax'; 
 			if( is_author() ) $page_type = 'mu-author';
-			if( is_archive() ) $page_type = 'mu-archive';
+			if( is_archive() && !is_category() && !is_tag() && !is_author() ) $page_type = 'mu-archive';
 			if( is_search() ) $page_type = 'mu-search';
 			if( is_404() ) $page_type = 'mu-404';
 		}
@@ -88,7 +88,7 @@ function tk_is_signup(){
 function echo_page(){	
 	echo '<br><br>Page type: ' . tk_get_page_type();
 }
-// add_action( 'wp_head', 'echo_page' );
+add_action( 'wp_head', 'echo_page' );
 
 
 
