@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bp-seo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-02 20:18+0100\n"
-"PO-Revision-Date: 2011-11-02 20:18+0100\n"
+"POT-Creation-Date: 2011-11-02 20:28+0100\n"
+"PO-Revision-Date: 2011-11-02 20:28+0100\n"
 "Last-Translator: Sven Wagener <svenw@themekraft.com>\n"
 "Language-Team: Sven Wagener <sven.wagener@rheinschmiede.de>\n"
 "MIME-Version: 1.0\n"
@@ -221,43 +221,49 @@ msgstr "Titel"
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
 #: Workspace\SeoPress/admin/options_seo.tab.php:24
+msgid "Show pagination"
+msgstr "Zeigt Seitennummerierung"
+
+#: C:\Users\wagesve\My
+#: Documents\Aptana Studio 3
+#: Workspace\SeoPress/admin/options_seo.tab.php:30
 msgid "Standard length of title"
 msgstr "Standard Länge des Titels"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/admin/options_seo.tab.php:26
 #: Workspace\SeoPress/admin/options_seo.tab.php:32
+#: Workspace\SeoPress/admin/options_seo.tab.php:38
 msgid "number of chars"
 msgstr "Anzahl der Zeichen"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/admin/options_seo.tab.php:30
+#: Workspace\SeoPress/admin/options_seo.tab.php:36
 msgid "Standard length of meta description"
 msgstr "Standard Länge der Meta Beschreibung"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/admin/options_seo.tab.php:37
+#: Workspace\SeoPress/admin/options_seo.tab.php:43
 msgid "Meta boxes in posts and pages"
 msgstr "Meta Boxen in Artikeln und Seiten"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/admin/options_seo.tab.php:41
+#: Workspace\SeoPress/admin/options_seo.tab.php:47
 msgid "Hide meta boxes in posts:"
 msgstr "Verstecke Meta Boxen in Artikeln:"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/admin/options_seo.tab.php:47
+#: Workspace\SeoPress/admin/options_seo.tab.php:53
 msgid "Hide meta boxes in pages:"
 msgstr "Verstecke Meta Boxen in Seiten:"
 
 #: C:\Users\wagesve\My
 #: Documents\Aptana Studio 3
-#: Workspace\SeoPress/admin/options_seo.tab.php:57
+#: Workspace\SeoPress/admin/options_seo.tab.php:63
 #: Workspace\SeoPress/admin/seo_buddypress.tab.php:54
 #: Workspace\SeoPress/admin/seo_wordpress.tab.php:34
 #: Workspace\SeoPress/admin/seo_wordpressmu.tab.php:36
@@ -1089,9 +1095,6 @@ msgstr "Zeigt das gesuchte Wort an"
 
 #~ msgid "Shows the  modifying date of the post"
 #~ msgstr "Zeigt das Datum an, an dem der Post zuletzt modifiziert wurde"
-
-#~ msgid "Shows the full Pagination"
-#~ msgstr "Zeigt die volle Seitennummerierung an"
 
 #~ msgid "Shows the component description"
 #~ msgstr "Zeigt die Komponenten-Beschreibung an"

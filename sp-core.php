@@ -100,13 +100,13 @@ class SP_CORE{
 			$new_title = $this->get_seo_data( 'title' );
 			
 			// Adding Pagination
-			if ( $paged >= 2 || $page >= 2 )
+			if ( ( $paged >= 2 || $page >= 2 ) && isset( $this->options['show_pagination'] ) )
 				$new_title.= ' | ' . sprintf( __( 'Page %s', 'seopress' ), max( $paged, $page ) );
 			
 			// Adding meta tags to wp head
 			add_action( 'wp_head' , array(&$this, 'insert_meta') , 1 );
 			
-			if( $new_title != '' ) $title = $this->filter_for_html_output( $new_title ) ;
+			if( $new_title != '' ) $title =  apply_filters('sp_title', $this->filter_for_html_output( $new_title ) ) ;
 				
 		}
 		return $title;	
@@ -137,7 +137,7 @@ class SP_CORE{
 		
 		$meta = $this->filter_meta( $meta );
 		
-		$meta['title'] = apply_filters( 'sp_title', $meta['title'] );
+		$meta['title'] = $meta['title'];
 		$meta['description'] = apply_filters( 'sp_description', $meta['description'] );
 		$meta['keywords'] = apply_filters( 'sp_keywords', $meta['keywords'] );
 		$meta['noindex'] = apply_filters( 'sp_noindex', $meta['noindex'] );	

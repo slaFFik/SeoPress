@@ -88,6 +88,8 @@ Plugin is updatefriendly, all needed migration from older versions, will be done
 == Changelog ==
 <h4>1.2.2</h4>
 <ul>
+<li>Added Pagination and option for it in Seo Options page</li>
+<li>Changed sp_title filter to top of generation</li>
 <li>Fixed: Achive data shown in categories, tags and author pages</li>
 <li>Fixed: Sitename shown title</li>
 </ul>

@@ -21,6 +21,12 @@ function sp_admin_settings_tab(){
 	$html.= '</tr>';
 	
 	$html.= '<tr>';	
+	$html.= '<td><div class="components_extend">' . __('Show pagination', 'seopress') . '</div></td>';
+	$html.= '<td><div class="components_extend">' . tk_wp_form_checkbox( 'show_pagination', 'seopress_options', 'show_pagination' ) . '</div></td>';	
+	$html.= '</tr>';
+	
+	
+	$html.= '<tr>';	
 	$html.= '<td><div class="components_extend">' . __('Standard length of title', 'seopress') . '</div></td>';
 	// $html.= '<td><div class="components_extend"><input type="text" name="bp_seo_metadesc_length" length="4" size="3" value="' . get_option('bp_seo_metadesc_length') . '" /> (' . __('number of chars', 'seopress' ) . ')</div></td>';
 	$html.= '<td><div class="components_extend">' . tk_wp_form_textfield( 'std_title_legth', 'seopress_options', 'std_title_legth' ) . ' (' . __('number of chars', 'seopress' ) . ')</div></td>';	

@@ -28,8 +28,10 @@ if( !function_exists( 'tk_get_bp_page_type' ) ){
 				}
 			}
 		}
+		
 		return apply_filters( 'tk_get_bp_page_type', $page_type );
 	}
+	
 	add_filter( 'tk_get_page_type', 'tk_get_bp_page_type' );	
 }
 

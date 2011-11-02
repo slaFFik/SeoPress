@@ -85,12 +85,10 @@ function tk_is_signup(){
 	}
 }
 
-function echo_page(){	
+function echo_page(){
 	echo '<br><br>Page type: ' . tk_get_page_type();
 }
-add_action( 'wp_head', 'echo_page' );
-
-
+// add_action( 'wp_head', 'echo_page' );
 
 function tk_get_bp_component(){
 	if( function_exists( 'bp_current_component' ) ){
