@@ -36,7 +36,8 @@ class SP_CORE{
 			}
 			
 			remove_all_filters( 'wp_title' );
-			add_filter( 'wp_title' ,  array(&$this, 'init_seo') , 1 );  // Filtering wordpress title
+			add_filter( 'wp_title' ,  array( &$this, 'init_seo') , 1 );  // Filtering wordpress title
+			add_filter( 'bloginfo', array( &$this, 'delete_bloginfo_name') , 2 );
 			
 			$this->used_tags = $special_tags->get_tags( $this->page_type ); // ???? Here ????
 			
@@ -71,6 +72,19 @@ class SP_CORE{
 			
 			do_action( 'sp_admin_init' );
 		}
+	}
+
+	/**
+    * Filtering blogname on Website
+	* @param $output string The output of the filter 'bloginfo'
+	* @param $show string The show parameter of the filter 'bloginfo'  
+    * @desc Initializes data for site and sets title
+    * */
+	public function delete_bloginfo_name( $output = '', $show = '' ){
+		if( $show == 'name' || $output == get_option('blogname') )
+			$output = '';
+
+		return $output;
 	}
 	
 	/**
