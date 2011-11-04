@@ -1,4 +1,8 @@
 <?php
+
+global $tk_error;
+global $tk_warning;
+
 /**
 * tk_get_wp_type
 * 
@@ -27,7 +31,35 @@ if( !function_exists( 'tk_get_wp_type' ) ){
 */ 
 if( !function_exists( 'tk_is_buddypress' ) ){
 	function tk_is_buddypress(){
-		if ( defined( 'BP_VERSION' ) ){ return true; }else{ return false; }
+		if ( defined( 'BP_VERSION' ) ){
+			if( tk_is_bp_setup_finished() ) {
+				return true; 
+			}else{
+				
+			}
+		}else{
+			return false; 
+		}
+	}
+}
+/**
+* tk_is_bp_setup_finished
+* 
+* @returns boolean true if buddypress is installed, false if not
+*/ 
+if( !function_exists( 'tk_is_bp_setup_finished' ) ){
+	function tk_is_bp_setup_finished(){
+		global $bp;
+		if( $bp->maintenance_mode == 'install' ){
+			if( $_GET['page'] == 'seopress_seo' ){
+				global $tk_warning;
+				$tk_warning = __( 'Please finish the Buddypress installation to get all SeoPress options.', 'seopress' );
+				add_action( 'all_admin_notices', 'tk_wp_warning_box', 1 );
+			}
+			return FALSE;
+		}else{
+			return TRUE;
+		}		
 	}
 }
 /**
@@ -76,6 +108,25 @@ if( !function_exists( 'tk_get_page_type' ) ){
 	}
 }
 
+
+/**
+* tk_wp_error_box
+*/ 
+if( !function_exists( 'tk_wp_error_box' ) ){
+	function tk_wp_error_box(){
+		global $tk_error;
+		echo '<div id="message" class="error"><p>' . $tk_error . '</p></div>';
+	}
+}
+/**
+* tk_wp_warning_box
+*/ 
+if( !function_exists( 'tk_wp_warning_box' ) ){
+	function tk_wp_warning_box(){
+		global $tk_warning;
+		echo '<div id="message" class="updated"><p>' . $tk_warning . '</p></div>';
+	}
+}
 
 function tk_is_signup(){
 	if( $_REQUEST['action'] == 'register' ){
