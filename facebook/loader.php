@@ -2,6 +2,12 @@
 
 require_once( 'open-graph.php' );
 
+#if (!function_exists('get_post_thumbnail_id')) {
+#    include('../wp-includes/post-thumbnail-template.php');
+#}
+
+#print_r(get_defined_vars());
+
 function sp_fp_add_meta(){
 	if( $_SERVER['HTTP_USER_AGENT'] == 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)' ) {			
 		global $post;
@@ -16,7 +22,7 @@ function sp_fp_add_meta(){
 			$fb_image = $post_meta['fb_image'];
 			$fb_type = $post_meta['fb_type'];
 			
-			if( $fb_image == 'featured_image' ){
+			if( $fb_image == 'featured_image' and function_exists('get_post_thumbnail_id')){
 				$ptn_id = get_post_thumbnail_id( $post->ID  );
 				$fb_image_src =   wp_get_attachment_url( $ptn_id );
 			}else if( $fb_image == 'post_text' ){
@@ -94,7 +100,7 @@ function sp_fb_post_meta_box( $tabs ){
 	
 	$preview_image = $post_meta['fb_image'];
 	
-	if( $preview_image == 'featured_image' ){
+	if( $preview_image == 'featured_image' and function_exists('get_post_thumbnail_id')){
 		$ptn_id = get_post_thumbnail_id( $post->ID  );
 		$preview_image =   wp_get_attachment_url( $ptn_id );
 	}else if( $preview_image == 'post_text' ){
