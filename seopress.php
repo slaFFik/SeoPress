@@ -8,7 +8,7 @@ Author URI: http://themekraft.com/
 License: GNU GENERAL PUBLIC LICENSE 3.0 http://www.gnu.org/licenses/gpl.txt
 Version: 1.2.2
 Text Domain: seopress
-Site Wide Only: true
+Network: true
 */
 //
 // This is an add-on for WordPress Single, MU and Buddypress
