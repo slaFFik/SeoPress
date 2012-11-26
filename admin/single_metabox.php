@@ -88,15 +88,18 @@ function sp_post_metabox(){
     $mb->create();
     
 }
+
 function sp_page_metabox(){
+    $title_field = $description_field = $keywords_field = $noindex_field = $page_metabox_table = '';
+
     $mb = new TK_WP_METABOX( 'sp_post_metabox', __( 'SeoPress Settings', 'seopress' ), 'page' );
     
-    $title_field = apply_filters( 'sp_page_metabox_title', $title_field );
+    $title_field       = apply_filters( 'sp_page_metabox_title', $title_field );
     $description_field = apply_filters( 'sp_page_metabox_description', $description_field );
-    $keywords_field = apply_filters( 'sp_page_metabox_keywords', $keywords_field );
-    $noindex_field = apply_filters( 'sp_page_metabox_noindex', $noindex_field );
+    $keywords_field    = apply_filters( 'sp_page_metabox_keywords', $keywords_field );
+    $noindex_field     = apply_filters( 'sp_page_metabox_noindex', $noindex_field );
     
-    $post_metabox_table = apply_filters( 'sp_page_metabox_table', $post_metabox_table );
+    $page_metabox_table = apply_filters( 'sp_page_metabox_table', $page_metabox_table );
     
     $tabs = new TK_WP_JQUERYUI_TABS();
     

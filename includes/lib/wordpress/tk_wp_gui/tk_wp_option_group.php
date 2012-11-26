@@ -18,11 +18,11 @@ function tk_save_wp_metabox_option_group( $post_id ){
 	
 	// verify this came from the our screen and with proper authorization,
 	// because save_post can be triggered at other times
-	if ( !wp_verify_nonce( $_POST[ $post_option_group . '_nonce' ], 'sp_post_metabox' ) )
+	if ( isset($_POST[ $post_option_group . '_nonce' ]) && !wp_verify_nonce( $_POST[ $post_option_group . '_nonce' ], 'sp_post_metabox' ) )
 	    return;
 	 
 	// Check permissions
-	if ( 'page' == $_POST['post_type'] ) {
+	if ( isset($_POST['post_type']) && 'page' == $_POST['post_type'] ) {
 	  if ( !current_user_can( 'edit_page', $post_id ) )
 	      return;
 	}
@@ -31,7 +31,8 @@ function tk_save_wp_metabox_option_group( $post_id ){
 	      return;
 	}	
 	
-	update_post_meta( $post_id, $post_option_group, $_POST[ $post_option_group ] );
+	if(isset($_POST[ $post_option_group ]) && !empty($_POST[ $post_option_group ]))
+		update_post_meta( $post_id, $post_option_group, $_POST[ $post_option_group ] );
 }
 
 ?>
