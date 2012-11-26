@@ -137,10 +137,10 @@ class SP_CORE{
         
         $meta = $this->filter_meta( $meta );
         
-        $meta['title'] = $meta['title'];
-        $meta['description'] = apply_filters( 'sp_description', $meta['description'] );
-        $meta['keywords'] = apply_filters( 'sp_keywords', $meta['keywords'] );
-        $meta['noindex'] = apply_filters( 'sp_noindex', $meta['noindex'] ); 
+        $meta['title']       = isset($meta['title'])?$meta['title']:'';
+        $meta['description'] = apply_filters( 'sp_description', isset($meta['description'])?$meta['description']:'' );
+        $meta['keywords']    = apply_filters( 'sp_keywords', isset($meta['keywords'])?$meta['keywords']:'' );
+        $meta['noindex']     = apply_filters( 'sp_noindex', isset($meta['noindex'])?$meta['noindex']:'' ); 
         
         $this->meta = $meta; // Writing meta results in global seopress meta variable
                 
@@ -157,11 +157,12 @@ class SP_CORE{
         if( $page_type == '' ){
             $page_type = tk_get_page_type();
         }
-                
-        $template['title'] = $this->seo_settings[ $page_type . '-title' ];
+        
+        $template = array();
+        $template['title']       = $this->seo_settings[ $page_type . '-title' ];
         $template['description'] = $this->seo_settings[ $page_type . '-description' ];
-        $template['keywords'] = $this->seo_settings[ $page_type . '-keywords' ];
-        $template['noindex'] = $this->seo_settings[ $page_type . '-noindex' ];      
+        $template['keywords']    = $this->seo_settings[ $page_type . '-keywords' ];
+        $template['noindex']     = $this->seo_settings[ $page_type . '-noindex' ];      
         
         return $template;
     } 
@@ -211,10 +212,10 @@ class SP_CORE{
     //////////////////////////////////// Should go to Hook
     public function filter_meta( $meta ){
         
-        if( $this->options['std_title_legth'] != '' && $this->options['std_title_legth'] != 0 ){
-            $meta['title'] =  substr( $meta['title']  ,0 , $this->options['std_title_legth'] );
+        if(!empty($meta['title']) && !empty($this->options['std_title_legth']) && $this->options['std_title_legth'] > 0 ){
+            $meta['title'] =  substr( $meta['title'], 0, $this->options['std_title_legth'] );
         }
-        if( $this->options['std_metadesc_legth'] != '' && $this->options['std_metadesc_legth'] != 0 ){
+        if(!empty($meta['description']) && !empty($this->options['std_metadesc_legth']) && $this->options['std_metadesc_legth'] > 0 ){
             $meta['description'] = substr( $meta['description']  ,0, $this->options['std_metadesc_legth'] );
         }
         
@@ -235,51 +236,61 @@ class SP_CORE{
         // SeoPress
         $post_meta = get_post_meta( $post_id, 'sp_post_metabox', TRUE );
 
-        $title[0] = $post_meta['title'];
+        $title = isset($post_meta['title'])?$post_meta['title']:'';
         
         // WPSEO
-        if( $title[0] == '' ) $title= get_post_meta( $post_id, "_wpseo_edit_title" );
+        if( empty($title) )
+            $title = get_post_meta( $post_id, "_wpseo_edit_title", true );
         // All in one seopack
-        if( $title[0] == '' ) $title=get_post_meta( $post_id, "_aioseop_title" );
-                
+        if( empty($title) )
+            $title = get_post_meta( $post_id, "_aioseop_title", true );
+
         // If title isn't empty, fill meta with it
-        if( $title[0] != '' ) $meta['title'] = $title[0];
+        if( !empty($title) ) 
+            $meta['title'] = $title;
         
         /*
          * Description
          */
                 
         // SeoPress
-        $description[0] = $post_meta['description'];
+        $description = isset($post_meta['description'])?$post_meta['description']:'';
         
         // WPSEO
-        if( $description[0] == '' ) $description = get_post_meta( $post_id, "_wpseo_edit_description" );
+        if( empty($description) )
+            $description = get_post_meta( $post_id, "_wpseo_edit_description", true );
         // All in one seopack
-        if( $description[0] == '' ) $description = get_post_meta( $post_id, "_aioseop_description" );
+        if( empty($description) ) 
+            $description = get_post_meta( $post_id, "_aioseop_description", true );
         
         // If description isn't empty, fill meta with it
-        if( $description[0] != '' ) $meta['description'] = $description[0]; 
+        if( !empty($description) ) 
+            $meta['description'] = $description; 
 
         /*
-         * Description
+         * Keywords
          */
         // SeoPress
-        $keywords[0] = $post_meta['keywords'];
+        $keywords = isset($post_meta['keywords'])?$post_meta['keywords']:'';
         
         // WPSEO
-        if( $keywords[0] == '' ) $keywords = get_post_meta( $post_id, "_wpseo_edit_keywords" );
+        if( empty($keywords)) 
+            $keywords = get_post_meta( $post_id, "_wpseo_edit_keywords", true );
         // All in one seopack
-        if( $keywords[0] == '' ) $keywords = get_post_meta( $post_id, "_aioseop_keywords" );
-        
-        if( $keywords[0] != '' ) $meta['keywords'] = $keywords[0];
+        if( empty($keywords) ) 
+            $keywords = get_post_meta( $post_id, "_aioseop_keywords", true );
+         
+         // If keywords aren't empty, fill meta with it
+        if( !empty($keywords) ) 
+            $meta['keywords'] = $keywords;
         
         /*
          * NoIndex
          */
-        $noindex[0] = $post_meta['noindex'];
+        $noindex = isset($post_meta['noindex'])?$post_meta['noindex']:'';
         
-        if( $noindex[0] != '' ){
-            $meta['noindex'] = $noindex[0];
+        if( !empty($noindex) ){
+            $meta['noindex'] = $noindex;
         }
         
         return apply_filters( 'sp_post_meta', $meta );

@@ -11,8 +11,10 @@ class TK_WP_FORM_SELECT extends TK_FORM_SELECT{
             $option_group_value = get_post_meta( $post->ID , $option_group , TRUE );
             
             $field_name = $option_group . '[' . $name . ']';
-            $value = $option_group_value[ $name ];
 
+            $value = false;
+            if(isset($option_group_value[ $name ]))
+                $value = $option_group_value[ $name ];
         }else{
             $value_raw = get_option( $option_group  . '_values' );
                         

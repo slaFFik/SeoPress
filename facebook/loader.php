@@ -45,7 +45,11 @@ function sp_fp_add_meta(){
 add_action( 'sp_insert_meta', 'sp_fp_add_meta' );
 
 function sp_fb_page_meta_box( &$tabs ){
-    
+    $title_field = $description_field = $post_metabox_table = '';
+    $title_field        = apply_filters( 'sp_post_metabox_title', $title_field );
+    $description_field  = apply_filters( 'sp_post_metabox_description', $description_field );
+    $post_metabox_table = apply_filters( 'sp_post_metabox_table', $post_metabox_table );
+
     $html = '<p class="sp_metabox_description">' . __( 'Leave fields blank if you want to use standard WordPress values.', 'seopress' ) . '</p>';
     
     $select_fb_image = new TK_WP_FORM_SELECT( 'fb_image', 'sp_post_metabox', 'seopress_fb_image' );
@@ -98,17 +102,17 @@ function sp_fb_post_meta_box( $tabs ){
     // Preview data
     $post_meta = get_post_meta( $post->ID , 'sp_post_metabox' , true );
     
-    $preview_image = $post_meta['fb_image'];
+    $preview_image = isset($post_meta['fb_image'])?$post_meta['fb_image']:'';
     
     if( $preview_image == 'featured_image'){
         if (!function_exists('get_post_thumbnail_id')) {
             include('../wp-includes/post-thumbnail-template.php');
         }
-        $ptn_id = get_post_thumbnail_id( $post->ID  );
+        $ptn_id        = get_post_thumbnail_id( $post->ID  );
         $preview_image =   wp_get_attachment_url( $ptn_id );
     }else if( $preview_image == 'post_text' ){
         $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches );
-        $preview_image = $matches [1] [0];
+        $preview_image = $matches[1][0];
     }
     if( $preview_image != '' ){
         $text_width = '300';        
@@ -116,21 +120,26 @@ function sp_fb_post_meta_box( $tabs ){
         $text_width = '400';
     }
     
-    if( $post_meta['fb_title'] != '' ){
+    if( isset($post_meta['fb_title']) && $post_meta['fb_title'] != '' ){
         $preview_title = $post_meta['fb_title'];
     }else{
         $preview_title = $post->post_title;
     }
     
-    if( $post_meta['fb_description'] != '' ){
+    if( isset($post_meta['fb_description']) && $post_meta['fb_description'] != '' ){
         $preview_desc = $post_meta['fb_description'];
     }else{
         $preview_desc = substr( strip_tags( $post->post_content ), 0, 300 ) . ' ... ';
     }
     
     $preview_url = get_permalink( $post->ID );
-    $preview_url = str_replace('http://', '', $preview_url );    
+    $preview_url = str_replace('http://', '', $preview_url );
     
+    $title_field = $description_field = $post_metabox_table = '';
+    $title_field        = apply_filters( 'sp_post_metabox_title', $title_field );
+    $description_field  = apply_filters( 'sp_post_metabox_description', $description_field );
+    $post_metabox_table = apply_filters( 'sp_post_metabox_table', $post_metabox_table );
+
     $html.= '<table class="form-table">
                     <tbody>
                         <tr>

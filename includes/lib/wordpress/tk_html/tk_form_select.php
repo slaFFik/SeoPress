@@ -16,9 +16,13 @@ class TK_FORM_SELECT extends TK_FORM_ELEMENT{
 	}
 	
 	public function get_html(){
-		if( $this->id != '' ) $id = ' id="' . $this->id . '"';
-		if( $this->name != '' ) $name = ' name="' . $this->name . '"';		
-		if( $this->extra != '' ) $extra = $this->extra;
+		$id = $name = $extra = '';
+		if( $this->id != '' ) 
+			$id = ' id="' . $this->id . '"';
+		if( $this->name != '' ) 
+			$name = ' name="' . $this->name . '"';		
+		if( $this->extra != '' ) 
+			$extra = $this->extra;
 		
 		$html = '<select' . $id . $name . $extra . ' />';
 		
