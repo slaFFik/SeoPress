@@ -9,6 +9,7 @@
 
 function seopress_seo(){
 	global $seopress_plugin_url;
+	$html = '';
 	
 	$html = apply_filters( 'sp_settings_top', $html );
 		 

@@ -85,7 +85,7 @@ function sp_rewrite_values_to_1_1( $old_option, $page_type ){
 function sp_update_to_1_1(){
 	global $seopress;
 	
-	if( get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_seo_settings_values' ) == '' || $_GET['reupdate_seopress'] == 'true' ){
+	if( get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_seo_settings_values' ) == '' || (isset($_GET['reupdate_seopress']) && $_GET['reupdate_seopress'] == 'true') ){
 		
 		$settings['seopress_seo_settings_values'] = array();
 
