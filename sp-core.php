@@ -126,13 +126,14 @@ class SP_CORE{
     * */
     public function get_seo_data( $key = false ){
         global $bp;
+        $meta = array();
+
+        if( is_single() || is_page() ) 
+            $meta = $this->get_post_meta();        
         
-        if( is_single() || is_page() ) $meta = $this->get_post_meta();
-        
-        
-        if( $meta == '' ){
+        if( empty($meta) ){
             $template = $this->get_template();
-            $meta = $this->replace_template( $template );
+            $meta     = $this->replace_template( $template );
         }
         
         $meta = $this->filter_meta( $meta );
@@ -159,10 +160,10 @@ class SP_CORE{
         }
         
         $template = array();
-        $template['title']       = $this->seo_settings[ $page_type . '-title' ];
-        $template['description'] = $this->seo_settings[ $page_type . '-description' ];
-        $template['keywords']    = $this->seo_settings[ $page_type . '-keywords' ];
-        $template['noindex']     = $this->seo_settings[ $page_type . '-noindex' ];      
+        $template['title']       = isset($this->seo_settings[ $page_type . '-title' ])?$this->seo_settings[ $page_type . '-title' ]:'';
+        $template['description'] = isset($this->seo_settings[ $page_type . '-description' ])?$this->seo_settings[ $page_type . '-description' ]:'';
+        $template['keywords']    = isset($this->seo_settings[ $page_type . '-keywords' ])?$this->seo_settings[ $page_type . '-keywords' ]:'';
+        $template['noindex']     = isset($this->seo_settings[ $page_type . '-noindex' ])?$this->seo_settings[ $page_type . '-noindex' ]:'';
         
         return $template;
     } 
@@ -175,31 +176,27 @@ class SP_CORE{
     }
 
     public function insert_meta(){
-    
-        if( $this->meta['noindex']==true ) echo '<meta name="robots" content="noindex" />' . chr(10); 
+        if( $this->meta['noindex'] == true ) 
+            echo '<meta name="robots" content="noindex" />' . chr(10); 
 
-        if( trim( $this->meta['description'] ) != "" || trim( $this->meta['description'] ) == ","){ 
+        if( !empty( $this->meta['description'] ))
             echo '<meta name="description" content="' . $this->filter_for_html_output( $this->meta['description'] ) . '" />' . chr(10);
-        } 
-        if( trim( $this->meta['keywords'] ) != '' ){ 
-            if(trim( $this->meta['keywords'] ) != ',' ){ //////////////////////////////////// Whats up here? Bad programming?
-                echo '<meta name="keywords" content="' . $this->filter_for_html_output( $this->meta['keywords'] ) . '" />' . chr(10);
-            }
-        }
+
+        if( !empty( $this->meta['keywords'] ) )
+            echo '<meta name="keywords" content="' . $this->filter_for_html_output( $this->meta['keywords'] ) . '" />' . chr(10);
+
         do_action( 'sp_insert_meta' );
     }
     
     public function replace_template( $template ){
-        
-        global $special_tags;   
-        $newmeta = Array();
+        global $special_tags;
+        $newmeta = array();
         
         if( tk_is_buddypress() ){
             $fallback_type = 'bp-component-unknown'; // Should be hooked in
         }
         
         if( is_array( $template ) ){
-            
             // Getting meta by replacing special tags in each temlate field
             foreach( $template as $key => $meta_field_template ){
                 $newmeta[ $key ] = $special_tags->replace( $meta_field_template, tk_get_page_type(), $fallback_type );
@@ -228,6 +225,8 @@ class SP_CORE{
         global $post;
         
         if( !$post_id ) $post_id = $post->ID;
+
+        $meta = array();
 
         /*
          * Title
@@ -318,7 +317,7 @@ class SP_CORE{
         
         if( 0 == get_option('blog_public') ){
             $privacy_url = $siteurl . '/wp-admin/options-privacy.php';           
-            echo '<div id="seopress-privacy-warning" class="error"><p>' . sprintf( __('Your blog is not public. Searchengines will be blocked. You can change this in your <a href="%s">privacy settings</a>.', 'seopress' ), $privacy_url ) . '</p></div>';
+            echo '<div id="seopress-privacy-warning" class="error"><p>' . sprintf( __('Your blog is not public. Search engines will be blocked. You can change this in your <a href="%s">privacy settings</a>.', 'seopress' ), $privacy_url ) . '</p></div>';
         }
     }
     

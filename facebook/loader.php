@@ -44,11 +44,11 @@ function sp_fp_add_meta(){
 }
 add_action( 'sp_insert_meta', 'sp_fp_add_meta' );
 
-function sp_fb_page_meta_box( &$tabs ){
+function sp_fb_page_meta_box( $tabs ){
     $title_field = $description_field = $post_metabox_table = '';
-    $title_field        = apply_filters( 'sp_post_metabox_title', $title_field );
-    $description_field  = apply_filters( 'sp_post_metabox_description', $description_field );
-    $post_metabox_table = apply_filters( 'sp_post_metabox_table', $post_metabox_table );
+    $title_field        = apply_filters( 'sp_fb_page_metabox_title', $title_field );
+    $description_field  = apply_filters( 'sp_fb_page_metabox_description', $description_field );
+    $post_metabox_table = apply_filters( 'sp_fb_page_metabox_table', $post_metabox_table );
 
     $html = '<p class="sp_metabox_description">' . __( 'Leave fields blank if you want to use standard WordPress values.', 'seopress' ) . '</p>';
     
@@ -84,7 +84,7 @@ function sp_fb_page_meta_box( &$tabs ){
                     
     $tabs->add_tab( 'cap_page_facebook', __ ('Facebook', 'seopress'), $html );
 }
-add_action( 'sp_page_metabox_tabs', 'sp_fb_post_meta_box' );
+add_action( 'sp_page_metabox_tabs', 'sp_fb_page_meta_box' );
 
 function sp_fb_post_meta_box( $tabs ){
     global $post;
@@ -109,7 +109,7 @@ function sp_fb_post_meta_box( $tabs ){
             include('../wp-includes/post-thumbnail-template.php');
         }
         $ptn_id        = get_post_thumbnail_id( $post->ID  );
-        $preview_image =   wp_get_attachment_url( $ptn_id );
+        $preview_image = wp_get_attachment_url( $ptn_id );
     }else if( $preview_image == 'post_text' ){
         $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches );
         $preview_image = $matches[1][0];
