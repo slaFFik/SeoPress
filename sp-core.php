@@ -1,10 +1,6 @@
 <?php
 /**
 * SeoPress Value class
-*
-* @author    Sven Wagener <svenw_at_themekraft_dot_com>
-* @copyright Themekraft.com
-* @include   Funktion:_include_
 */
 class SP_CORE{
     
@@ -22,7 +18,7 @@ class SP_CORE{
         global $special_tags;
         
         $this->seo_settings = get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_seo_settings_values' );
-        $this->options = get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_options_values' );
+        $this->options      = get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_options_values' );
         $this->init_special_tags();
                             
         // Initialising data for frontend   

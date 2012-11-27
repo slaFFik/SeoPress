@@ -1,11 +1,7 @@
 <?php
 /**
  * Metaboxes at the end of post or page
- *
- * @package SeoPress
- * @author Sven Lehnert, Sven Wagener
- * @copyright Copyright (C) Themekraft.com
- **/
+ */
 
 function sp_post_metabox(){
     global $post;
@@ -109,11 +105,11 @@ function sp_page_metabox(){
                 <tbody>
                     <tr>
                         <td width="200" valign="top"><label for="seopress_title">' . __( 'Title', 'seopress' ) . ':</label></td>
-                        <td>' . tk_wp_form_textfield( 'title', 'sp_post_metabox', 'title',  ' style="width:99%"' ) . $title_field . '</td>
+                        <td>' . tk_wp_form_textfield( 'title', 'sp_post_metabox', 'seopress_title',  ' style="width:99%"' ) . $title_field . '</td>
                     </tr>
                     <tr>
                         <td valign="top"><label for="seopress_description">' . __( 'Description', 'seopress' ) . ':</label></td>
-                        <td>' . tk_wp_form_textfield( 'description', 'sp_post_metabox', 'description', ' style="width:99%"' ) . $description_field . '</td>
+                        <td>' . tk_wp_form_textfield( 'description', 'sp_post_metabox', 'seopress_description', ' style="width:99%"' ) . $description_field . '</td>
                     </tr>
                     <tr>
                         <td valign="top"><label for="seopress_keywords">' . __( 'Keywords', 'seopress' ) . ':</label></td>

@@ -31,10 +31,10 @@ function sp_fp_add_meta(){
             }
             
             $args = array(
-                'title' => $fb_title,
+                'title'       => $fb_title,
                 'description' => $fb_description,
-                'type' => $fb_type,
-                'image' => $fb_image_src
+                'type'        => $fb_type,
+                'image'       => $fb_image_src
             );
             
             $og->set_page_data( $args );
@@ -45,10 +45,10 @@ function sp_fp_add_meta(){
 add_action( 'sp_insert_meta', 'sp_fp_add_meta' );
 
 function sp_fb_page_meta_box( $tabs ){
-    $title_field = $description_field = $post_metabox_table = '';
+    $title_field = $description_field = $page_metabox_table = '';
     $title_field        = apply_filters( 'sp_fb_page_metabox_title', $title_field );
     $description_field  = apply_filters( 'sp_fb_page_metabox_description', $description_field );
-    $post_metabox_table = apply_filters( 'sp_fb_page_metabox_table', $post_metabox_table );
+    $page_metabox_table = apply_filters( 'sp_fb_page_metabox_table', $page_metabox_table );
 
     $html = '<p class="sp_metabox_description">' . __( 'Leave fields blank if you want to use standard WordPress values.', 'seopress' ) . '</p>';
     
@@ -78,7 +78,7 @@ function sp_fb_page_meta_box( $tabs ){
                             <td valign="top"><label for="seopress_fb_type">' . __( 'Type', 'seopress' ) . ':</label></td>
                             <td>' . $select_fb_type->get_html() . '</td>
                         </tr>//-->
-                        ' . $post_metabox_table .'
+                        ' . $page_metabox_table .'
                     </tbody>
                 </table>';
                     
