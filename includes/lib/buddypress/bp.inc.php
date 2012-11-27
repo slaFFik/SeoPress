@@ -18,7 +18,7 @@ if( !function_exists( 'tk_get_bp_page_type' ) ){
                     if( bp_is_group_forum_topic() ){
                         $page_type = 'bp-component-' . $component . '-' . $action . '-topic';                           
                     
-                    }elseif ( !bp_is_activity_front_page() &&  bp_is_activity_component() && $action != 'just-me' ){
+                    }elseif ( !bp_is_component_front_page( 'activity' ) &&  bp_is_activity_component() && $action != 'just-me' ){
                         $page_type = 'bp-component-activity-activity';
                     }else{
                         $page_type = 'bp-component-' . $component . '-' . $action;
