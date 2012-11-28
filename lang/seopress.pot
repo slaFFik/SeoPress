@@ -3,563 +3,609 @@
 # This file is distributed under the same license as the SeoPress package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SeoPress 1.0\n"
+"Project-Id-Version: SeoPress\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/seopress\n"
-"POT-Creation-Date: 2010-10-12 10:23+0000\n"
-"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2012-11-28 08:19+0200\n"
+"PO-Revision-Date: 2012-11-28 08:19+0200\n"
+"Last-Translator: slaFFik <slava.abakumov@gmail.com>\n"
+"Language-Team: slaFFik <slaffik@list.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: W:\\_server\\home\\ovi\\ab\\wp-content\\plugins"
+"\\seopress\n"
+"X-Poedit-SearchPath-0: W:\\_server\\home\\ovi\\ab\\wp-content\\plugins"
+"\\seopress\n"
 
-#: admin/general.inc.php:80
-msgid "<b>SeoPress:</b> General SEO options"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:100
+#, php-format
+msgid "Page %s"
 msgstr ""
 
-#: admin/general.inc.php:83 admin/general.inc.php:420
-msgid "Save General SEO options"
-msgstr ""
-
-#: admin/general.inc.php:87 admin/main.inc.php:44
-msgid "Settings"
-msgstr ""
-
-#: admin/general.inc.php:90
-msgid "Directories"
-msgstr ""
-
-#: admin/general.inc.php:94
-msgid "Groups"
-msgstr ""
-
-#: admin/general.inc.php:97
-msgid "Main Blog"
-msgstr ""
-
-#: admin/general.inc.php:99
-msgid "User Blogs"
-msgstr ""
-
-#: admin/general.inc.php:113
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:320
 #, php-format
 msgid ""
-"A directory view is the start-page of a component, the overview.\r\n"
-"<br>\r\n"
-"Most special tags will not work at the directory view, because they make no "
-"sense here.<br>\r\n"
-"The %%component...%% tags are just for sub-pages of the directories.<br>\r\n"
-"<br>\r\n"
-"The directory views are the main-pages and that's why it's important to give "
-"every directory a unique title and description.\r\n"
-"Write something about every directory on your site so that others will know "
-"what kind of directory they will find.\r\n"
-"<br><br>\r\n"
-"Examples: in the groups directory, write what kind of groups I will find on "
-"your social network.\r\n"
-"If you are in the members directory, write what kind of members I will find. "
-"Are your members musicians, or do they have the same hobbies? repair "
-"cars ...?\r\n"
-"Give a detailed explanation.\r\n"
-"\r\n"
-"."
+"Your blog is not public. Search engines will be blocked. You can change this "
+"in your <a href=\"%s\">privacy settings</a>."
 msgstr ""
 
-#: admin/general.inc.php:167 admin/general.inc.php:239
-#: admin/general.inc.php:303 admin/main.inc.php:66 admin/main.inc.php:105
-#: admin/plugins.inc.php:132
-msgid "The site's name"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:368
+msgid "SeoPress - Page types"
 msgstr ""
 
-#: admin/general.inc.php:168 admin/general.inc.php:240 admin/main.inc.php:106
-#: admin/plugins.inc.php:133
-msgid "Replaced with current component"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:368
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo.php:19
+msgid "Page types"
 msgstr ""
 
-#: admin/general.inc.php:169 admin/general.inc.php:241 admin/main.inc.php:107
-#: admin/plugins.inc.php:134
-msgid "Replaced with current action"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:369
+msgid "SeoPress - Options"
 msgstr ""
 
-#: admin/general.inc.php:170 admin/main.inc.php:123
-msgid "Replaced with the user's nicename"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:369
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options.php:16
+msgid "Options"
 msgstr ""
 
-#: admin/general.inc.php:171 admin/main.inc.php:124
-msgid "Replaced with the user registered"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:383
+msgid "Pro Version now available!"
 msgstr ""
 
-#: admin/general.inc.php:172 admin/main.inc.php:125
-msgid "Replaced with the displayed name of the user"
-msgstr ""
-
-#: admin/general.inc.php:173 admin/main.inc.php:126
-msgid "Replaced with the full name of the user"
-msgstr ""
-
-#: admin/general.inc.php:234 admin/general.inc.php:298 admin/main.inc.php:31
-#: admin/main.inc.php:54
-msgid "Special Tags"
-msgstr ""
-
-#: admin/general.inc.php:242 admin/main.inc.php:108 admin/plugins.inc.php:135
-msgid "Replaced with component name"
-msgstr ""
-
-#: admin/general.inc.php:243 admin/main.inc.php:109 admin/plugins.inc.php:136
-msgid "Replaced with the component ID"
-msgstr ""
-
-#: admin/general.inc.php:244 admin/main.inc.php:110 admin/plugins.inc.php:137
-msgid "Replaced with component description"
-msgstr ""
-
-#: admin/general.inc.php:245 admin/main.inc.php:111 admin/plugins.inc.php:138
-msgid "Replaced with the component status"
-msgstr ""
-
-#: admin/general.inc.php:246 admin/main.inc.php:112 admin/plugins.inc.php:139
-msgid "Replaced with the component date created"
-msgstr ""
-
-#: admin/general.inc.php:247 admin/main.inc.php:113 admin/plugins.inc.php:140
-msgid "Replaced with the component admins"
-msgstr ""
-
-#: admin/general.inc.php:248 admin/main.inc.php:114 admin/plugins.inc.php:141
-msgid "Replaced with the component total member-count"
-msgstr ""
-
-#: admin/general.inc.php:249 admin/main.inc.php:115 admin/plugins.inc.php:142
-msgid "Replaced with the component last activity"
-msgstr ""
-
-#: admin/general.inc.php:250 admin/main.inc.php:116
-msgid "Replaced with current forum topic title"
-msgstr ""
-
-#: admin/general.inc.php:251 admin/main.inc.php:117
-msgid "Replaced with current forum topic poster name"
-msgstr ""
-
-#: admin/general.inc.php:252 admin/main.inc.php:118
-msgid "Replaced with current forum topic last poster name"
-msgstr ""
-
-#: admin/general.inc.php:253 admin/main.inc.php:119
-msgid "Replaced with current forum topic start time"
-msgstr ""
-
-#: admin/general.inc.php:254 admin/main.inc.php:120
-msgid "Replaced with current forum topic time"
-msgstr ""
-
-#: admin/general.inc.php:255 admin/main.inc.php:121
-msgid "Replaced with current forum topic text"
-msgstr ""
-
-#: admin/general.inc.php:304 admin/main.inc.php:79
-msgid "Replaced with the current time"
-msgstr ""
-
-#: admin/general.inc.php:305 admin/main.inc.php:80
-msgid "Replaced with the current date"
-msgstr ""
-
-#: admin/general.inc.php:306 admin/main.inc.php:81
-msgid "Replaced with the current month"
-msgstr ""
-
-#: admin/general.inc.php:307 admin/main.inc.php:82
-msgid "Replaced with the current year"
-msgstr ""
-
-#: admin/general.inc.php:323 admin/general.inc.php:341
-#: admin/general.inc.php:383 admin/main.inc.php:57
-msgid "Special Tags for WP and WPMU"
-msgstr ""
-
-#: admin/general.inc.php:324 admin/general.inc.php:342
-#: admin/general.inc.php:384
-msgid "For a list of all available tags go "
-msgstr ""
-
-#: admin/general.inc.php:324 admin/general.inc.php:342
-#: admin/general.inc.php:384 admin/plugins.inc.php:159
-msgid "here"
-msgstr ""
-
-#: admin/general.inc.php:380
-msgid "Info"
-msgstr ""
-
-#: admin/general.inc.php:381
-msgid "You need to activate the plugin sitewide to run user blogs."
-msgstr ""
-
-#: admin/main.inc.php:30
-msgid "Welcome"
-msgstr ""
-
-#: admin/main.inc.php:32
-msgid "Pro Version"
-msgstr ""
-
-#: admin/main.inc.php:38 seopress.php:120 seopress.php:124
-msgid "General Seo"
-msgstr ""
-
-#: admin/main.inc.php:39
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:384
 msgid ""
-"This is the place for the general meta(title, description, keywords) "
-"optimization in a WP | WPMU | Buddypress environment. The meta options shown "
-"in this page will be generated depending on the WP you use and the activated "
-"Buddypress components."
+"Get SeoPress Pro Version now, and benefit from more functionality, support "
+"and a clean UI."
 msgstr ""
 
-#: admin/main.inc.php:41 seopress.php:121
-msgid "Plugins Seo"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:386
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:407
+msgid "Upgrade now"
 msgstr ""
 
-#: admin/main.inc.php:42
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:388
+msgid "Pro Features"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:390
+msgid "Keyword generator"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:391
+msgid "Text counter for meta title and description"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:392
+msgid "No branding: the Pro Version comes without the \"Get Pro\" tabs."
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:393
+msgid "Full support and help in the SeoPress group and forum."
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:396
+msgid "Pro Roadmap"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:398
+msgid "Sitemap generator (including Buddypress urls)"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:399
+msgid "Deeplink generator"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:400
+msgid "Pages and posts optimizer"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:401
+msgid "Searchengine preview for pages and posts"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:402
+msgid "Google Pagerank checker"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:403
+msgid "Canonical url support"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:404
+msgid "Xprofile special tags for buddypress"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-core.php:411
+msgid "Get Pro version!"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-setup.php:63
 msgid ""
-"If you have installed plugins to extend Buddypress, this is the place where "
-"to configure the Seo behavior of every component. First you need to select "
-"where the component is shown in the front-end. After saving, you will be "
-"able to enter all meta data depending on your selection."
+"Congratulations! You have successfully installed SeoPress. You can support "
+"us with the developement by buying SeoPress pro."
 msgstr ""
 
-#: admin/main.inc.php:45
-msgid ""
-"Settings page for the global Seo configuration, update and delete Seo for "
-"Buddypress."
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-setup.php:64
+msgid "Only for "
 msgstr ""
 
-#: admin/main.inc.php:55
-msgid ""
-"Special Tags are place holders to use in the meta data to specifay the "
-"content. Not all Tags are avalibe everywere. Use every tag with care, and "
-"check if the tag is suportet and gife you back the result you wanted."
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-setup.php:67
+msgid "Get it on themekraft.com"
 msgstr ""
 
-#: admin/main.inc.php:58
-msgid ""
-"These tags can be included and will be replaced when the main/user blog "
-"pages or posts are displayed."
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/sp-setup.php:70
+msgid "Close Window"
 msgstr ""
 
-#: admin/main.inc.php:64
-msgid "Replaced with the date of the post/page"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options.php:17
+msgid "Configure global settings for SeoPress."
 msgstr ""
 
-#: admin/main.inc.php:65
-msgid "Replaced with the title of the post/page"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options.php:28
+msgid "Seo"
 msgstr ""
 
-#: admin/main.inc.php:67
-msgid "Replaced with the post/page excerpt"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:14
+msgid "Global Seo options"
 msgstr ""
 
-#: admin/main.inc.php:68
-msgid "Replaced with the current tag/tags"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:14
+msgid "Setup the global settings of the Seo part of the plugin."
 msgstr ""
 
-#: admin/main.inc.php:69
-msgid "Replaced with the post categories (comma separated)"
-msgstr ""
-
-#: admin/main.inc.php:70
-msgid "Replaced with the category description"
-msgstr ""
-
-#: admin/main.inc.php:71
-msgid "Replaced with the tag description"
-msgstr ""
-
-#: admin/main.inc.php:72
-msgid "Replaced with the term description"
-msgstr ""
-
-#: admin/main.inc.php:73
-msgid "Replaced with the term name"
-msgstr ""
-
-#: admin/main.inc.php:74
-msgid "Replaced with the post/page modified time"
-msgstr ""
-
-#: admin/main.inc.php:75
-msgid "Replaced with the post/page ID"
-msgstr ""
-
-#: admin/main.inc.php:76
-msgid "Replaced with the post/page author's 'nicename'"
-msgstr ""
-
-#: admin/main.inc.php:77
-msgid "Replaced with the post/page author's user ID"
-msgstr ""
-
-#: admin/main.inc.php:78
-msgid "Replaced with the current search phrase"
-msgstr ""
-
-#: admin/main.inc.php:83
-msgid "Replaced with the current page number (i.e. page 2 of 4)"
-msgstr ""
-
-#: admin/main.inc.php:84
-msgid "Replaced with the current page total"
-msgstr ""
-
-#: admin/main.inc.php:85
-msgid "Replaced with the current page number"
-msgstr ""
-
-#: admin/main.inc.php:86
-msgid "Attachment caption"
-msgstr ""
-
-#: admin/main.inc.php:98
-msgid "Special Tags for Buddypress"
-msgstr ""
-
-#: admin/main.inc.php:99
-msgid ""
-"These tags can be included and will be replaced when a Buddypress page is "
-"displayed."
-msgstr ""
-
-#: admin/main.inc.php:122
-msgid "Replaced with the user ID"
-msgstr ""
-
-#: admin/main.inc.php:145
-msgid "Get the SeoPress Pro version"
-msgstr ""
-
-#: admin/main.inc.php:146
-msgid "Comming soon!"
-msgstr ""
-
-#: admin/plugins.inc.php:33
-msgid "<b>SeoPress:</b> Plugins Seo Options"
-msgstr ""
-
-#: admin/plugins.inc.php:38
-msgid "Configuration"
-msgstr ""
-
-#: admin/plugins.inc.php:50
-msgid "Buddypress Seo configuration for extended components"
-msgstr ""
-
-#: admin/plugins.inc.php:51
-msgid "Please select the component for which you like to edit the meta tags."
-msgstr ""
-
-#: admin/plugins.inc.php:52
-msgid ""
-" !!! Attention: most times if a component has a directory view, every entry "
-"of the component has an own home view."
-msgstr ""
-
-#: admin/plugins.inc.php:53
-msgid ""
-"To generate dynamic meta tags for these views, you need to select the "
-"component itself under \"extends other components\". "
-msgstr ""
-
-#: admin/plugins.inc.php:55
-msgid ""
-"For example, if you have \"Buddypress Events\" installed: it has a directory "
-"view and every event has a home view. In this case, you have to select "
-"\"events\" under \"extends other components\"."
-msgstr ""
-
-#: admin/plugins.inc.php:59
-msgid "Update components configuration"
-msgstr ""
-
-#: admin/plugins.inc.php:181
-msgid "COMPONENTS EXTENDED"
-msgstr ""
-
-#: admin/settings.inc.php:9
-msgid "SeoPress:General settings"
-msgstr ""
-
-#: admin/settings.inc.php:13
-msgid "Keyword Generator"
-msgstr ""
-
-#: admin/settings.inc.php:14
-msgid ""
-"Check this, if you want SeoPress to generate the keywords from the content, "
-"if there are no Keywords set."
-msgstr ""
-
-#: admin/settings.inc.php:16
-msgid "How many Keywords to use?"
-msgstr ""
-
-#: admin/settings.inc.php:18 admin/settings.inc.php:25
-#: admin/settings.inc.php:32
-msgid "Save"
-msgstr ""
-
-#: admin/settings.inc.php:22
-msgid "Hide meta box in “Add New Page/Edit” screen "
-msgstr ""
-
-#: admin/settings.inc.php:23
-msgid ""
-"Check this, if you do not want to edit meta data in the “Add New Page/Edit” "
-"screen: "
-msgstr ""
-
-#: admin/settings.inc.php:29
-msgid "Hide meta box in “Add New Post/Edit” screen "
-msgstr ""
-
-#: admin/settings.inc.php:30
-msgid ""
-"Check this, if you do not want to edit meta data in the “Add New Post/Edit” "
-"screen: "
-msgstr ""
-
-#: admin/settings.inc.php:36
-msgid "Standard length of the title"
-msgstr ""
-
-#: admin/settings.inc.php:37
-msgid ""
-"Please set up a maximum length of the title. After this the title will be "
-"stopped. If you dont want to stop, please type in 0."
-msgstr ""
-
-#: admin/settings.inc.php:37 admin/settings.inc.php:44
-msgid "number of chars"
-msgstr ""
-
-#: admin/settings.inc.php:39
-msgid "Save standard title length"
-msgstr ""
-
-#: admin/settings.inc.php:43
-msgid "Standard length of meta description"
-msgstr ""
-
-#: admin/settings.inc.php:44
-msgid ""
-"Please set up a maximum length of meta description. After this the meta "
-"description will be stopped. If you dont want to stop, please type in 0."
-msgstr ""
-
-#: admin/settings.inc.php:46
-msgid "Save standard description length"
-msgstr ""
-
-#: admin/settings.inc.php:50 admin/settings.inc.php:52
-msgid "Delete Seo for Buddypress"
-msgstr ""
-
-#: admin/settings.inc.php:51
-msgid ""
-"I dont want to use Seo for Buddypress! Delete all concerning fields from the "
-"option table."
-msgstr ""
-
-#: admin/single-metabox.php:38
-msgid "klick"
-msgstr ""
-
-#: admin/single-metabox.php:41
-msgid "SeoPress settings"
-msgstr ""
-
-#: admin/single-metabox.php:44
-msgid "No Index"
-msgstr ""
-
-#: admin/single-metabox.php:49
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:21
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:45
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:107
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/sp_admin_core.php:13
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:66
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:146
 msgid "Title"
 msgstr ""
 
-#: admin/single-metabox.php:54
-msgid "Description"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:25
+msgid "Show pagination"
 msgstr ""
 
-#: admin/single-metabox.php:58
-msgid "Keywords"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:31
+msgid "Standard length of title"
 msgstr ""
 
-#: meta.inc.php:366
-msgid "Home"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:33
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:39
+msgid "number of chars"
 msgstr ""
 
-#: meta.inc.php:370
-msgid "Blog &#124; "
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:37
+msgid "Standard length of meta description"
 msgstr ""
 
-#: meta.inc.php:372
-msgid "Blog &#124; Categories &#124; "
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:44
+msgid "Meta boxes in posts and pages"
 msgstr ""
 
-#: meta.inc.php:374
-msgid "Blog &#124; Tags &#124; "
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:48
+msgid "Hide meta boxes in posts:"
 msgstr ""
 
-#: meta.inc.php:378
-msgid "Blog"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:54
+msgid "Hide meta boxes in pages:"
 msgstr ""
 
-#: meta.inc.php:388 meta.inc.php:390
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/options_seo.tab.php:64
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:58
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpress.tab.php:42
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpressmu.tab.php:44
+msgid "Save"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo.php:20
+msgid "Optimize your Wordpress pages."
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo.php:35
+msgid "Wordpress"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo.php:39
+msgid "Wordpress Network"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo.php:45
+msgid "Buddypress"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo.php:48
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress_plugins.tab.php:17
+msgid "Buddypress Plugins"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:17
+msgid "BuddyPress"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:18
+msgid "Setup your title and meta tags of the buddypress pages."
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:32
+msgid "Setup Buddypress pages"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:37
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:72
+msgid "Activity"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:40
+msgid "Members"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:41
+msgid "Profiles"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:44
+msgid "Groups"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:47
+msgid "Forums"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:50
+msgid "Blogs"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:53
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:226
+msgid "Registration"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:71
+msgid "Activities Directory"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:94
+msgid "Members Directory"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:115
+msgid "Profile"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:118
+msgid "Profile Activity"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:121
+msgid "Profile Blogs"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:124
+msgid "Profile Groups"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:147
+msgid "Group Directory"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:150
+msgid "Group Activities"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:153
+msgid "Group Home"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:156
+msgid "Group Forum"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:157
+msgid "Group Forum Topic"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:160
+msgid "Group Members"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:182
+msgid "Forums Directory"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress.tab.php:204
+msgid "Blogs Directory"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress_plugins.tab.php:17
+msgid ""
+"Setup your title and meta tags of the buddypress plugins you have installed."
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress_plugins.tab.php:25
+msgid "Save settings"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress_plugins.tab.php:72
 #, php-format
 msgid "%s Directory"
 msgstr ""
 
-#: meta.inc.php:393
-msgid "Create an Account"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress_plugins.tab.php:83
+#, php-format
+msgid "Page in %s"
 msgstr ""
 
-#: meta.inc.php:396
-msgid "Activate your Account"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress_plugins.tab.php:87
+#, php-format
+msgid "Configurate \"%s\" plugin"
 msgstr ""
 
-#: meta.inc.php:399
-msgid "Create a Group"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress_plugins.tab.php:103
+#, php-format
+msgid "Please config your \"%s\" plugin:"
 msgstr ""
 
-#: meta.inc.php:402
-msgid "Create a Blog"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress_plugins.tab.php:110
+#, php-format
+msgid "\"%s\" has a directory page:"
 msgstr ""
 
-#. #-#-#-#-#  plugin.pot (SeoPress 1.0)  #-#-#-#-#
-#. Plugin Name of the plugin/theme
-#: seopress.php:119 seopress.php:123
-msgid "SeoPress"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_buddypress_plugins.tab.php:116
+#, php-format
+msgid "\"%s\" creating pages in following components:"
 msgstr ""
 
-#: special-tags.inc.php:471
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpress.tab.php:15
+msgid "Wordpress Blog"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpress.tab.php:16
+msgid "Setup your title and meta tags of your Wordpress blog."
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpress.tab.php:19
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpressmu.tab.php:19
+msgid "Home"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpress.tab.php:20
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpressmu.tab.php:20
+msgid "Posts"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpress.tab.php:21
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpressmu.tab.php:21
+msgid "Pages"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpress.tab.php:22
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpressmu.tab.php:22
+msgid "Archive"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpress.tab.php:23
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpressmu.tab.php:23
+msgid "Categories"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpress.tab.php:24
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpressmu.tab.php:24
+msgid "Tags"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpress.tab.php:25
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpressmu.tab.php:25
+msgid "Author"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpress.tab.php:26
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpressmu.tab.php:26
+msgid "Search result"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpressmu.tab.php:15
+msgid "Wordpress Network Blogs"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/seo_wordpressmu.tab.php:16
+msgid "Setup your title and meta tags of your Wordpress main blog."
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:10
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:91
+msgid "SeoPress Settings"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:40
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:53
+msgid "Leave fields blank if you want to use standard WordPress values."
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:49
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:111
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/sp_admin_core.php:14
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:70
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:150
+msgid "Description"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:53
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:115
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/sp_admin_core.php:15
+msgid "Keywords"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:57
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:119
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/sp_admin_core.php:36
+msgid "Ban searchengines"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:61
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:158
+msgid "Preview:"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:76
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:128
+msgid "SEO"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/admin/single_metabox.php:102
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:92
+msgid "Leave fields blank if you want to use standard values."
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:56
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:95
+msgid "featured image"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:57
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:96
+msgid "post text"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:74
+msgid "Image"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:78
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:175
+msgid "Type"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:85
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:182
+msgid "Facebook"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/facebook/loader.php:154
+msgid "Take image from"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/includes/lib/cheesecap.php:445
+msgid "Save Options"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/includes/lib/wordpress/wp.inc.php:56
+msgid "Please finish the Buddypress installation to get all SeoPress options."
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/bp/sets.php:11
+msgid "Shows the component name"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/bp/sets.php:18
+msgid "Shows the content of the activity"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/bp/sets.php:19
+msgid "Shows the author of the activity"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/bp/sets.php:26
+msgid "Shows the group name"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/bp/sets.php:27
+msgid "Shows the group description"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/bp/sets.php:34
+msgid "Shows name of the user"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/bp/sets.php:43
+msgid "Shows the forum topic title"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/bp/sets.php:44
+msgid "Shows the forum topic text"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/bp/sets.php:45
+msgid "Shows the forum topic poster name"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/functions.php:297
 #, php-format
 msgid "page %d of %d"
 msgstr ""
 
-#. #-#-#-#-#  plugin.pot (SeoPress 1.0)  #-#-#-#-#
-#. Plugin URI of the plugin/theme
-#. #-#-#-#-#  plugin.pot (SeoPress 1.0)  #-#-#-#-#
-#. Author URI of the plugin/theme
-msgid "http://sven-lehnert.de"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:9
+msgid "Shows the sitename"
 msgstr ""
 
-#. Description of the plugin/theme
-msgid "Seo for Wordpress, Wordpress MU and Buddypress"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:10
+msgid "Shows the site description"
 msgstr ""
 
-#. Author of the plugin/theme
-msgid "Sven Lehnert, Sven Wagener"
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:17
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:27
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:28
+msgid "Shows the title of post"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:18
+msgid "Shows the content of the post"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:19
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:20
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:29
+msgid "Shows the excerpt of the post"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:21
+msgid "Shows post categories"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:22
+msgid "Shows post tags"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:23
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:30
+msgid "Shows the name of post author"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:37
+msgid "Shows the archive date"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:43
+msgid "Shows the category name"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:44
+msgid "Shows the category description"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:51
+msgid "Shows the tag name"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:52
+msgid "Shows the tag description"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:59
+msgid "Shows the name of the author"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:66
+msgid "Shows the current page number"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:67
+msgid "Shows the sum of all pages"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\seopress/special-tags/wp/sets.php:74
+msgid "Shows the search phrase"
 msgstr ""

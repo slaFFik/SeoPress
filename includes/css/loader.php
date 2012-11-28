@@ -1,15 +1,15 @@
 <?php
 
 // add css for the option page
-function seopress_css() {
+function seopress_admin_css() {
     global $seopress_plugin_url;    
-         
-    if( 
+
+    if(
         (isset($_GET['page']) && ('seopress_seo' == $_GET['page'] || 'seopress_options' == $_GET['page'])) || 
         (isset($_GET['post']) && '' != $_GET['post']) || 
         'post-new.php' == basename( $_SERVER['REQUEST_URI'] ) 
     ) {
-        $style_url =  $seopress_plugin_url . 'includes/css/styles.css';
+        $style_url = $seopress_plugin_url . 'includes/css/styles.css';
         wp_register_style( 'seopressui', $style_url );
         wp_enqueue_style( 'seopressui' );
         
@@ -19,6 +19,6 @@ function seopress_css() {
     }
 }
 // Initialising javascripts and css
-add_action( 'admin_init' , 'seopress_css' );  
+add_action( 'admin_init' , 'seopress_admin_css' );  
 
 ?>

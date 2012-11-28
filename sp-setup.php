@@ -64,7 +64,7 @@ h4{
 	<p><?php _e( 'Only for ', 'seopress' ); ?> <span style="font-size:2em; font-weight:bold;">39$</span></p>
 	<br /> 	
 	<p>
-		<a href="https://themekraft.com/plugin/seopress-pro/?s2-ssl=yes" class="button buttonblue" target="_blank"><?php _e( 'Get it on themekraft.com', 'seopress' ); ?></a>
+		<a href="https://themekraft.com/shop/seopress-pro/?s2-ssl=yes" class="button buttonblue" target="_blank"><?php _e( 'Get it on themekraft.com', 'seopress' ); ?></a>
 	</p>
 	<p>
 		<a href="#" class="button buttonblue" onclick="try{top.tb_remove();}catch(e){}; return false;"><?php _e( 'Close Window', 'seopress' ); ?></a>

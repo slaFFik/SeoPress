@@ -6,17 +6,26 @@ function sp_add_page_type( $page_type ){
 
 function sp_type_box( $type, $css_class = '' ){
     global $seopress_plugin_url;
-    $html = '';
        
     $autocomplete_script = $seopress_plugin_url . 'admin/get_tags.php?type=' . $type;
     
-    $fields['title'] = array( 'name' => $type . '-title', 'title' => __( 'Title', 'seopress') , 'field-type' => 'textfield', '' => '' ) ;
-    $fields['description'] = array( 'name' => $type . '-description', 'title' => __( 'Description', 'seopress') , 'field-type' => 'textfield' ) ;
-    $fields['keywords'] =array( 'name' => $type . '-keywords', 'title' => __( 'Keywords', 'seopress') , 'field-type' => 'textfield' ) ;
+    $fields['title']       = array( 
+                                'name'       => $type . '-title', 
+                                'title'      => __( 'Title', 'seopress') , 
+                                'field-type' => 'textfield', 
+                                ''           => '' ) ;
+    $fields['description'] = array( 
+                                'name'       => $type . '-description', 
+                                'title'      => __( 'Description', 'seopress') , 
+                                'field-type' => 'textfield' ) ;
+    $fields['keywords']    = array(
+                                'name'       => $type . '-keywords', 
+                                'title'      => __( 'Keywords', 'seopress') , 
+                                'field-type' => 'textfield' ) ;
     
     $fields = apply_filters( 'sp_types_fields', $fields );
 
-    $html.= '<table width="100%" class="form-table"><tbody>';
+    $html = '<table width="100%" class="form-table"><tbody>';
         
     foreach( $fields AS $key => $field ){
         if( $field['field-type'] == 'textfield' ){
@@ -51,8 +60,7 @@ function sp_admin_tab_header( $title = '' , $description = '', $logo = '' ){
     if( $logo != '' ){
         $html.= '<div class="logo"><img src="' . $logo . '" /></div>'; 
     }
-    $html.='        
-                <div class="sp-tab-head">        
+    $html.='    <div class="sp-tab-head">        
                     <h3>' . $title . '</h3>
                     <p>' . $description . '</p>
                 </div>

@@ -2,8 +2,6 @@
 
 require_once( 'open-graph.php' );
 
-#print_r(get_defined_vars());
-
 function sp_fp_add_meta(){
     if( $_SERVER['HTTP_USER_AGENT'] == 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)' ) {            
         global $post;
@@ -13,10 +11,10 @@ function sp_fp_add_meta(){
             
             $post_meta = get_post_meta( $post->ID, 'sp_post_metabox', TRUE );
     
-            $fb_title = $post_meta['fb_title'];
+            $fb_title       = $post_meta['fb_title'];
             $fb_description = $post_meta['fb_description'];
-            $fb_image = $post_meta['fb_image'];
-            $fb_type = $post_meta['fb_type'];
+            $fb_image       = $post_meta['fb_image'];
+            $fb_type        = $post_meta['fb_type'];
             
             if( $fb_image == 'featured_image'){
                 if (!function_exists('get_post_thumbnail_id')) {

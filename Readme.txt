@@ -1,79 +1,70 @@
 === SeoPress ===
 Contributors: svenl77,mahype,slaFFik
 Tags: seo,buddypress,wpmu,wp,searchengine optimization,networked blogs,title,meta,meta description,meta keywords,noindex,facebook,open graph
-Requires at least: 2.9.x
-Tested up to: 3.4.x & Buddypress 1.6.x
-Stable tag:  1.2.3
+Requires at least: WordPress 2.9.x
+Tested up to: WordPress 3.4.x & Buddypress 1.6.x
+Stable tag: 1.2.3
 
-Searchengine optimization plugin for Wordpress & Buddypress
+Complete search-engine optimization (SEO) plugin for Wordpress & Buddypress
 
 == Description ==
-<h3>SeoPress is search engine optimization for</h3>
+
+= SeoPress is search engine optimization for =
+* WordPress,
+* WordPress Networked Blogs
+* and Buddypress.
 
 
-    * WordPress,
-    * WordPress Networked Blogs
-    * and Buddypress.
+= Optimize your Posts/Pages for Facebook!=
+
+= Features =
+
+* Setup Title, Description and Keywords of your WordPress, WordPress sites and Buddypress pages.
+* Optimize your Posts/Pages for Facebook
+* Ban searchengines from your sites (noindex)
+* Autocomplete Special Tags for wordpress values
+* Action hooks for 3rd party plugins
+* Add your own special tags
 
 
-<strong>NEW: Optimize your Posts/Pages for Facebook!</strong>
+= Screenshot =
 
-<h3>Features</h3>
-
-	* Setup Title, Description and Keywords of your WordPress, WordPress sites and Buddypress pages.
-	* Optimize your Posts/Pages for Facebook
-	* Ban searchengines from your sites (noindex)
-	* Autocomplete Special Tags for wordpress values
-	* Action hooks for 3rd party plugins
-	* Add your own special tags
-
-
-<h3>Screenshot</h3>
 <img src="http://themekraft.com/wp-content/uploads/2010/11/screenshot-seopress.jpg" alt="" title="SeoPress Screenshot" width="530" height="340" class="alignnone size-full wp-image-1796" />
 
-<h3>How the plugin works</h3>
+= How the plugin works =
+
 SeoPress automaticaly detects your WordPress configuration and offers you the options you need to setup the different page types of WordPress and Buddypress. Just activate it and all values you can set will be shown!
 
 = Page types =
+
 Your WordPress page has a lot of page types like home, posts, pages, categories and so on. Every page type needs a different setup to have an optimal result in searchengines. SeoPress offers you all page types and shows you the values you can edit on these pages.
 
 = Special Tags =
+
 Use the special tags like %%site_name%% (for getting name of the site) and use it in your page types. The special tag autocomplete will help you to find the right ones.
 
-<h3>Buddypress Support</h3>
+= Buddypress Support =
+
 SeoPress is the only plugin for WordPress which offers you to setup the meta data of the BuddyPress page types. It automaticaly recognizes if BuddyPress is activated and shows you all options to optimize your different page types.
 
-<h3>Languages</h3>
-SeoPress is multilingual and supports the following languages:
+= Languages =
 
-* English
-* German
-
+SeoPress is multilingual and can be translated into any language. 
 Feel free to support the community. Send us your language files to team[at]themekraft.com and we we will add it in the next update!
 
-<h3>SeoPress API</h3>
-You need more special tags or do you want to extend your own plugin to support SeoPress with own page types and your own special tags? Just use the API! You can add new page types and Special tags by using hooks and functions we have added to SeoPress. Just take a look at our code and communicate with SeoPress! A documentation is in progress.
+For bug reports and features requests please go to:
 
-
-For bug report and feature requests please go to:<br><br>
-https://github.com/Themekraft/SeoPress-Free/issues or to http://themekraft.com/groups/seopress/forum/
+https://github.com/Themekraft/SeoPress/issues
 
 No lose of individual page settings (Meta's&Title) if used "All in One Seo" and "WPSeo"  before.
 
-<br>
 == Installation ==
 1. Upload 'SeoPress' to the '/wp-content/plugins/' directory<br>
-2. a) If you use standard Wordpress installation:<br>
-Activate the plugin through the 'Plugins' menu in WordPress<br>
-2. b) If you use multiple Blog installation:<br>
-Activate the plugin by the Network Admin plugins menu<br>
-3. If you use Buddypress:<br>
-<br>
-<strong>Be sure that the main blog header title have only included wp_title() or bp_title() function.<strong><br><br>
+2. If you use standard Wordpress installation: Activate the plugin through the 'Plugins' menu in WordPress
+3. If you use multiple Blog installation: Activate the plugin by the Network Admin plugins menu
+4. If you use Buddypress:
 
-That's it, have fun!
-<br>
-Plugin is updatefriendly, all needed migration from older versions, will be done on activation.<br>
+Be sure that the main blog header title have only included wp_title() or bp_title() function.
 
 == Screenshots ==
 

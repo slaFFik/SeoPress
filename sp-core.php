@@ -42,7 +42,6 @@ class SP_CORE{
 
         // Initialising data for admin          
         }else{
-
             $this->init_admin();
 
             add_action( 'admin_init', 'sp_register_seo_settings_form' );
