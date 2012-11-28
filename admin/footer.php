@@ -16,7 +16,7 @@
                 <a href="http://themekraft.com/groups/seopress/forum/" title="You've got questions? Come to our SeoPress forum and tell your question!" target="_blank">SeoPress forum</a>
             </li>
             <li>
-                <a href="https://github.com/Themekraft/SeoPress-Free/issues" title="Found a bug? Come to our SeoPress ticket system and report it!" target="_blank">SeoPress tickets</a>
+                <a href="https://github.com/Themekraft/SeoPress/issues" title="Found a bug? Come to our SeoPress ticket system and report it!" target="_blank">SeoPress tickets</a>
             </li>
         </ul>
     </div>
