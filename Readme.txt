@@ -1,7 +1,7 @@
 === SeoPress ===
 Contributors: svenl77,mahype,slaFFik
 Tags: seo,buddypress,wpmu,wp,searchengine optimization,networked blogs,title,meta,meta description,meta keywords,noindex,facebook,open graph
-Requires at least: WordPress 2.9.x
+Requires at least: WordPress 3.1.x & Buddypress 1.2.x
 Tested up to: WordPress 3.4.x & Buddypress 1.6.x
 Stable tag: 1.2.3
 
@@ -13,7 +13,6 @@ Complete search-engine optimization (SEO) plugin for Wordpress & Buddypress
 * WordPress,
 * WordPress Networked Blogs
 * and Buddypress.
-
 
 = Optimize your Posts/Pages for Facebook!=
 
