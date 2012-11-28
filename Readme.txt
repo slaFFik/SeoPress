@@ -59,6 +59,7 @@ https://github.com/Themekraft/SeoPress/issues
 No lose of individual page settings (Meta's&Title) if used "All in One Seo" and "WPSeo"  before.
 
 == Installation ==
+
 1. Upload 'SeoPress' to the '/wp-content/plugins/' directory<br>
 2. If you use standard Wordpress installation: Activate the plugin through the 'Plugins' menu in WordPress
 3. If you use multiple Blog installation: Activate the plugin by the Network Admin plugins menu
@@ -111,7 +112,6 @@ Be sure that the main blog header title have only included wp_title() or bp_titl
 * Changed get_page_type function
 
 = 1.1 beta 3 =
-
 * Renamed update script filename
 * Changed version name to beta 3
 * Dublicate topic fix
@@ -141,7 +141,6 @@ Be sure that the main blog header title have only included wp_title() or bp_titl
 = 1.0.2 =
 * There was a bug, if you select "displays your latest post" as front page. And the latest post has a meta values in the post meta,
 * The plugin used the last post meta values instead of the homepage values.
-
 
 = 1.0.1 =
 * CSS bugfix and backend tweaking
