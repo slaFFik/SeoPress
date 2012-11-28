@@ -14,7 +14,6 @@ Complete search-engine optimization (SEO) plugin for Wordpress & Buddypress
 * WordPress Networked Blogs
 * and Buddypress.
 
-
 = Optimize your Posts/Pages for Facebook!=
 
 = Features =
