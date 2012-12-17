@@ -48,7 +48,7 @@ SeoPress is the only plugin for WordPress which offers you to setup the meta dat
 
 = Languages =
 
-SeoPress is multilingual and can be translated into any language. 
+SeoPress is multilingual and can be translated into any language.
 Feel free to support the community. Send us your language files to team[at]themekraft.com and we we will add it in the next update!
 
 For bug reports and features requests please go to:
@@ -79,7 +79,7 @@ Be sure that the main blog header title have only included wp_title() or bp_titl
 
 = 1.2.3 =
 * Fixing enormous number of notices
-* Making the plugin better and ready for new features :)
+* Making the plugin ready for new features
 
 = 1.2.2 =
 * Added Pagination and option for it in Seo Options page

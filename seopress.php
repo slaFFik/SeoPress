@@ -6,7 +6,7 @@ Description: Searchengine optimization plugin for Wordpress & Buddypress
 Author: Sven Lehnert, Sven Wagener
 Author URI: http://themekraft.com/
 License: GNU GENERAL PUBLIC LICENSE 3.0 http://www.gnu.org/licenses/gpl.txt
-Version: 1.2.2
+Version: 1.2.3
 Text Domain: seopress
 Network: true
 */
@@ -14,7 +14,7 @@ Network: true
 // **********************************************************************
 // This program is distributed in the hope that it will be useful, but
 // WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // **********************************************************************
 
 global $blog_id, $meta, $docroot, $seopress_plugin_url, $seopress_plugin_url, $wpdb;
@@ -90,7 +90,7 @@ add_action( 'init' , 'seopress_init' , 0 );
 function sp_setup_redirect( $plugin ){
 	if( basename( $plugin ) == 'seopress.php' ){
 		update_option( 'seopress_setup', array( 'activation_run' => false ) );
-		wp_redirect( get_bloginfo('home') . '/wp-admin/admin.php?page=seopress_seo&sp_activate=true' );	
+		wp_redirect( get_bloginfo('home') . '/wp-admin/admin.php?page=seopress_seo&sp_activate=true' );
 		exit;
 	}
 }
