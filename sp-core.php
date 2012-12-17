@@ -7,14 +7,13 @@ class SP_CORE{
     var $settings;
     var $page_type;
     var $special_tags;
-    var $used_tags;
     var $meta;
 
     /**
     * Constructor of class
     * @desc Constructor of class
     */
-    public function __construct(){     
+    public function __construct(){
         global $special_tags;
 
         $this->seo_settings = get_blog_option( SITE_ID_CURRENT_SITE , 'seopress_seo_settings_values' );
@@ -22,26 +21,23 @@ class SP_CORE{
 
         $this->init_special_tags();
 
-        $this->used_tags    = $special_tags->get_tags( $this->page_type ); // @ToDo - what this does?
-
-        // Initialising data for frontend   
+        // Initialising data for frontend
         if( !is_admin() ){
-
-            global $wp_filter, $merged_filters;
-
-            if( tk_is_buddypress() ){ // Should be reworked <- BP have to be hooked in
+            global $wp_filter;
+            if( isset($wp_filter['bp_page_title']) && tk_is_buddypress() ){ // Should be reworked <- BP have to be hooked in
                 remove_all_filters( 'bp_page_title' );
-                add_filter( 'bp_page_title' , array(&$this, 'init_seo') , 1 ); // Filtering buddypress title
+                add_filter( 'bp_page_title', array(&$this, 'init_seo') , 1 ); // Filtering buddypress title
             }
 
-            remove_all_filters( 'wp_title' );
-            add_filter( 'wp_title' ,  array( &$this, 'init_seo') , 1, 3 );  // Filtering wordpress title
+            if(isset($wp_filter['wp_title'])){
+                remove_all_filters( 'wp_title' );
+            }
+            add_filter( 'wp_title', array( &$this, 'init_seo') , 1, 3 );  // Filtering wordpress title
             add_filter( 'bloginfo', array( &$this, 'delete_bloginfo_name') , 1, 2 );
 
             do_action( 'sp_init' );
-
-        // Initialising data for admin          
-        }else{
+        } // Initialising data for admin area
+        else{
             $this->init_admin();
 
             add_action( 'admin_init', 'sp_register_seo_settings_form' );
@@ -73,7 +69,7 @@ class SP_CORE{
     /**
     * Filtering blogname on Website
     * @param $output string The output of the filter 'bloginfo'
-    * @param $show string The show parameter of the filter 'bloginfo'  
+    * @param $show string The show parameter of the filter 'bloginfo'
     * @desc Initializes data for site and sets title
     */
     public function delete_bloginfo_name( $output = '', $show = '' ){
@@ -86,7 +82,7 @@ class SP_CORE{
     /**
     * Initializing seo data for requested page
     * @desc Initializes data for site and sets title
-    */    
+    */
     public function init_seo( $title, $sep = '', $seplocation = '' ){
         if( !is_404() && FALSE != $sep ){
             global $page, $paged;
@@ -101,7 +97,7 @@ class SP_CORE{
             // Adding meta tags to wp head
             add_action( 'wp_head' , array(&$this, 'insert_meta') , 1 );
 
-            if( !empty($new_title) ) 
+            if( !empty($new_title) )
                 $title = apply_filters('sp_title', $this->filter_for_html_output( $new_title ) ) ;
         }
 
@@ -114,7 +110,7 @@ class SP_CORE{
     public function filter_for_html_output( $string ){
         $string = strip_tags( $string ); // Filtering HTML Tags
         // $string = htmlentities( $string, ENT_QUOTES, 'UTF-8'  ); // Changning all special chars to HTML chars
-        $string = stripslashes( $string ); // Stripping slashes 
+        $string = stripslashes( $string ); // Stripping slashes
 
         return $string;
     }
@@ -127,7 +123,7 @@ class SP_CORE{
         global $bp;
         $meta = array();
 
-        if( is_single() || is_page() ) 
+        if( is_single() || is_page() )
             $meta = $this->get_post_meta();
 
         if( empty($meta) ){
@@ -139,15 +135,15 @@ class SP_CORE{
 
         $meta['title']       = isset($meta['title'])?$meta['title']:'';
         $meta['description'] = apply_filters('sp_description', isset($meta['description'])?$meta['description']:'' );
-        $meta['keywords']    = apply_filters('sp_keywords', isset($meta['keywords'])?$meta['keywords']:'' );
-        $meta['noindex']     = apply_filters('sp_noindex', isset($meta['noindex'])?$meta['noindex']:'' ); 
+        $meta['keywords']    = apply_filters('sp_keywords',    isset($meta['keywords'])?   $meta['keywords']:'' );
+        $meta['noindex']     = apply_filters('sp_noindex',     isset($meta['noindex'])?    $meta['noindex']:'' );
 
         $this->meta = $meta; // Writing meta results in global seopress meta variable
 
         if($key!=false){
             return $meta[$key];
         }else{
-            return $meta;           
+            return $meta;
         }
 
     }
@@ -165,7 +161,7 @@ class SP_CORE{
         $template['noindex']     = isset($this->seo_settings[ $page_type . '-noindex' ])?$this->seo_settings[ $page_type . '-noindex' ]:'';
 
         return $template;
-    } 
+    }
 
     public function update_template( $page_type, $template ){
         if( $page_type != "" ){
@@ -175,8 +171,8 @@ class SP_CORE{
     }
 
     public function insert_meta(){
-        if( $this->meta['noindex'] == true ) 
-            echo '<meta name="robots" content="noindex" />' . chr(10); 
+        if( $this->meta['noindex'] == true )
+            echo '<meta name="robots" content="noindex" />' . chr(10);
 
         if( !empty( $this->meta['description'] ))
             echo '<meta name="description" content="' . $this->filter_for_html_output( $this->meta['description'] ) . '" />' . chr(10);
@@ -199,10 +195,10 @@ class SP_CORE{
             // Getting meta by replacing special tags in each temlate field
             foreach( $template as $key => $meta_field_template ){
                 $newmeta[ $key ] = $special_tags->replace( $meta_field_template, tk_get_page_type(), $fallback_type );
-            }           
+            }
         }
 
-        return $newmeta; 
+        return $newmeta;
     }
 
     //////////////////////////////////// Should go to Hook
@@ -244,7 +240,7 @@ class SP_CORE{
             $title = get_post_meta( $post_id, "_aioseop_title", true );
 
         // If title isn't empty, fill meta with it
-        if( !empty($title) ) 
+        if( !empty($title) )
             $meta['title'] = $title;
 
         /*
@@ -258,12 +254,12 @@ class SP_CORE{
         if( empty($description) )
             $description = get_post_meta( $post_id, "_wpseo_edit_description", true );
         // All in one seopack
-        if( empty($description) ) 
+        if( empty($description) )
             $description = get_post_meta( $post_id, "_aioseop_description", true );
 
         // If description isn't empty, fill meta with it
-        if( !empty($description) ) 
-            $meta['description'] = $description; 
+        if( !empty($description) )
+            $meta['description'] = $description;
 
         /*
          * Keywords
@@ -272,14 +268,14 @@ class SP_CORE{
         $keywords = isset($post_meta['keywords'])?$post_meta['keywords']:'';
 
         // WPSEO
-        if( empty($keywords)) 
+        if( empty($keywords))
             $keywords = get_post_meta( $post_id, "_wpseo_edit_keywords", true );
         // All in one seopack
-        if( empty($keywords) ) 
+        if( empty($keywords) )
             $keywords = get_post_meta( $post_id, "_aioseop_keywords", true );
 
          // If keywords aren't empty, fill meta with it
-        if( !empty($keywords) ) 
+        if( !empty($keywords) )
             $meta['keywords'] = $keywords;
 
         /*
@@ -298,7 +294,7 @@ class SP_CORE{
         global $special_tags;
         $special_tags = new TK_SPECIAL_TAGS();
 
-        sp_init_special_tags(); // Initializung Special tag sets & tags         
+        sp_init_special_tags(); // Initializung Special tag sets & tags
         sp_init_special_tags_pt(); // Initializung Special tag types
 
         if( tk_is_buddypress() ){ // Should be reworked <- BP have to be hooked in
@@ -315,21 +311,21 @@ class SP_CORE{
         $siteurl = get_bloginfo('url');
 
         if( 0 == get_option('blog_public') ){
-            $privacy_url = $siteurl . '/wp-admin/options-privacy.php';           
+            $privacy_url = $siteurl . '/wp-admin/options-privacy.php';
             echo '<div id="seopress-privacy-warning" class="error"><p>' . sprintf( __('Your blog is not public. Search engines will be blocked. You can change this in your <a href="%s">privacy settings</a>.', 'seopress' ), $privacy_url ) . '</p></div>';
         }
     }
 
     public function init_admin(){
-        if( 
+        if(
         (isset($_GET['page']) &&
             (
-                'seopress_seo' == $_GET['page'] || 
+                'seopress_seo' == $_GET['page'] ||
                 'seopress_options' == $_GET['page']
             )
-        ) || 
-        (isset($_GET['post']) && '' != $_GET['post']) || 
-        'post-new.php' == basename( $_SERVER['REQUEST_URI'] ) ) {              
+        ) ||
+        (isset($_GET['post']) && '' != $_GET['post']) ||
+        'post-new.php' == basename( $_SERVER['REQUEST_URI'] ) ) {
             $tk_jquery_ui = new TK_WP_JQUERYUI();
             $tk_jquery_ui->load_jqueryui( array ( 'jquery-ui-tabs', 'jquery-ui-accordion', 'jquery-ui-autocomplete' ) );
             add_thickbox();
@@ -353,10 +349,10 @@ function sp_register_post_metabox_form(){
 function sp_admin_menue(){
     global $blog_id, $seopress_plugin_url;
 
-    if( !current_user_can('level_10') ){ 
+    if( !current_user_can('level_10') ){
         return false;
     } else {
-        if( defined('SITE_ID_CURRENT_SITE') ){  
+        if( defined('SITE_ID_CURRENT_SITE') ){
             if( $blog_id != SITE_ID_CURRENT_SITE ){
                 return false;
             }
@@ -382,7 +378,7 @@ function sp_get_pro_tab( $tabs ){
               <h2>' . __('Pro Version now available!', 'seopress') . '</h2><br>
                 <b>' . __('Get SeoPress Pro Version now, and benefit from more functionality, support and a clean UI.', 'seopress') . '</b><br>
                 <br>
-                <a href="http://themekraft.com/plugin/seopress-pro/" target="_blank">' . __('Upgrade now', 'seopress') . '</a>                  
+                <a href="http://themekraft.com/plugin/seopress-pro/" target="_blank">' . __('Upgrade now', 'seopress') . '</a>
                 <br><br>
                 <h3>' . __('Pro Features', 'seopress') . '</h3>
                 <ol>
@@ -403,11 +399,11 @@ function sp_get_pro_tab( $tabs ){
                     <li>' . __( 'Xprofile special tags for buddypress', 'seopress') . '</li>
                 </ol>
                 <br>
-                <a href="http://themekraft.com/plugin/seopress-pro/" target="_blank">' . __('Upgrade now', 'seopress') . '</a>  
+                <a href="http://themekraft.com/plugin/seopress-pro/" target="_blank">' . __('Upgrade now', 'seopress') . '</a>
             </div>
         </div>';
 
-    $tabs->add_tab( 'cap_get_pro', __ ('Get Pro version!', 'seopress'), $html );    
+    $tabs->add_tab( 'cap_get_pro', __ ('Get Pro version!', 'seopress'), $html );
 }
 
 function sp_reset_data(){
@@ -415,7 +411,7 @@ function sp_reset_data(){
 
 function seopress_activate(){
     $redirect_url = get_bloginfo('url') . 'wp-admin/admin.php?page=seopress_seo';
-    wp_redirect( $redirect_url );   
+    wp_redirect( $redirect_url );
 }
 
 function sp_setup(){

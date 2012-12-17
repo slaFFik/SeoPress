@@ -8,8 +8,8 @@ class TK_SPECIAL_TAGS{
     
     public function __construct(){
         $this->types = array();
-        $this->sets = array();
-        $this->tags = array();      
+        $this->sets  = array();
+        $this->tags  = array();      
     }
     
     public function replace( $string, $type = '', $fallback_type = '' ){        
@@ -23,7 +23,7 @@ class TK_SPECIAL_TAGS{
     }
     
     public function add_type( $name, $sets = array() , $option_name = '' ){ 
-        $this->types[ $name ]['sets'] = $sets;
+        $this->types[ $name ]['sets']        = $sets;
         $this->types[ $name ]['option-name'] = $option_name;
     }
     
@@ -32,7 +32,7 @@ class TK_SPECIAL_TAGS{
     }
     
     public function add_tag( $tag, $function, $description = '' ){
-        $this->tags[ $tag ]['function'] = $function;
+        $this->tags[ $tag ]['function']    = $function;
         $this->tags[ $tag ]['description'] = $description;
     }
     

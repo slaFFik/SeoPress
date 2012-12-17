@@ -137,7 +137,9 @@ function tk_is_signup(){
 }
 
 function echo_page(){
-    echo '<br><br>Page type: ' . tk_get_page_type();
+    echo '<br><br>';
+    _e('Page type:', 'seopress'); 
+    echo ' ' . tk_get_page_type();
 }
 // add_action( 'wp_head', 'echo_page' );
 
@@ -148,15 +150,5 @@ function tk_get_bp_component(){
         return false;
     }
 }
-
-function tk_show_bp_vars(){
-    global $bp, $forum_template;
-    global $wp_post_types;
-//  print_r_html( $bp );
-    print_r_html( $wp_post_types );
-//  print_r_html( $forum_template );
-}
-// add_action( 'wp_head', 'tk_show_bp_vars' );
-
 
 ?>

@@ -1,11 +1,7 @@
 <?php 
 /**
  * Configuration tab for general seo settings
- *
- * @package SeoPress
- * @author Sven Wagener
- * @copyright Copyright (C) Themekraft
- **/
+ */
 
 function sp_admin_settings_tab(){
     global $seopress_plugin_url;
