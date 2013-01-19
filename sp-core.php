@@ -88,6 +88,8 @@ class SP_CORE{
         if( !is_404() && FALSE != $sep ){
             global $page, $paged;
 
+            $title = get_bloginfo('name') .' | '. ((is_home()||is_front_page())? get_bloginfo('description') : wp_title(''));
+
             // Setup meta data and getting title
             $new_title = $this->get_seo_data( 'title' );
 

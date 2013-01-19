@@ -88,8 +88,8 @@ class SP_BP_FORUM_TOPIC{
         global $bp, $forum_template;
         $topic_slug = $bp->action_variables[1];
         $topic_id   = bp_forums_get_topic_id_from_slug( $topic_slug );
-        $array_pos  = false;
         $forum_template->topic = bp_forums_get_topic_details( $topic_id );
+        $array_pos  = false;
 
         if(empty($forum_template))
             return $array_pos;
