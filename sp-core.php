@@ -32,6 +32,7 @@ class SP_CORE{
             if(isset($wp_filter['wp_title'])){
                 remove_all_filters( 'wp_title' );
             }
+
             add_filter( 'wp_title', array( &$this, 'init_seo') , 1, 3 );  // Filtering wordpress title
             add_filter( 'bloginfo', array( &$this, 'delete_bloginfo_name') , 1, 2 );
 
