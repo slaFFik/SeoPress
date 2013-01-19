@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Buddypress component functions
+ * BuddyPress component functions
  */
 function sp_get_bp_current_component(){
     global $bp;
@@ -9,23 +9,28 @@ function sp_get_bp_current_component(){
 }
 
 /*
- * Buddypress group functions
+ * BuddyPress group functions
  */
 function sp_get_bp_group_name(){
     global $bp;
+    if(!is_numeric($bp->groups->current_group->id))
+        return false;
     $bp_group = new BP_Groups_Group( $bp->groups->current_group->id );
     return $bp_group->name;
 }
 
 function sp_get_bp_group_description(){
     global $bp;
+    if(!is_numeric($bp->groups->current_group->id))
+        return false;
+
     $bp_group = new BP_Groups_Group( $bp->groups->current_group->id );
     return $bp_group->description;
 }
 
 
 /*
- * Buddypress user functions
+ * BuddyPress user functions
  */
 function sp_get_bp_user_nicename(){
     global $bp;
@@ -46,7 +51,7 @@ function sp_get_bp_user_fullname(){
 
 
 /*
- * Buddypress activity functions
+ * BuddyPress activity functions
  */
 function sp_get_bp_activity_content(){
     global $activities_template, $bp;
@@ -72,7 +77,7 @@ function sp_get_bp_activity_author(){
 
 
 /*
- * Buddypress forum functions (not in groups)
+ * BuddyPress forum functions (not in groups)
  */
 class SP_BP_FORUM_TOPIC{
     public function __construct(){
@@ -83,6 +88,8 @@ class SP_BP_FORUM_TOPIC{
         global $bp, $forum_template;
         $topic_slug = $bp->action_variables[1];
         $topic_id   = bp_forums_get_topic_id_from_slug( $topic_slug );
+
+        if(empty($forum_template)) return;
 
         for( $i=0; $i <= count( $forum_template->topics ) ; $i++ ){
             if( $topic_id == $forum_template->topics[$i]->topic_id ) {
@@ -153,7 +160,7 @@ function sp_get_bp_forum_last_post_text(){
 }
 
 /*
- * Buddypress universal functions
+ * BuddyPress universal functions
  */
 function sp_get_bp_current_action(){
     global $bp;

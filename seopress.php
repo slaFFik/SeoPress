@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: SeoPress
-Plugin URI: http://themekraft.com/plugin/seopress/
+Plugin URI: http://themekraft.com/shop/seopress-pro/
 Description: Searchengine optimization plugin for Wordpress & Buddypress
 Author: Sven Lehnert, Sven Wagener
 Author URI: http://themekraft.com/
@@ -17,7 +17,7 @@ Network: true
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // **********************************************************************
 
-global $blog_id, $meta, $docroot, $seopress_plugin_url, $seopress_plugin_url, $wpdb;
+global $blog_id, $meta, $docroot, $seopress_plugin_url, $wpdb;
 
 $seopress_plugin_url = plugin_dir_url( __FILE__ );
 
