@@ -88,8 +88,6 @@ class SP_CORE{
         if( !is_404() && FALSE != $sep ){
             global $page, $paged;
 
-            $title = get_bloginfo('name') .' | '. ((is_home()||is_front_page())? get_bloginfo('description') : wp_title(''));
-
             // Setup meta data and getting title
             $new_title = $this->get_seo_data( 'title' );
 
@@ -103,6 +101,9 @@ class SP_CORE{
             if( !empty($new_title) )
                 $title = apply_filters('sp_title', $this->filter_for_html_output( $new_title ) ) ;
         }
+
+        if(empty($title))
+            $title = get_bloginfo('name') .' | '. ((is_home()||is_front_page())? get_bloginfo('description') : wp_title(''));
 
         // get rid of | at the end
         $title = trim($title, ' |');
