@@ -80,20 +80,37 @@ if(is_admin()){
     require_once( 'admin/single_metabox.php' );
 }
 require_once( 'sp-core.php' );
-require_once( 'sp-update.php' );
+// require_once( 'sp-update.php' );
 
 require_once( 'facebook/loader.php' );
 
 add_action( 'init' , 'seopress_init' , 0 );
 
-// Redirect to SeoPress admin page after activation
-function sp_setup_redirect( $plugin ){
-	if( basename( $plugin ) == 'seopress.php' ){
-		update_option( 'seopress_setup', array( 'activation_run' => false ) );
-		wp_redirect( get_bloginfo('home') . '/wp-admin/admin.php?page=seopress_seo&sp_activate=true' );
-		exit;
-	}
-}
-add_action( 'activated_plugin', 'sp_setup_redirect');
 
+register_activation_hook( __FILE__, 'seopress_activate' );
+register_deactivation_hook( __FILE__, 'seopress_deactivate' );
+function seopress_activate(){
+    // $redirect_url = get_bloginfo('url') . 'wp-admin/admin.php?page=seopress_seo';
+    // wp_redirect( $redirect_url );
+}
+
+function seopress_deactivate(){
+    // delete all data if exists and checked in admin area
+    $options = get_option('seopress_options_values');
+    if($options['delete_data'] == 'on'){
+        sp_reset_data();
+    }
+}
+
+/**
+ * Delete everything SeoPress related from the DB
+ */
+function sp_reset_data(){
+    delete_option( 'seopress_options_values' );
+    delete_option( 'seopress_setup' );
+    delete_option( 'seopress_seo_settings_values' );
+
+    global $wpdb;
+    $wpdb->query("DELETE FROM {$wpdb->postmeta} WHERE `meta_key` = 'sp_post_metabox'");
+}
 ?>

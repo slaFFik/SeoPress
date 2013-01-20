@@ -60,7 +60,6 @@ function sp_admin_bp_tab(){
     $html.= $button;
 
     return $html;
-
 }
 
 function sp_admin_bp_activities_tab(){
@@ -83,7 +82,6 @@ function sp_admin_bp_activities_tab(){
     do_action( 'sp_admin_bp_activies_tab_bottom' );
 
     return $html;
-
 }
 
 function sp_admin_bp_members_tab(){
