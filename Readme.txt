@@ -1,38 +1,33 @@
 === SeoPress ===
 Contributors: svenl77,mahype,slaFFik
-Tags: seo,buddypress,wpmu,wp,searchengine optimization,networked blogs,title,meta,meta description,meta keywords,noindex,facebook,open graph
-Requires at least: WordPress 3.1.x & Buddypress 1.2.x
-Tested up to: WordPress 3.4.x & Buddypress 1.6.x
-Stable tag: 1.2.3
+Tags: seo,BuddyPress,wpmu,wp,searchengine optimization,networked blogs,title,meta,meta description,meta keywords,noindex,facebook,open graph
+Requires at least: WordPress 3.1.x & BuddyPress 1.2.x
+Tested up to: WordPress 3.5.x & BuddyPress 1.6.3
+Stable tag: 1.2.4
 
-Complete search-engine optimization (SEO) plugin for Wordpress & Buddypress
+Complete search-engine optimization (SEO) plugin for Wordpress & BuddyPress
 
 == Description ==
 
 = SeoPress is search engine optimization for =
 * WordPress,
 * WordPress Networked Blogs
-* and Buddypress.
+* and BuddyPress.
 
 = Optimize your Posts/Pages for Facebook!=
 
 = Features =
 
-* Setup Title, Description and Keywords of your WordPress, WordPress sites and Buddypress pages.
+* Setup Title, Description and Keywords of your WordPress, WordPress sites and BuddyPress pages.
 * Optimize your Posts/Pages for Facebook
 * Ban searchengines from your sites (noindex)
 * Autocomplete Special Tags for wordpress values
 * Action hooks for 3rd party plugins
 * Add your own special tags
 
-
-= Screenshot =
-
-<img src="http://themekraft.com/wp-content/uploads/2010/11/screenshot-seopress.jpg" alt="" title="SeoPress Screenshot" width="530" height="340" class="alignnone size-full wp-image-1796" />
-
 = How the plugin works =
 
-SeoPress automaticaly detects your WordPress configuration and offers you the options you need to setup the different page types of WordPress and Buddypress. Just activate it and all values you can set will be shown!
+SeoPress automaticaly detects your WordPress configuration and offers you the options you need to setup the different page types of WordPress and BuddyPress. Just activate it and all values you can set will be shown!
 
 = Page types =
 
@@ -42,7 +37,7 @@ Your WordPress page has a lot of page types like home, posts, pages, categories 
 
 Use the special tags like %%site_name%% (for getting name of the site) and use it in your page types. The special tag autocomplete will help you to find the right ones.
 
-= Buddypress Support =
+= BuddyPress Support =
 
 SeoPress is the only plugin for WordPress which offers you to setup the meta data of the BuddyPress page types. It automaticaly recognizes if BuddyPress is activated and shows you all options to optimize your different page types.
 
@@ -55,14 +50,14 @@ For bug reports and features requests please go to:
 
 https://github.com/Themekraft/SeoPress/issues
 
-No lose of individual page settings (Meta's&Title) if used "All in One Seo" and "WPSeo"  before.
+No lose of individual page settings (Meta's & Title) if used "All in One Seo" and "WPSeo"  before.
 
 == Installation ==
 
 1. Upload 'SeoPress' to the '/wp-content/plugins/' directory<br>
 2. If you use standard Wordpress installation: Activate the plugin through the 'Plugins' menu in WordPress
 3. If you use multiple Blog installation: Activate the plugin by the Network Admin plugins menu
-4. If you use Buddypress:
+4. If you use BuddyPress:
 
 Be sure that the main blog header title have only included wp_title() or bp_title() function.
 
@@ -76,6 +71,10 @@ Be sure that the main blog header title have only included wp_title() or bp_titl
 
 
 == Changelog ==
+
+= 1.2.4 =
+* Finally fixed group forum topic problems.
+* Added ability to delete all plugin's data on deactivation
 
 = 1.2.3 =
 * Fixing enormous number of notices
@@ -121,7 +120,7 @@ Be sure that the main blog header title have only included wp_title() or bp_titl
 * Only loading jQuery on SeoPress pages
 
 = 1.1 beta 2 =
-* Bugfixes and Buddypress 1.5 implementation
+* Bugfixes and BuddyPress 1.5 implementation
 
 = 1.1 beta =
 * Complete rework
@@ -145,7 +144,7 @@ Be sure that the main blog header title have only included wp_title() or bp_titl
 * CSS bugfix and backend tweaking
 
 = 1.0 =
-* The version "SeoPress 1.0" is a replacemand for the old plugin "Seo for Buddypress".
+* The version "SeoPress 1.0" is a replacemand for the old plugin "Seo for BuddyPress".
 * It comes with a new UI, a lot of more functionality and many more. Read the Desciption for more details.
 
 
